@@ -47,6 +47,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          remarkPlugins: [require('remark-math')],
+          rehypePlugins: [require('rehype-katex')],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -74,6 +76,10 @@ const config = {
     ],
   ],
 
+  themes: [
+    '@docusaurus/theme-live-codeblock',
+  ],
+
   plugins: [
     [
       require.resolve('@cmfcmf/docusaurus-search-local'),
@@ -82,6 +88,28 @@ const config = {
         indexBlog: false,   // Disable blog indexing if you don't have a blog
         indexPages: true,   // Index other pages
         language: "en",     // Language of your docs
+      },
+    ],
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          { tagName: 'link', rel: 'icon', href: '/img/logo.png' },
+          { tagName: 'meta', name: 'theme-color', content: '#ffffff' },
+        ],
+      },
+    ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-XXXXXXXXXX',
+        anonymizeIP: true,
       },
     ],
   ],
@@ -163,6 +191,13 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      announcementBar: {
+        id: 'new_release',
+        content: '🚀 Check out the latest release of our product!',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
       },
     }),
 };
