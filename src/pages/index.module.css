@@ -1,23 +1,254 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+:root{
+  --bg-gradient-1: #6366f1;
+  --bg-gradient-2: #7c3aed;
+  --accent: #4e46e5;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --card-shadow: 0 8px 30px rgba(2,6,23,0.08);
+  --max-width: 1200px;
+  --radius-lg: 14px;
+}
 
+/* Hero Banner */
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  background: linear-gradient(120deg, var(--bg-gradient-1), var(--bg-gradient-2));
+  padding: 4.5rem 1.5rem;
+  color: white;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.buttons {
+.kicker {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.95);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.2vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.03;
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.92);
+  max-width: 54ch;
+  margin-bottom: 1.25rem;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.heroText {
+  flex: 1 1 520px;
+  min-width: 260px;
+}
+
+.heroVideo {
+  flex: 0 0 460px;
+  min-width: 260px;
+}
+
+.decorative { position: absolute; inset: 0; pointer-events:none; }
+.blob1, .blob2{ position:absolute; border-radius:50%; filter:blur(36px); opacity:0.18 }
+.blob1{ width:420px; height:420px; right:-80px; top:-80px; background:linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)); }
+.blob2{ width:320px; height:320px; left:-60px; bottom:-60px; background:linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); }
+
+.buttons { margin-top: 1.5rem; display:flex; gap:0.75rem; flex-wrap:wrap }
+.primaryBtn{ background: white; color: var(--accent); padding:0.75rem 1.25rem; border-radius:10px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; cursor:pointer }
+.secondaryBtn{ background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.18); padding:0.7rem 1.15rem; border-radius:10px; font-weight:600; text-decoration:none; cursor:pointer }
+.ghostBtn{ background: rgba(255,255,255,0.06); color: white; padding:0.6rem 1rem; border-radius:8px; font-weight:600; cursor:pointer }
+
+.primaryBtn:hover, .secondaryBtn:hover, .ghostBtn:hover { opacity:0.9 }
+.primaryBtn:focus, .secondaryBtn:focus, .ghostBtn:focus, .cardLink:focus { outline: none; box-shadow: 0 0 0 3px rgba(78,70,229,0.18); border-radius: 10px }
+
+.trustLogos{ margin-top:1.6rem; display:flex; gap:1rem; align-items:center; color:rgba(255,255,255,0.9); font-size:0.9rem }
+.logos{ display:flex; gap:1rem; align-items:center; flex-wrap:wrap }
+.logo{ background: rgba(255,255,255,0.06); padding:0.4rem 0.75rem; border-radius:8px; font-weight:600; font-size:0.85rem }
+
+/* Aspect ratio wrapper */
+.aspectRatio{ position:relative; width:100%; padding-bottom:56.25%; height:0; border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--card-shadow); }
+.aspectRatio iframe{ position:absolute; inset:0; width:100%; height:100%; border:0 }
+
+@media (max-width: 900px){
+  .heroContent{ flex-direction:column-reverse; align-items:center }
+  .heroText{ text-align:center }
+  .buttons{ justify-content:center }
+}
+
+/* Features Section */
+.featuresSection{ padding:4rem 1rem; background: #f8fafc }
+.sectionTitle{ text-align:center; font-size:clamp(1.5rem, 3vw, 1.9rem); font-weight:800; margin-bottom:2rem; color:#0f172a }
+.featuresGrid{ display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: var(--max-width); margin:0 auto }
+
+/* Card Link Styles */
+.cardLink{ display:block; color:inherit; text-decoration:none; height:100% }
+
+/* Feature Cards with Icon Header */
+.card{ 
+  background: var(--surface); 
+  border-radius: var(--radius-lg); 
+  box-shadow: var(--card-shadow); 
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease; 
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%;
+  cursor: pointer;
+}
+
+.card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 16px 45px rgba(2,6,23,0.14);
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08));
+  padding: 2.5rem 1.5rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 140px;
 }
+
+.cardIconLarge {
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 12px rgba(99,102,241,0.18));
+}
+
+.cardBody {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardBody h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: #0f172a;
+}
+
+.cardBody p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.cardAccent {
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  margin-top: auto;
+}
+
+/* CTA strip */
+.ctaStrip{ background:linear-gradient(90deg,#eef2ff, #f8fafc); padding:2.5rem 1rem }
+.ctaInner{ max-width:var(--max-width); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem }
+.ctaInner h3{ margin:0; font-size:1.35rem; color:#0f172a; font-weight:700 }
+
+@media (max-width:800px){ 
+  .ctaInner{ flex-direction:column; text-align:center }
+  .ctaInner h3{ margin-bottom:0.5rem }
+}
+
+/* Testimonials */
+.testimonials{ padding:3.5rem 1rem }
+.testimonialGrid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem; max-width:var(--max-width); margin:0 auto }
+.testimonial{ background:white; padding:1.5rem; border-radius:10px; box-shadow: var(--card-shadow); border-left: 3px solid #6366f1 }
+.quote{ font-style:italic; color:#111827; margin-bottom:1rem; line-height:1.7 }
+.author{ font-weight:700; color:var(--muted); font-size:0.9rem }
+
+/* Technical Writing Resources Section */
+.techWritingSection{ padding:4rem 1rem; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) }
+.sectionSubtitle{ text-align:center; color:var(--muted); font-size:1rem; max-width:600px; margin:0 auto 3rem; line-height:1.6 }
+.techWritingGrid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; max-width:var(--max-width); margin:0 auto }
+
+.techCard{ 
+  background: white; 
+  border-radius:12px; 
+  padding:1.75rem; 
+  box-shadow: var(--card-shadow); 
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-top: 3px solid #6366f1;
+}
+
+.techCard:hover{ 
+  transform: translateY(-4px); 
+  box-shadow: 0 12px 35px rgba(99,102,241,0.12);
+}
+
+.techCardHeader{ 
+  display:flex; 
+  align-items:center; 
+  gap:0.75rem; 
+  margin-bottom:1rem;
+}
+
+.techIcon{ 
+  font-size:1.75rem; 
+  display:inline-flex; 
+  align-items:center; 
+  justify-content:center;
+}
+
+.techCardHeader h3{ 
+  margin:0; 
+  font-size:1.1rem; 
+  color:#0f172a; 
+  font-weight:700;
+}
+
+.techList{ 
+  list-style:none; 
+  padding:0; 
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:0.6rem;
+}
+
+.techList li{ 
+  padding:0.4rem 0 0.4rem 1.5rem; 
+  color:var(--muted); 
+  position:relative; 
+  font-size:0.95rem;
+  line-height:1.5;
+}
+
+.techList li::before{ 
+  content:'→'; 
+  position:absolute; 
+  left:0; 
+  color:#6366f1; 
+  font-weight:700;
+}
+
+/* RTL support */
+:dir(rtl) .heroText{ text-align:right }
+:dir(rtl) .ctaInner{ direction:rtl }
+:dir(rtl) .buttons{ flex-direction:row-reverse }
+:dir(rtl) .techList li{ padding-left:0; padding-right:1.5rem }
+:dir(rtl) .techList li::before{ left:auto; right:0 }

@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Tech Docs',
+  tagline: 'Modern, beautiful product documentation',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -123,9 +123,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'Tech Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Tech Docs Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -136,6 +136,42 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            label: 'Guides',
+            position: 'left',
+            items: [
+              {
+                label: 'Getting Started',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Create a Document',
+                to: '/docs/create-a-document',
+              },
+              {
+                label: 'Create a Page',
+                to: '/docs/create-a-page',
+              },
+            ],
+          },
+          {
+            label: 'Resources',
+            position: 'left',
+            items: [
+              {
+                label: 'Documentation Basics',
+                to: '/docs/tutorial-basics/markdown-features',
+              },
+              {
+                label: 'Deploy Your Site',
+                to: '/docs/tutorial-basics/deploy-your-site',
+              },
+              {
+                label: 'Manage Docs Versions',
+                to: '/docs/tutorial-extras/manage-docs-versions',
+              },
+            ],
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -186,18 +222,11 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tech Docs. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-      },
-      announcementBar: {
-        id: 'new_release',
-        content: '🚀 Check out the latest release of our product!',
-        backgroundColor: '#fafbfc',
-        textColor: '#091E42',
-        isCloseable: true,
       },
     }),
 };
