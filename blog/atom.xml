@@ -2,108 +2,290 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://techdocs.co.in/blog</id>
     <title>Tech Docs Blog</title>
-    <updated>2021-08-26T00:00:00.000Z</updated>
+    <updated>2024-12-04T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://techdocs.co.in/blog"/>
     <subtitle>Tech Docs Blog</subtitle>
     <icon>https://techdocs.co.in/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>https://techdocs.co.in/blog/welcome</id>
-        <link href="https://techdocs.co.in/blog/welcome"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer" class="">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer" class="">blog plugin</a>.</p>
-<p>Here are a few tips you might find useful.</p>
-<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
-<p>Regular blog authors can be added to <code>authors.yml</code>.</p>
-<p>The blog post date can be extracted from filenames, such as:</p>
+        <title type="html"><![CDATA[How Great Documentation Helps Businesses and Users Scale Worldwide]]></title>
+        <id>https://techdocs.co.in/blog/why-documentation-matters-for-business</id>
+        <link href="https://techdocs.co.in/blog/why-documentation-matters-for-business"/>
+        <updated>2024-12-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn why great documentation is the backbone of business success, helping companies scale globally and empowering users with self-service support.]]></summary>
+        <content type="html"><![CDATA[<p>In today's global competitive market, everyday businesses are reaching new heights. Almost every day, new ideas turn into businesses. Companies frequently launch new software and products to meet changing customer needs and stay ahead of competitors.</p>
+<p>When it comes to business, every product has information about it that serves or solves problems in today's world. For users, documentation is always the first stop to understand the product.</p>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&amp;h=400&amp;fit=crop" alt="Documentation Matters" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-documentation-matters">Why Documentation Matters<a href="https://techdocs.co.in/blog/why-documentation-matters-for-business#why-documentation-matters" class="hash-link" aria-label="Direct link to Why Documentation Matters" title="Direct link to Why Documentation Matters" translate="no">​</a></h2>
+<p>Customers expect instant answers. They don't want to wait for support tickets or spend time on long phone calls. Instead, they always turn to documentation first, such as:</p>
 <ul>
-<li class=""><code>2019-05-30-welcome.md</code></li>
-<li class=""><code>2019-05-30-welcome/index.md</code></li>
+<li class=""><strong>Release notes</strong> (to see what's new or improved)</li>
+<li class=""><strong>FAQs</strong> (for common questions)</li>
+<li class=""><strong>Troubleshooting guides</strong> (for solving problems)</li>
+<li class=""><strong>How-to articles</strong> (for completing tasks)</li>
+<li class=""><strong>Technical docs</strong> for software</li>
 </ul>
-<p>A blog post folder can be convenient to co-locate blog post images:</p>
-<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://techdocs.co.in/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
-<p>The blog supports tags as well!</p>
-<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="documentation-the-backbone-of-business">Documentation: The Backbone of Business<a href="https://techdocs.co.in/blog/why-documentation-matters-for-business#documentation-the-backbone-of-business" class="hash-link" aria-label="Direct link to Documentation: The Backbone of Business" title="Direct link to Documentation: The Backbone of Business" translate="no">​</a></h2>
+<p>Documentation is like the backbone of any business. It makes onboarding new team members seamless, encourages knowledge sharing, and reduces the risk of losing valuable know-how when people move on.</p>
+<p>As your company grows, documentation keeps everyone aligned, so you don't lose momentum or run into costly knowledge gaps.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-larger-organizations">For Larger Organizations<a href="https://techdocs.co.in/blog/why-documentation-matters-for-business#for-larger-organizations" class="hash-link" aria-label="Direct link to For Larger Organizations" title="Direct link to For Larger Organizations" translate="no">​</a></h3>
+<p>For larger organizations, robust documentation keeps things running smoothly across different teams and locations. It helps with:</p>
+<ul>
+<li class=""><strong>Compliance</strong></li>
+<li class=""><strong>Streamlined training</strong></li>
+<li class=""><strong>Consistent best practices</strong></li>
+<li class=""><strong>Faster product launches</strong></li>
+<li class=""><strong>Easier market expansion</strong></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="self-service-the-modern-customer-expectation">Self-Service: The Modern Customer Expectation<a href="https://techdocs.co.in/blog/why-documentation-matters-for-business#self-service-the-modern-customer-expectation" class="hash-link" aria-label="Direct link to Self-Service: The Modern Customer Expectation" title="Direct link to Self-Service: The Modern Customer Expectation" translate="no">​</a></h2>
+<p>Today's customers love self-service. They want to find answers on their own, whenever they need them, without waiting on hold or submitting a ticket.</p>
+<p>High-quality documentation—think clear instructions, troubleshooting guides, and FAQs—makes this possible. Not only does this free up your support team, but it also builds customer loyalty.</p>
+<p>In crowded markets, being known for excellent documentation can set you apart and keep customers coming back.</p>]]></content>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>Roushan Gupta</name>
+            <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
-        </author>
-        <category label="Facebook" term="Facebook"/>
-        <category label="Hello" term="Hello"/>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="documentation" term="documentation"/>
+        <category label="business" term="business"/>
+        <category label="technical-writing" term="technical-writing"/>
+        <category label="best-practices" term="best-practices"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[MDX Blog Post]]></title>
-        <id>https://techdocs.co.in/blog/mdx-blog-post</id>
-        <link href="https://techdocs.co.in/blog/mdx-blog-post"/>
-        <updated>2021-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
-        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer" class="">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer" class="">MDX</a>.</p>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p></div></div>
-<!-- -->
-<p>For example, use JSX to create an interactive button:</p>
-<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
-<button>Click me!</button>]]></content>
+        <title type="html"><![CDATA[Cloud Computing Basics]]></title>
+        <id>https://techdocs.co.in/blog/cloud-computing-basics</id>
+        <link href="https://techdocs.co.in/blog/cloud-computing-basics"/>
+        <updated>2024-11-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Discover how cloud computing (AWS, Azure, GCP) transforms businesses by solving infrastructure challenges and enabling global scalability.]]></summary>
+        <content type="html"><![CDATA[<p>Have you ever wondered how your apps, online stores, or business software run seamlessly no matter where you are?</p>
+<p>The answer is <strong>cloud computing</strong>. I understand how powerful this technology can be and want to share how cloud computing can turn small ideas into big successes.</p>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&amp;h=400&amp;fit=crop" alt="Cloud Computing" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="in-this-post-youll-discover">In this post, you'll discover:<a href="https://techdocs.co.in/blog/cloud-computing-basics#in-this-post-youll-discover" class="hash-link" aria-label="Direct link to In this post, you'll discover:" title="Direct link to In this post, you'll discover:" translate="no">​</a></h2>
+<ul>
+<li class="">What cloud computing is and why it matters</li>
+<li class="">The most common business challenges companies face with traditional IT</li>
+<li class="">How cloud computing solutions address those problems</li>
+<li class="">Why cloud computing has become so popular for businesses of all sizes</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="challenges-before-cloud-computing">Challenges Before Cloud Computing<a href="https://techdocs.co.in/blog/cloud-computing-basics#challenges-before-cloud-computing" class="hash-link" aria-label="Direct link to Challenges Before Cloud Computing" title="Direct link to Challenges Before Cloud Computing" translate="no">​</a></h2>
+<p>Before we dive into the details of cloud computing, let's first understand the major challenges that businesses faced before it came along.</p>
+<p>Turning a great idea into an app or online store used to be a huge challenge for people all over the world. It wasn't just about creativity—you needed a lot of money and technical skills right from the start.</p>
+<p>Here's what businesses everywhere had to deal with:</p>
+<ul>
+<li class="">Buying and maintaining their own servers and equipment</li>
+<li class="">Hiring IT and security experts to keep things running</li>
+<li class="">Paying for buildings, electricity, and constant upkeep</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-sudden-traffic-surges-can-crash-your-website">1. Sudden Traffic Surges Can Crash Your Website<a href="https://techdocs.co.in/blog/cloud-computing-basics#1-sudden-traffic-surges-can-crash-your-website" class="hash-link" aria-label="Direct link to 1. Sudden Traffic Surges Can Crash Your Website" title="Direct link to 1. Sudden Traffic Surges Can Crash Your Website" translate="no">​</a></h3>
+<p>Imagine you have an e-commerce application that typically handles 20,000 customer visits every second. As your business grows, you decide to host a major event—like a Super Sale or Big Billion Day.</p>
+<p>Suddenly, your website traffic spikes to 1 million visits per second. Can your app handle this massive surge? Most likely not, because it wasn't designed for such extreme loads. <strong>The result: your site crashes</strong>, and you lose both sales and customers.</p>
+<p>To prevent this, you might invest in extra servers to handle the peak traffic. However, once the sale ends and your traffic drops back to the usual 20,000 visits per second, those extra servers are no longer needed.</p>
+<p>Even though they sit idle, you still have to pay for and maintain them because you own the equipment. This means you've spent a lot of money on resources that are rarely used, making it both wasteful and expensive for your business.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-expanding-globally-requires-huge-investments">2. Expanding Globally Requires Huge Investments<a href="https://techdocs.co.in/blog/cloud-computing-basics#2-expanding-globally-requires-huge-investments" class="hash-link" aria-label="Direct link to 2. Expanding Globally Requires Huge Investments" title="Direct link to 2. Expanding Globally Requires Huge Investments" translate="no">​</a></h3>
+<p>If you want to grow your business into new countries or regions, you can't just launch your website and expect it to work everywhere. You need to set up servers and data centers close to your new customers to ensure fast, reliable service.</p>
+<p>This also means hiring IT staff in each location to manage and maintain your infrastructure. All of this requires a significant upfront investment—buying hardware, renting space, and building teams—before you even know if your business will succeed in those markets.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-maintenance-and-upgrades-are-costly">3. Maintenance and Upgrades Are Costly<a href="https://techdocs.co.in/blog/cloud-computing-basics#3-maintenance-and-upgrades-are-costly" class="hash-link" aria-label="Direct link to 3. Maintenance and Upgrades Are Costly" title="Direct link to 3. Maintenance and Upgrades Are Costly" translate="no">​</a></h3>
+<p>When you own your own servers and software, you're responsible for keeping everything running smoothly. This means you need to hire IT experts to manage your systems, fix hardware issues, and handle unexpected problems.</p>
+<p>You also have to regularly upgrade your hardware and software to stay secure and up to date. All of these tasks require both time and money.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-security-and-data-protection">4. Security and Data Protection<a href="https://techdocs.co.in/blog/cloud-computing-basics#4-security-and-data-protection" class="hash-link" aria-label="Direct link to 4. Security and Data Protection" title="Direct link to 4. Security and Data Protection" translate="no">​</a></h3>
+<p>Protecting your website and customer data from hackers is entirely your responsibility. You need to set up strong security systems, monitor for threats, and create reliable backups to prevent data loss.</p>
+<p>Building and maintaining these security measures not only takes time and expertise but also increases your costs. If you don't get it right, your business and customers could be at serious risk.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-slow-to-launch-and-make-changes">5. Slow to Launch and Make Changes<a href="https://techdocs.co.in/blog/cloud-computing-basics#5-slow-to-launch-and-make-changes" class="hash-link" aria-label="Direct link to 5. Slow to Launch and Make Changes" title="Direct link to 5. Slow to Launch and Make Changes" translate="no">​</a></h3>
+<p>Setting up your own servers and systems isn't quick—it can take weeks or even months before everything is ready. When you want to introduce new features or support more customers, making these changes often involves complex upgrades and careful planning.</p>
+<p>This slow, complicated process means you can't respond quickly to market demands or new opportunities. As a result, your business may miss out on growth and fall behind competitors who can move faster.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-does-cloud-computing-solve-these-problems">How Does Cloud Computing Solve These Problems?<a href="https://techdocs.co.in/blog/cloud-computing-basics#how-does-cloud-computing-solve-these-problems" class="hash-link" aria-label="Direct link to How Does Cloud Computing Solve These Problems?" title="Direct link to How Does Cloud Computing Solve These Problems?" translate="no">​</a></h2>
+<p>Cloud computing changes everything. Instead of buying and managing your own servers, you:</p>
+<ul>
+<li class="">Rent computing resources from cloud providers like <strong>AWS, Azure, or Google Cloud</strong></li>
+<li class="">Pay only for what you use, and scale up or down as needed</li>
+<li class="">Let the cloud provider handle maintenance, security, and updates</li>
+</ul>
+<p>It's like renting an apartment instead of building a house—you use what you need, and someone else takes care of the rest.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cloud-computing">Cloud Computing<a href="https://techdocs.co.in/blog/cloud-computing-basics#cloud-computing" class="hash-link" aria-label="Direct link to Cloud Computing" title="Direct link to Cloud Computing" translate="no">​</a></h3>
+<p>Cloud computing is the delivery of computing services—such as servers, storage, databases, and software over the internet. It lets you access what you need, when you need it, without owning or managing any physical hardware.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benefits-of-cloud-computing">Benefits of Cloud Computing<a href="https://techdocs.co.in/blog/cloud-computing-basics#benefits-of-cloud-computing" class="hash-link" aria-label="Direct link to Benefits of Cloud Computing" title="Direct link to Benefits of Cloud Computing" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Cost Savings</strong>: No big upfront costs; pay-as-you-go pricing</li>
+<li class=""><strong>Scalability</strong>: Easily add or remove resources as your business grows</li>
+<li class=""><strong>Accessibility</strong>: Work from anywhere with an internet connection</li>
+<li class=""><strong>Automatic Updates</strong>: Cloud providers keep everything up to date and secure</li>
+<li class=""><strong>Disaster Recovery</strong>: Your data is backed up and protected</li>
+<li class=""><strong>Collaboration</strong>: Teams can work together in real time</li>
+<li class=""><strong>Security</strong>: Leading providers offer strong security features</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-next">What's Next?<a href="https://techdocs.co.in/blog/cloud-computing-basics#whats-next" class="hash-link" aria-label="Direct link to What's Next?" title="Direct link to What's Next?" translate="no">​</a></h2>
+<p>Understanding the basics of cloud computing is just the beginning. In my next post, I'll dive deeper into the different types of cloud models and top global market leaders.</p>]]></content>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>Roushan Gupta</name>
+            <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="cloud-computing" term="cloud-computing"/>
+        <category label="aws" term="aws"/>
+        <category label="azure" term="azure"/>
+        <category label="gcp" term="gcp"/>
+        <category label="technology" term="technology"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Long Blog Post]]></title>
-        <id>https://techdocs.co.in/blog/long-blog-post</id>
-        <link href="https://techdocs.co.in/blog/long-blog-post"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
-<p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <title type="html"><![CDATA[Docs as Code Approach]]></title>
+        <id>https://techdocs.co.in/blog/docs-as-code-approach</id>
+        <link href="https://techdocs.co.in/blog/docs-as-code-approach"/>
+        <updated>2024-11-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn the Docs as Code methodology - manage documentation like source code with Git, CI/CD, and modern developer workflows.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to my blog on the <strong>Docs as Code</strong> approach! Whether you're a software technical writer, a developer, or part of a documentation team, you might have heard about Docs as Code.</p>
+<p>If this concept is new to you, don't worry—this blog will guide you through everything you need to know, step by step.</p>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200&amp;h=400&amp;fit=crop" alt="Docs as Code" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="in-this-post-youll-discover">In this post, you'll discover:<a href="https://techdocs.co.in/blog/docs-as-code-approach#in-this-post-youll-discover" class="hash-link" aria-label="Direct link to In this post, you'll discover:" title="Direct link to In this post, you'll discover:" translate="no">​</a></h2>
+<ul>
+<li class="">What Docs as Code really means</li>
+<li class="">Why it's become so popular in today's tech world</li>
+<li class="">How it powers modern developer documentation</li>
+<li class="">Who's using it and why</li>
+<li class="">The key benefits that make it a game-changer for documentation teams</li>
+</ul>
+<p>Whether you're looking to modernize your documentation process or just want to stay updated on the latest trends, you'll find practical insights and real-world examples here.</p>
+<p>Ready to dive in and see how Docs as Code can transform your documentation workflow? Let's get started!</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-the-docs-as-code-approach">What is the Docs as Code Approach?<a href="https://techdocs.co.in/blog/docs-as-code-approach#what-is-the-docs-as-code-approach" class="hash-link" aria-label="Direct link to What is the Docs as Code Approach?" title="Direct link to What is the Docs as Code Approach?" translate="no">​</a></h2>
+<p><strong>Docs as Code</strong> is a methodology where documentation is created, managed, and published using the same tools and workflows as software development. Instead of treating documentation as something separate, it's handled just like source code.</p>
+<p>With Docs as Code, documentation is:</p>
+<ul>
+<li class="">Written in plain text formats like <strong>Markdown</strong> or <strong>AsciiDoc</strong></li>
+<li class="">Stored in version control systems such as <strong>GitHub</strong> or <strong>Bitbucket</strong></li>
+<li class="">Built and deployed using <strong>CI/CD</strong> tools like <strong>Jenkins</strong> or <strong>GitHub Actions</strong></li>
+<li class="">Reviewed and improved through pull requests (PRs)</li>
+</ul>
+<p>This approach is popular among:</p>
+<ul>
+<li class="">Technical writers</li>
+<li class="">Software developers (especially for developer documentation)</li>
+<li class="">DevOps teams</li>
+<li class="">Product engineering teams (maintaining APIs, SDKs, and developer tools)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-does-docs-as-code-work">How Does Docs as Code Work?<a href="https://techdocs.co.in/blog/docs-as-code-approach#how-does-docs-as-code-work" class="hash-link" aria-label="Direct link to How Does Docs as Code Work?" title="Direct link to How Does Docs as Code Work?" translate="no">​</a></h2>
+<p>Here's a typical Docs as Code workflow:</p>
+<ol>
+<li class="">Writers create or update documentation files</li>
+<li class="">Changes are submitted via a pull request (PR)</li>
+<li class="">Reviewers (writers or engineers) provide feedback</li>
+<li class="">Once approved, the PR is merged</li>
+<li class="">Automated pipelines build and publish the updated documentation</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-benefits-of-docs-as-code">Key Benefits of Docs as Code<a href="https://techdocs.co.in/blog/docs-as-code-approach#key-benefits-of-docs-as-code" class="hash-link" aria-label="Direct link to Key Benefits of Docs as Code" title="Direct link to Key Benefits of Docs as Code" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Improved Accuracy</strong>: Docs are updated alongside code, so information is always current when features launch.</li>
+<li class=""><strong>Enhanced Collaboration</strong>: Developers and writers work together using the same tools and workflows, making contributions and reviews seamless.</li>
+<li class=""><strong>Version Control &amp; Traceability</strong>: Every change is tracked—see what changed, who changed it, and why. Easily roll back if needed.</li>
+<li class=""><strong>Increased Efficiency</strong>: Automation speeds up publishing and reduces manual work.</li>
+<li class=""><strong>Consistency &amp; Quality</strong>: Automated checks, style guides, and peer reviews keep documentation uniform and high-quality.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="essential-tools-for-docs-as-code">Essential Tools for Docs as Code<a href="https://techdocs.co.in/blog/docs-as-code-approach#essential-tools-for-docs-as-code" class="hash-link" aria-label="Direct link to Essential Tools for Docs as Code" title="Direct link to Essential Tools for Docs as Code" translate="no">​</a></h2>
+<table><thead><tr><th>Tool</th><th>Description</th></tr></thead><tbody><tr><td><strong>Visual Studio Code</strong></td><td>Free, open-source, and highly customizable code editor. Supports Markdown, live preview, Git integration, and many extensions.</td></tr><tr><td><strong>Git</strong></td><td>Distributed version control system. Tracks every change, supports branching, merging, and rollback for transparent history.</td></tr><tr><td><strong>GitHub</strong></td><td>Web-based platform for hosting/managing Git repositories. Enables pull requests, code reviews, issue tracking, and automation.</td></tr><tr><td><strong>GitHub Actions</strong></td><td>Built-in CI/CD service for GitHub. Automates workflows like building and deploying documentation whenever changes are merged.</td></tr><tr><td><strong>Docusaurus</strong></td><td>Static site generator for documentation. Converts Markdown files into professional, searchable, and mobile-friendly websites.</td></tr></tbody></table>
+<p>Docs as Code is more than a trend—it's a practical, proven approach that brings the best of software development to the world of documentation.</p>]]></content>
         <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
+            <name>Roushan Gupta</name>
+            <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <category label="Hello" term="Hello"/>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="docs-as-code" term="docs-as-code"/>
+        <category label="documentation" term="documentation"/>
+        <category label="technical-writing" term="technical-writing"/>
+        <category label="devops" term="devops"/>
+        <category label="git" term="git"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>https://techdocs.co.in/blog/first-blog-post</id>
-        <link href="https://techdocs.co.in/blog/first-blog-post"/>
-        <updated>2019-05-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet...]]></summary>
-        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
-<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <title type="html"><![CDATA[Welcome to Tech Docs]]></title>
+        <id>https://techdocs.co.in/blog/welcome-to-tech-docs</id>
+        <link href="https://techdocs.co.in/blog/welcome-to-tech-docs"/>
+        <updated>2024-11-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Tech Docs by Roushan Gupta - your go-to platform for technical writing, cloud computing, and DevOps insights.]]></summary>
+        <content type="html"><![CDATA[<p>Hello, my name is <strong>Roushan Gupta</strong>. I am a technical writer with extensive experience in writing and managing documentation for software applications, cloud computing, and DevOps.</p>
+<p>I specialise in transforming complex technology into clear, concise, and helpful information that anyone can use.</p>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&amp;h=400&amp;fit=crop" alt="Welcome to Tech Docs" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="about-tech-docs">About Tech Docs<a href="https://techdocs.co.in/blog/welcome-to-tech-docs#about-tech-docs" class="hash-link" aria-label="Direct link to About Tech Docs" title="Direct link to About Tech Docs" translate="no">​</a></h2>
+<p><strong>Tech Docs</strong> is a platform where I share the knowledge and insights I've gained throughout my career in writing and technology. My goal is to make technical topics easy to understand and genuinely useful for everyone.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-youll-find-here">What You'll Find Here<a href="https://techdocs.co.in/blog/welcome-to-tech-docs#what-youll-find-here" class="hash-link" aria-label="Direct link to What You'll Find Here" title="Direct link to What You'll Find Here" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Easy-to-follow technical documentation</strong></li>
+<li class=""><strong>Best practices and industry standards</strong></li>
+<li class=""><strong>Tips on AI-powered documentation</strong></li>
+<li class=""><strong>Insights on Cloud and DevOps</strong></li>
+</ul>
+<p>Whether you're new to tech or looking to sharpen your skills, you'll find practical and accessible content here.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lets-connect">Let's Connect<a href="https://techdocs.co.in/blog/welcome-to-tech-docs#lets-connect" class="hash-link" aria-label="Direct link to Let's Connect" title="Direct link to Let's Connect" translate="no">​</a></h2>
+<p>I'm passionate about helping others learn and grow in the world of technical writing. Feel free to explore the blog, and don't hesitate to reach out if you have questions or want to collaborate!</p>
+<p>Welcome aboard, and happy reading! 🚀</p>]]></content>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>Roushan Gupta</name>
+            <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
+        <category label="introduction" term="introduction"/>
+        <category label="technical-writing" term="technical-writing"/>
+        <category label="documentation" term="documentation"/>
+        <category label="cloud" term="cloud"/>
+        <category label="devops" term="devops"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Turn Your Documentation Search Box into SuperSmart Search]]></title>
+        <id>https://techdocs.co.in/blog/ai-powered-documentation-search</id>
+        <link href="https://techdocs.co.in/blog/ai-powered-documentation-search"/>
+        <updated>2024-11-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Transform your documentation with AI-powered search using Algolia Ask AI and Docusaurus 3.9. Get instant, accurate answers without digging through pages.]]></summary>
+        <content type="html"><![CDATA[<p>Still jumping between documentation pages and spending huge time trying to get the right answer?</p>
+<p>If yes, then it's time to stop searching manually and start <strong>AI-powered smart search</strong> to get your answers instantly.</p>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;h=400&amp;fit=crop" alt="AI-Powered Search" class="img_ev3q"></p>
+<p>With <strong>Docusaurus 3.9.0</strong> that supports <strong>Algolia Ask AI</strong>, you can make your documentation application smart, interactive, and searchable. Just ask a question and get the exact answer you need right away—no more digging through pages, scanning headers, or feeling lost.</p>
+<p>Transform your docs into an intelligent knowledge hub. Now it's time to empower your users with AI-driven search that delivers quick, accurate, and conversational answers.</p>
+<p>Make your documentation the place where people actually want to find answers.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-benefits">Key Benefits<a href="https://techdocs.co.in/blog/ai-powered-documentation-search#key-benefits" class="hash-link" aria-label="Direct link to Key Benefits" title="Direct link to Key Benefits" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Faster answers for users</strong>: No more hunting for information.</li>
+<li class=""><strong>Reduced repetitive questions</strong>: Free up your team's time.</li>
+<li class=""><strong>Smarter documentation</strong>: Your docs become an interactive, intelligent resource.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-switch-to-ai-powered-search">Why Switch to AI-Powered Search?<a href="https://techdocs.co.in/blog/ai-powered-documentation-search#why-switch-to-ai-powered-search" class="hash-link" aria-label="Direct link to Why Switch to AI-Powered Search?" title="Direct link to Why Switch to AI-Powered Search?" translate="no">​</a></h2>
+<p>Traditional search tools rely on exact keywords, often leading to irrelevant results and wasted time. <strong>Ask AI</strong> changes the game by:</p>
+<ul>
+<li class=""><strong>Understanding natural language</strong>: Users simply type questions in plain English.</li>
+<li class=""><strong>Providing context-aware answers</strong>: Responses are generated directly from your documentation.</li>
+<li class=""><strong>Reducing support tickets</strong>: Users find what they need without contacting support.</li>
+<li class=""><strong>Enhancing user experience</strong>: Modern, fast, and intuitive search with autocomplete.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="before-vs-after-ask-ai">Before vs. After Ask AI<a href="https://techdocs.co.in/blog/ai-powered-documentation-search#before-vs-after-ask-ai" class="hash-link" aria-label="Direct link to Before vs. After Ask AI" title="Direct link to Before vs. After Ask AI" translate="no">​</a></h3>
+<table><thead><tr><th>Before</th><th>After</th></tr></thead><tbody><tr><td>Keyword guessing</td><td>Natural language questions</td></tr><tr><td>Irrelevant results</td><td>Context-aware answers</td></tr><tr><td>User frustration</td><td>Instant, conversational help</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example">Example<a href="https://techdocs.co.in/blog/ai-powered-documentation-search#example" class="hash-link" aria-label="Direct link to Example" title="Direct link to Example" translate="no">​</a></h3>
+<p>A user asks, <strong>"How to change my account settings?"</strong></p>
+<p>Instead of clicking through endless pages or hunting for the right guide, <strong>Ask AI</strong> gives you a direct, relevant answer—like "how to change the account settings"—right away.</p>
+<p>Isn't that amazing? This is the breakthrough we've all been waiting for! Now, users get the information they need instantly, without the frustration of navigating a maze of documentation.</p>
+<p>Not only does this solve the problem of information overload, but it also makes your documentation the go-to resource for users to quickly self-serve and resolve their questions. Especially for new users, finding answers becomes effortless, making your docs more engaging and accessible than ever before.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-ask-ai-works">How Ask AI Works<a href="https://techdocs.co.in/blog/ai-powered-documentation-search#how-ask-ai-works" class="hash-link" aria-label="Direct link to How Ask AI Works" title="Direct link to How Ask AI Works" translate="no">​</a></h2>
+<p>Ask AI combines Algolia's powerful indexing with advanced AI to deliver the right answers:</p>
+<ol>
+<li class=""><strong>Indexing</strong>: Algolia crawls and organizes your documentation.</li>
+<li class=""><strong>AI Processing</strong>: Ask AI leverages a Large Language Model (LLM) to generate accurate, meaningful answers.</li>
+<li class=""><strong>User Experience</strong>: Users see either traditional search results or conversational answers directly in the search box.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setting-up-ask-ai-in-docusaurus">Setting Up Ask AI in Docusaurus<a href="https://techdocs.co.in/blog/ai-powered-documentation-search#setting-up-ask-ai-in-docusaurus" class="hash-link" aria-label="Direct link to Setting Up Ask AI in Docusaurus" title="Direct link to Setting Up Ask AI in Docusaurus" translate="no">​</a></h2>
+<p>Getting started is simple:</p>
+<ol>
+<li class="">Install Docusaurus v3.9</li>
+<li class="">Set up Algolia DocSearch v4</li>
+<li class="">Add your configuration to <code>docusaurus.config.js</code>:</li>
+</ol>
+<div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token literal-property property" style="color:#36acaa">themeConfig</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token literal-property property" style="color:#36acaa">algolia</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token literal-property property" style="color:#36acaa">appId</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'YOUR_APP_ID'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token literal-property property" style="color:#36acaa">apiKey</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'YOUR_SEARCH_API_KEY'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token literal-property property" style="color:#36acaa">indexName</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'YOUR_INDEX_NAME'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token literal-property property" style="color:#36acaa">contextualSearch</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">true</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token literal-property property" style="color:#36acaa">searchPagePath</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'search'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token literal-property property" style="color:#36acaa">askAi</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'YOUR_ALGOLIA_ASSISTANT_ID'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// enables Ask AI</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>Don't let your documentation slow your users down. With Docusaurus v3.9 and Algolia DocSearch v4, your docs become smarter and easier to use.</p>
+<p>Connect DocSearch, enable Ask AI, and let users find answers instantly.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references--resources">References &amp; Resources<a href="https://techdocs.co.in/blog/ai-powered-documentation-search#references--resources" class="hash-link" aria-label="Direct link to References &amp; Resources" title="Direct link to References &amp; Resources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://docusaurus.io/blog/releases/3.9#docsearch-v4" target="_blank" rel="noopener noreferrer" class="">Docusaurus Search Documentation</a></li>
+<li class=""><a href="https://docsearch.algolia.com/docs/v4/askai/" target="_blank" rel="noopener noreferrer" class="">Algolia DocSearch v4</a></li>
+<li class=""><a href="https://docusaurus.io/blog/releases/3.9" target="_blank" rel="noopener noreferrer" class="">Docusaurus 3.9 Release</a></li>
+</ul>]]></content>
         <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
+            <name>Roushan Gupta</name>
+            <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <category label="Hola" term="Hola"/>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="ai" term="ai"/>
+        <category label="algolia" term="algolia"/>
+        <category label="docusaurus" term="docusaurus"/>
+        <category label="search" term="search"/>
+        <category label="documentation" term="documentation"/>
+        <category label="technical-writing" term="technical-writing"/>
     </entry>
 </feed>
