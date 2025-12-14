@@ -20,10 +20,10 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://roushan901.github.io',
+  url: 'https://techdocs.co.in',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/tech-docs/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -133,47 +133,47 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Learning',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog & Insights', position: 'left'},
           {
-            label: 'Guides',
+            label: 'Documentation',
             position: 'left',
             items: [
               {
-                label: 'Getting Started',
+                label: 'Writing Essentials',
                 to: '/docs/intro',
               },
               {
-                label: 'Create a Document',
-                to: '/docs/create-a-document',
+                label: 'Writing Techniques',
+                to: '/docs/tutorial-basics/create-a-document',
               },
               {
-                label: 'Create a Page',
-                to: '/docs/create-a-page',
+                label: 'Documentation Tools',
+                to: '/docs/tutorial-basics/create-a-page',
               },
             ],
           },
           {
-            label: 'Resources',
+            label: 'Cloud Services',
             position: 'left',
             items: [
               {
-                label: 'Documentation Basics',
+                label: 'AWS Documentation',
                 to: '/docs/tutorial-basics/markdown-features',
               },
               {
-                label: 'Deploy Your Site',
+                label: 'Azure Guides',
                 to: '/docs/tutorial-basics/deploy-your-site',
               },
               {
-                label: 'Manage Docs Versions',
+                label: 'GCP Resources',
                 to: '/docs/tutorial-extras/manage-docs-versions',
               },
             ],
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Roushan901/tech-docs',
             label: 'GitHub',
             position: 'right',
           },

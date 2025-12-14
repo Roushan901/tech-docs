@@ -1,6 +1,8 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
+import FeedbackForm from "@site/src/components/FeedbackForm";
+import ContactSupport from "@site/src/components/ContactSupport";
 import styles from "./index.module.css";
 
 /**
@@ -13,22 +15,23 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <div className={styles.kicker}>Documentation • Guides • Examples</div>
-              <h1 className={styles.title}>Tech Docs — Beautiful, Fast Docs</h1>
+              <div className={styles.kicker}>📖 Welcome to Tech Docs • Documentation • Cloud Services</div>
+              <h1 className={styles.title}>Master Technical Writing & Documentation</h1>
               <p className={styles.subtitle}>
-                Ship better docs faster. Clean reading experience, powerful
-                search and developer-friendly workflows.
+                Learn professional documentation techniques, writing best practices,
+                cloud services integration, and tools to create clear, effective technical content.
+                Explore real-world examples, industry insights, and grow as a technical writer.
               </p>
 
               <div className={styles.buttons}>
                 <Link className={styles.primaryBtn} to="/docs/intro">
-                  Get Started
+                  Start Learning
                 </Link>
                 <Link className={styles.secondaryBtn} to="/blog">
-                  Read the Blog
+                  Explore Blog & Insights
                 </Link>
-                <Link className={styles.ghostBtn} to="/docs/intro#features">
-                  Explore Features
+                <Link className={styles.ghostBtn} to="/docs/tutorial-basics/create-a-document">
+                  Documentation Guides
                 </Link>
               </div>
 
@@ -56,57 +59,88 @@ export default function Home() {
       </header>
 
       <main>
+        {/* Welcome Section */}
+        <section className={styles.welcomeSection}>
+          <div className={styles.container}>
+            <div className={styles.welcomeContent}>
+              <h2>Welcome to Your Documentation Learning Hub</h2>
+              <p>
+                Whether you're writing API documentation, cloud service guides, or user manuals,
+                we provide comprehensive resources to help you excel. Learn from industry experts,
+                explore best practices for AWS, Azure, and GCP, and master the art of clear technical communication.
+              </p>
+              <div className={styles.welcomeHighlights}>
+                <div className={styles.highlight}>
+                  <span className={styles.highlightIcon}>📖</span>
+                  <strong>Documentation Techniques</strong>
+                  <p>Master writing patterns for modern tech</p>
+                </div>
+                <div className={styles.highlight}>
+                  <span className={styles.highlightIcon}>☁️</span>
+                  <strong>Cloud Services</strong>
+                  <p>AWS, Azure, GCP guides & patterns</p>
+                </div>
+                <div className={styles.highlight}>
+                  <span className={styles.highlightIcon}>💡</span>
+                  <strong>Insights & Trends</strong>
+                  <p>Industry expert tips and case studies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="features" className={styles.featuresSection}>
-          <h2 className={styles.sectionTitle}>Why Choose Us?</h2>
+          <h2 className={styles.sectionTitle}>What You'll Learn</h2>
 
           <div className={styles.featuresGrid}>
-            <Link to="/docs/intro" className={styles.cardLink} aria-label="Fast & Lightweight - Docs">
+            <Link to="/docs/intro" className={styles.cardLink} aria-label="Documentation Essentials">
               <div className={styles.card}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.cardIconLarge}>🚀</div>
+                  <div className={styles.cardIconLarge}>📚</div>
                 </div>
                 <div className={styles.cardBody}>
-                  <h3>Fast & Lightweight</h3>
-                  <p>Built with performance in mind — fast builds and instant navigation.</p>
+                  <h3>Documentation Essentials</h3>
+                  <p>Fundamentals of technical writing, clarity, audience analysis, and structure.</p>
                 </div>
                 <div className={styles.cardAccent} />
               </div>
             </Link>
 
-            <Link to="/docs/create-a-document" className={styles.cardLink} aria-label="Easy Documentation - Docs">
+            <Link to="/docs/tutorial-basics/create-a-document" className={styles.cardLink} aria-label="Writing Techniques">
               <div className={styles.card}>
                 <div className={styles.cardHeader}>
                   <div className={styles.cardIconLarge}>✍️</div>
                 </div>
                 <div className={styles.cardBody}>
-                  <h3>Easy Authoring</h3>
-                  <p>Write in Markdown or MDX, version docs, and deploy from Git.</p>
+                  <h3>Writing Techniques</h3>
+                  <p>Professional strategies for writing clear, concise, and user-focused documentation.</p>
                 </div>
                 <div className={styles.cardAccent} />
               </div>
             </Link>
 
-            <Link to="/docs/create-a-page" className={styles.cardLink} aria-label="Customizable UI - Docs">
+            <Link to="/docs/tutorial-basics/create-a-page" className={styles.cardLink} aria-label="Tools & Cloud Services">
               <div className={styles.card}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.cardIconLarge}>🎨</div>
+                  <div className={styles.cardIconLarge}>☁️</div>
                 </div>
                 <div className={styles.cardBody}>
-                  <h3>Beautiful UI</h3>
-                  <p>Modern themes, clean typography, and customizable components.</p>
+                  <h3>Cloud Services & Tools</h3>
+                  <p>AWS, Azure, GCP documentation patterns, cloud architecture, and deployment guides.</p>
                 </div>
                 <div className={styles.cardAccent} />
               </div>
             </Link>
 
-            <Link to="/blog" className={styles.cardLink} aria-label="Community & Plugins">
+            <Link to="/blog" className={styles.cardLink} aria-label="Industry Insights">
               <div className={styles.card}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.cardIconLarge}>🔌</div>
+                  <div className={styles.cardIconLarge}>💡</div>
                 </div>
                 <div className={styles.cardBody}>
-                  <h3>Extensible</h3>
-                  <p>Plugins and integrations to adapt the docs to your workflow.</p>
+                  <h3>Industry Insights</h3>
+                  <p>Expert tips, case studies, and evolving trends in technical documentation.</p>
                 </div>
                 <div className={styles.cardAccent} />
               </div>
@@ -209,6 +243,20 @@ export default function Home() {
         </section>
 
         {/* Testimonials removed to maintain focus on technical writing resources */}
+
+        {/* Feedback Section */}
+        <section className={styles.feedbackSection}>
+          <div className={styles.container}>
+            <div className={styles.feedbackHeader}>
+              <h2>📝 Help Improve Our Resources</h2>
+              <p>Share your feedback to help us create better technical writing guides and tutorials</p>
+            </div>
+            <FeedbackForm />
+          </div>
+        </section>
+
+        {/* Contact Support Section */}
+        <ContactSupport />
       </main>
     </Layout>
   );
