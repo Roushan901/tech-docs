@@ -51,8 +51,11 @@ const config = {
           rehypePlugins: [require('rehype-katex')],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: undefined,
+          showLastUpdateTime: false,
+        },
+        pages: {
+          // Enable feedback on all pages
         },
         blog: {
           showReadingTime: true,
@@ -62,8 +65,7 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: undefined,
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -126,7 +128,7 @@ const config = {
         title: 'Tech Docs',
         logo: {
           alt: 'Tech Docs Logo',
-          src: 'img/logo.svg',
+          src: 'https://img.icons8.com/color/96/documents.png',
         },
         items: [
           {
@@ -135,9 +137,9 @@ const config = {
             position: 'left',
             label: 'Learning',
           },
-          {to: '/blog', label: 'Blog & Insights', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            label: 'Documentation',
+            label: 'Guides',
             position: 'left',
             items: [
               {
@@ -172,11 +174,6 @@ const config = {
               },
             ],
           },
-          {
-            href: 'https://github.com/Roushan901/tech-docs',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       footer: {
@@ -192,19 +189,15 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Connect',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/roushan-g-99242299/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Contact Us',
+                href: 'mailto:contact@techdocs.co.in',
               },
             ],
           },
@@ -215,14 +208,10 @@ const config = {
                 label: 'Blog',
                 to: '/blog',
               },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tech Docs. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Tech Docs. All rights reserved. | By Roushan Gupta`,
       },
       prism: {
         theme: prismThemes.github,

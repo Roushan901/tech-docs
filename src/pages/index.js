@@ -1,13 +1,8 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import FeedbackForm from "@site/src/components/FeedbackForm";
-import ContactSupport from "@site/src/components/ContactSupport";
 import styles from "./index.module.css";
 
-/**
- * Homepage component for Tech Docs
- */
 export default function Home() {
   return (
     <Layout title="Tech Docs" description="Modern documentation site">
@@ -15,27 +10,21 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <div className={styles.kicker}>📖 Welcome to Tech Docs • Documentation • Cloud Services</div>
-              <h1 className={styles.title}>Master Technical Writing & Documentation</h1>
+              <h1 className={styles.title}>TECH DOCS</h1>
               <p className={styles.subtitle}>
-                Learn professional documentation techniques, writing best practices,
-                cloud services integration, and tools to create clear, effective technical content.
-                Explore real-world examples, industry insights, and grow as a technical writer.
+                Your complete learning hub for <strong>software technical writing</strong>. Master 
+                documentation best practices, explore modern tools, and learn 
+                Cloud & DevOps documentation strategies.
               </p>
 
               <div className={styles.buttons}>
                 <Link className={styles.primaryBtn} to="/docs/intro">
-                  Start Learning
+                  START LEARNING
                 </Link>
                 <Link className={styles.secondaryBtn} to="/blog">
-                  Explore Blog & Insights
-                </Link>
-                <Link className={styles.ghostBtn} to="/docs/tutorial-basics/create-a-document">
-                  Documentation Guides
+                  READ BLOG
                 </Link>
               </div>
-
-              {/* trust logos removed to keep focus on writing resources */}
             </div>
 
             <div className={styles.heroVideo}>
@@ -50,213 +39,93 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div className={styles.decorative} aria-hidden="true">
-            <div className={styles.blob1} />
-            <div className={styles.blob2} />
-          </div>
         </div>
       </header>
 
       <main>
-        {/* Welcome Section */}
-        <section className={styles.welcomeSection}>
+        <section className={styles.exploreSection}>
           <div className={styles.container}>
-            <div className={styles.welcomeContent}>
-              <h2>Welcome to Your Documentation Learning Hub</h2>
-              <p>
-                Whether you're writing API documentation, cloud service guides, or user manuals,
-                we provide comprehensive resources to help you excel. Learn from industry experts,
-                explore best practices for AWS, Azure, and GCP, and master the art of clear technical communication.
-              </p>
-              <div className={styles.welcomeHighlights}>
-                <div className={styles.highlight}>
-                  <span className={styles.highlightIcon}>📖</span>
-                  <strong>Documentation Techniques</strong>
-                  <p>Master writing patterns for modern tech</p>
+            <div className={styles.exploreBadge}>EXPLORE RESOURCES</div>
+            <h2 className={styles.exploreTitle}>Start Your Learning Journey</h2>
+            <p className={styles.exploreSubtitle}>
+              Choose your path and dive into comprehensive guides tailored for technical writers
+            </p>
+            
+            <div className={styles.featuresGrid}>
+              <Link to="/docs/intro" className={styles.featureCard}>
+                <div className={styles.cardImageWrapper}>
+                  <img 
+                    src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop" 
+                    alt="Writing Best Practices"
+                  />
                 </div>
-                <div className={styles.highlight}>
-                  <span className={styles.highlightIcon}>☁️</span>
-                  <strong>Cloud Services</strong>
-                  <p>AWS, Azure, GCP guides & patterns</p>
+                <div className={styles.cardContent}>
+                  <h3>Writing Best Practices</h3>
+                  <p>Learn industry-standard techniques for clarity, conciseness, and user-focused documentation.</p>
+                  <span className={styles.cardLink}>Explore Guides →</span>
                 </div>
-                <div className={styles.highlight}>
-                  <span className={styles.highlightIcon}>💡</span>
-                  <strong>Insights & Trends</strong>
-                  <p>Industry expert tips and case studies</p>
+              </Link>
+
+              <Link to="/docs/tutorial-basics/create-a-document" className={styles.featureCard}>
+                <div className={styles.cardImageWrapper}>
+                  <img 
+                    src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" 
+                    alt="Developer Documentation"
+                  />
                 </div>
-              </div>
+                <div className={styles.cardContent}>
+                  <h3>Developer Documentation</h3>
+                  <p>Master API docs, user guides, tutorials, release notes, and troubleshooting guides.</p>
+                  <span className={styles.cardLink}>Learn More →</span>
+                </div>
+              </Link>
+
+              <Link to="/docs/tutorial-basics/create-a-page" className={styles.featureCard}>
+                <div className={styles.cardImageWrapper}>
+                  <img 
+                    src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" 
+                    alt="Documentation Tools"
+                  />
+                </div>
+                <div className={styles.cardContent}>
+                  <h3>Documentation Tools</h3>
+                  <p>Discover Docusaurus, Swagger, MkDocs, GitBook, and other powerful documentation platforms.</p>
+                  <span className={styles.cardLink}>Discover Tools →</span>
+                </div>
+              </Link>
+
+              <Link to="/blog" className={styles.featureCard}>
+                <div className={styles.cardImageWrapper}>
+                  <img 
+                    src="https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif" 
+                    alt="Cloud Computing"
+                  />
+                </div>
+                <div className={styles.cardContent}>
+                  <h3>Cloud Computing</h3>
+                  <p>Learn AWS, Azure, GCP documentation strategies and cloud architecture best practices.</p>
+                  <span className={styles.cardLink}>View Resources →</span>
+                </div>
+              </Link>
+
+              <Link to="/blog" className={styles.featureCard}>
+                <div className={styles.cardImageWrapper}>
+                  <img 
+                    src="https://images.unsplash.com/photo-1667372393086-9d4001d51cf1?w=400&h=300&fit=crop" 
+                    alt="DevOps"
+                  />
+                </div>
+                <div className={styles.cardContent}>
+                  <h3>DevOps</h3>
+                  <p>Master CI/CD pipeline documentation, infrastructure as code guides, and automation workflows.</p>
+                  <span className={styles.cardLink}>Explore Guides →</span>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
 
-        <section id="features" className={styles.featuresSection}>
-          <h2 className={styles.sectionTitle}>What You'll Learn</h2>
 
-          <div className={styles.featuresGrid}>
-            <Link to="/docs/intro" className={styles.cardLink} aria-label="Documentation Essentials">
-              <div className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <div className={styles.cardIconLarge}>📚</div>
-                </div>
-                <div className={styles.cardBody}>
-                  <h3>Documentation Essentials</h3>
-                  <p>Fundamentals of technical writing, clarity, audience analysis, and structure.</p>
-                </div>
-                <div className={styles.cardAccent} />
-              </div>
-            </Link>
-
-            <Link to="/docs/tutorial-basics/create-a-document" className={styles.cardLink} aria-label="Writing Techniques">
-              <div className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <div className={styles.cardIconLarge}>✍️</div>
-                </div>
-                <div className={styles.cardBody}>
-                  <h3>Writing Techniques</h3>
-                  <p>Professional strategies for writing clear, concise, and user-focused documentation.</p>
-                </div>
-                <div className={styles.cardAccent} />
-              </div>
-            </Link>
-
-            <Link to="/docs/tutorial-basics/create-a-page" className={styles.cardLink} aria-label="Tools & Cloud Services">
-              <div className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <div className={styles.cardIconLarge}>☁️</div>
-                </div>
-                <div className={styles.cardBody}>
-                  <h3>Cloud Services & Tools</h3>
-                  <p>AWS, Azure, GCP documentation patterns, cloud architecture, and deployment guides.</p>
-                </div>
-                <div className={styles.cardAccent} />
-              </div>
-            </Link>
-
-            <Link to="/blog" className={styles.cardLink} aria-label="Industry Insights">
-              <div className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <div className={styles.cardIconLarge}>💡</div>
-                </div>
-                <div className={styles.cardBody}>
-                  <h3>Industry Insights</h3>
-                  <p>Expert tips, case studies, and evolving trends in technical documentation.</p>
-                </div>
-                <div className={styles.cardAccent} />
-              </div>
-            </Link>
-          </div>
-        </section>
-
-        {/* Technical Writing Resources Section */}
-        <section className={styles.techWritingSection}>
-          <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Technical Writing Resources</h2>
-            <p className={styles.sectionSubtitle}>Learn best practices, doc types, tools, and cloud services for technical writers</p>
-
-            <div className={styles.techWritingGrid}>
-              <div className={styles.techCard}>
-                <div className={styles.techCardHeader}>
-                  <span className={styles.techIcon}>✍️</span>
-                  <h3>Best Practices</h3>
-                </div>
-                <ul className={styles.techList}>
-                  <li>Clear, concise language</li>
-                  <li>User-focused documentation</li>
-                  <li>Consistency in style & tone</li>
-                  <li>SEO optimization</li>
-                  <li>Accessibility standards</li>
-                </ul>
-              </div>
-
-              <div className={styles.techCard}>
-                <div className={styles.techCardHeader}>
-                  <span className={styles.techIcon}>📚</span>
-                  <h3>Documentation Types</h3>
-                </div>
-                <ul className={styles.techList}>
-                  <li>API Documentation</li>
-                  <li>User Guides & Tutorials</li>
-                  <li>Getting Started Guides</li>
-                  <li>FAQ & Troubleshooting</li>
-                  <li>Release Notes & Changelog</li>
-                </ul>
-              </div>
-
-              <div className={styles.techCard}>
-                <div className={styles.techCardHeader}>
-                  <span className={styles.techIcon}>🛠️</span>
-                  <h3>Writing Tools</h3>
-                </div>
-                <ul className={styles.techList}>
-                  <li>Docusaurus</li>
-                  <li>Read the Docs</li>
-                  <li>Sphinx & MkDocs</li>
-                  <li>GitBook</li>
-                  <li>Swagger/OpenAPI</li>
-                </ul>
-              </div>
-
-              <div className={styles.techCard}>
-                <div className={styles.techCardHeader}>
-                  <span className={styles.techIcon}>☁️</span>
-                  <h3>Cloud Services</h3>
-                </div>
-                <ul className={styles.techList}>
-                  <li>AWS & Azure Documentation</li>
-                  <li>Google Cloud Guides</li>
-                  <li>GitHub Pages Hosting</li>
-                  <li>Netlify & Vercel Deploy</li>
-                  <li>CDN & Distribution</li>
-                </ul>
-              </div>
-
-              <div className={styles.techCard}>
-                <div className={styles.techCardHeader}>
-                  <span className={styles.techIcon}>🎓</span>
-                  <h3>Learning Resources</h3>
-                </div>
-                <ul className={styles.techList}>
-                  <li>Technical writing courses</li>
-                  <li>Industry certifications</li>
-                  <li>Community forums</li>
-                  <li>Best practices guides</li>
-                  <li>Case studies & examples</li>
-                </ul>
-              </div>
-
-              <div className={styles.techCard}>
-                <div className={styles.techCardHeader}>
-                  <span className={styles.techIcon}>🎯</span>
-                  <h3>Doc Strategy</h3>
-                </div>
-                <ul className={styles.techList}>
-                  <li>Information architecture</li>
-                  <li>Content planning</li>
-                  <li>Versioning strategy</li>
-                  <li>Analytics & feedback</li>
-                  <li>Maintenance workflow</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials removed to maintain focus on technical writing resources */}
-
-        {/* Feedback Section */}
-        <section className={styles.feedbackSection}>
-          <div className={styles.container}>
-            <div className={styles.feedbackHeader}>
-              <h2>📝 Help Improve Our Resources</h2>
-              <p>Share your feedback to help us create better technical writing guides and tutorials</p>
-            </div>
-            <FeedbackForm />
-          </div>
-        </section>
-
-        {/* Contact Support Section */}
-        <ContactSupport />
       </main>
     </Layout>
   );
