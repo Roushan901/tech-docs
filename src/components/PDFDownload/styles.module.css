@@ -1,0 +1,51 @@
+.pdfButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff5252 0%, #ff2929 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 82, 82, 0.2);
+  font-family: var(--ifm-font-family-base);
+}
+
+.pdfButton:hover {
+  background: linear-gradient(135deg, #ff7a7a 0%, #ff5252 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+}
+
+.pdfButton:active {
+  transform: translateY(0);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.text {
+  line-height: 1;
+}
+
+/* Print styles */
+@media print {
+  .pdfButton {
+    display: none;
+  }
+}
+
+/* Dark mode support */
+[data-theme='dark'] .pdfButton {
+  background: linear-gradient(135deg, #ff5252 0%, #ff2929 100%);
+}
+
+[data-theme='dark'] .pdfButton:hover {
+  background: linear-gradient(135deg, #ff7a7a 0%, #ff5252 100%);
+}

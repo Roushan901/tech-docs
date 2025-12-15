@@ -37,7 +37,17 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+      es: {
+        label: 'Español',
+        direction: 'ltr',
+      },
+    },
   },
 
   presets: [
@@ -80,56 +90,18 @@ const config = {
 
   themes: [
     '@docusaurus/theme-live-codeblock',
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en"],
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
+      },
+    ],
   ],
 
   plugins: [
-    [
-      require.resolve('@cmfcmf/docusaurus-search-local'),
-      {
-        indexDocs: true,
-        indexBlog: true,
-        indexPages: true,
-        language: "en",
-      },
-    ],
-    [
-      '@docusaurus/plugin-pwa',
-      {
-        debug: false,
-        offlineModeActivationStrategies: [
-          'appInstalled',
-          'standalone',
-          'queryString',
-        ],
-        pwaHead: [
-          {
-            tagName: 'link',
-            rel: 'icon',
-            href: '/img/logo.png',
-          },
-          {
-            tagName: 'link',
-            rel: 'manifest',
-            href: '/manifest.json',
-          },
-          {
-            tagName: 'meta',
-            name: 'theme-color',
-            content: '#10b981',
-          },
-          {
-            tagName: 'meta',
-            name: 'apple-mobile-web-app-capable',
-            content: 'yes',
-          },
-          {
-            tagName: 'meta',
-            name: 'apple-mobile-web-app-status-bar-style',
-            content: '#10b981',
-          },
-        ],
-      },
-    ],
     [
       '@docusaurus/plugin-google-gtag',
       {
@@ -155,7 +127,7 @@ const config = {
         title: 'Tech Docs',
         logo: {
           alt: 'Tech Docs Logo',
-          src: 'https://img.icons8.com/color/96/documents.png',
+          src: 'img/logo.svg',
         },
         items: [
           {
@@ -212,6 +184,21 @@ const config = {
                 to: '/docs/tutorial-extras/manage-docs-versions',
               },
             ],
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+          {
+            label: 'Contact Support',
+            to: 'mailto:contact@techdocs.co.in',
+            position: 'right',
+            className: 'header-contact-link',
           },
         ],
       },
