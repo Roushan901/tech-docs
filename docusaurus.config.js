@@ -86,10 +86,10 @@ const config = {
     [
       require.resolve('@cmfcmf/docusaurus-search-local'),
       {
-        indexDocs: true,    // Index all documentation pages
-        indexBlog: false,   // Disable blog indexing if you don't have a blog
-        indexPages: true,   // Index other pages
-        language: "en",     // Language of your docs
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: true,
+        language: "en",
       },
     ],
     [
@@ -166,16 +166,28 @@ const config = {
             position: 'left',
             items: [
               {
-                label: 'Writing Essentials',
+                label: 'Release Notes',
                 to: '/docs/intro',
               },
               {
-                label: 'Writing Techniques',
+                label: 'User Guides',
                 to: '/docs/tutorial-basics/create-a-document',
               },
               {
-                label: 'Documentation Tools',
+                label: 'Installation Guides',
                 to: '/docs/tutorial-basics/create-a-page',
+              },
+              {
+                label: 'Admin Guides',
+                to: '/docs/tutorial-basics/markdown-features',
+              },
+              {
+                label: 'Integration Guides',
+                to: '/docs/tutorial-basics/deploy-your-site',
+              },
+              {
+                label: 'API References',
+                to: '/docs/tutorial-extras/manage-docs-versions',
               },
             ],
           },
@@ -184,15 +196,15 @@ const config = {
             position: 'left',
             items: [
               {
-                label: 'AWS Documentation',
+                label: 'AWS',
                 to: '/docs/tutorial-basics/markdown-features',
               },
               {
-                label: 'Azure Guides',
+                label: 'Azure',
                 to: '/docs/tutorial-basics/deploy-your-site',
               },
               {
-                label: 'GCP Resources',
+                label: 'GCP',
                 to: '/docs/tutorial-extras/manage-docs-versions',
               },
             ],
