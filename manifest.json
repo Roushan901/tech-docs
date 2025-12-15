@@ -1,11 +1,11 @@
 {
-  "name": "Tech Docs",
+  "name": "Tech Docs - Professional Technical Writing Hub",
   "short_name": "Tech Docs",
-  "description": "Your complete learning hub for software technical writing",
+  "description": "Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#10b981",
+  "theme_color": "#0ea5e9",
   "icons": [
     {
       "src": "/img/logo.png",

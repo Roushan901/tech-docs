@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://techdocs.co.in/blog</id>
-    <title>Tech Docs Blog</title>
+    <title>Tech Docs - Professional Technical Writing Hub Blog</title>
     <updated>2025-12-04T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://techdocs.co.in/blog"/>
-    <subtitle>Tech Docs Blog</subtitle>
+    <subtitle>Tech Docs - Professional Technical Writing Hub Blog</subtitle>
     <icon>https://techdocs.co.in/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[How Great Documentation Helps Businesses and Users Scale Worldwide]]></title>
