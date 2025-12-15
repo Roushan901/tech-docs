@@ -143,27 +143,27 @@ const config = {
             items: [
               {
                 label: 'Release Notes',
-                to: '/docs/intro',
+                to: '/docs/release-notes',
               },
               {
                 label: 'User Guides',
-                to: '/docs/tutorial-basics/create-a-document',
+                to: '/docs/user-guides',
               },
               {
                 label: 'Installation Guides',
-                to: '/docs/tutorial-basics/create-a-page',
+                to: '/docs/installation-guides',
               },
               {
                 label: 'Admin Guides',
-                to: '/docs/tutorial-basics/markdown-features',
+                to: '/docs/admin-guides',
               },
               {
                 label: 'Integration Guides',
-                to: '/docs/tutorial-basics/deploy-your-site',
+                to: '/docs/integration-guides',
               },
               {
                 label: 'API References',
-                to: '/docs/tutorial-extras/manage-docs-versions',
+                to: '/docs/api-references',
               },
             ],
           },
@@ -173,15 +173,15 @@ const config = {
             items: [
               {
                 label: 'AWS',
-                to: '/docs/tutorial-basics/markdown-features',
+                to: '/docs/cloud-devops/aws',
               },
               {
                 label: 'Azure',
-                to: '/docs/tutorial-basics/deploy-your-site',
+                to: '/docs/cloud-devops/azure',
               },
               {
                 label: 'GCP',
-                to: '/docs/tutorial-extras/manage-docs-versions',
+                to: '/docs/cloud-devops/gcp',
               },
             ],
           },

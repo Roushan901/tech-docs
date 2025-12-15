@@ -80,10 +80,10 @@ export default function Home() {
                 Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.
               </p>
               <div className={styles.ctaWrapper}>
-                <Link to="/docs/intro" className={styles.primaryCta}>
+                <Link to="/docs/user-guides" className={styles.primaryCta}>
                   Start Learning
                 </Link>
-                <Link to="/blog" className={styles.secondaryCta}>
+                <Link to="/docs/installation-guides" className={styles.secondaryCta}>
                   Explore Documentation
                 </Link>
               </div>
@@ -158,7 +158,7 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link to="/docs/tutorial-basics/create-a-document" className={styles.featureCard}>
+              <Link to="/docs/user-guides" className={styles.featureCard}>
                 <div className={styles.cardImageWrapper}>
                   <img 
                     src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" 
@@ -172,7 +172,7 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link to="/docs/tutorial-basics/create-a-page" className={styles.featureCard}>
+              <Link to="/docs/installation-guides" className={styles.featureCard}>
                 <div className={styles.cardImageWrapper}>
                   <img 
                     src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" 
@@ -186,7 +186,7 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link to="/blog" className={styles.featureCard}>
+              <Link to="/docs/cloud-devops/aws" className={styles.featureCard}>
                 <div className={styles.cardImageWrapper}>
                   <img 
                     src="https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif" 
@@ -200,7 +200,7 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link to="/blog" className={styles.featureCard}>
+              <Link to="/docs/integration-guides" className={styles.featureCard}>
                 <div className={styles.cardImageWrapper}>
                   <img 
                     src="https://images.unsplash.com/photo-1667372393086-9d4001d51cf1?w=400&h=300&fit=crop" 
@@ -214,7 +214,7 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link to="/docs/intro" className={styles.featureCard}>
+              <Link to="/docs/api-references" className={styles.featureCard}>
                 <div className={styles.cardImageWrapper}>
                   <img 
                     src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=400&h=300&fit=crop" 
@@ -222,7 +222,7 @@ export default function Home() {
                   />
                 </div>
                 <div className={styles.cardContent}>
-                  <h3>Sample</h3>
+                  <h3>API References</h3>
                   <p>Browse professional documentation templates and real-world examples to accelerate your technical writing projects.</p>
                   <span className={styles.cardLink}>Explore →</span>
                 </div>
