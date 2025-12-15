@@ -15,13 +15,78 @@ export default function Home() {
     }
   };
 
+  // Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Tech Docs",
+    "url": "https://techdocs.co.in",
+    "logo": "https://techdocs.co.in/img/logo.png",
+    "description": "Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.",
+    "sameAs": [
+      "https://www.linkedin.com/in/roushan-g-99242299/"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Roushan Gupta",
+      "url": "https://www.linkedin.com/in/roushan-g-99242299/"
+    }
+  };
+
   return (
-    <Layout title="Tech Docs - Professional Technical Writing Hub" description="Master technical writing, API documentation, and modern documentation tools. Trusted by developers worldwide.">
+    <>
+      <Layout 
+        title="Tech Docs - Professional Technical Writing Hub" 
+        description="Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love."
+      >
+        {/* Enhanced SEO Meta Tags */}
+        <head>
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://techdocs.co.in" />
+          <meta property="og:title" content="Tech Docs - Professional Technical Writing Hub" />
+          <meta property="og:description" content="Master technical writing, API documentation, and modern DevOps practices. Learn from real-world examples and professional documentation templates." />
+          <meta property="og:image" content="https://techdocs.co.in/img/logo.png" />
+          <meta property="og:site_name" content="Tech Docs" />
+          
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:url" content="https://techdocs.co.in" />
+          <meta name="twitter:title" content="Tech Docs - Professional Technical Writing Hub" />
+          <meta name="twitter:description" content="Master technical writing, API documentation, and modern DevOps practices. Learn from real-world examples." />
+          <meta name="twitter:image" content="https://techdocs.co.in/img/logo.png" />
+          
+          {/* Additional SEO */}
+          <meta name="keywords" content="technical writing, API documentation, DevOps, documentation tools, Docusaurus, technical writer, developer documentation, cloud computing, AWS, Azure, GCP" />
+          <meta name="author" content="Roushan Gupta" />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://techdocs.co.in" />
+          
+          {/* Mobile Optimization */}
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          
+          {/* Structured Data */}
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        </head>
       <header className={styles.heroBanner}>
         <div className={styles.container}>
           <div className={styles.heroContent}>
             <div className={styles.heroLeft}>
               <h1 className={styles.title}>Tech Docs</h1>
+              <p className={styles.heroDescription}>
+                Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.
+              </p>
+              <div className={styles.ctaWrapper}>
+                <Link to="/docs/intro" className={styles.primaryCta}>
+                  Start Learning
+                </Link>
+                <Link to="/blog" className={styles.secondaryCta}>
+                  Explore Documentation
+                </Link>
+              </div>
               <p className={styles.subtitle}>
                 Search documentation…
               </p>
@@ -49,6 +114,7 @@ export default function Home() {
             </div>
 
             <div className={styles.heroRight}>
+              <h3 className={styles.videoHeading}>Welcome to TechDOCS</h3>
               <div className={styles.heroImageWrapper}>
                 <div className={styles.heroVideo}>
                   <div className={styles.aspectRatio}>
@@ -78,7 +144,7 @@ export default function Home() {
             <h2 className={styles.exploreTitle}>Learn Technical Writing, Documentation, and Cloud & DevOps</h2>
             
             <div className={styles.featuresGrid}>
-              <Link to="/docs/intro" className={styles.featureCard}>
+              <Link to="/blog" className={styles.featureCard}>
                 <div className={styles.cardImageWrapper}>
                   <img 
                     src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop" 
@@ -87,8 +153,8 @@ export default function Home() {
                 </div>
                 <div className={styles.cardContent}>
                   <h3>Blog</h3>
-                  <p>Learn industry-standard techniques for clarity, conciseness, and user-focused documentation.</p>
-                  <span className={styles.cardLink}>Explore Guides →</span>
+                  <p>Learn industry-standard techniques for clarity, conciseness, and user-focused documentation with real-world examples.</p>
+                  <span className={styles.cardLink}>Explore →</span>
                 </div>
               </Link>
 
@@ -101,8 +167,8 @@ export default function Home() {
                 </div>
                 <div className={styles.cardContent}>
                   <h3>Developer Documentation</h3>
-                  <p>Master API docs, user guides, tutorials, release notes, and troubleshooting guides.</p>
-                  <span className={styles.cardLink}>Learn More →</span>
+                  <p>Master API documentation, user guides, and tutorials with practical examples that improve developer experience.</p>
+                  <span className={styles.cardLink}>Explore →</span>
                 </div>
               </Link>
 
@@ -115,8 +181,8 @@ export default function Home() {
                 </div>
                 <div className={styles.cardContent}>
                   <h3>Documentation Tools</h3>
-                  <p>Discover Docusaurus, Swagger, MkDocs, GitBook, and other powerful documentation platforms.</p>
-                  <span className={styles.cardLink}>Discover Tools →</span>
+                  <p>Discover Docusaurus, Swagger, MkDocs, and other platforms to build scalable, maintainable documentation.</p>
+                  <span className={styles.cardLink}>Explore →</span>
                 </div>
               </Link>
 
@@ -129,8 +195,8 @@ export default function Home() {
                 </div>
                 <div className={styles.cardContent}>
                   <h3>Cloud Computing</h3>
-                  <p>Learn AWS, Azure, GCP documentation strategies and cloud architecture best practices.</p>
-                  <span className={styles.cardLink}>View Resources →</span>
+                  <p>Understand AWS, Azure, and GCP documentation with practical cloud architecture patterns and deployment guides.</p>
+                  <span className={styles.cardLink}>Explore →</span>
                 </div>
               </Link>
 
@@ -143,8 +209,8 @@ export default function Home() {
                 </div>
                 <div className={styles.cardContent}>
                   <h3>DevOps</h3>
-                  <p>Master CI/CD pipeline documentation, infrastructure as code guides, and automation workflows.</p>
-                  <span className={styles.cardLink}>Explore Guides →</span>
+                  <p>Learn CI/CD pipeline documentation and infrastructure as code with hands-on automation workflow examples.</p>
+                  <span className={styles.cardLink}>Explore →</span>
                 </div>
               </Link>
 
@@ -157,8 +223,8 @@ export default function Home() {
                 </div>
                 <div className={styles.cardContent}>
                   <h3>Sample</h3>
-                  <p>Explore sample documentation projects and templates to kickstart your technical writing.</p>
-                  <span className={styles.cardLink}>View Samples →</span>
+                  <p>Browse professional documentation templates and real-world examples to accelerate your technical writing projects.</p>
+                  <span className={styles.cardLink}>Explore →</span>
                 </div>
               </Link>
             </div>
@@ -167,6 +233,7 @@ export default function Home() {
 
 
       </main>
-    </Layout>
+      </Layout>
+    </>
   );
 }

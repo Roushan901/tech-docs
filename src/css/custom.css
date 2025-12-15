@@ -145,9 +145,9 @@ a:hover {
 .navbar {
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 500;
-  background: #ee0000 !important;
+  background: #dc2626 !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #c90000;
+  border-bottom: 1px solid #b91c1c;
   height: 64px;
   padding: 0 2rem;
 }
@@ -245,8 +245,8 @@ a:hover {
 
 /* Footer */
 .footer {
-  background: #ee0000 !important;
-  border-top: 1px solid #c90000;
+  background: #dc2626 !important;
+  border-top: 1px solid #b91c1c;
 }
 
 .footer__title,
