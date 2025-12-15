@@ -1,0 +1,14 @@
+# robots.txt for Tech Docs
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://techdocs.co.in/sitemap.xml
+
+# Disallow crawling of search results
+Disallow: /search
+
+# Disallow crawling of build files
+Disallow: /build/

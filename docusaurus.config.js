@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tech Docs',
-  tagline: 'Modern, beautiful product documentation',
+  title: 'Tech Docs - Professional Technical Writing Hub',
+  tagline: 'Master technical writing, API documentation, and modern DevOps practices',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -144,6 +144,10 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      metadata: [
+        {name: 'keywords', content: 'technical writing, API documentation, DevOps, documentation tools, Docusaurus, technical writer, developer documentation, cloud computing'},
+        {name: 'author', content: 'Roushan Gupta'},
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
@@ -158,11 +162,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Learning',
+            label: 'Learn',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            label: 'Guides',
+            label: 'Documentation',
             position: 'left',
             items: [
               {
@@ -192,7 +196,7 @@ const config = {
             ],
           },
           {
-            label: 'Cloud Services',
+            label: 'Cloud & DevOps',
             position: 'left',
             items: [
               {
@@ -213,6 +217,11 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'Tech Docs',
+          src: 'https://img.icons8.com/color/96/documents.png',
+          width: 50,
+        },
         links: [
           {
             title: 'Docs',
@@ -246,7 +255,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Tech Docs. All rights reserved. | By Roushan Gupta`,
+        copyright: `© ${new Date().getFullYear()} Tech Docs - Your comprehensive resource for technical writing, API documentation, and DevOps best practices. <br/> Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer">Roushan Gupta</a>`,
       },
       prism: {
         theme: prismThemes.github,
