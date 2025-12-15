@@ -95,15 +95,38 @@ const config = {
     [
       '@docusaurus/plugin-pwa',
       {
-        debug: true,
+        debug: false,
         offlineModeActivationStrategies: [
           'appInstalled',
           'standalone',
           'queryString',
         ],
         pwaHead: [
-          { tagName: 'link', rel: 'icon', href: '/img/logo.png' },
-          { tagName: 'meta', name: 'theme-color', content: '#ffffff' },
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/logo.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json',
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: '#10b981',
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-capable',
+            content: 'yes',
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-status-bar-style',
+            content: '#10b981',
+          },
         ],
       },
     ],

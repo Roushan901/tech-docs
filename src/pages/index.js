@@ -8,34 +8,67 @@ export default function Home() {
     <Layout title="Tech Docs" description="Modern documentation site">
       <header className={styles.heroBanner}>
         <div className={styles.container}>
-          <div className={styles.heroContent}>
-            <div className={styles.heroText}>
-              <h1 className={styles.title}>TECH DOCS</h1>
-              <p className={styles.subtitle}>
-                Your complete learning hub for <strong>software technical writing</strong>. Master 
-                documentation best practices, explore modern tools, and learn 
-                Cloud & DevOps documentation strategies.
-              </p>
+          <div className={styles.heroWrapper}>
+            <div className={styles.heroContent}>
+              <div className={styles.heroText}>
+                <h1 className={styles.title}>TECH DOCS</h1>
+                <p className={styles.subtitle}>
+                  Your complete learning hub for <strong>software technical writing</strong>. Master 
+                  documentation best practices, explore modern tools, and learn 
+                  Cloud & DevOps documentation strategies.
+                </p>
 
-              <div className={styles.buttons}>
-                <Link className={styles.primaryBtn} to="/docs/intro">
-                  START LEARNING
-                </Link>
-                <Link className={styles.secondaryBtn} to="/blog">
-                  READ BLOG
-                </Link>
+                <div className={styles.buttons}>
+                  <Link className={styles.primaryBtn} to="/docs/intro">
+                    START LEARNING
+                  </Link>
+                  <Link className={styles.secondaryBtn} to="/blog">
+                    READ BLOG
+                  </Link>
+                </div>
+              </div>
+
+              <div className={styles.heroVideo}>
+                <div className={styles.aspectRatio}>
+                  <iframe
+                    src="https://www.youtube.com/embed/yRpLlJmRo2w?rel=0&modestbranding=1"
+                    title="Intro video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </div>
 
-            <div className={styles.heroVideo}>
-              <div className={styles.aspectRatio}>
-                <iframe
-                  src="https://www.youtube.com/embed/yRpLlJmRo2w?rel=0&modestbranding=1"
-                  title="Intro video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
+            <div className={styles.searchWrapper}>
+              <span className={styles.searchIcon}>🔍</span>
+              <h2 className={styles.searchTitle}>Find What You Need</h2>
+              <p className={styles.searchSubtitle}>
+                Search through our comprehensive documentation, guides, and tutorials
+              </p>
+              <div className={styles.searchBoxWrapper}>
+                <input
+                  type="text"
+                  placeholder="Search documentation, guides, tutorials..."
+                  className={styles.searchBox}
+                  onClick={(e) => {
+                    window.location.href = '/search';
+                  }}
+                  readOnly
                 />
+                <button 
+                  className={styles.searchButton}
+                  onClick={() => window.location.href = '/search'}
+                >
+                  Search
+                </button>
+              </div>
+              <div className={styles.searchHints}>
+                <span>Try:</span>
+                <Link to="/docs/intro" className={styles.hint}>API Documentation</Link>
+                <Link to="/blog" className={styles.hint}>Cloud Services</Link>
+                <Link to="/docs/tutorial-basics/markdown-features" className={styles.hint}>Markdown Guide</Link>
               </div>
             </div>
           </div>
@@ -43,6 +76,7 @@ export default function Home() {
       </header>
 
       <main>
+
         <section className={styles.exploreSection}>
           <div className={styles.container}>
             <div className={styles.exploreBadge}>EXPLORE RESOURCES</div>
