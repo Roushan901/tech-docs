@@ -5,70 +5,84 @@ import styles from "./index.module.css";
 
 export default function Home() {
   return (
-    <Layout title="Tech Docs" description="Modern documentation site">
+    <Layout title="Tech Docs - Professional Technical Writing Hub" description="Master technical writing, API documentation, and modern documentation tools. Trusted by developers worldwide.">
       <header className={styles.heroBanner}>
         <div className={styles.container}>
-          <div className={styles.heroWrapper}>
-            <div className={styles.heroContent}>
-              <div className={styles.heroText}>
-                <h1 className={styles.title}>TECH DOCS</h1>
-                <p className={styles.subtitle}>
-                  Your complete learning hub for <strong>software technical writing</strong>. Master 
-                  documentation best practices, explore modern tools, and learn 
-                  Cloud & DevOps documentation strategies.
-                </p>
+          <div className={styles.heroContent}>
+            <div className={styles.heroText}>
+              <div className={styles.badge}>
+                <span className={styles.badgeIcon}>📚</span>
+                <span>Professional Documentation Platform</span>
+              </div>
+              <h1 className={styles.title}>
+                Master Technical <span className={styles.highlightText}>Writing</span> & Documentation
+              </h1>
+              <p className={styles.subtitle}>
+                Your complete learning hub for <strong>software technical writing</strong>. Master 
+                documentation best practices, explore modern tools, and learn 
+                Cloud & DevOps documentation strategies. Trusted by developers worldwide.
+              </p>
 
-                <div className={styles.buttons}>
-                  <Link className={styles.primaryBtn} to="/docs/intro">
-                    START LEARNING
-                  </Link>
-                  <Link className={styles.secondaryBtn} to="/blog">
-                    READ BLOG
-                  </Link>
+              <div className={styles.searchWrapper}>
+                <div className={styles.searchBoxWrapper}>
+                  <svg className={styles.searchIconSvg} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM18 18l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <input
+                    type="text"
+                    placeholder="Search documentation, guides, tutorials..."
+                    className={styles.searchBox}
+                    onClick={(e) => {
+                      window.location.href = '/search';
+                    }}
+                    readOnly
+                    aria-label="Search documentation"
+                  />
+                  <button 
+                    className={styles.searchButton}
+                    onClick={() => window.location.href = '/search'}
+                    aria-label="Search"
+                  >
+                    <span>Search</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M6 8h4m0 0l-2-2m2 2l-2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div className={styles.searchHints}>
+                  <span className={styles.hintsLabel}>Popular searches:</span>
+                  <Link to="/docs/intro" className={styles.hint}>API Docs</Link>
+                  <Link to="/blog" className={styles.hint}>Cloud Guide</Link>
+                  <Link to="/docs/tutorial-basics/markdown-features" className={styles.hint}>Markdown</Link>
                 </div>
               </div>
 
-              <div className={styles.heroVideo}>
-                <div className={styles.aspectRatio}>
-                  <iframe
-                    src="https://www.youtube.com/embed/yRpLlJmRo2w?rel=0&modestbranding=1"
-                    title="Intro video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
+              <div className={styles.ctaButtons}>
+                <Link className={styles.primaryBtn} to="/docs/intro">
+                  <span className={styles.btnText}>Get Started</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 10h6m0 0l-3-3m3 3l-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+                <Link className={styles.secondaryBtn} to="/blog">
+                  <span className={styles.btnText}>Explore Blog</span>
+                </Link>
+              </div>
+              <div className={styles.trustBadge}>
+                <span className={styles.trustIcon}>✓</span>
+                <span className={styles.trustText}>Free • Open Source • Global Community</span>
               </div>
             </div>
 
-            <div className={styles.searchWrapper}>
-              <span className={styles.searchIcon}>🔍</span>
-              <h2 className={styles.searchTitle}>Find What You Need</h2>
-              <p className={styles.searchSubtitle}>
-                Search through our comprehensive documentation, guides, and tutorials
-              </p>
-              <div className={styles.searchBoxWrapper}>
-                <input
-                  type="text"
-                  placeholder="Search documentation, guides, tutorials..."
-                  className={styles.searchBox}
-                  onClick={(e) => {
-                    window.location.href = '/search';
-                  }}
-                  readOnly
+            <div className={styles.heroVideo}>
+              <div className={styles.aspectRatio}>
+                <iframe
+                  src="https://www.youtube.com/embed/yRpLlJmRo2w?rel=0&modestbranding=1"
+                  title="Intro video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                 />
-                <button 
-                  className={styles.searchButton}
-                  onClick={() => window.location.href = '/search'}
-                >
-                  Search
-                </button>
-              </div>
-              <div className={styles.searchHints}>
-                <span>Try:</span>
-                <Link to="/docs/intro" className={styles.hint}>API Documentation</Link>
-                <Link to="/blog" className={styles.hint}>Cloud Services</Link>
-                <Link to="/docs/tutorial-basics/markdown-features" className={styles.hint}>Markdown Guide</Link>
               </div>
             </div>
           </div>

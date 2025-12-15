@@ -132,45 +132,54 @@ a:hover {
 .navbar {
   font-family: var(--ifm-heading-font-family);
   font-weight: 600;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.9) !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .navbar__title {
   color: #0f172a !important;
-  font-weight: 700;
-  font-size: 1.15rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navbar__link {
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: #1e293b !important;
+  color: #334155 !important;
+  transition: all 0.3s ease;
 }
 
 .navbar__link:hover {
-  color: #10b981 !important;
+  color: #0ea5e9 !important;
 }
 
 .navbar__link--active {
-  color: #10b981 !important;
+  color: #0ea5e9 !important;
   font-weight: 700;
 }
 
 /* Navbar Dropdown */
 .dropdown__link {
-  color: #1e293b !important;
+  color: #334155 !important;
   font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .dropdown__link:hover {
-  color: #10b981 !important;
-  background-color: #f0fdf4 !important;
+  color: #0ea5e9 !important;
+  background-color: rgba(14, 165, 233, 0.08) !important;
 }
 
 .dropdown__link--active {
-  color: #10b981 !important;
+  color: #0ea5e9 !important;
   font-weight: 700;
+  background-color: rgba(14, 165, 233, 0.1) !important;
 }
 
 /* Hide Default Navbar Search */
