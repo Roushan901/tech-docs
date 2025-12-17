@@ -27,8 +27,8 @@
   /* Colors - Red Hat Style */
   --ifm-background-color: #ffffff;
   --ifm-background-surface-color: #f5f5f5;
-  --ifm-font-color-base: #151515;
-  --ifm-heading-color: #151515;
+  --ifm-font-color-base: #000000;
+  --ifm-heading-color: #000000;
   --ifm-color-emphasis-300: #d2d2d2;
   --ifm-color-emphasis-600: #6a6e73;
   --ifm-color-emphasis-700: #4d5258;

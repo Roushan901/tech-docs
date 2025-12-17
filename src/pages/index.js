@@ -1,17 +1,77 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import { useHistory } from '@docusaurus/router';
+import { useHistory } from "@docusaurus/router";
 import styles from "./index.module.css";
 
+/**
+ * Enhanced Error Boundary Component
+ * Catches JavaScript errors in its child component tree, logs those errors, and displays a fallback UI.
+ */
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // Log the error to an error reporting service
+    console.error("Error caught by ErrorBoundary:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: "20px", textAlign: "center" }}>
+          <h1>Something went wrong.</h1>
+          <button onClick={() => this.setState({ hasError: false })}>
+            Try Again
+          </button>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+/**
+ * Home component - Entry point for the homepage.
+ * Provides navigation, search functionality, and interactive UI elements.
+ */
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const history = useHistory();
+
+  useEffect(() => {
+    // Cleanup logic to prevent DOM manipulation errors
+    return () => {
+      console.log("Component unmounted, cleaning up resources.");
+    };
+  }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       history.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
+
+  const handleButtonClick = () => {
+    try {
+      console.log("Button clicked successfully.");
+      // Simulate a potential error for debugging
+      if (Math.random() < 0.1) {
+        throw new Error("Simulated error for debugging.");
+      }
+    } catch (error) {
+      console.error("Error during button click:", error);
+      throw error; // Re-throw the error to be caught by ErrorBoundary
     }
   };
 
@@ -34,9 +94,9 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Layout 
-        title="Tech Docs - Professional Technical Writing Hub" 
+    <ErrorBoundary>
+      <Layout
+        title="Tech Docs - Professional Technical Writing Hub"
         description="Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love."
       >
         {/* Enhanced SEO Meta Tags */}
@@ -71,169 +131,238 @@ export default function Home() {
             {JSON.stringify(structuredData)}
           </script>
         </head>
-      <header className={styles.heroBanner}>
-        <div className={styles.container}>
-          <div className={styles.heroContent}>
-            <div className={styles.heroLeft}>
-              <h1 className={styles.title}>Tech Docs</h1>
-              <p className={styles.heroDescription}>
-                Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.
-              </p>
-              <div className={styles.ctaWrapper}>
-                <Link to="/docs/user-guides" className={styles.primaryCta}>
-                  Start Learning
-                </Link>
-                <Link to="/docs/installation-guides" className={styles.secondaryCta}>
-                  Explore Documentation
-                </Link>
+        <header className={styles.heroBanner}>
+          <div
+            className={styles.container}
+            style={{
+              padding: "20px",
+              background: "linear-gradient(to right, #d32f2f, #f44336)",
+              borderRadius: "15px",
+              boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+            }}
+          >
+            <div className={styles.heroContent}>
+              <div className={styles.heroLeft}>
+                <h1
+                  className={styles.title}
+                  style={{
+                    fontSize: "3rem",
+                    fontWeight: "bold",
+                    color: "#ffffff",
+                    textShadow: "2px 2px 4px rgba(255, 255, 255, 0.5)",
+                  }}
+                >
+                  Welcome to Tech Docs
+                </h1>
+                <p
+                  className={styles.heroDescription}
+                  style={{ fontSize: "1.2rem", color: "#f0f0f0", lineHeight: "1.6" }}
+                >
+                  Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.
+                </p>
+                <div className={styles.searchWrapper} style={{ marginTop: "20px", textAlign: "center" }}>
+                  <form onSubmit={handleSearch} className={styles.searchBoxWrapper}>
+                    <input
+                      type="text"
+                      placeholder="Search documentation..."
+                      className={styles.searchBox}
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      aria-label="Search documentation"
+                      style={{
+                        padding: "15px",
+                        borderRadius: "10px",
+                        border: "1px solid #ccc",
+                        width: "85%",
+                        boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1)",
+                        fontSize: "1.2rem",
+                      }}
+                    />
+                    <button
+                      type="submit"
+                      className={styles.searchSubmitBtn}
+                      aria-label="Submit search"
+                      style={{
+                        padding: "15px",
+                        borderRadius: "10px",
+                        backgroundColor: "#d32f2f",
+                        color: "#fff",
+                        border: "none",
+                        marginLeft: "10px",
+                        transition: "background-color 0.3s",
+                        boxShadow: "0 6px 12px rgba(0, 0, 0, 0.2)",
+                        fontSize: "1.2rem",
+                      }}
+                    >
+                      Search
+                    </button>
+                  </form>
+                </div>
               </div>
-              <p className={styles.subtitle}>
-                Search documentation…
-              </p>
-
-              <div className={styles.searchWrapper}>
-                <form onSubmit={handleSearch} className={styles.searchBoxWrapper}>
-                  <svg className={styles.searchIconSvg} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM18 18l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <input
-                    type="text"
-                    placeholder=""
-                    className={styles.searchBox}
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    aria-label="Search documentation"
-                  />
-                  <button type="submit" className={styles.searchSubmitBtn} aria-label="Submit search">
-                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
-                      <path d="M6 8h4m0 0l-2-2m2 2l-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            <div className={styles.heroRight}>
-              <h3 className={styles.videoHeading}>Welcome to TechDOCS</h3>
-              <div className={styles.heroImageWrapper}>
-                <div className={styles.heroVideo}>
-                  <div className={styles.aspectRatio}>
-                    <iframe
-                      width="560"
-                      height="315"
-                      src="https://www.youtube.com/embed/QVxv3q_OVb8"
-                      title="Tech Docs Introduction Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0}}
-                    ></iframe>
-                  </div>
+              <div className={styles.heroRight}>
+                <div
+                  className={styles.heroImageWrapper}
+                  style={{
+                    margin: "0 auto",
+                    border: "1px solid #ccc",
+                    borderRadius: "15px",
+                    overflow: "hidden",
+                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    width: "90%",
+                  }}
+                >
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/QVxv3q_OVb8"
+                    title="Tech Docs Introduction Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <main>
-
-        <section className={styles.exploreSection}>
-          <div className={styles.container}>
-            <h2 className={styles.exploreTitle}>Learn Technical Writing, Documentation, and Cloud & DevOps</h2>
-            
-            <div className={styles.featuresGrid}>
-              <Link to="/blog" className={styles.featureCard}>
-                <div className={styles.cardImageWrapper}>
-                  <img 
-                    src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop" 
-                    alt="Blog"
-                  />
-                </div>
-                <div className={styles.cardContent}>
+        <main style={{ marginTop: "20px" }}>
+          <section className={styles.exploreSection}>
+            <div
+              className={styles.container}
+              style={{
+                padding: "30px",
+                backgroundColor: "#f9f9f9",
+                borderRadius: "15px",
+                boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+              }}
+            >
+              <h2
+                className={styles.exploreTitle}
+                style={{
+                  fontSize: "2rem",
+                  fontWeight: "bold",
+                  color: "#333",
+                  textAlign: "center",
+                  marginBottom: "20px",
+                }}
+              >
+                Learn Technical Writing, Documentation, and Cloud & DevOps
+              </h2>
+              <div className={styles.featuresGrid}>
+                <Link
+                  to="/blog"
+                  className={styles.featureCard}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    borderRadius: "15px",
+                    padding: "20px",
+                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    textDecoration: "none",
+                    color: "#333",
+                    transition: "transform 0.3s",
+                    hover: { transform: "scale(1.05)" },
+                  }}
+                  onClick={handleButtonClick}
+                >
                   <h3>Blog</h3>
                   <p>Learn industry-standard techniques for clarity, conciseness, and user-focused documentation with real-world examples.</p>
-                  <span className={styles.cardLink}>Explore →</span>
-                </div>
-              </Link>
-
-              <Link to="/docs/user-guides" className={styles.featureCard}>
-                <div className={styles.cardImageWrapper}>
-                  <img 
-                    src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" 
-                    alt="Developer Documentation"
-                  />
-                </div>
-                <div className={styles.cardContent}>
+                </Link>
+                <Link
+                  to="/docs/user-guides"
+                  className={styles.featureCard}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    borderRadius: "15px",
+                    padding: "20px",
+                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    textDecoration: "none",
+                    color: "#333",
+                    transition: "transform 0.3s",
+                    hover: { transform: "scale(1.05)" },
+                  }}
+                  onClick={handleButtonClick}
+                >
                   <h3>Developer Documentation</h3>
                   <p>Master API documentation, user guides, and tutorials with practical examples that improve developer experience.</p>
-                  <span className={styles.cardLink}>Explore →</span>
-                </div>
-              </Link>
-
-              <Link to="/docs/installation-guides" className={styles.featureCard}>
-                <div className={styles.cardImageWrapper}>
-                  <img 
-                    src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" 
-                    alt="Documentation Tools"
-                  />
-                </div>
-                <div className={styles.cardContent}>
+                </Link>
+                <Link
+                  to="/docs/installation-guides"
+                  className={styles.featureCard}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    borderRadius: "15px",
+                    padding: "20px",
+                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    textDecoration: "none",
+                    color: "#333",
+                    transition: "transform 0.3s",
+                    hover: { transform: "scale(1.05)" },
+                  }}
+                  onClick={handleButtonClick}
+                >
                   <h3>Documentation Tools</h3>
                   <p>Discover Docusaurus, Swagger, MkDocs, and other platforms to build scalable, maintainable documentation.</p>
-                  <span className={styles.cardLink}>Explore →</span>
-                </div>
-              </Link>
-
-              <Link to="/docs/cloud-devops/aws" className={styles.featureCard}>
-                <div className={styles.cardImageWrapper}>
-                  <img 
-                    src="https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif" 
-                    alt="Cloud Computing"
-                  />
-                </div>
-                <div className={styles.cardContent}>
+                </Link>
+                <Link
+                  to="/docs/cloud-devops/aws"
+                  className={styles.featureCard}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    borderRadius: "15px",
+                    padding: "20px",
+                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    textDecoration: "none",
+                    color: "#333",
+                    transition: "transform 0.3s",
+                    hover: { transform: "scale(1.05)" },
+                  }}
+                  onClick={handleButtonClick}
+                >
                   <h3>Cloud Computing</h3>
                   <p>Understand AWS, Azure, and GCP documentation with practical cloud architecture patterns and deployment guides.</p>
-                  <span className={styles.cardLink}>Explore →</span>
-                </div>
-              </Link>
-
-              <Link to="/docs/integration-guides" className={styles.featureCard}>
-                <div className={styles.cardImageWrapper}>
-                  <img 
-                    src="https://images.unsplash.com/photo-1667372393086-9d4001d51cf1?w=400&h=300&fit=crop" 
-                    alt="DevOps"
-                  />
-                </div>
-                <div className={styles.cardContent}>
+                </Link>
+                <Link
+                  to="/docs/integration-guides"
+                  className={styles.featureCard}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    borderRadius: "15px",
+                    padding: "20px",
+                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    textDecoration: "none",
+                    color: "#333",
+                    transition: "transform 0.3s",
+                    hover: { transform: "scale(1.05)" },
+                  }}
+                  onClick={handleButtonClick}
+                >
                   <h3>DevOps</h3>
                   <p>Learn CI/CD pipeline documentation and infrastructure as code with hands-on automation workflow examples.</p>
-                  <span className={styles.cardLink}>Explore →</span>
-                </div>
-              </Link>
-
-              <Link to="/docs/api-references" className={styles.featureCard}>
-                <div className={styles.cardImageWrapper}>
-                  <img 
-                    src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=400&h=300&fit=crop" 
-                    alt="Sample"
-                  />
-                </div>
-                <div className={styles.cardContent}>
+                </Link>
+                <Link
+                  to="/docs/api-references"
+                  className={styles.featureCard}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    borderRadius: "15px",
+                    padding: "20px",
+                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    textDecoration: "none",
+                    color: "#333",
+                    transition: "transform 0.3s",
+                    hover: { transform: "scale(1.05)" },
+                  }}
+                  onClick={handleButtonClick}
+                >
                   <h3>API References</h3>
                   <p>Browse professional documentation templates and real-world examples to accelerate your technical writing projects.</p>
-                  <span className={styles.cardLink}>Explore →</span>
-                </div>
-              </Link>
+                </Link>
+              </div>
             </div>
-          </div>
-        </section>
-
-
-      </main>
+          </section>
+        </main>
       </Layout>
-    </>
+    </ErrorBoundary>
   );
 }
