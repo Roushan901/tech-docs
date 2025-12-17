@@ -12,30 +12,36 @@ export default function ContactSupport() {
     {
       icon: '📧',
       title: 'Email',
-      value: 'roushan901@example.com',
+      value: 'support@techdocs.com',
       type: 'email',
-      action: () => window.location.href = 'mailto:roushan901@example.com'
+      action: () => {
+        try {
+          window.location.href = 'mailto:support@techdocs.com';
+        } catch (error) {
+          alert('Unable to open email client. Please copy the email address: support@techdocs.com');
+        }
+      }
     },
     {
       icon: '💬',
       title: 'LinkedIn',
       value: 'Connect & Network',
       type: 'linkedin',
-      link: 'https://linkedin.com/in/roushan901'
+      link: 'https://linkedin.com/in/techdocs'
     },
     {
       icon: '🐙',
       title: 'GitHub',
       value: 'Contribute & Collaborate',
       type: 'github',
-      link: 'https://github.com/Roushan901/tech-docs'
+      link: 'https://github.com/TechDocsOrg/tech-docs'
     },
     {
       icon: '💭',
       title: 'Discussions',
       value: 'Share Ideas & Get Help',
       type: 'discussions',
-      link: 'https://github.com/Roushan901/tech-docs/discussions'
+      link: 'https://github.com/TechDocsOrg/tech-docs/discussions'
     }
   ];
 
