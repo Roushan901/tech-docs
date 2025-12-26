@@ -1,3 +1,5 @@
+<!-- Last updated: December 26, 2025, 10:00 AM -->
+
 # Release Notes
 
 Welcome to the Release Notes section of Tech Docs!

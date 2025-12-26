@@ -1,3 +1,5 @@
+<!-- Last updated: December 26, 2025 at 11:45 PM -->
+
 # Admin Guides
 
 Comprehensive administrative guides for managing documentation platforms and user access.

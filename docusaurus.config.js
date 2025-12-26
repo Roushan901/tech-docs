@@ -62,7 +62,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: undefined,
-          showLastUpdateTime: false,
+          showLastUpdateTime: true, // Enable last update time
         },
         pages: {
           // Enable feedback on all pages

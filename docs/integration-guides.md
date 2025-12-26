@@ -1,3 +1,5 @@
+<!-- Last updated: December 26, 2025, 10:00 AM -->
+
 # Integration Guides
 
 Complete guides for integrating various tools and services with your documentation platform.

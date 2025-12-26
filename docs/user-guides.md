@@ -1,3 +1,5 @@
+<!-- Last updated: December 26, 2025, 10:00 AM -->
+
 # User Guides
 
 Comprehensive guides to help you get the most out of Tech Docs and learn technical writing best practices.

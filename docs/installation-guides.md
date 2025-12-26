@@ -1,6 +1,7 @@
+<!-- Last updated: December 26, 2025 at 11:47 PM -->
 # Installation Guides
 
-Complete installation instructions for various documentation tools and platforms.
+Complete installation instructions for various documentation tools and platforms.xsdas
 
 ## Overview
 
