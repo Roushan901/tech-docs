@@ -93,6 +93,50 @@ export default function Home() {
     }
   };
 
+  // Custom Dropdown Component
+  function Dropdown({ label, items }) {
+    return (
+      <div style={{ position: "relative", display: "inline-block" }}>
+        <button
+          style={{
+            backgroundColor: "#d32f2f",
+            color: "white",
+            padding: "10px 20px",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+          }}
+        >
+          {label}
+        </button>
+        <div
+          style={{
+            display: "none",
+            position: "absolute",
+            backgroundColor: "white",
+            boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+            zIndex: 1,
+          }}
+        >
+          {items.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              style={{
+                display: "block",
+                padding: "10px",
+                textDecoration: "none",
+                color: "black",
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <ErrorBoundary>
       <Layout
@@ -160,8 +204,14 @@ export default function Home() {
                 >
                   Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.
                 </p>
-                <div className={styles.searchWrapper} style={{ marginTop: "20px", textAlign: "center" }}>
-                  <form onSubmit={handleSearch} className={styles.searchBoxWrapper}>
+                <div
+                  className={styles.searchWrapper}
+                  style={{ marginTop: "20px", textAlign: "center" }}
+                >
+                  <form
+                    onSubmit={handleSearch}
+                    className={styles.searchBoxWrapper}
+                  >
                     <input
                       type="text"
                       placeholder="Search documentation..."
@@ -204,7 +254,7 @@ export default function Home() {
                   className={styles.heroImageWrapper}
                   style={{
                     margin: "0 auto",
-                    border: "1px solid #ccc",
+                    border: "none",
                     borderRadius: "15px",
                     overflow: "hidden",
                     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
@@ -213,8 +263,8 @@ export default function Home() {
                 >
                   <iframe
                     width="100%"
-                    height="315"
-                    src="https://www.youtube.com/embed/QVxv3q_OVb8"
+                    height="300"
+                    src="https://www.youtube.com/embed/7IFJb-uLEaI"
                     title="Tech Docs Introduction Video"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -337,7 +387,7 @@ export default function Home() {
                   }}
                   onClick={handleButtonClick}
                 >
-                  <h3>DevOps</h3>
+                  <h3>Cloud</h3>
                   <p>Learn CI/CD pipeline documentation and infrastructure as code with hands-on automation workflow examples.</p>
                 </Link>
                 <Link
