@@ -254,7 +254,7 @@ export default function Home() {
                   className={styles.heroImageWrapper}
                   style={{
                     margin: "0 auto",
-                    border: "1px solid #ccc",
+                    border: "none",
                     borderRadius: "15px",
                     overflow: "hidden",
                     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
@@ -263,8 +263,8 @@ export default function Home() {
                 >
                   <iframe
                     width="100%"
-                    height="315"
-                    src="https://www.youtube.com/embed/QVxv3q_OVb8"
+                    height="300"
+                    src="https://www.youtube.com/embed/7IFJb-uLEaI"
                     title="Tech Docs Introduction Video"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
