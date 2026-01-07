@@ -249,6 +249,15 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '3E578B8FE87612D81',
+      },
+    },
+  ],
 };
 
 export default config;
