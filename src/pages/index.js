@@ -237,14 +237,14 @@ export default function Home() {
           </div>
         </header>
 
-        <main style={{ marginTop: "20px" }}>
+        <main style={{ marginTop: "80px" }}>
           <section className={styles.exploreSection}>
             <div
               className={styles.container}
               style={{
-                padding: "48px 32px",
+                padding: "64px 40px",
                 backgroundColor: "#fafafa",
-                borderRadius: "20px",
+                borderRadius: "24px",
                 boxShadow: "0 4px 20px rgba(0, 0, 0, 0.06)",
                 border: "1px solid #e5e7eb",
               }}
@@ -252,11 +252,11 @@ export default function Home() {
               <h2
                 className={styles.exploreTitle}
                 style={{
-                  fontSize: "2.25rem",
+                  fontSize: "2.5rem",
                   fontWeight: "800",
                   color: "#0f172a",
                   textAlign: "center",
-                  marginBottom: "48px",
+                  marginBottom: "60px",
                   letterSpacing: "-0.02em",
                 }}
               >
@@ -268,8 +268,8 @@ export default function Home() {
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "16px",
-                    padding: "28px",
+                    borderRadius: "18px",
+                    padding: "36px",
                     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
@@ -296,8 +296,8 @@ export default function Home() {
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "16px",
-                    padding: "28px",
+                    borderRadius: "18px",
+                    padding: "36px",
                     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
@@ -324,8 +324,8 @@ export default function Home() {
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "16px",
-                    padding: "28px",
+                    borderRadius: "18px",
+                    padding: "36px",
                     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
