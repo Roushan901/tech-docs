@@ -176,122 +176,61 @@ export default function Home() {
           </script>
         </head>
         <header className={styles.heroBanner}>
-          <div
-            className={styles.container}
-            style={{
-              padding: "48px 32px",
-              background: "linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #dc2626 100%)",
-              borderRadius: "20px",
-              boxShadow: "0 20px 40px rgba(220, 38, 38, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1)",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
+          <div className={styles.container}>
             <div className={styles.heroContent}>
+              {/* Left Side - Content */}
               <div className={styles.heroLeft}>
-                <h1
-                  className={styles.title}
-                  style={{
-                    fontSize: "3rem",
-                    fontWeight: "bold",
-                    color: "#ffffff",
-                    textShadow: "2px 2px 4px rgba(255, 255, 255, 0.5)",
-                  }}
-                >
-                  TechDOCS
+                <h1 className={styles.title}>
+                  Tech<span className={styles.highlightText}>DOCS</span>
                 </h1>
-                <p
-                  className={styles.heroDescription}
-                  style={{ fontSize: "1.2rem", color: "#f0f0f0", lineHeight: "1.6" }}
-                >
-                  Professional technical writing resources for developers and technical writers.
+                <p className={styles.heroDescription}>
+                  Professional technical writing resources for developers and technical writers
                 </p>
-                <div
-                  className={styles.searchWrapper}
-                  style={{ marginTop: "20px", textAlign: "center" }}
-                >
-                  <form
-                    onSubmit={handleSearch}
-                    className={styles.searchBoxWrapper}
-                  >
+                
+                <div className={styles.searchWrapper}>
+                  <form onSubmit={handleSearch} className={styles.searchBoxWrapper}>
+                    <svg className={styles.searchIconSvg} width="22" height="22" viewBox="0 0 20 20" fill="none">
+                      <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M13 13l4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
                     <input
                       type="text"
-                      placeholder="Search guides, tutorials, API docs, and more..."
+                      placeholder="Search documentation..."
                       className={styles.searchBox}
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       aria-label="Search documentation"
-                      style={{
-                        padding: "15px 20px",
-                        borderRadius: "12px",
-                        border: "2px solid #e2e8f0",
-                        width: "85%",
-                        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
-                        fontSize: "1.1rem",
-                        transition: "all 0.3s ease",
-                        outline: "none",
-                      }}
-                      onFocus={(e) => {
-                        e.target.style.borderColor = "#0ea5e9";
-                        e.target.style.boxShadow = "0 4px 16px rgba(14, 165, 233, 0.2)";
-                      }}
-                      onBlur={(e) => {
-                        e.target.style.borderColor = "#e2e8f0";
-                        e.target.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
-                      }}
                     />
                     <button
                       type="submit"
                       className={styles.searchSubmitBtn}
                       aria-label="Submit search"
-                      style={{
-                        padding: "15px 32px",
-                        borderRadius: "12px",
-                        background: "linear-gradient(135deg, #dc2626 0%, #991b1b 100%)",
-                        color: "#fff",
-                        border: "none",
-                        marginLeft: "10px",
-                        transition: "all 0.3s ease",
-                        boxShadow: "0 4px 12px rgba(220, 38, 38, 0.3)",
-                        fontSize: "1.1rem",
-                        fontWeight: "600",
-                        cursor: "pointer",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.target.style.transform = "translateY(-2px)";
-                        e.target.style.boxShadow = "0 6px 16px rgba(220, 38, 38, 0.4)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.target.style.transform = "translateY(0)";
-                        e.target.style.boxShadow = "0 4px 12px rgba(220, 38, 38, 0.3)";
-                      }}
                     >
-                      Search
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M19 19l-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </button>
                   </form>
                 </div>
               </div>
+
+              {/* Right Side - Video */}
               <div className={styles.heroRight}>
-                <div
-                  className={styles.heroImageWrapper}
-                  style={{
-                    margin: "0 auto",
-                    border: "none",
-                    borderRadius: "15px",
-                    overflow: "hidden",
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
-                    width: "90%",
-                  }}
-                >
-                  <iframe
-                    width="100%"
-                    height="300"
-                    src="https://www.youtube.com/embed/7IFJb-uLEaI"
-                    title="Tech Docs Introduction Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+                <div className={styles.videoContainer}>
+                  <div className={styles.videoBorderFrame}>
+                    <div className={styles.videoInnerFrame}>
+                      <div className={styles.shineEffect}></div>
+                      <iframe
+                        className={styles.videoIframe}
+                        src="https://www.youtube.com/embed/7IFJb-uLEaI"
+                        title="TechDOCS Introduction"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        loading="lazy"
+                      ></iframe>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -37,17 +37,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es'],
-    localeConfigs: {
-      en: {
-        label: 'English',
-        direction: 'ltr',
-      },
-      es: {
-        label: 'Español',
-        direction: 'ltr',
-      },
-    },
+    locales: ['en'],
   },
 
   presets: [
@@ -193,10 +183,6 @@ const config = {
             dropdownActiveClassDisabled: true,
           },
           {
-            type: 'localeDropdown',
-            position: 'right',
-          },
-          {
             label: 'Contact Support',
             to: 'mailto:contact@techdocs.co.in',
             position: 'right',
@@ -244,7 +230,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} TechDOCS. Your go-to resource for mastering technical writing, API documentation, and modern DevOps practices. Learn, build, and scale with confidence. <br/> Crafted with passion by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: #fecaca; font-weight: 600; text-decoration: underline;">Roushan Gupta</a>`,
+        copyright: `© ${new Date().getFullYear()} TechDOCS. One platform to help you understand, build, and scale technical content—covering technical writing best practices, documentation, cloud technologies, and DevOps.<br/><br/>Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: #fbbf24; font-weight: 600; text-decoration: none;">Roushan Gupta</a>.`,
       },
       prism: {
         theme: prismThemes.github,
