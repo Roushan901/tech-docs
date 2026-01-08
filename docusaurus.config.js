@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Tech Docs - Professional Technical Writing Hub',
   tagline: 'Master technical writing, API documentation, and modern DevOps practices',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -115,19 +115,19 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/techdocs-social-card.svg',
+      image: 'img/docusaurus-social-card.jpg',
       metadata: [
-        {name: 'keywords', content: 'technical writing, API documentation, DevOps, documentation tools, Docusaurus, technical writer, developer documentation, cloud computing'},
+        {name: 'keywords', content: 'technical writing, API documentation, DevOps, documentation tools, technical writer, developer documentation, cloud computing, TechDOCS'},
         {name: 'author', content: 'Roushan Gupta'},
         {property: 'og:title', content: 'TechDOCS - Professional Technical Writing Hub'},
         {property: 'og:description', content: 'Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.'},
-        {property: 'og:image', content: 'https://techdocs.co.in/img/techdocs-social-card.svg'},
+        {property: 'og:image', content: 'https://techdocs.co.in/img/docusaurus-social-card.jpg'},
         {property: 'og:url', content: 'https://techdocs.co.in'},
         {property: 'og:type', content: 'website'},
         {name: 'twitter:card', content: 'summary_large_image'},
         {name: 'twitter:title', content: 'TechDOCS - Professional Technical Writing Hub'},
         {name: 'twitter:description', content: 'Master technical writing, API documentation, and modern DevOps practices'},
-        {name: 'twitter:image', content: 'https://techdocs.co.in/img/techdocs-social-card.svg'},
+        {name: 'twitter:image', content: 'https://techdocs.co.in/img/docusaurus-social-card.jpg'},
       ],
       colorMode: {
         respectPrefersColorScheme: true,

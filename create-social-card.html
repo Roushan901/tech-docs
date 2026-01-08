@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechDOCS Social Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;900&family=Red+Hat+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .social-card {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .social-card::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+        .social-card::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            bottom: -80px;
+            left: -80px;
+        }
+        .content {
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+        }
+        .title {
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 96px;
+            font-weight: 900;
+            color: white;
+            margin: 0 0 20px 0;
+            letter-spacing: -2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .tagline {
+            font-family: 'Red Hat Text', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #fecaca;
+            margin: 0 0 40px 0;
+        }
+        .description {
+            font-family: 'Red Hat Text', sans-serif;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 0 0 60px 0;
+            max-width: 900px;
+        }
+        .domain {
+            font-family: 'Red Hat Text', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: white;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 12px 40px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .instructions {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            max-width: 1200px;
+            font-family: 'Red Hat Text', sans-serif;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #dc2626;
+        }
+        .instructions ol {
+            text-align: left;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="social-card" id="card">
+            <div class="content">
+                <div class="title">TechDOCS</div>
+                <div class="tagline">Professional Technical Writing Hub</div>
+                <div class="description">Master technical writing, API documentation, and DevOps</div>
+                <div class="domain">techdocs.co.in</div>
+            </div>
+        </div>
+        <div class="instructions">
+            <h3>📸 Instructions to Create Social Card</h3>
+            <ol>
+                <li><strong>Windows:</strong> Press <code>Win + Shift + S</code> to open Snipping Tool</li>
+                <li>Select the red card above (exactly 1200x630px area)</li>
+                <li>Save the screenshot as <code>techdocs-social-card.jpg</code></li>
+                <li>Place the file in <code>static/img/</code> folder</li>
+                <li>Or use browser dev tools: Right-click the card → "Capture node screenshot"</li>
+            </ol>
+            <p><strong>Alternative:</strong> Use an online tool like <a href="https://www.screely.com/" target="_blank">Screely</a> or take a full-page screenshot at 1200x630px resolution.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,26 +1,96 @@
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Circle -->
-  <circle cx="100" cy="100" r="95" fill="#151515"/>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="paperGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fafafa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.35"/>
+    </filter>
+    <filter id="innerShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="1" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
   
-  <!-- Document Shape -->
-  <rect x="60" y="50" width="80" height="100" rx="4" fill="#ffffff"/>
+  <!-- Background Circle with gradient -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)"/>
   
-  <!-- Folded Corner -->
-  <path d="M 140 50 L 140 65 L 125 65 Z" fill="#e0e0e0"/>
-  <path d="M 140 50 L 140 65 L 125 65 Z" fill="#151515" opacity="0.1"/>
+  <!-- Subtle accent circles -->
+  <circle cx="140" cy="60" r="30" fill="white" opacity="0.05"/>
+  <circle cx="60" cy="140" r="40" fill="black" opacity="0.05"/>
   
-  <!-- Code Lines -->
-  <rect x="70" y="75" width="50" height="4" rx="2" fill="#ff5252"/>
-  <rect x="70" y="85" width="60" height="4" rx="2" fill="#10b981"/>
-  <rect x="70" y="95" width="45" height="4" rx="2" fill="#3b82f6"/>
-  <rect x="70" y="105" width="55" height="4" rx="2" fill="#ff5252"/>
-  <rect x="70" y="115" width="40" height="4" rx="2" fill="#10b981"/>
-  <rect x="70" y="125" width="50" height="4" rx="2" fill="#3b82f6"/>
+  <!-- Document stack effect (depth) -->
+  <g opacity="0.2">
+    <rect x="58" y="48" width="88" height="108" rx="6" fill="#000"/>
+    <rect x="60" y="50" width="86" height="106" rx="6" fill="#000"/>
+  </g>
   
-  <!-- Tech Symbol - Brackets -->
-  <path d="M 80 130 L 70 140 L 80 150" stroke="#ff5252" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 120 130 L 130 140 L 120 150" stroke="#ff5252" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Main Document with shadow -->
+  <g filter="url(#shadow)">
+    <!-- Document base -->
+    <rect x="62" y="52" width="84" height="104" rx="6" fill="url(#paperGradient)"/>
+    
+    <!-- Document header bar -->
+    <rect x="62" y="52" width="84" height="18" rx="6" fill="#dc2626"/>
+    <rect x="62" y="62" width="84" height="8" fill="#dc2626"/>
+    
+    <!-- Folded corner (enhanced) -->
+    <path d="M 146 52 L 146 70 L 128 70 Z" fill="#e5e7eb"/>
+    <path d="M 146 52 L 146 70 L 128 70 Z" fill="#000" opacity="0.1"/>
+    <line x1="128" y1="70" x2="146" y2="52" stroke="#d1d5db" stroke-width="0.5"/>
+  </g>
   
-  <!-- Forward Slash -->
-  <line x1="105" y1="130" x2="95" y2="150" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  <!-- Document content area -->
+  <g>
+    <!-- Code/Tech brackets decoration -->
+    <text x="72" y="85" font-family="monospace" font-size="12" fill="#dc2626" opacity="0.4">&lt;/&gt;</text>
+    
+    <!-- Document text lines (realistic text) -->
+    <rect x="78" y="85" width="58" height="3.5" rx="1.5" fill="#dc2626" opacity="0.8"/>
+    <rect x="78" y="92" width="54" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
+    <rect x="78" y="98" width="52" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
+    <rect x="78" y="104" width="56" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
+    <rect x="78" y="110" width="50" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
+    
+    <!-- Section divider -->
+    <line x1="75" y1="118" x2="138" y2="118" stroke="#e5e7eb" stroke-width="1"/>
+    
+    <!-- More text lines -->
+    <rect x="78" y="123" width="55" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
+    <rect x="78" y="129" width="48" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
+  </g>
+  
+  <!-- Large stylized T (with better positioning) -->
+  <g>
+    <text x="110" y="146" font-family="'Arial Black', Arial, sans-serif" font-size="42" font-weight="900" fill="#dc2626" text-anchor="middle">T</text>
+    <text x="110" y="146" font-family="'Arial Black', Arial, sans-serif" font-size="42" font-weight="900" fill="url(#shineGradient)" text-anchor="middle">T</text>
+  </g>
+  
+  <!-- Badge with D (enhanced) -->
+  <g filter="url(#shadow)">
+    <circle cx="135" cy="60" r="17" fill="#dc2626"/>
+    <circle cx="135" cy="60" r="17" fill="url(#shineGradient)"/>
+    <circle cx="135" cy="60" r="14" fill="#dc2626"/>
+    <text x="135" y="67.5" font-family="'Arial Black', Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">D</text>
+  </g>
+  
+  <!-- Subtle shine on background circle -->
+  <ellipse cx="100" cy="50" rx="70" ry="35" fill="url(#shineGradient)" opacity="0.3"/>
 </svg>
