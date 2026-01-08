@@ -101,15 +101,16 @@ const config = {
     ],
   ],
 
-  plugins: [
-    [
-      '@docusaurus/plugin-google-gtag',
-      {
-        trackingID: 'G-XXXXXXXXXX',
-        anonymizeIP: true,
-      },
-    ],
-  ],
+  // Uncomment and add your real Google Analytics tracking ID when ready
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-google-gtag',
+  //     {
+  //       trackingID: 'G-XXXXXXXXXX',
+  //       anonymizeIP: true,
+  //     },
+  //   ],
+  // ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -140,8 +141,8 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'writing-best-practices',
             position: 'left',
             label: 'Writing Best Practices',
           },
@@ -179,38 +180,12 @@ const config = {
           {
             label: 'Cloud',
             position: 'left',
-            items: [
-              {
-                label: 'AWS',
-                to: '/docs/cloud-devops/aws',
-              },
-              {
-                label: 'Azure',
-                to: '/docs/cloud-devops/azure',
-              },
-              {
-                label: 'GCP',
-                to: '/docs/cloud-devops/gcp',
-              },
-            ],
+            to: '/docs/cloud-devops',
           },
           {
             label: 'DevOps',
             position: 'left',
-            items: [
-              {
-                label: 'CI/CD',
-                to: '/docs/devops/cicd',
-              },
-              {
-                label: 'Docker & Kubernetes',
-                to: '/docs/devops/containers',
-              },
-              {
-                label: 'Infrastructure as Code',
-                to: '/docs/devops/iac',
-              },
-            ],
+            to: '/docs/devops',
           },
           {
             type: 'docsVersionDropdown',

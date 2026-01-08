@@ -1,0 +1,58 @@
+{
+  "title": {
+    "message": "TechDOCS",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "TechDOCS Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Writing Best Practices": {
+    "message": "Writing Best Practices",
+    "description": "Navbar item with label Writing Best Practices"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Guides": {
+    "message": "Guides",
+    "description": "Navbar item with label Guides"
+  },
+  "item.label.Cloud": {
+    "message": "Cloud",
+    "description": "Navbar item with label Cloud"
+  },
+  "item.label.DevOps": {
+    "message": "DevOps",
+    "description": "Navbar item with label DevOps"
+  },
+  "item.label.Contact Support": {
+    "message": "Contact Support",
+    "description": "Navbar item with label Contact Support"
+  },
+  "item.label.Release Notes": {
+    "message": "Release Notes",
+    "description": "Navbar item with label Release Notes"
+  },
+  "item.label.User Guides": {
+    "message": "User Guides",
+    "description": "Navbar item with label User Guides"
+  },
+  "item.label.Installation Guides": {
+    "message": "Installation Guides",
+    "description": "Navbar item with label Installation Guides"
+  },
+  "item.label.Admin Guides": {
+    "message": "Admin Guides",
+    "description": "Navbar item with label Admin Guides"
+  },
+  "item.label.Integration Guides": {
+    "message": "Integration Guides",
+    "description": "Navbar item with label Integration Guides"
+  },
+  "item.label.API References": {
+    "message": "API References",
+    "description": "Navbar item with label API References"
+  }
+}
