@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Technical Writing Excellence',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Master the art of creating clear, concise, and user-friendly documentation.
+        Learn best practices for technical writing that developers and users love.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'API Documentation',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Build comprehensive API documentation with code examples, authentication guides,
+        and interactive references that make integration seamless.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'DevOps & Cloud',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Explore modern DevOps practices and cloud technologies. Learn AWS, Azure, GCP,
+        and automation tools to streamline your documentation workflow.
       </>
     ),
   },

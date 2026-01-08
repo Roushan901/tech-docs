@@ -20,7 +20,7 @@ const sidebars = {
     'intro',
     {
       type: 'category',
-      label: '📚 Documentation Guides',
+      label: 'Documentation Guides',
       collapsed: false,
       items: [
         'release-notes',
@@ -33,7 +33,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '☁️ Cloud & DevOps',
+      label: 'Cloud & DevOps',
       collapsed: false,
       items: [
         'cloud-devops/aws',
@@ -43,7 +43,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '📖 Tutorial - Basics',
+      label: 'Tutorial - Basics',
       items: [
         'tutorial-basics/create-a-document',
         'tutorial-basics/create-a-blog-post',
@@ -55,7 +55,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🚀 Tutorial - Extras',
+      label: 'Tutorial - Extras',
       items: [
         'tutorial-extras/manage-docs-versions',
         'tutorial-extras/translate-your-site',

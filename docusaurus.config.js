@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tech Docs - Professional Technical Writing Hub',
+  title: 'TechDOCS - Professional Technical Writing Hub',
   tagline: 'Master technical writing, API documentation, and modern DevOps practices',
   favicon: 'img/favicon.svg',
 
@@ -133,9 +133,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Tech Docs',
+        title: 'TechDOCS',
         logo: {
-          alt: 'Tech Docs Logo',
+          alt: 'TechDOCS Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -143,11 +143,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Learn',
+            label: 'Writing Best Practices',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            label: 'Documentation',
+            label: 'Guides',
             position: 'left',
             items: [
               {
@@ -177,7 +177,7 @@ const config = {
             ],
           },
           {
-            label: 'Cloud & DevOps',
+            label: 'Cloud',
             position: 'left',
             items: [
               {
@@ -191,6 +191,24 @@ const config = {
               {
                 label: 'GCP',
                 to: '/docs/cloud-devops/gcp',
+              },
+            ],
+          },
+          {
+            label: 'DevOps',
+            position: 'left',
+            items: [
+              {
+                label: 'CI/CD',
+                to: '/docs/devops/cicd',
+              },
+              {
+                label: 'Docker & Kubernetes',
+                to: '/docs/devops/containers',
+              },
+              {
+                label: 'Infrastructure as Code',
+                to: '/docs/devops/iac',
               },
             ],
           },
@@ -214,9 +232,9 @@ const config = {
       footer: {
         style: 'dark',
         logo: {
-          alt: 'Tech Docs',
-          src: 'https://img.icons8.com/color/96/documents.png',
-          width: 50,
+          alt: 'TechDOCS',
+          src: 'img/logo.svg',
+          width: 60,
         },
         links: [
           {
@@ -251,7 +269,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Tech Docs - Your comprehensive resource for technical writing, API documentation, and DevOps best practices. <br/> Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer">Roushan Gupta</a>`,
+        copyright: `© ${new Date().getFullYear()} TechDOCS. Your go-to resource for mastering technical writing, API documentation, and modern DevOps practices. Learn, build, and scale with confidence. <br/> Crafted with passion by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: #fecaca; font-weight: 600; text-decoration: underline;">Roushan Gupta</a>`,
       },
       prism: {
         theme: prismThemes.github,

@@ -179,10 +179,12 @@ export default function Home() {
           <div
             className={styles.container}
             style={{
-              padding: "20px",
-              background: "linear-gradient(to right, #d32f2f, #f44336)",
-              borderRadius: "15px",
-              boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+              padding: "48px 32px",
+              background: "linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #dc2626 100%)",
+              borderRadius: "20px",
+              boxShadow: "0 20px 40px rgba(220, 38, 38, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1)",
+              position: "relative",
+              overflow: "hidden",
             }}
           >
             <div className={styles.heroContent}>
@@ -196,13 +198,13 @@ export default function Home() {
                     textShadow: "2px 2px 4px rgba(255, 255, 255, 0.5)",
                   }}
                 >
-                  Welcome to Tech Docs
+                  TechDOCS
                 </h1>
                 <p
                   className={styles.heroDescription}
                   style={{ fontSize: "1.2rem", color: "#f0f0f0", lineHeight: "1.6" }}
                 >
-                  Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.
+                  Professional technical writing resources for developers and technical writers.
                 </p>
                 <div
                   className={styles.searchWrapper}
@@ -214,18 +216,28 @@ export default function Home() {
                   >
                     <input
                       type="text"
-                      placeholder="Search documentation..."
+                      placeholder="Search guides, tutorials, API docs, and more..."
                       className={styles.searchBox}
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       aria-label="Search documentation"
                       style={{
-                        padding: "15px",
-                        borderRadius: "10px",
-                        border: "1px solid #ccc",
+                        padding: "15px 20px",
+                        borderRadius: "12px",
+                        border: "2px solid #e2e8f0",
                         width: "85%",
-                        boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1)",
-                        fontSize: "1.2rem",
+                        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
+                        fontSize: "1.1rem",
+                        transition: "all 0.3s ease",
+                        outline: "none",
+                      }}
+                      onFocus={(e) => {
+                        e.target.style.borderColor = "#0ea5e9";
+                        e.target.style.boxShadow = "0 4px 16px rgba(14, 165, 233, 0.2)";
+                      }}
+                      onBlur={(e) => {
+                        e.target.style.borderColor = "#e2e8f0";
+                        e.target.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
                       }}
                     />
                     <button
@@ -233,15 +245,25 @@ export default function Home() {
                       className={styles.searchSubmitBtn}
                       aria-label="Submit search"
                       style={{
-                        padding: "15px",
-                        borderRadius: "10px",
-                        backgroundColor: "#d32f2f",
+                        padding: "15px 32px",
+                        borderRadius: "12px",
+                        background: "linear-gradient(135deg, #dc2626 0%, #991b1b 100%)",
                         color: "#fff",
                         border: "none",
                         marginLeft: "10px",
-                        transition: "background-color 0.3s",
-                        boxShadow: "0 6px 12px rgba(0, 0, 0, 0.2)",
-                        fontSize: "1.2rem",
+                        transition: "all 0.3s ease",
+                        boxShadow: "0 4px 12px rgba(220, 38, 38, 0.3)",
+                        fontSize: "1.1rem",
+                        fontWeight: "600",
+                        cursor: "pointer",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.transform = "translateY(-2px)";
+                        e.target.style.boxShadow = "0 6px 16px rgba(220, 38, 38, 0.4)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.transform = "translateY(0)";
+                        e.target.style.boxShadow = "0 4px 12px rgba(220, 38, 38, 0.3)";
                       }}
                     >
                       Search
@@ -281,23 +303,25 @@ export default function Home() {
             <div
               className={styles.container}
               style={{
-                padding: "30px",
-                backgroundColor: "#f9f9f9",
-                borderRadius: "15px",
-                boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                padding: "48px 32px",
+                backgroundColor: "#fafafa",
+                borderRadius: "20px",
+                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.06)",
+                border: "1px solid #e5e7eb",
               }}
             >
               <h2
                 className={styles.exploreTitle}
                 style={{
-                  fontSize: "2rem",
-                  fontWeight: "bold",
-                  color: "#333",
+                  fontSize: "2.25rem",
+                  fontWeight: "800",
+                  color: "#0f172a",
                   textAlign: "center",
-                  marginBottom: "20px",
+                  marginBottom: "48px",
+                  letterSpacing: "-0.02em",
                 }}
               >
-                Learn Technical Writing, Documentation, and Cloud & DevOps
+                Explore TechDOCS Resources
               </h2>
               <div className={styles.featuresGrid}>
                 <Link
@@ -305,108 +329,168 @@ export default function Home() {
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "15px",
-                    padding: "20px",
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    borderRadius: "16px",
+                    padding: "28px",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
-                    transition: "transform 0.3s",
-                    hover: { transform: "scale(1.05)" },
+                    transition: "all 0.3s ease",
+                    border: "2px solid transparent",
                   }}
                   onClick={handleButtonClick}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.boxShadow = "0 12px 24px rgba(0, 0, 0, 0.12)";
+                    e.currentTarget.style.borderColor = "#0ea5e9";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+                    e.currentTarget.style.borderColor = "transparent";
+                  }}
                 >
-                  <h3>Blog</h3>
-                  <p>Learn industry-standard techniques for clarity, conciseness, and user-focused documentation with real-world examples.</p>
+                  <h3 style={{ marginBottom: "12px", fontSize: "1.4rem", fontWeight: "700", color: "#0f172a" }}>Blog</h3>
+                  <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Latest insights on technical writing trends, documentation tools, and industry best practices from experts.</p>
                 </Link>
                 <Link
                   to="/docs/user-guides"
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "15px",
-                    padding: "20px",
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    borderRadius: "16px",
+                    padding: "28px",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
-                    transition: "transform 0.3s",
-                    hover: { transform: "scale(1.05)" },
+                    transition: "all 0.3s ease",
+                    border: "2px solid transparent",
                   }}
                   onClick={handleButtonClick}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.boxShadow = "0 12px 24px rgba(0, 0, 0, 0.12)";
+                    e.currentTarget.style.borderColor = "#0ea5e9";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+                    e.currentTarget.style.borderColor = "transparent";
+                  }}
                 >
-                  <h3>Developer Documentation</h3>
-                  <p>Master API documentation, user guides, and tutorials with practical examples that improve developer experience.</p>
+                  <h3 style={{ marginBottom: "12px", fontSize: "1.4rem", fontWeight: "700", color: "#0f172a" }}>Technical Guides</h3>
+                  <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Comprehensive guides covering installation, integration, and best practices for technical documentation projects.</p>
                 </Link>
                 <Link
                   to="/docs/installation-guides"
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "15px",
-                    padding: "20px",
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    borderRadius: "16px",
+                    padding: "28px",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
-                    transition: "transform 0.3s",
-                    hover: { transform: "scale(1.05)" },
+                    transition: "all 0.3s ease",
+                    border: "2px solid transparent",
                   }}
                   onClick={handleButtonClick}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.boxShadow = "0 12px 24px rgba(0, 0, 0, 0.12)";
+                    e.currentTarget.style.borderColor = "#0ea5e9";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+                    e.currentTarget.style.borderColor = "transparent";
+                  }}
                 >
-                  <h3>Documentation Tools</h3>
-                  <p>Discover Docusaurus, Swagger, MkDocs, and other platforms to build scalable, maintainable documentation.</p>
+                  <h3 style={{ marginBottom: "12px", fontSize: "1.4rem", fontWeight: "700", color: "#0f172a" }}>Documentation Tools</h3>
+                  <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Explore Docusaurus, Swagger, MkDocs, and modern platforms for building scalable documentation sites.</p>
                 </Link>
                 <Link
                   to="/docs/cloud-devops/aws"
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "15px",
-                    padding: "20px",
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    borderRadius: "16px",
+                    padding: "28px",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
-                    transition: "transform 0.3s",
-                    hover: { transform: "scale(1.05)" },
+                    transition: "all 0.3s ease",
+                    border: "2px solid transparent",
                   }}
                   onClick={handleButtonClick}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.boxShadow = "0 12px 24px rgba(0, 0, 0, 0.12)";
+                    e.currentTarget.style.borderColor = "#0ea5e9";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+                    e.currentTarget.style.borderColor = "transparent";
+                  }}
                 >
-                  <h3>Cloud Computing</h3>
-                  <p>Understand AWS, Azure, and GCP documentation with practical cloud architecture patterns and deployment guides.</p>
+                  <h3 style={{ marginBottom: "12px", fontSize: "1.4rem", fontWeight: "700", color: "#0f172a" }}>Cloud Computing</h3>
+                  <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Deep dive into AWS, Azure, and GCP with architecture patterns, deployment strategies, and cloud-native solutions.</p>
                 </Link>
                 <Link
                   to="/docs/integration-guides"
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "15px",
-                    padding: "20px",
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    borderRadius: "16px",
+                    padding: "28px",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
-                    transition: "transform 0.3s",
-                    hover: { transform: "scale(1.05)" },
+                    transition: "all 0.3s ease",
+                    border: "2px solid transparent",
                   }}
                   onClick={handleButtonClick}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.boxShadow = "0 12px 24px rgba(0, 0, 0, 0.12)";
+                    e.currentTarget.style.borderColor = "#0ea5e9";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+                    e.currentTarget.style.borderColor = "transparent";
+                  }}
                 >
-                  <h3>Cloud</h3>
-                  <p>Learn CI/CD pipeline documentation and infrastructure as code with hands-on automation workflow examples.</p>
+                  <h3 style={{ marginBottom: "12px", fontSize: "1.4rem", fontWeight: "700", color: "#0f172a" }}>DevOps</h3>
+                  <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Master CI/CD pipelines, Docker, Kubernetes, and infrastructure as code with practical automation examples.</p>
                 </Link>
                 <Link
                   to="/docs/api-references"
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
-                    borderRadius: "15px",
-                    padding: "20px",
-                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    borderRadius: "16px",
+                    padding: "28px",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                     textDecoration: "none",
                     color: "#333",
-                    transition: "transform 0.3s",
-                    hover: { transform: "scale(1.05)" },
+                    transition: "all 0.3s ease",
+                    border: "2px solid transparent",
                   }}
                   onClick={handleButtonClick}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.boxShadow = "0 12px 24px rgba(0, 0, 0, 0.12)";
+                    e.currentTarget.style.borderColor = "#0ea5e9";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+                    e.currentTarget.style.borderColor = "transparent";
+                  }}
                 >
-                  <h3>API References</h3>
-                  <p>Browse professional documentation templates and real-world examples to accelerate your technical writing projects.</p>
+                  <h3 style={{ marginBottom: "12px", fontSize: "1.4rem", fontWeight: "700", color: "#0f172a" }}>Writing Best Practices</h3>
+                  <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Learn professional writing techniques, style guides, and standards for creating clear, effective documentation.</p>
                 </Link>
               </div>
             </div>

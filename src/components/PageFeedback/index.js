@@ -119,13 +119,13 @@ export default function PageFeedback() {
           onClick={handleHelpful}
           className={`${styles.feedbackBtn} ${styles.helpfulBtn}`}
         >
-          👍 Yes, helpful
+          Yes, helpful
         </button>
         <button
           onClick={handleNeedsWork}
           className={`${styles.feedbackBtn} ${styles.needsWorkBtn}`}
         >
-          👎 Needs work
+          Needs work
         </button>
       </div>
     </div>
