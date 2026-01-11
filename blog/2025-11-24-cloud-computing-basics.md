@@ -17,6 +17,10 @@ In this first post of my cloud computing basics series, you'll discover:
 
 <!--truncate-->
 
+## Video Overview
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W78WSKJVgq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Challenges Before Cloud Computing
 
 Before we dive into the details of cloud computing, let's first understand the major challenges that businesses faced before it came along. By looking at these core challenges, you'll see why cloud computing is such a game-changer, what real-world problems it solves across the globe, and how it has completely transformed and scaled the IT industry worldwide.

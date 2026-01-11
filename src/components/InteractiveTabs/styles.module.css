@@ -1,0 +1,103 @@
+.tabContainer {
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+}
+
+.tabHeaders {
+  display: flex;
+  gap: 0;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 2px solid var(--ifm-color-emphasis-300);
+  overflow-x: auto;
+}
+
+.tabButton {
+  flex: 0 0 auto;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--ifm-color-emphasis-700);
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tabButton:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.tabButton.activeTab {
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.tabButton.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ifm-color-primary);
+}
+
+.tabIcon {
+  font-size: 1.1rem;
+}
+
+.tabContent {
+  padding: 1.5rem;
+  min-height: 100px;
+}
+
+.tabPanel {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 1rem;
+  background: var(--ifm-code-background);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.codeBlock code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ifm-code-color);
+}
+
+@media (max-width: 768px) {
+  .tabButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .tabContent {
+    padding: 1rem;
+  }
+}

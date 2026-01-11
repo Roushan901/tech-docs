@@ -1,0 +1,234 @@
+.tableContainer {
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+}
+
+.searchBar {
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-color-emphasis-900);
+  transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table thead {
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 2px solid var(--ifm-color-emphasis-300);
+}
+
+.table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-800);
+  white-space: nowrap;
+}
+
+.table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.table th.sortable:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.table th.sorted {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-primary);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.sortIcon {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.table th.sortable:hover .sortIcon {
+  opacity: 1;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table td {
+  padding: 1rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.noResults {
+  text-align: center;
+  padding: 2rem;
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+}
+
+.noData {
+  padding: 2rem;
+  text-align: center;
+  color: var(--ifm-color-emphasis-600);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+  margin: 1.5rem 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  gap: 1rem;
+}
+
+.pageButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pageNumbers {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.resultCount {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.8rem;
+  }
+  
+  .table th, .table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .pageButton {
+    width: 100%;
+  }
+  
+  .pageInfo {
+    order: -1;
+  }
+}
+
+/* Responsive table on very small screens */
+@media (max-width: 480px) {
+  .table thead {
+    display: none;
+  }
+  
+  .table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+  
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  }
+  
+  .table td:last-child {
+    border-bottom: none;
+  }
+  
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--ifm-color-emphasis-700);
+  }
+}

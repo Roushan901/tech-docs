@@ -1,5 +1,5 @@
-/* Import Red Hat Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800;900&family=Red+Hat+Text:wght@400;500;600;700&display=swap');
+/* Import Inter Font - Best Web Font 2024-2026 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /**
  * Enhanced Custom CSS with Modern Typography and Color System
@@ -16,9 +16,9 @@
   --ifm-color-primary-lighter: #ff5252;
   --ifm-color-primary-lightest: #ff7a7a;
   
-  /* Typography - Red Hat Style */
-  --ifm-font-family-base: 'Red Hat Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --ifm-heading-font-family: 'Red Hat Display', 'Red Hat Text', sans-serif;
+  /* Typography - Inter (Best Web Font) */
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --ifm-font-size-base: 16px;
   --ifm-line-height-base: 1.6;
   --ifm-heading-line-height: 1.3;

@@ -1,0 +1,462 @@
+---
+title: Interactive Components Demo
+description: Explore all interactive components available in TechDocs
+hide_table_of_contents: false
+---
+
+# 🎨 Interactive Components Demo
+
+Welcome to the interactive components showcase! This page demonstrates all the reactive components available in TechDocs to make your documentation more engaging and intuitive.
+
+## 🚀 Quick Navigation
+
+Jump to any component:
+- [Interactive Code Editor](#interactive-code-editor)
+- [Interactive Tabs](#interactive-tabs)
+- [Interactive Accordion](#interactive-accordion)
+- [API Simulator](#api-simulator)
+- [Progress Tracker](#progress-tracker)
+
+---
+
+## Interactive Code Editor
+
+The **Interactive Code Editor** allows readers to write, edit, and execute JavaScript code directly in your documentation. Perfect for tutorials and code demonstrations.
+
+### Features
+- ✅ Live code execution
+- ✅ Instant output display
+- ✅ Error handling
+- ✅ Reset functionality
+
+### Demo
+
+import InteractiveCodeEditor from '@site/src/components/InteractiveCodeEditor';
+
+<InteractiveCodeEditor 
+  title="Try JavaScript Here"
+  initialCode={`// Calculate factorial
+function factorial(n) {
+  if (n <= 1) return 1;
+  return n * factorial(n - 1);
+}
+
+console.log('5! =', factorial(5));
+console.log('10! =', factorial(10));
+
+// Array operations
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+console.log('Doubled:', doubled);`}
+/>
+
+### How to Use
+
+```jsx
+import InteractiveCodeEditor from '@site/src/components/InteractiveCodeEditor';
+
+<InteractiveCodeEditor 
+  title="My Code Example"
+  initialCode="console.log('Hello, World!');"
+/>
+```
+
+---
+
+## Interactive Tabs
+
+The **Interactive Tabs** component lets you organize multiple related pieces of content in a clean, tabbed interface. Perfect for showing code examples in different languages or comparing different approaches.
+
+### Features
+- ✅ Smooth transitions
+- ✅ Keyboard accessible
+- ✅ Icon support
+- ✅ Responsive design
+
+### Demo
+
+import InteractiveTabs, { CodeTabs } from '@site/src/components/InteractiveTabs';
+
+<CodeTabs 
+  examples={[
+    {
+      label: 'JavaScript',
+      icon: '🟨',
+      code: `// JavaScript Example
+fetch('/api/users')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));`
+    },
+    {
+      label: 'Python',
+      icon: '🐍',
+      code: `# Python Example
+import requests
+
+response = requests.get('/api/users')
+data = response.json()
+print(data)`
+    },
+    {
+      label: 'cURL',
+      icon: '🔄',
+      code: `# cURL Example
+curl -X GET \\
+  'https://api.example.com/users' \\
+  -H 'Accept: application/json'`
+    }
+  ]}
+/>
+
+### Custom Content Tabs
+
+<InteractiveTabs 
+  tabs={[
+    {
+      label: 'Overview',
+      icon: '📚',
+      content: <div>
+        <h4>What are Interactive Tabs?</h4>
+        <p>Interactive tabs help organize related content in a space-efficient manner. Users can switch between different views without leaving the page.</p>
+        <ul>
+          <li>Easy navigation</li>
+          <li>Reduced scrolling</li>
+          <li>Better UX</li>
+        </ul>
+      </div>
+    },
+    {
+      label: 'Usage',
+      icon: '💡',
+      content: <div>
+        <h4>When to Use Tabs</h4>
+        <p>Consider using tabs when you have:</p>
+        <ul>
+          <li>Multiple code examples in different languages</li>
+          <li>Different installation methods</li>
+          <li>Step-by-step instructions for different platforms</li>
+          <li>Related content that doesn't need to be visible simultaneously</li>
+        </ul>
+      </div>
+    },
+    {
+      label: 'Best Practices',
+      icon: '✨',
+      content: <div>
+        <h4>Tab Best Practices</h4>
+        <ul>
+          <li>Keep tab labels short and descriptive</li>
+          <li>Limit to 3-5 tabs for optimal UX</li>
+          <li>Use icons to make tabs more scannable</li>
+          <li>Ensure content in each tab is self-contained</li>
+        </ul>
+      </div>
+    }
+  ]}
+/>
+
+### How to Use
+
+```jsx
+import InteractiveTabs, { CodeTabs } from '@site/src/components/InteractiveTabs';
+
+// For code examples
+<CodeTabs 
+  examples={[
+    { label: 'JavaScript', code: '...' },
+    { label: 'Python', code: '...' }
+  ]}
+/>
+
+// For custom content
+<InteractiveTabs 
+  tabs={[
+    { label: 'Tab 1', content: <div>Content here</div> },
+    { label: 'Tab 2', content: <div>More content</div> }
+  ]}
+/>
+```
+
+---
+
+## Interactive Accordion
+
+The **Interactive Accordion** component creates collapsible sections perfect for FAQs, documentation sections, and detailed explanations that users can expand on demand.
+
+### Features
+- ✅ Smooth animations
+- ✅ Single or multiple expansion
+- ✅ Icon support
+- ✅ Accessible
+
+### Demo
+
+import InteractiveAccordion, { FAQAccordion } from '@site/src/components/InteractiveAccordion';
+
+<InteractiveAccordion 
+  allowMultiple={true}
+  defaultExpanded={[0]}
+  items={[
+    {
+      icon: '🚀',
+      title: 'Getting Started',
+      content: <div>
+        <p>To get started with interactive components, simply import them into your MDX files:</p>
+        <code>import ComponentName from '@site/src/components/ComponentName';</code>
+        <p>Then use them like any other React component in your markdown content.</p>
+      </div>
+    },
+    {
+      icon: '🎨',
+      title: 'Customization',
+      content: <div>
+        <p>All components support customization through props. You can:</p>
+        <ul>
+          <li>Change colors via CSS variables</li>
+          <li>Add custom icons</li>
+          <li>Modify layouts</li>
+          <li>Override default styles</li>
+        </ul>
+      </div>
+    },
+    {
+      icon: '📱',
+      title: 'Responsive Design',
+      content: <div>
+        <p>All components are fully responsive and work great on:</p>
+        <ul>
+          <li>Desktop computers</li>
+          <li>Tablets</li>
+          <li>Mobile phones</li>
+        </ul>
+        <p>The layouts automatically adjust to provide the best experience on any screen size.</p>
+      </div>
+    },
+    {
+      icon: '♿',
+      title: 'Accessibility',
+      content: <div>
+        <p>We take accessibility seriously. All components include:</p>
+        <ul>
+          <li>Proper ARIA labels</li>
+          <li>Keyboard navigation support</li>
+          <li>Screen reader compatibility</li>
+          <li>Focus management</li>
+        </ul>
+      </div>
+    }
+  ]}
+/>
+
+### FAQ Example
+
+<FAQAccordion 
+  faqs={[
+    {
+      question: 'Can I use these components in my documentation?',
+      answer: 'Yes! All components are ready to use in any MDX file. Simply import them and start using.'
+    },
+    {
+      question: 'Are these components mobile-friendly?',
+      answer: 'Absolutely! All components are fully responsive and work great on mobile devices, tablets, and desktops.'
+    },
+    {
+      question: 'Can I customize the styling?',
+      answer: 'Yes, you can customize the appearance using CSS variables or by overriding the component styles.'
+    },
+    {
+      question: 'Do these work with dark mode?',
+      answer: 'Yes! All components automatically adapt to your site\'s dark mode settings using CSS variables.'
+    }
+  ]}
+/>
+
+### How to Use
+
+```jsx
+import InteractiveAccordion, { FAQAccordion } from '@site/src/components/InteractiveAccordion';
+
+// Regular accordion
+<InteractiveAccordion 
+  allowMultiple={true}
+  items={[
+    { title: 'Section 1', content: <div>Content</div> },
+    { title: 'Section 2', content: <div>Content</div> }
+  ]}
+/>
+
+// FAQ accordion
+<FAQAccordion 
+  faqs={[
+    { question: 'Question?', answer: 'Answer here' }
+  ]}
+/>
+```
+
+---
+
+## API Simulator
+
+The **API Simulator** provides an interactive way to demonstrate API endpoints, allowing users to modify parameters and see mock responses in real-time.
+
+### Features
+- ✅ Multiple HTTP methods
+- ✅ Query parameters
+- ✅ Request body editing
+- ✅ Mock response simulation
+- ✅ Response time tracking
+
+### Demo
+
+import APISimulator from '@site/src/components/APISimulator';
+
+<APISimulator 
+  endpoint="https://api.techdocs.co.in/v1/users"
+  method="GET"
+  description="Fetch user data from the API"
+  initialParams={{
+    "page": "1",
+    "limit": "10"
+  }}
+/>
+
+### POST Request Example
+
+<APISimulator 
+  endpoint="https://api.techdocs.co.in/v1/users"
+  method="POST"
+  description="Create a new user"
+  initialParams={{}}
+  initialBody={`{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "role": "developer"
+}`}
+/>
+
+### How to Use
+
+```jsx
+import APISimulator from '@site/src/components/APISimulator';
+
+<APISimulator 
+  endpoint="/api/endpoint"
+  method="GET"
+  description="API description"
+  initialParams={{"key": "value"}}
+  initialBody='{"data": "value"}'
+/>
+```
+
+---
+
+## Progress Tracker
+
+The **Progress Tracker** component helps users track their progress through tutorials, learning paths, or multi-step guides. It's perfect for educational content.
+
+### Features
+- ✅ Visual progress bar
+- ✅ Click to mark steps complete
+- ✅ Duration indicators
+- ✅ Completion celebration
+
+### Demo
+
+import ProgressTracker from '@site/src/components/ProgressTracker';
+
+<ProgressTracker 
+  title="Learn TechDocs Components"
+  steps={[
+    {
+      title: 'Setup Your Environment',
+      description: 'Install Node.js and Docusaurus to get started with building documentation.',
+      duration: '10 mins'
+    },
+    {
+      title: 'Learn Interactive Code Editor',
+      description: 'Understand how to add live code execution to your docs.',
+      duration: '15 mins'
+    },
+    {
+      title: 'Master Interactive Tabs',
+      description: 'Create multi-language code examples and tabbed content.',
+      duration: '10 mins'
+    },
+    {
+      title: 'Use Accordion Components',
+      description: 'Build collapsible FAQs and detailed sections.',
+      duration: '12 mins'
+    },
+    {
+      title: 'Implement API Simulator',
+      description: 'Add interactive API documentation to your site.',
+      duration: '20 mins'
+    },
+    {
+      title: 'Track Progress',
+      description: 'Help users track their learning journey with progress trackers.',
+      duration: '8 mins'
+    }
+  ]}
+/>
+
+### How to Use
+
+```jsx
+import ProgressTracker from '@site/src/components/ProgressTracker';
+
+<ProgressTracker 
+  title="Tutorial Progress"
+  steps={[
+    {
+      title: 'Step 1',
+      description: 'Description here',
+      duration: '5 mins'
+    },
+    {
+      title: 'Step 2',
+      description: 'Description here',
+      duration: '10 mins'
+    }
+  ]}
+/>
+```
+
+---
+
+## 🎯 Best Practices
+
+When using interactive components in your documentation:
+
+1. **Use Sparingly** - Don't overload pages with too many interactive elements
+2. **Provide Context** - Always explain what the component does before showing it
+3. **Set Good Defaults** - Pre-fill with meaningful examples
+4. **Mobile First** - Test on mobile devices to ensure good UX
+5. **Accessibility** - Ensure keyboard navigation works properly
+
+## 💡 Tips for Success
+
+- **Code Editor**: Great for tutorials and coding exercises
+- **Tabs**: Perfect for multi-language code examples
+- **Accordion**: Ideal for FAQs and optional detailed information
+- **API Simulator**: Excellent for API documentation and testing
+- **Progress Tracker**: Essential for tutorials and learning paths
+
+## 🚀 Next Steps
+
+Ready to start using these components? 
+
+1. Copy the component import statement
+2. Paste it at the top of your MDX file
+3. Add the component with your custom props
+4. Preview your documentation
+
+Need help? Check out our [documentation guide](/docs/writing-best-practices) or [contact support](mailto:contact@techdocs.co.in).
+
+---
+
+<div style={{textAlign: 'center', padding: '2rem', background: 'var(--ifm-color-emphasis-100)', borderRadius: '8px', marginTop: '2rem'}}>
+  <h3>🎉 Start Building Interactive Docs Today!</h3>
+  <p>These components are ready to use in all your documentation pages.</p>
+</div>

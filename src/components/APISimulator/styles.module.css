@@ -1,0 +1,197 @@
+.simulatorContainer {
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.simulatorHeader {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.simulatorHeader h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.description {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.requestSection {
+  padding: 1.5rem;
+}
+
+.requestLine {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.methodSelect {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.methodSelect.get {
+  color: #10b981;
+  border-color: #10b981;
+}
+
+.methodSelect.post {
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.methodSelect.put, .methodSelect.patch {
+  color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.methodSelect.delete {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.endpointInput {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.paramsSection, .bodySection {
+  margin-bottom: 1rem;
+}
+
+.sectionLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.jsonTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  background: var(--ifm-code-background);
+  color: var(--ifm-code-color);
+  resize: vertical;
+}
+
+.jsonTextarea:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.sendButton, .clearButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sendButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex: 1;
+}
+
+.sendButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.sendButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.clearButton {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.clearButton:hover {
+  background: var(--ifm-color-emphasis-300);
+}
+
+.responseSection {
+  border-top: 2px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-code-background);
+}
+
+.responseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.responseTime {
+  font-size: 0.875rem;
+  color: var(--ifm-color-success);
+  font-weight: 600;
+}
+
+.responseBody {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ifm-code-color);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .requestLine {
+    flex-direction: column;
+  }
+  
+  .methodSelect {
+    width: 100%;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .sendButton, .clearButton {
+    width: 100%;
+  }
+}

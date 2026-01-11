@@ -222,7 +222,7 @@ export default function Home() {
                       <div className={styles.shineEffect}></div>
                       <iframe
                         className={styles.videoIframe}
-                        src="https://www.youtube.com/embed/7IFJb-uLEaI"
+                        src="https://www.youtube.com/embed/-aCKsD70V2E?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1&autoplay=0&mute=0&loop=0&vq=hd1080"
                         title="TechDOCS Introduction"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

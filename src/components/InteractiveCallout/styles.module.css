@@ -1,0 +1,217 @@
+.callout {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+  background: var(--ifm-background-surface-color);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.calloutHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.calloutIcon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.calloutTitle {
+  font-weight: 600;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.dismissButton {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  opacity: 0.5;
+}
+
+.dismissButton:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.calloutContent {
+  padding-left: 2.25rem;
+}
+
+.calloutContent p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.calloutContent p:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.calloutContent ul, .calloutContent ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.calloutContent code {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.875em;
+}
+
+/* Type-specific styles */
+.callout.info {
+  border-left-color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.1);
+}
+
+.callout.info .calloutTitle {
+  color: #0369a1;
+}
+
+.callout.success {
+  border-left-color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.callout.success .calloutTitle {
+  color: #047857;
+}
+
+.callout.warning {
+  border-left-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.callout.warning .calloutTitle {
+  color: #d97706;
+}
+
+.callout.danger {
+  border-left-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.callout.danger .calloutTitle {
+  color: #dc2626;
+}
+
+.callout.tip {
+  border-left-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.callout.tip .calloutTitle {
+  color: #7c3aed;
+}
+
+.callout.note {
+  border-left-color: #6b7280;
+  background: rgba(107, 114, 128, 0.1);
+}
+
+.callout.note .calloutTitle {
+  color: #4b5563;
+}
+
+/* Showcase container */
+.showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .callout {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .callout.info {
+  background: rgba(14, 165, 233, 0.15);
+}
+
+[data-theme='dark'] .callout.info .calloutTitle {
+  color: #38bdf8;
+}
+
+[data-theme='dark'] .callout.success {
+  background: rgba(16, 185, 129, 0.15);
+}
+
+[data-theme='dark'] .callout.success .calloutTitle {
+  color: #34d399;
+}
+
+[data-theme='dark'] .callout.warning {
+  background: rgba(245, 158, 11, 0.15);
+}
+
+[data-theme='dark'] .callout.warning .calloutTitle {
+  color: #fbbf24;
+}
+
+[data-theme='dark'] .callout.danger {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+[data-theme='dark'] .callout.danger .calloutTitle {
+  color: #f87171;
+}
+
+[data-theme='dark'] .callout.tip {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+[data-theme='dark'] .callout.tip .calloutTitle {
+  color: #a78bfa;
+}
+
+[data-theme='dark'] .callout.note {
+  background: rgba(107, 114, 128, 0.15);
+}
+
+[data-theme='dark'] .callout.note .calloutTitle {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .callout {
+    padding: 0.875rem;
+  }
+  
+  .calloutIcon {
+    font-size: 1.25rem;
+  }
+  
+  .calloutTitle {
+    font-size: 0.9rem;
+  }
+  
+  .calloutContent {
+    padding-left: 2rem;
+  }
+}
