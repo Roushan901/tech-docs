@@ -843,7 +843,6 @@ import Component from '@site/src/components/Component';
 
 - [All Interactive Components Demo](/docs/all-interactive-components)
 - [Quick Start Components Guide](/docs/quick-start-components)
-- [Component README](/src/components/README.md)
 - [Docusaurus Markdown Guide](https://docusaurus.io/docs/markdown-features)
 
 ---

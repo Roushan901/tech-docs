@@ -16,7 +16,6 @@
 
 ### Component Documentation
 - **[Original 5 Components](/docs/interactive-components)** - First components created
-- **[Component Source README](/src/components/README.md)** - Technical documentation
 
 ---
 
@@ -245,7 +244,6 @@ docs/
 **...use components** → [All Interactive Components](/docs/all-interactive-components)  
 **...start quickly** → [Quick Start Guide](/docs/quick-start-components)  
 **...see examples** → [Markdown Features](/docs/tutorial-basics/markdown-features)  
-**...technical docs** → [Component README](/src/components/README.md)  
 
 ### "I need..."
 
