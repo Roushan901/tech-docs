@@ -150,3 +150,69 @@ export const Highlight = ({children, color}) => (
 This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
 
 This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+
+## Interactive Components
+
+TechDocs includes several interactive components to make your documentation more engaging:
+
+import InteractiveCodeEditor from '@site/src/components/InteractiveCodeEditor';
+import InteractiveTabs, { CodeTabs } from '@site/src/components/InteractiveTabs';
+
+### Live Code Editor
+
+Try editing and running this JavaScript code:
+
+<InteractiveCodeEditor 
+  title="JavaScript Playground"
+  initialCode={`// Try editing this code
+const greeting = "Hello, TechDocs!";
+console.log(greeting);
+
+// Calculate sum
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((a, b) => a + b, 0);
+console.log('Sum:', sum);`}
+/>
+
+### Multi-Language Code Examples
+
+<CodeTabs 
+  examples={[
+    {
+      label: 'JavaScript',
+      icon: '🟨',
+      code: `const sayHello = (name) => {
+  return \`Hello, \${name}!\`;
+};
+
+console.log(sayHello('World'));`
+    },
+    {
+      label: 'Python',
+      icon: '🐍',
+      code: `def say_hello(name):
+    return f"Hello, {name}!"
+
+print(say_hello('World'))`
+    },
+    {
+      label: 'Java',
+      icon: '☕',
+      code: `public class Hello {
+    public static String sayHello(String name) {
+        return "Hello, " + name + "!";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(sayHello("World"));
+    }
+}`
+    }
+  ]}
+/>
+
+:::tip Check Out More
+
+Explore all interactive components in our [Interactive Components Demo](/docs/interactive-components) page!
+
+:::

@@ -1,0 +1,123 @@
+.accordion {
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+  transition: background 0.2s ease;
+}
+
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+.accordionItem.expanded {
+  background: var(--ifm-color-emphasis-50);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.2s ease;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.accordionHeader:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.accordionItem.expanded .accordionHeader {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.accordionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.itemIcon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevron {
+  display: inline-block;
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.chevronExpanded {
+  transform: rotate(-180deg);
+}
+
+.accordionContent {
+  overflow: hidden;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+.accordionBody {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: var(--ifm-color-emphasis-800);
+  line-height: 1.6;
+}
+
+.accordionBody p {
+  margin: 0 0 0.75rem 0;
+}
+
+.accordionBody p:last-child {
+  margin-bottom: 0;
+}
+
+.accordionBody ul, .accordionBody ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.accordionBody code {
+  background: var(--ifm-code-background);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.875em;
+}
+
+@media (max-width: 768px) {
+  .accordionHeader {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .accordionBody {
+    padding: 0 1rem 1rem 1rem;
+  }
+}

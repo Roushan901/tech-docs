@@ -1,0 +1,159 @@
+.terminalContainer {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #323232;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.terminalButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+}
+
+.terminalButton {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+.terminalTitle {
+  flex: 1;
+  text-align: center;
+  color: #a0a0a0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.terminalSpacer {
+  flex: 0 0 auto;
+  width: 60px;
+}
+
+.terminalBody {
+  padding: 1rem;
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  cursor: text;
+}
+
+.terminalBody::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminalBody::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.terminalBody::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 4px;
+}
+
+.terminalBody::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}
+
+.terminalLine {
+  margin-bottom: 0.5rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminalLine.system {
+  color: #4ec9b0;
+}
+
+.terminalLine.command {
+  color: #d4d4d4;
+}
+
+.terminalLine.output {
+  color: #ce9178;
+  padding-left: 1rem;
+}
+
+.terminalLine.error {
+  color: #f48771;
+  padding-left: 1rem;
+}
+
+.terminalInputLine {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terminalPrompt {
+  color: #4ec9b0;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.terminalInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #d4d4d4;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  caret-color: #4ec9b0;
+}
+
+.terminalInput::selection {
+  background: #264f78;
+}
+
+.terminalFooter {
+  padding: 0.5rem 1rem;
+  background: #252526;
+  border-top: 1px solid #1a1a1a;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: #858585;
+  font-style: italic;
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.terminalInput:focus::after {
+  content: '▋';
+  animation: blink 1s infinite;
+  color: #4ec9b0;
+}
+
+@media (max-width: 768px) {
+  .terminalBody {
+    min-height: 250px;
+    max-height: 400px;
+    font-size: 0.8rem;
+  }
+  
+  .hint {
+    font-size: 0.7rem;
+  }
+}

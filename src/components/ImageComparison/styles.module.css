@@ -1,0 +1,142 @@
+.comparisonContainer {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: ew-resize;
+  aspect-ratio: 16 / 9;
+  background: var(--ifm-color-emphasis-200);
+}
+
+.afterImage, .beforeImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.afterImage img, .beforeImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.beforeImage {
+  clip-path: inset(0 50% 0 0);
+}
+
+.imageLabel {
+  position: absolute;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.afterImage .imageLabel {
+  right: 1rem;
+}
+
+.beforeImage .imageLabel {
+  left: 1rem;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: white;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sliderButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.slider:hover .sliderButton,
+.slider:active .sliderButton {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.sliderArrow {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #666;
+  line-height: 1;
+}
+
+.sliderLine {
+  width: 2px;
+  height: 100%;
+  background: white;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.error {
+  padding: 1rem;
+  background: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger);
+  border-radius: 4px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .imageLabel {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .sliderButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .sliderArrow {
+    font-size: 1rem;
+  }
+}
+
+/* Smooth dragging */
+.comparisonContainer * {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

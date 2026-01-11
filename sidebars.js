@@ -18,9 +18,10 @@ const sidebars = {
   // Main sidebar with organized documentation structure
   tutorialSidebar: [
     'intro',
+    'quick-reference-index',
     {
       type: 'category',
-      label: 'Documentation Guides',
+      label: '📚 Documentation Guides',
       collapsed: false,
       items: [
         'release-notes',
@@ -29,13 +30,26 @@ const sidebars = {
         'admin-guides',
         'integration-guides',
         'api-references',
+        'writing-best-practices',
       ],
     },
     {
       type: 'category',
-      label: 'Cloud & DevOps',
+      label: '🎨 Interactive Components',
       collapsed: false,
       items: [
+        'all-interactive-components',
+        'interactive-components',
+        'quick-start-components',
+        'mdx-features-reference',
+      ],
+    },
+    {
+      type: 'category',
+      label: '☁️ Cloud & DevOps',
+      collapsed: false,
+      items: [
+        'cloud-devops/index',
         'cloud-devops/aws',
         'cloud-devops/azure',
         'cloud-devops/gcp',
@@ -43,7 +57,18 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Tutorial - Basics',
+      label: '🚀 DevOps Practices',
+      collapsed: false,
+      items: [
+        'devops/index',
+        'devops/cicd',
+        'devops/containers',
+        'devops/iac',
+      ],
+    },
+    {
+      type: 'category',
+      label: '📖 Tutorial - Basics',
       items: [
         'tutorial-basics/create-a-document',
         'tutorial-basics/create-a-blog-post',
@@ -51,14 +76,6 @@ const sidebars = {
         'tutorial-basics/markdown-features',
         'tutorial-basics/deploy-your-site',
         'tutorial-basics/congratulations',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Tutorial - Extras',
-      items: [
-        'tutorial-extras/manage-docs-versions',
-        'tutorial-extras/translate-your-site',
       ],
     },
   ],
