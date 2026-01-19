@@ -102,7 +102,9 @@ const config = {
         apiKey: '86e2aca43bb565d7d9c017e8ff626166',
         indexName: 'techdocstechdocs',
         contextualSearch: true,
-        searchParameters: {},
+        searchParameters: {
+          hitsPerPage: 10,
+        },
         searchPagePath: 'search',
       },
       // Replace with your project's social card
