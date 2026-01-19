@@ -242,7 +242,7 @@ const config = {
       tagName: 'meta',
       attributes: {
         name: 'algolia-site-verification',
-        content: '3E578B8FE87612D81',
+        content: '38E57BBFE8761DB1',
       },
     },
   ],
