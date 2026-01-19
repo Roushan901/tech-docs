@@ -185,6 +185,10 @@ const config = {
             dropdownActiveClassDisabled: true,
           },
           {
+            type: 'search',
+            position: 'right',
+          },
+          {
             label: 'Contact Support',
             to: 'mailto:contact@techdocs.co.in',
             position: 'right',
