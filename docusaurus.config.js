@@ -80,15 +80,6 @@ const config = {
 
   themes: [
     '@docusaurus/theme-live-codeblock',
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        hashed: true,
-        language: ["en"],
-        docsRouteBasePath: '/docs',
-        blogRouteBasePath: '/blog',
-      },
-    ],
   ],
 
   // Uncomment and add your real Google Analytics tracking ID when ready
@@ -105,6 +96,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Algolia DocSearch configuration
+      algolia: {
+        appId: 'NNCX8DGX61',
+        apiKey: '86e2aca43bb565d7d9c017e8ff626166',
+        indexName: 'techdocs',
+        contextualSearch: true,
+        searchParameters: {},
+        searchPagePath: 'search',
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       metadata: [
