@@ -100,7 +100,7 @@ const config = {
       algolia: {
         appId: 'NNCX8DGX61',
         apiKey: '86e2aca43bb565d7d9c017e8ff626166',
-        indexName: 'techdocs',
+        indexName: 'techdocstechdocs',
         contextualSearch: true,
         searchParameters: {},
         searchPagePath: 'search',
