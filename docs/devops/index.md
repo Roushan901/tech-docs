@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: DevOps Practices
+sidebar: devopsSidebar
 ---
 
 <!-- Last updated: January 08, 2026, 10:00 AM -->
@@ -14,7 +15,7 @@ Master modern DevOps methodologies, tools, and best practices. Learn how to auto
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginTop: '32px'}}>
 
 <a href="/docs/devops/cicd" className="cloud-card cicd-card">
-  <div style={{fontSize: '3rem', marginBottom: '16px'}}>🔄</div>
+  <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
   <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#10b981'}}>CI/CD Pipelines</h3>
   <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
     Automate your build, test, and deployment workflows with GitHub Actions, Jenkins, GitLab CI/CD. Learn pipeline best practices and deployment strategies.
@@ -22,7 +23,7 @@ Master modern DevOps methodologies, tools, and best practices. Learn how to auto
 </a>
 
 <a href="/docs/devops/containers" className="cloud-card docker-card">
-  <div style={{fontSize: '3rem', marginBottom: '16px'}}>🐳</div>
+  <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
   <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#2496ED'}}>Docker & Kubernetes</h3>
   <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
     Master containerization with Docker and orchestration with Kubernetes. Build, deploy, and scale containerized applications with confidence.
@@ -30,7 +31,7 @@ Master modern DevOps methodologies, tools, and best practices. Learn how to auto
 </a>
 
 <a href="/docs/devops/iac" className="cloud-card iac-card">
-  <div style={{fontSize: '3rem', marginBottom: '16px'}}>⚙️</div>
+  <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
   <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#7B42BC'}}>Infrastructure as Code</h3>
   <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
     Manage infrastructure declaratively with Terraform, CloudFormation, and Ansible. Version control, automate, and standardize your infrastructure.
@@ -92,12 +93,12 @@ Plan → Code → Build → Test → Release → Deploy → Operate → Monitor 
 
 Each DevOps guide includes:
 
-- 📖 **Fundamentals:** Core concepts and terminology
-- 💻 **Practical Examples:** Real-world configuration and code samples
-- 🏗️ **Best Practices:** Industry-standard approaches and patterns
-- 🔒 **Security:** Security scanning, secrets management, and compliance
-- 📊 **Monitoring:** Logging, metrics, and observability strategies
-- 🚀 **Advanced Topics:** Scaling, optimization, and troubleshooting
+- **Fundamentals:** Core concepts and terminology
+- **Practical Examples:** Real-world configuration and code samples
+- **Best Practices:** Industry-standard approaches and patterns
+- **Security:** Security scanning, secrets management, and compliance
+- **Monitoring:** Logging, metrics, and observability strategies
+- **Advanced Topics:** Scaling, optimization, and troubleshooting
 
 ## DevOps Career Path
 

@@ -8,7 +8,7 @@ This document contains every feature you can use in your `.md` and `.mdx` files.
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 1. [Basic Markdown Syntax](#basic-markdown-syntax)
 2. [MDX - React Components in Markdown](#mdx---react-components-in-markdown)
@@ -356,8 +356,8 @@ $$
 ```md
 | Component | **Status** | `Version` |
 |-----------|------------|-----------|
-| React     | ✅ Active  | `18.0`    |
-| Vue       | ⚠️ Beta    | `3.2`     |
+| React     |  Active  | `18.0`    |
+| Vue       |  Beta    | `3.2`     |
 ```
 
 ---
@@ -826,7 +826,7 @@ import Component from '@site/src/components/Component';
 
 ---
 
-## 💡 Pro Tips
+##  Pro Tips
 
 1. **Use MDX for interactive content** - Any file with components should be `.mdx`
 2. **Preview changes** - Always run `npm start` to see live updates
@@ -839,7 +839,7 @@ import Component from '@site/src/components/Component';
 
 ---
 
-## 📚 Related Documentation
+##  Related Documentation
 
 - [All Interactive Components Demo](/docs/all-interactive-components)
 - [Quick Start Components Guide](/docs/quick-start-components)
@@ -847,7 +847,7 @@ import Component from '@site/src/components/Component';
 
 ---
 
-## 📧 Need Help?
+##  Need Help?
 
 - **Email**: contact@techdocs.co.in
 - **Issues**: Check component documentation

@@ -1,14 +1,24 @@
+---
+sidebar: guidesSidebar
+---
+
 <!-- Last updated: December 26, 2025 at 11:45 PM -->
 
 # Admin Guides
 
-Comprehensive administrative guides for managing documentation platforms and user access.
+**Who This Is For:** System administrators, DevOps engineers, and technical leads responsible for managing documentation platforms, user access, and system configurations.
+
+**When to Use This Guide:** You need to configure platform settings, manage user permissions, set up authentication, implement backups, or handle system-level documentation management tasks.
+
+**What You'll Learn:** How to effectively administer documentation systems, configure security settings, manage user roles, monitor system health, and maintain documentation infrastructure at an enterprise level.
 
 ## Overview
 
-This guide provides administrators with the knowledge and tools needed to effectively manage documentation systems, user permissions, and content workflows.
+As a documentation platform administrator, you're the backbone of your organization's knowledge management system. This guide equips you with everything needed to set up, configure, and maintain a secure, scalable documentation environment. Whether you're onboarding new teams, implementing access controls, or optimizing platform performance, you'll find step-by-step instructions and best practices here.
 
-## Getting Started as an Admin
+**Real-World Scenario:** Your company is rolling out a new documentation platform for 500+ users across engineering, product, and support teams. You need to configure role-based access, integrate with existing SSO, set up automated backups, and establish content governance policies. This guide walks you through each step.
+
+## Getting Started As an Admin
 
 ### Admin Dashboard Access
 - Log in with admin credentials
@@ -51,11 +61,11 @@ Jane Smith,jane@example.com,viewer
 #### Permission Matrix
 | Action | Viewer | Reviewer | Editor | Admin | Super Admin |
 |--------|--------|----------|--------|-------|-------------|
-| View docs | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Edit docs | ✗ | ✗ | ✓ | ✓ | ✓ |
-| Approve docs | ✗ | ✓ | ✗ | ✓ | ✓ |
-| Manage users | ✗ | ✗ | ✗ | ✓ | ✓ |
-| System config | ✗ | ✗ | ✗ | ✗ | ✓ |
+| View docs |  |  |  |  |  |
+| Edit docs |  |  |  |  |  |
+| Approve docs |  |  |  |  |  |
+| Manage users |  |  |  |  |  |
+| System config |  |  |  |  |  |
 
 ### Managing User Access
 

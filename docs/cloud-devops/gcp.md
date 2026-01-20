@@ -1,3 +1,7 @@
+---
+sidebar: cloudSidebar
+---
+
 # GCP (Google Cloud Platform)
 
 Complete guide to Google Cloud Platform services, documentation, and best practices.

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "@theme/Layout";
+import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
 import { useHistory } from "@docusaurus/router";
 import styles from "./index.module.css";
@@ -144,7 +145,7 @@ export default function Home() {
         description="Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love."
       >
         {/* Enhanced SEO Meta Tags */}
-        <head>
+        <Head>
           {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://techdocs.co.in" />
@@ -174,7 +175,7 @@ export default function Home() {
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
           </script>
-        </head>
+        </Head>
         <header className={styles.heroBanner}>
           <div className={styles.container}>
             <div className={styles.heroContent}>

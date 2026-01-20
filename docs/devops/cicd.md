@@ -1,6 +1,7 @@
 <!-- Last updated: January 8, 2026, 10:00 AM -->
 ---
 sidebar_position: 1
+sidebar: devopsSidebar
 ---
 
 # CI/CD Pipeline Documentation
@@ -307,3 +308,5 @@ security-scan:
 ---
 
 **Need help with CI/CD implementation?** Contact our DevOps team at [contact@techdocs.co.in](mailto:contact@techdocs.co.in)
+
+**Connect with us:** [Roushan Gupta on LinkedIn](https://www.linkedin.com/in/roushan-gupta-a42a6a8a/)

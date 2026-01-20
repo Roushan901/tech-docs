@@ -123,7 +123,9 @@ const config = {
         {name: 'twitter:image', content: 'https://techdocs.co.in/img/docusaurus-social-card.jpg'},
       ],
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'TechDOCS',
@@ -180,21 +182,15 @@ const config = {
             to: '/docs/devops',
           },
           {
-            type: 'docsVersionDropdown',
-            position: 'right',
-            dropdownActiveClassDisabled: true,
-          },
-          {
             type: 'search',
             position: 'right',
           },
-          {
-            label: 'Contact Support',
-            to: 'mailto:contact@techdocs.co.in',
-            position: 'right',
-            className: 'header-contact-link',
-          },
         ],
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
       },
       footer: {
         style: 'dark',
@@ -219,6 +215,10 @@ const config = {
               {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/in/roushan-g-99242299/',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/@TechDocsTutorials',
               },
               {
                 label: 'Contact Us',

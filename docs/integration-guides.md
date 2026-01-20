@@ -1,12 +1,22 @@
+---
+sidebar: guidesSidebar
+---
+
 <!-- Last updated: December 26, 2025, 10:00 AM -->
 
 # Integration Guides
 
-Complete guides for integrating various tools and services with your documentation platform.
+**Who This Is For:** Developers, DevOps engineers, and technical leads implementing third-party integrations to enhance documentation functionality.
+
+**When to Use This Guide:** You need to add search capabilities, integrate analytics tracking, connect documentation with issue trackers, set up deployment pipelines, or automate documentation workflows.
+
+**What You'll Learn:** How to integrate popular services (Algolia, GitHub, Slack, Google Analytics), configure OAuth and API authentication, implement webhooks, and automate documentation publishing and notifications.
 
 ## Overview
 
-Learn how to integrate third-party services, APIs, and tools to enhance your documentation platform's functionality and user experience.
+Modern documentation platforms thrive on integrations. Whether you're adding powerful search with Algolia, tracking user behavior with analytics, syncing content from GitHub, or automating deployments to Netlify, this guide provides practical, working examples for the most valuable integrations.
+
+**Real-World Scenario:** Your documentation site has grown to 500+ pages, and users struggle to find information. You want to implement Algolia search, track which pages users visit most with Google Analytics, automatically notify your Slack channel when docs are updated, and deploy changes to production via GitHub Actions. This guide walks you through implementing each integration with real code examples and configuration files.
 
 ## Quick Start
 
@@ -38,7 +48,7 @@ Learn how to integrate third-party services, APIs, and tools to enhance your doc
 
 ## GitHub Integration
 
-### Setup GitHub Authentication
+### Set Up GitHub Authentication
 
 #### 1. Create GitHub App
 1. Go to GitHub Settings → Developer settings
@@ -107,7 +117,7 @@ jobs:
 
 ## Algolia Search Integration
 
-### Setup Algolia
+### Set Up Algolia
 
 #### 1. Create Algolia Account
 - Sign up at [algolia.com](https://www.algolia.com/)
@@ -143,7 +153,7 @@ docker run -it --env-file=.env -e "CONFIG=$(cat algolia-config.json | jq -r tost
 
 ## Google Analytics Integration
 
-### Setup GA4
+### Set Up GA4
 
 #### 1. Create GA4 Property
 1. Go to Google Analytics
@@ -206,7 +216,7 @@ async function notifySlack(message) {
 }
 
 // Usage
-notifySlack('📚 New documentation published!');
+notifySlack(' New documentation published!');
 ```
 
 #### 3. Automate with GitHub Actions
@@ -471,7 +481,7 @@ plugins: [
 Need help with integrations?
 - [Integration FAQ](#)
 - [API Documentation](#)
-- [Contact Support](mailto:contact@techdocs.co.in)
+- [Contact Support](mailto:contact@techdocs.co.in) or [LinkedIn](https://www.linkedin.com/in/roushan-gupta-a42a6a8a/)
 
 ## Next Steps
 

@@ -1,6 +1,7 @@
 <!-- Last updated: January 8, 2026, 10:00 AM -->
 ---
 sidebar_position: 2
+sidebar: devopsSidebar
 ---
 
 # Docker & Kubernetes Documentation
