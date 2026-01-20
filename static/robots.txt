@@ -1,6 +1,10 @@
 # robots.txt for Tech Docs
 # Allow all search engines to crawl the site
 
+# Allow Algolia Crawler specifically
+User-agent: Algolia Crawler
+Allow: /
+
 User-agent: *
 Allow: /
 

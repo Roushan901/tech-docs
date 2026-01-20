@@ -82,6 +82,10 @@ const config = {
     '@docusaurus/theme-live-codeblock',
   ],
 
+  clientModules: [
+    require.resolve('./src/clientModules/algoliaInsights.js'),
+  ],
+
   // Uncomment and add your real Google Analytics tracking ID when ready
   // plugins: [
   //   [
@@ -104,7 +108,10 @@ const config = {
         contextualSearch: true,
         searchParameters: {
           hitsPerPage: 10,
+          clickAnalytics: true,
+          analytics: true,
         },
+        insights: true,
         searchPagePath: 'search',
       },
       // Replace with your project's social card
