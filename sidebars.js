@@ -18,16 +18,6 @@ const sidebars = {
   // Main sidebar with organized documentation structure
   tutorialSidebar: [
     {
-      type: 'doc',
-      id: 'intro',
-      label: 'Intro',
-    },
-    {
-      type: 'doc',
-      id: 'quick-reference-index',
-      label: 'Quick Reference Index',
-    },
-    {
       type: 'category',
       label: 'Documentation Guides',
       collapsed: false,
