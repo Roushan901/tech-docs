@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Cloud Platforms
+sidebar: cloudSidebar
 ---
 
 <!-- Last updated: January 08, 2026, 10:00 AM -->

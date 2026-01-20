@@ -1,3 +1,7 @@
+---
+sidebar: cloudSidebar
+---
+
 # AWS (Amazon Web Services)
 
 Complete guide to AWS documentation, services, and best practices for cloud computing.

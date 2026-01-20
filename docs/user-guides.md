@@ -1,12 +1,22 @@
+---
+sidebar: guidesSidebar
+---
+
 <!-- Last updated: December 26, 2025, 10:00 AM -->
 
 # User Guides
 
-Comprehensive guides to help you get the most out of Tech Docs and learn technical writing best practices.
+**Who This Is For:** Technical writers, content creators, developers, product managers, and anyone creating user-facing documentation.
+
+**When to Use This Guide:** You're writing product documentation, creating help articles, developing tutorials, or need to communicate technical concepts to end users effectively.
+
+**What You'll Learn:** Fundamental technical writing skills, documentation structure best practices, how to write for different audiences, and proven techniques to create clear, user-friendly content that solves real problems.
 
 ## Getting Started
 
-Welcome to our user guides! Whether you're new to technical writing or an experienced documentation professional, these guides will help you master the art of creating effective documentation.
+Welcome to our user guides! Whether you're a software engineer documenting an API, a product manager writing feature announcements, or a dedicated technical writer crafting comprehensive manuals, these guides will help you create documentation that users actually want to read.
+
+**Real-World Scenario:** You've just launched a new SaaS product feature. Users are confused about how to use it, and support tickets are piling up. You need to create quick-start guides, detailed how-to articles, and video tutorials that reduce support burden and increase feature adoption. This guide shows you exactly how to approach this challenge.
 
 ## Quick Start Guide
 
@@ -84,7 +94,7 @@ Browse our collection of professional templates:
 Need help? Check out:
 - [FAQ Section](#)
 - [Community Forum](#)
-- [Contact Support](mailto:contact@techdocs.co.in)
+- [Contact Support](mailto:contact@techdocs.co.in) or [LinkedIn](https://www.linkedin.com/in/roushan-gupta-a42a6a8a/)
 
 ## Next Steps
 

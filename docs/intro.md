@@ -1,8 +1,8 @@
-<!-- Last updated: December 26, 2025, 10:00 AM -->
-
 ---
 sidebar_position: 1
 ---
+
+<!-- Last updated: December 26, 2025, 10:00 AM -->
 
 # Tutorial Intro
 

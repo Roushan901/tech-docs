@@ -125,6 +125,7 @@ import ProgressTracker from '@site/src/components/ProgressTracker';
 
 -  [Full Documentation](/docs/interactive-components)
 -  [Contact Support](mailto:contact@techdocs.co.in)
+-  [LinkedIn: Roushan Gupta](https://www.linkedin.com/in/roushan-gupta-a42a6a8a/)
 -  See [Markdown Features](/docs/tutorial-basics/markdown-features) for more examples
 
 ---

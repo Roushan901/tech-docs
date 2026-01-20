@@ -1,11 +1,22 @@
+---
+sidebar: guidesSidebar
+---
+
 <!-- Last updated: December 26, 2025 at 11:47 PM -->
+
 # Installation Guides
 
-Complete installation instructions for various documentation tools and platforms.xsdas
+**Who This Is For:** Developers, technical writers, and DevOps engineers setting up documentation tools and development environments.
+
+**When to Use This Guide:** You're starting a new documentation project, migrating to a new platform, setting up local development environments, or deploying documentation sites to production.
+
+**What You'll Learn:** Step-by-step installation procedures for popular documentation tools (Docusaurus, MkDocs, Jekyll, Hugo), environment configuration, dependency management, and troubleshooting common installation issues.
 
 ## Overview
 
-This guide will walk you through installing and configuring essential tools for technical writing and documentation development.
+Setting up documentation tools shouldn't be complicated. This guide provides clear, tested installation instructions for the most popular documentation platforms, helping you go from zero to a running documentation site in minutes, not hours.
+
+**Real-World Scenario:** Your team has decided to migrate from Confluence to a docs-as-code approach using Docusaurus. You need to set up local development environments for 10 engineers, configure CI/CD pipelines, and ensure everyone can preview changes before deployment. This guide covers everything from Node.js installation to production deployment configurations.
 
 ## Prerequisites
 
@@ -191,4 +202,4 @@ After installation:
 Need help with installation?
 - Check our [FAQ](#)
 - Join our [Community](#)
-- [Contact Support](mailto:contact@techdocs.co.in)
+- [Contact Support](mailto:contact@techdocs.co.in) or [LinkedIn](https://www.linkedin.com/in/roushan-gupta-a42a6a8a/)

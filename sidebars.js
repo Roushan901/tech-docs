@@ -15,8 +15,8 @@
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 const sidebars = {
-  // Main sidebar with organized documentation structure
-  tutorialSidebar: [
+  // Documentation Guides sidebar
+  guidesSidebar: [
     {
       type: 'category',
       label: 'Documentation Guides',
@@ -52,13 +52,83 @@ const sidebars = {
           id: 'api-references',
           label: 'API References',
         },
+      ],
+    },
+  ],
+
+  // Writing Best Practices sidebar
+  writingSidebar: [
+    {
+      type: 'doc',
+      id: 'writing-best-practices',
+      label: 'Writing Best Practices',
+    },
+  ],
+
+  // Cloud & DevOps sidebar
+  cloudSidebar: [
+    {
+      type: 'category',
+      label: 'Cloud Platforms',
+      collapsed: false,
+      items: [
         {
           type: 'doc',
-          id: 'writing-best-practices',
-          label: 'Writing Best Practices',
+          id: 'cloud-devops/index',
+          label: 'Cloud Platforms Overview',
+        },
+        {
+          type: 'doc',
+          id: 'cloud-devops/aws',
+          label: 'AWS (Amazon Web Services)',
+        },
+        {
+          type: 'doc',
+          id: 'cloud-devops/azure',
+          label: 'Azure (Microsoft Azure)',
+        },
+        {
+          type: 'doc',
+          id: 'cloud-devops/gcp',
+          label: 'GCP (Google Cloud Platform)',
         },
       ],
     },
+  ],
+
+  // DevOps Practices sidebar
+  devopsSidebar: [
+    {
+      type: 'category',
+      label: 'DevOps Practices',
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'devops/index',
+          label: 'DevOps Overview',
+        },
+        {
+          type: 'doc',
+          id: 'devops/cicd',
+          label: 'CI/CD Pipeline Documentation',
+        },
+        {
+          type: 'doc',
+          id: 'devops/containers',
+          label: 'Docker & Kubernetes Documentation',
+        },
+        {
+          type: 'doc',
+          id: 'devops/iac',
+          label: 'Infrastructure As Code (IaC)',
+        },
+      ],
+    },
+  ],
+
+  // Tutorial sidebar (optional - can be removed if not needed)
+  tutorialSidebar: [
     {
       type: 'category',
       label: 'Interactive Components',
@@ -83,60 +153,6 @@ const sidebars = {
           type: 'doc',
           id: 'mdx-features-reference',
           label: 'MDX Features Reference',
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Cloud & DevOps',
-      collapsed: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'cloud-devops/index',
-          label: 'Cloud Platforms',
-        },
-        {
-          type: 'doc',
-          id: 'cloud-devops/aws',
-          label: 'AWS (Amazon Web Services)',
-        },
-        {
-          type: 'doc',
-          id: 'cloud-devops/azure',
-          label: 'Azure (Microsoft Azure)',
-        },
-        {
-          type: 'doc',
-          id: 'cloud-devops/gcp',
-          label: 'GCP (Google Cloud Platform)',
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'DevOps Practices',
-      collapsed: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'devops/index',
-          label: 'DevOps Practices',
-        },
-        {
-          type: 'doc',
-          id: 'devops/cicd',
-          label: 'CI/CD Pipeline Documentation',
-        },
-        {
-          type: 'doc',
-          id: 'devops/containers',
-          label: 'Docker & Kubernetes Documentation',
-        },
-        {
-          type: 'doc',
-          id: 'devops/iac',
-          label: 'Infrastructure As Code (IaC)',
         },
       ],
     },

@@ -1,3 +1,7 @@
+---
+sidebar: cloudSidebar
+---
+
 # Azure (Microsoft Azure)
 
 Comprehensive guide to Microsoft Azure cloud services, documentation, and best practices.
