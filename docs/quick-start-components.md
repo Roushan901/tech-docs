@@ -115,18 +115,18 @@ import ProgressTracker from '@site/src/components/ProgressTracker';
 
 ## Tips
 
-- ✅ Always import at the top of your MDX file
-- ✅ Use meaningful titles and descriptions
-- ✅ Pre-fill with helpful examples
-- ✅ Test on mobile devices
-- ✅ Don't overuse - keep it intuitive
+-  Always import at the top of your MDX file
+-  Use meaningful titles and descriptions
+-  Pre-fill with helpful examples
+-  Test on mobile devices
+-  Don't overuse - keep it intuitive
 
 ## Need Help?
 
-- 📚 [Full Documentation](/docs/interactive-components)
-- 📧 [Contact Support](mailto:contact@techdocs.co.in)
-- 💡 See [Markdown Features](/docs/tutorial-basics/markdown-features) for more examples
+-  [Full Documentation](/docs/interactive-components)
+-  [Contact Support](mailto:contact@techdocs.co.in)
+-  See [Markdown Features](/docs/tutorial-basics/markdown-features) for more examples
 
 ---
 
-**Happy Documenting! 🚀**
+**Happy Documenting! **

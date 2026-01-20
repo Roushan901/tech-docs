@@ -17,65 +17,173 @@
 const sidebars = {
   // Main sidebar with organized documentation structure
   tutorialSidebar: [
-    'intro',
-    'quick-reference-index',
+    {
+      type: 'doc',
+      id: 'intro',
+      label: 'Intro',
+    },
+    {
+      type: 'doc',
+      id: 'quick-reference-index',
+      label: 'Quick Reference Index',
+    },
     {
       type: 'category',
-      label: '📚 Documentation Guides',
+      label: 'Documentation Guides',
       collapsed: false,
       items: [
-        'release-notes',
-        'user-guides',
-        'installation-guides',
-        'admin-guides',
-        'integration-guides',
-        'api-references',
-        'writing-best-practices',
+        {
+          type: 'doc',
+          id: 'release-notes',
+          label: 'Release Notes',
+        },
+        {
+          type: 'doc',
+          id: 'user-guides',
+          label: 'User Guides',
+        },
+        {
+          type: 'doc',
+          id: 'installation-guides',
+          label: 'Installation Guides',
+        },
+        {
+          type: 'doc',
+          id: 'admin-guides',
+          label: 'Admin Guides',
+        },
+        {
+          type: 'doc',
+          id: 'integration-guides',
+          label: 'Integration Guides',
+        },
+        {
+          type: 'doc',
+          id: 'api-references',
+          label: 'API References',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices',
+          label: 'Writing Best Practices',
+        },
       ],
     },
     {
       type: 'category',
-      label: '🎨 Interactive Components',
+      label: 'Interactive Components',
       collapsed: false,
       items: [
-        'all-interactive-components',
-        'interactive-components',
-        'quick-start-components',
-        'mdx-features-reference',
+        {
+          type: 'doc',
+          id: 'all-interactive-components',
+          label: 'All Interactive Components',
+        },
+        {
+          type: 'doc',
+          id: 'interactive-components',
+          label: 'Interactive Components',
+        },
+        {
+          type: 'doc',
+          id: 'quick-start-components',
+          label: 'Quick Start Components',
+        },
+        {
+          type: 'doc',
+          id: 'mdx-features-reference',
+          label: 'MDX Features Reference',
+        },
       ],
     },
     {
       type: 'category',
-      label: '☁️ Cloud & DevOps',
+      label: 'Cloud & DevOps',
       collapsed: false,
       items: [
-        'cloud-devops/index',
-        'cloud-devops/aws',
-        'cloud-devops/azure',
-        'cloud-devops/gcp',
+        {
+          type: 'doc',
+          id: 'cloud-devops/index',
+          label: 'Cloud Platforms',
+        },
+        {
+          type: 'doc',
+          id: 'cloud-devops/aws',
+          label: 'AWS (Amazon Web Services)',
+        },
+        {
+          type: 'doc',
+          id: 'cloud-devops/azure',
+          label: 'Azure (Microsoft Azure)',
+        },
+        {
+          type: 'doc',
+          id: 'cloud-devops/gcp',
+          label: 'GCP (Google Cloud Platform)',
+        },
       ],
     },
     {
       type: 'category',
-      label: '🚀 DevOps Practices',
+      label: 'DevOps Practices',
       collapsed: false,
       items: [
-        'devops/index',
-        'devops/cicd',
-        'devops/containers',
-        'devops/iac',
+        {
+          type: 'doc',
+          id: 'devops/index',
+          label: 'DevOps Practices',
+        },
+        {
+          type: 'doc',
+          id: 'devops/cicd',
+          label: 'CI/CD Pipeline Documentation',
+        },
+        {
+          type: 'doc',
+          id: 'devops/containers',
+          label: 'Docker & Kubernetes Documentation',
+        },
+        {
+          type: 'doc',
+          id: 'devops/iac',
+          label: 'Infrastructure As Code (IaC)',
+        },
       ],
     },
     {
       type: 'category',
-      label: '📖 Tutorial - Basics',
+      label: 'Tutorial - Basics',
       items: [
-        'tutorial-basics/create-a-document',
-        'tutorial-basics/create-a-blog-post',
-        'tutorial-basics/create-a-page',
-        'tutorial-basics/markdown-features',
-        'tutorial-basics/deploy-your-site',
-        'tutorial-basics/congratulations',
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-document',
+          label: 'Create A Document',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-blog-post',
+          label: 'Create A Blog Post',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-page',
+          label: 'Create A Page',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/markdown-features',
+          label: 'Markdown Features',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/deploy-your-site',
+          label: 'Deploy Your Site',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/congratulations',
+          label: 'Congratulations',
+        },
       ],
     },
   ],

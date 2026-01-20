@@ -81,8 +81,8 @@ Include TOC for documents longer than 3 screens:
 
 **Active Voice Example:**
 ```
-✅ "The system processes the request"
-❌ "The request is processed by the system"
+ "The system processes the request"
+ "The request is processed by the system"
 ```
 
 **Appropriate Tone:**
@@ -95,8 +95,8 @@ Include TOC for documents longer than 3 screens:
 
 **Serial Comma (Oxford Comma):**
 ```
-✅ "Install Node.js, Python, and Docker"
-❌ "Install Node.js, Python and Docker"
+ "Install Node.js, Python, and Docker"
+ "Install Node.js, Python and Docker"
 ```
 
 **Contractions:**
@@ -106,8 +106,8 @@ Include TOC for documents longer than 3 screens:
 
 **Second Person:**
 ```
-✅ "You can configure the settings in the dashboard"
-❌ "Users can configure the settings" or "One can configure"
+ "You can configure the settings in the dashboard"
+ "Users can configure the settings" or "One can configure"
 ```
 
 ### Formatting Conventions
@@ -263,7 +263,7 @@ Retrieves detailed information for a specific user.
 - Resolved data sync problem (#145)
 
 ## Breaking Changes
-⚠️ API endpoint changed from /api/v1 to /api/v2
+ API endpoint changed from /api/v1 to /api/v2
 ```
 
 ## Visual Elements
@@ -300,14 +300,14 @@ Retrieves detailed information for a specific user.
 ### Code Examples
 
 **Effective code examples:**
-- ✅ Complete and runnable
-- ✅ Include relevant context
-- ✅ Show realistic use cases
-- ✅ Add inline comments for clarity
-- ✅ Follow language conventions
+-  Complete and runnable
+-  Include relevant context
+-  Show realistic use cases
+-  Add inline comments for clarity
+-  Follow language conventions
 
 ```javascript
-// ✅ Good Example: Clear, complete, commented
+//  Good Example: Clear, complete, commented
 async function fetchUserData(userId) {
   try {
     // Make API request with authentication
@@ -455,8 +455,8 @@ description: Learn how to implement API authentication with step-by-step example
 
 **URL structure:**
 ```
-✅ /docs/guides/api-authentication
-❌ /docs/page?id=123
+ /docs/guides/api-authentication
+ /docs/page?id=123
 ```
 
 ## Tools and Resources
@@ -507,14 +507,14 @@ Before publishing, ensure:
 
 ### Common Pitfalls to Avoid
 
-❌ **Assuming Knowledge:** Don't skip explaining basics
-❌ **Outdated Screenshots:** Update with each release
-❌ **Broken Links:** Regularly validate all URLs
-❌ **Missing Prerequisites:** Always list requirements upfront
-❌ **Inconsistent Naming:** Stick to one term per concept
-❌ **No Examples:** Always provide concrete examples
-❌ **Poor Organization:** Use clear hierarchical structure
-❌ **Ignoring Feedback:** Address user questions and issues
+ **Assuming Knowledge:** Don't skip explaining basics
+ **Outdated Screenshots:** Update with each release
+ **Broken Links:** Regularly validate all URLs
+ **Missing Prerequisites:** Always list requirements upfront
+ **Inconsistent Naming:** Stick to one term per concept
+ **No Examples:** Always provide concrete examples
+ **Poor Organization:** Use clear hierarchical structure
+ **Ignoring Feedback:** Address user questions and issues
 
 ## Next Steps
 

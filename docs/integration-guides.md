@@ -206,7 +206,7 @@ async function notifySlack(message) {
 }
 
 // Usage
-notifySlack('📚 New documentation published!');
+notifySlack(' New documentation published!');
 ```
 
 #### 3. Automate with GitHub Actions

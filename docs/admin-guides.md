@@ -51,11 +51,11 @@ Jane Smith,jane@example.com,viewer
 #### Permission Matrix
 | Action | Viewer | Reviewer | Editor | Admin | Super Admin |
 |--------|--------|----------|--------|-------|-------------|
-| View docs | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Edit docs | ✗ | ✗ | ✓ | ✓ | ✓ |
-| Approve docs | ✗ | ✓ | ✗ | ✓ | ✓ |
-| Manage users | ✗ | ✗ | ✗ | ✓ | ✓ |
-| System config | ✗ | ✗ | ✗ | ✗ | ✓ |
+| View docs |  |  |  |  |  |
+| Edit docs |  |  |  |  |  |
+| Approve docs |  |  |  |  |  |
+| Manage users |  |  |  |  |  |
+| System config |  |  |  |  |  |
 
 ### Managing User Access
 

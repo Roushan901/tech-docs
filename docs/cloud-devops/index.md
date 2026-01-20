@@ -14,7 +14,7 @@ Explore comprehensive guides for major cloud providers. Learn architecture patte
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginTop: '32px'}}>
 
 <a href="/docs/cloud-devops/aws" className="cloud-card aws-card">
-  <div style={{fontSize: '3rem', marginBottom: '16px'}}>☁️</div>
+  <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
   <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#FF9900'}}>Amazon Web Services (AWS)</h3>
   <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
     Complete guide to AWS services including EC2, S3, Lambda, RDS, and more. Learn cloud architecture, deployment strategies, and AWS best practices.
@@ -22,7 +22,7 @@ Explore comprehensive guides for major cloud providers. Learn architecture patte
 </a>
 
 <a href="/docs/cloud-devops/azure" className="cloud-card azure-card">
-  <div style={{fontSize: '3rem', marginBottom: '16px'}}>☁️</div>
+  <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
   <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#0078D4'}}>Microsoft Azure</h3>
   <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
     Comprehensive Azure documentation covering Virtual Machines, App Service, Azure Functions, Cosmos DB, and enterprise integration patterns.
@@ -30,7 +30,7 @@ Explore comprehensive guides for major cloud providers. Learn architecture patte
 </a>
 
 <a href="/docs/cloud-devops/gcp" className="cloud-card gcp-card">
-  <div style={{fontSize: '3rem', marginBottom: '16px'}}>☁️</div>
+  <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
   <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#4285F4'}}>Google Cloud Platform (GCP)</h3>
   <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
     Deep dive into GCP services like Compute Engine, Cloud Functions, BigQuery, and Kubernetes Engine with practical examples and architecture patterns.
@@ -54,12 +54,12 @@ Cloud platforms provide scalable, flexible, and cost-effective infrastructure fo
 
 Each cloud platform guide includes:
 
-- 🏗️ **Core Services:** Compute, storage, networking, and databases
-- 📊 **Architecture Patterns:** Best practices for cloud-native design
-- 🔒 **Security:** IAM, encryption, compliance, and security best practices
-- 💰 **Cost Optimization:** Strategies to minimize cloud spending
-- 🚀 **Deployment:** CI/CD pipelines and infrastructure as code
-- 📈 **Monitoring:** Logging, metrics, and observability tools
+- **Core Services:** Compute, storage, networking, and databases
+- **Architecture Patterns:** Best practices for cloud-native design
+- **Security:** IAM, encryption, compliance, and security best practices
+- **Cost Optimization:** Strategies to minimize cloud spending
+- **Deployment:** CI/CD pipelines and infrastructure as code
+- **Monitoring:** Logging, metrics, and observability tools
 
 ## Multi-Cloud Strategy
 
