@@ -218,7 +218,7 @@ const config = {
               },
               {
                 label: 'YouTube',
-                href: 'https://www.youtube.com/@techdocstechdocs',
+                href: 'https://www.youtube.com/@TechDocsTutorials',
               },
               {
                 label: 'Contact Us',
