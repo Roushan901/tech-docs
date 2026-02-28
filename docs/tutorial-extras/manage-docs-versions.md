@@ -1,5 +1,9 @@
 ---
+id: tutorial-extras-manage-docs-versions
+title: Manage Docs Versions
 sidebar_position: 1
+sidebar_label: Manage Docs Versions
+tags: []
 ---
 
 # Manage Docs Versions

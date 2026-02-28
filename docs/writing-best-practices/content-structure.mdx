@@ -1,0 +1,207 @@
+---
+sidebar_position: 3
+id: writing-best-practices-content-structure
+---
+
+<!-- Last updated: February 28, 2026, 12:00 PM -->
+
+# Content Structure
+
+Clear structure is the backbone of user experience in documentation. Content designers organize information to match how users think, scan, and search. Poor structure forces users to hunt for information; good structure guides them naturally to answers.
+
+## Information Architecture Principles
+
+Information architecture (IA) determines how content is organized, labeled, and related.
+
+### Principle 1: Match User Mental Models
+
+Organize content the way users think about it, not the way your system is built.
+
+**Wrong approach**: Organize by technical implementation
+```
+- API
+  - Webhook Events
+  - REST Endpoints
+  - GraphQL Schema
+```
+
+**Better approach**: Organize by user task
+```
+- Getting Started
+- Common Workflows
+  - Creating Resources
+  - Querying Data
+  - Handling Events
+```
+
+### Principle 2: Hierarchy and Depth
+
+Use heading hierarchy consistently. Limit depth to 3-4 levels to prevent cognitive overload.
+
+- **H1**: Page title (one per document)
+- **H2**: Major sections that answer primary questions
+- **H3**: Subsections providing detail
+- **H4**: Supporting information (use sparingly)
+
+### Principle 3: Scannable Structure
+
+Users scan before reading. Structure should reveal content hierarchy at a glance.
+
+**Techniques:**
+- Use descriptive headings that answer questions
+- Start sections with summaries
+- Use lists for multiple items
+- Highlight important information with callouts
+- Keep paragraphs short (2-3 sentences)
+
+## Content Models and Components
+
+A content model defines what information should be included and how it's organized. This ensures consistency across similar content.
+
+### Task Content Model
+
+```
+Title (describes the outcome)
+Brief description (what user will accomplish)
+
+Prerequisites section
+- Required knowledge
+- Required tools
+- Required permissions
+
+Step-by-step instructions
+Numbered, focused actions
+
+Expected result or confirmation
+How to verify completion
+
+Related next steps
+Links to follow-up tasks
+```
+
+### Reference Content Model
+
+```
+Item name (API endpoint, config option, etc.)
+Brief one-line description
+
+Parameters/properties table
+- Name, type, required/optional, description
+
+Usage example
+Code snippet or example
+
+Related items
+Links to similar reference entries
+```
+
+### Conceptual Content Model
+
+```
+Title (concept name)
+One-sentence definition
+
+Why this matters
+Real-world applications and benefits
+
+How it works
+Explanation with analogies
+
+When to use
+Practical scenarios
+
+Common misconceptions
+Clarify what this is NOT
+
+Example use case
+Detailed walkthrough
+
+Further reading
+Links to related concepts
+```
+
+## Navigation and Cross-References
+
+Help users discover related content.
+
+### Internal Links
+
+Use descriptive link text that reveals the destination:
+
+**Poor**: Click [here](link) to learn more about authentication
+**Better**: [Learn how authentication works](link) in our security guide
+
+### Related Content Links
+
+At the end of content, provide related items:
+
+```
+## Related topics
+- [Prerequisite concept you should know first](link)
+- [Next task after completing this one](link)
+- [Advanced variations of this technique](link)
+```
+
+### Breadcrumb Navigation
+
+Show the user's location in the documentation hierarchy:
+
+```
+Home > Documentation > Guides > API Reference > Authentication
+```
+
+## Using Callouts and Visual Elements
+
+Visual hierarchy helps users identify important information types.
+
+### Callout Types
+
+**Note**: Additional information that might be helpful
+> **Note:** This feature requires version 2.0 or later
+
+**Warning**: Something that could go wrong
+> **Warning:** Deleting this will permanently remove all user data
+
+**Tip**: Shortcut or best practice
+> **Tip:** You can use keyboard shortcuts to speed up this process
+
+**Important**: Critical information not to miss
+> **Important:** Never commit secrets or API keys to version control
+
+## Structural Patterns
+
+### Progressive Disclosure
+
+Hide complexity, revealing detail only when needed:
+
+1. Summary or overview
+2. Common cases (simple)
+3. Advanced cases (detailed)
+4. Edge cases (reference)
+
+### Parallel Structure
+
+When describing multiple similar items, use the same structure for each:
+
+**Inconsistent:**
+- Feature A: Does X very quickly
+- Feature B: Supports both local and remote configurations
+- Feature C: Uses three main patterns
+
+**Consistent:**
+- Feature A: What it does - very fast X processing. When to use - X requires speed
+- Feature B: What it does - supports both local and remote configurations. When to use - distributed systems
+- Feature C: What it does - implements three main patterns. When to use - pattern selection needed
+
+## Content Structure Checklist
+
+- [ ] Information organized by user task, not technical implementation
+- [ ] Heading hierarchy is consistent and logical (max 3-4 levels)
+- [ ] Content is scannable with descriptive headings
+- [ ] Content model is consistent within content type
+- [ ] Internal links use descriptive anchor text
+- [ ] Related content is clearly cross-referenced
+- [ ] Visual callouts used appropriately for different information types
+- [ ] Breadcrumb or location indicators present
+- [ ] Navigation aids users find related content
+

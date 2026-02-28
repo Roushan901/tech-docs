@@ -1,5 +1,9 @@
 ---
+id: tutorial-basics-create-a-blog-post
+title: Create a Blog Post
 sidebar_position: 3
+sidebar_label: Create a Blog Post
+tags: []
 ---
 
 # Create a Blog Post

@@ -1,0 +1,285 @@
+---
+sidebar_position: 6
+id: writing-best-practices-commands-code-ui
+---
+
+<!-- Last updated: February 28, 2026, 12:00 PM -->
+
+# Commands, Code, and UI Text
+
+Technical documentation frequently includes commands, code snippets, and references to user interface elements. These must be formatted precisely so users can copy them without errors and clearly distinguish them from regular text.
+
+## Formatting Commands
+
+Commands typed into a terminal or command line need special formatting to be clearly distinguished.
+
+### Code Blocks for Commands
+
+Use code blocks with the appropriate language identifier for syntax highlighting.
+
+```bash
+npm install @your-package/library
+```
+
+```powershell
+Get-ChildItem -Path C:\Users\YourName\Documents
+```
+
+```sql
+SELECT * FROM users WHERE status='active';
+```
+
+### Command Format Conventions
+
+**Input the user types:**
+```bash
+curl https://api.example.com/data
+```
+
+**Output the system returns:**
+```
+{
+  "status": "success",
+  "data": []
+}
+```
+
+### User-Replaceable Elements
+
+Indicate parts users should replace with their own values using angle brackets or italics.
+
+**Using angle brackets:**
+```bash
+curl https://api.example.com/data/<your-api-key>
+```
+
+**Using italics in text:**
+Type `curl https://api.example.com/data/YOUR_API_KEY` where `YOUR_API_KEY` is your unique key.
+
+**Clear placeholder explanation:**
+Replace `username` with your actual username, like `john_smith`.
+
+### Command Syntax Documentation
+
+When documenting command syntax, show required vs optional parameters clearly.
+
+```
+npm install [--save | --save-dev] [--global] <package-name>
+
+Required:
+  <package-name>     The name of the package to install
+
+Optional:
+  --save             Add to package.json dependencies
+  --save-dev         Add to package.json devDependencies
+  --global           Install globally on your system
+```
+
+## Formatting Code Examples
+
+Code examples help users understand implementation. Format them consistently.
+
+### Inline Code
+
+For short code references within text, use backticks:
+
+"Use the `filter()` method to remove items from an array."
+
+"Set `maxRetries: 3` in your configuration."
+
+### Code Blocks
+
+Use fenced code blocks with language identifiers:
+
+````
+```javascript
+function greeting(name) {
+  return `Hello, ${name}!`;
+}
+```
+````
+
+### Complete vs Partial Examples
+
+**Complete example** (ready to copy and run):
+```javascript
+const users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" }
+];
+
+const names = users.map(user => user.name);
+console.log(names);
+```
+
+**Partial example** (showing specific concept):
+```javascript
+// Map over array to extract names
+const names = users.map(user => user.name);
+```
+
+### Code Comments
+
+Use comments to explain non-obvious parts of code:
+
+```javascript
+// Validate email format using regex
+const isValidEmail = (email) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+```
+
+### Syntax Highlighting Languages
+
+Use the appropriate language identifier:
+- `javascript` or `js` for JavaScript
+- `python` for Python
+- `bash` or `shell` for shell commands
+- `json` for JSON
+- `yaml` for YAML
+- `sql` for SQL
+- `xml` or `html` for HTML/XML
+- `css` for CSS
+- `typescript` or `ts` for TypeScript
+
+## Referencing UI Elements
+
+When instructing users to interact with interface elements, make the text clear and scannable.
+
+### Button and Menu Text
+
+Enclose UI text in bold or special formatting:
+
+"Click **Save and Continue**"
+
+"Select **File** > **Open** > **Recent Files**"
+
+"Enter your email in the **Email Address** field"
+
+### Field Names and Labels
+
+Distinguish field references from action text:
+
+"Enter your password in the **Password** field"
+
+"Check the **Remember my device** checkbox"
+
+"Select **Standard** from the **Account Type** dropdown"
+
+### UI Path Instructions
+
+Show hierarchical paths clearly:
+
+"Navigate to **Settings** → **Security** → **Two-Factor Authentication**"
+
+"In the left sidebar, click **Accounts**, then select **Manage**"
+
+## Special Formatting for Different Elements
+
+### Variables and Placeholders
+
+```
+Connect to the database using:
+postgresql://user:password@localhost:5432/database_name
+
+Replace:
+- user = your PostgreSQL username
+- password = your PostgreSQL password
+- database_name = your database name
+```
+
+### Configuration Files
+
+When showing configuration examples, indicate the file name:
+
+**config.json:**
+```json
+{
+  "apiKey": "your-key-here",
+  "endpoint": "https://api.example.com",
+  "timeout": 30
+}
+```
+
+**Environment Variables:**
+```bash
+export DATABASE_URL="postgresql://user:pass@localhost"
+export API_KEY="your-secret-key"
+```
+
+### Error Messages and Output
+
+Format error messages distinctly so users recognize them:
+
+**You'll see:**
+```
+Error: Connection refused (ECONNREFUSED)
+Error: Port 3000 is already in use
+```
+
+**Expected output:**
+```
+✓ Installation successful
+Server running at http://localhost:3000
+```
+
+## Code and Command Best Practices
+
+### Keep Examples Short and Focused
+
+**Too long:**
+```javascript
+// 50 lines of setup code
+// Mixed with the actual example
+// That shows the concept we want to teach
+```
+
+**Better:**
+```javascript
+// Show only the relevant part
+const data = users.filter(user => user.active);
+```
+
+### Annotate Complex Code
+
+```javascript
+// For each user object, extract the 'name' property
+const names = users.map(({ name }) => name);
+//                       ^^^^^^^
+//            Destructure to get name only
+```
+
+### Provide Copy-Friendly Code
+
+Make sure code blocks can be easily copied:
+- No line numbers that would copy
+- No prompt symbols unless they're part of the command
+- Include blank lines that make the code valid
+- Test that code is actually executable
+
+### Test Your Code Examples
+
+Code examples should work if copied exactly. Regularly test them.
+
+**Before publishing:**
+```bash
+# Copy and paste the exact code from your documentation
+# Run it in the target environment
+# Verify it produces the expected result
+```
+
+## Commands, Code, and UI Text Checklist
+
+- [ ] Commands formatted in code blocks with language identifier
+- [ ] Replaceable user values clearly indicated
+- [ ] Code examples are complete and testable
+- [ ] Code examples are short and focused
+- [ ] Complex code is annotated with comments
+- [ ] UI elements (buttons, fields) formatted consistently
+- [ ] UI paths shown with arrow separators
+- [ ] Field names distinguished from instructions
+- [ ] File names and configuration files clearly labeled
+- [ ] Error messages and expected output distinguished
+- [ ] Code examples have been tested and work correctly
+- [ ] All code can be copy-pasted without modification (except for placeholders)
+

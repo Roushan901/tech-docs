@@ -1,0 +1,8 @@
+{
+  "label": "Blog",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore insights on technical writing, documentation, cloud computing, and DevOps best practices."
+  }
+}

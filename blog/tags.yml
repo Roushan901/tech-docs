@@ -1,3 +1,8 @@
+documentation:
+  label: Documentation
+  permalink: /documentation
+  description: Documentation best practices and techniques
+
 facebook:
   label: Facebook
   permalink: /facebook
@@ -17,3 +22,77 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+ai-search:
+  label: AI Search
+  permalink: /ai-search
+  description: AI-powered search solutions
+
+algolia:
+  label: Algolia
+  permalink: /algolia
+  description: Algolia search integration
+
+ask-ai:
+  label: Ask AI
+  permalink: /ask-ai
+  description: AI question answering
+
+technical-writing:
+  label: Technical Writing
+  permalink: /technical-writing
+  description: Technical writing best practices
+
+search-integration:
+  label: Search Integration
+  permalink: /search-integration
+  description: Search integration and optimization
+
+introduction:
+  label: Introduction
+  permalink: /introduction
+  description: Introductory content
+
+about:
+  label: About
+  permalink: /about
+  description: About section
+
+business-growth:
+  label: Business Growth
+  permalink: /business-growth
+  description: Business growth and scaling
+
+knowledge-sharing:
+  label: Knowledge Sharing
+  permalink: /knowledge-sharing
+  description: Knowledge sharing practices
+
+cloud-computing:
+  label: Cloud Computing
+  permalink: /cloud-computing
+  description: Cloud computing concepts
+
+cloud-services:
+  label: Cloud Services
+  permalink: /cloud-services
+  description: Cloud services overview
+
+cloud-technology:
+  label: Cloud Technology
+  permalink: /cloud-technology
+  description: Cloud technology insights
+
+devops:
+  label: DevOps
+  permalink: /devops
+  description: DevOps practices and tools
+
+docs-as-code:
+  label: Docs as Code
+  permalink: /docs-as-code
+  description: Documentation as code approach
+
+content-management:
+  label: Content Management
+  permalink: /content-management
+  description: Content management strategies

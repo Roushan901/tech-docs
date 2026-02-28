@@ -1,9 +1,11 @@
 ---
-sidebar_position: 1
+id: cloud-devops-index
 title: Cloud Platforms
+sidebar_position: 1
 sidebar: cloudSidebar
+sidebar_label: Cloud Platforms
+tags: []
 ---
-
 <!-- Last updated: January 08, 2026, 10:00 AM -->
 
 # Cloud Platforms

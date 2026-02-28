@@ -1,9 +1,11 @@
 ---
-sidebar_position: 1
+id: devops-index
 title: DevOps Practices
+sidebar_position: 1
 sidebar: devopsSidebar
+sidebar_label: DevOps Practices
+tags: []
 ---
-
 <!-- Last updated: January 08, 2026, 10:00 AM -->
 
 # DevOps Practices

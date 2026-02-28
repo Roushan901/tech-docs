@@ -1,7 +1,9 @@
 <!-- Last updated: January 8, 2026, 10:00 AM -->
 ---
+---
 sidebar_position: 3
 sidebar: devopsSidebar
+---
 ---
 
 # Infrastructure as Code (IaC) Documentation

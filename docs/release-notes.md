@@ -1,4 +1,5 @@
 ---
+id: release-notes
 sidebar_label: Release Notes
 sidebar: guidesSidebar
 ---

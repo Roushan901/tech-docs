@@ -59,9 +59,56 @@ const sidebars = {
   // Writing Best Practices sidebar
   writingSidebar: [
     {
-      type: 'doc',
-      id: 'writing-best-practices',
-      label: 'Writing Best Practices',
+      type: 'category',
+      label: '📖 Writing Best Practices',
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'writing-best-practices',
+          label: '📚 Overview',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-audience-and-intent',
+          label: 'Audience and Intent',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-content-types',
+          label: 'Content Types',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-content-structure',
+          label: 'Content Structure',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-clear-concise-writing',
+          label: 'Clear and Concise Writing',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-procedural-writing',
+          label: 'Procedural Writing',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-commands-code-ui',
+          label: 'Commands, Code, and UI Text',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-style-terminology',
+          label: 'Style and Terminology',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-review-checklist',
+          label: 'Review and Quality Checklist',
+        },
+      ],
     },
   ],
 
@@ -74,22 +121,22 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'cloud-devops/index',
+          id: 'cloud-devops/cloud-devops-index',
           label: 'Cloud Platforms Overview',
         },
         {
           type: 'doc',
-          id: 'cloud-devops/aws',
+          id: 'cloud-devops/cloud-devops-aws',
           label: 'AWS (Amazon Web Services)',
         },
         {
           type: 'doc',
-          id: 'cloud-devops/azure',
+          id: 'cloud-devops/cloud-devops-azure',
           label: 'Azure (Microsoft Azure)',
         },
         {
           type: 'doc',
-          id: 'cloud-devops/gcp',
+          id: 'cloud-devops/cloud-devops-gcp',
           label: 'GCP (Google Cloud Platform)',
         },
       ],
@@ -105,7 +152,7 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'devops/index',
+          id: 'devops/devops-index',
           label: 'DevOps Overview',
         },
         {
@@ -160,36 +207,36 @@ const sidebars = {
       type: 'category',
       label: 'Tutorial - Basics',
       items: [
-        {
-          type: 'doc',
-          id: 'tutorial-basics/create-a-document',
-          label: 'Create A Document',
-        },
-        {
-          type: 'doc',
-          id: 'tutorial-basics/create-a-blog-post',
-          label: 'Create A Blog Post',
-        },
-        {
-          type: 'doc',
-          id: 'tutorial-basics/create-a-page',
-          label: 'Create A Page',
-        },
-        {
-          type: 'doc',
-          id: 'tutorial-basics/markdown-features',
-          label: 'Markdown Features',
-        },
-        {
-          type: 'doc',
-          id: 'tutorial-basics/deploy-your-site',
-          label: 'Deploy Your Site',
-        },
-        {
-          type: 'doc',
-          id: 'tutorial-basics/congratulations',
-          label: 'Congratulations',
-        },
+                {
+                  type: 'doc',
+                  id: 'tutorial-basics/tutorial-basics-create-a-document',
+                  label: 'Create A Document',
+                },
+                {
+                  type: 'doc',
+                  id: 'tutorial-basics/tutorial-basics-create-a-blog-post',
+                  label: 'Create A Blog Post',
+                },
+                {
+                  type: 'doc',
+                  id: 'tutorial-basics/tutorial-basics-create-a-page',
+                  label: 'Create A Page',
+                },
+                {
+                  type: 'doc',
+                  id: 'tutorial-basics/tutorial-basics-markdown-features',
+                  label: 'Markdown Features',
+                },
+                {
+                  type: 'doc',
+                  id: 'tutorial-basics/tutorial-basics-deploy-your-site',
+                  label: 'Deploy Your Site',
+                },
+                {
+                  type: 'doc',
+                  id: 'tutorial-basics/tutorial-basics-congratulations',
+                  label: 'Congratulations',
+                },
       ],
     },
   ],

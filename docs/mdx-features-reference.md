@@ -1,3 +1,7 @@
+---
+id: mdx-features-reference
+---
+
 <!-- Last updated: January 11, 2026, 12:00 PM -->
 
 # Complete MDX & Markdown Features Reference

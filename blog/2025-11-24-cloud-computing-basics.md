@@ -2,7 +2,7 @@
 slug: cloud-computing-basics
 title: Cloud Computing Basics
 authors: [roushan]
-tags: [cloud-computing, cloud-services, cloud-technology, DevOps]
+tags: [cloud-computing, cloud-services, cloud-technology, devops]
 date: 2025-11-24
 ---
 

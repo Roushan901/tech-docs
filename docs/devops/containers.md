@@ -1,7 +1,13 @@
 <!-- Last updated: January 8, 2026, 10:00 AM -->
 ---
+---
+id: devops-containers
+title: Docker & Kubernetes Documentation
 sidebar_position: 2
 sidebar: devopsSidebar
+sidebar_label: Docker & Kubernetes Documentation
+tags: []
+---
 ---
 
 # Docker & Kubernetes Documentation

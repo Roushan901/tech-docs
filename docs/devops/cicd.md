@@ -1,7 +1,13 @@
 <!-- Last updated: January 8, 2026, 10:00 AM -->
 ---
+---
+id: devops-cicd
+title: CI/CD Pipeline Documentation
 sidebar_position: 1
 sidebar: devopsSidebar
+sidebar_label: CI/CD Pipeline Documentation
+tags: []
+---
 ---
 
 # CI/CD Pipeline Documentation
