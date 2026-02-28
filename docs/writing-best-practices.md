@@ -3,25 +3,7 @@ sidebar_position: 2
 sidebar: writingSidebar
 ---
 
-<!-- Last updated: January 08, 2026, 10:00 AM -->
-
-## Writing Best Practices (Overview)
-
-This content has been reorganized into a set of focused guides to improve discoverability and reduce cognitive load. Visit the new landing page to explore topic cards and dedicated articles.
-
-- Landing page: [Writing Best Practices Overview](./writing-best-practices/index)
-
-Child pages:
-
-- [Core Principles](./writing-best-practices/core-principles)
-- [Writing for Global Audience (Accessibility)](./writing-best-practices/accessibility)
-- [Document Structure](./writing-best-practices/document-structure)
-- [Style Guide](./writing-best-practices/style-guide)
-- [Visual Elements](./writing-best-practices/visual-elements)
-- [Docs as Code](./writing-best-practices/docs-as-code)
-- [Review & Quality](./writing-best-practices/review-process)
-- [Maintenance](./writing-best-practices/maintenance)
-- [SEO](./writing-best-practices/seo)
+This page is intentionally left blank. Please use the [Writing Best Practices Overview](./writing-best-practices/index) to navigate the topic-specific guides.
 
 ## Core Principles
 
@@ -29,7 +11,11 @@ Child pages:
 
 Understanding your readers is fundamental to effective technical writing:
 
-- **Identify User Personas:** Define who will use your documentation (developers, end-users, administrators)
+- **Identify User Personas:** Define who will use your documentation (developers, end-users, administrators)npm start
+# then open http://localhost:3000/docs/writing-best-practices
+# or go to the sidebar "Writing Best Practices" -> Overviewnpm start
+# then open http://localhost:3000/docs/writing-best-practices
+# or go to the sidebar "Writing Best Practices" -> Overview
 - **Assess Technical Level:** Match complexity to audience expertise
 - **Consider Context:** Where and how will they access your docs?
 - **Language Preferences:** Account for international audiences and localization needs
