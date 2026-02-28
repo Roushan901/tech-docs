@@ -1,4 +1,5 @@
 ---
+id: admin-guides
 sidebar: guidesSidebar
 ---
 

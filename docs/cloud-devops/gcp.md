@@ -1,7 +1,10 @@
 ---
+id: cloud-devops-gcp
+title: GCP (Google Cloud Platform)
 sidebar: cloudSidebar
+sidebar_label: GCP (Google Cloud Platform)
+tags: []
 ---
-
 # GCP (Google Cloud Platform)
 
 Complete guide to Google Cloud Platform services, documentation, and best practices.

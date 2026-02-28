@@ -1,4 +1,5 @@
 ---
+id: integration-guides
 sidebar: guidesSidebar
 ---
 

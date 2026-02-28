@@ -1,3 +1,7 @@
+---
+id: quick-start-components
+---
+
 <!-- Last updated: January 11, 2026, 12:00 PM -->
 
 # Quick Start: Using Interactive Components

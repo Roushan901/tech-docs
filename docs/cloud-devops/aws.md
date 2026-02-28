@@ -1,7 +1,10 @@
 ---
+id: cloud-devops-aws
+title: AWS (Amazon Web Services)
 sidebar: cloudSidebar
+sidebar_label: AWS (Amazon Web Services)
+tags: []
 ---
-
 # AWS (Amazon Web Services)
 
 Complete guide to AWS documentation, services, and best practices for cloud computing.

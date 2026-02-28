@@ -1,4 +1,5 @@
 ---
+id: installation-guides
 sidebar: guidesSidebar
 ---
 

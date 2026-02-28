@@ -1,5 +1,9 @@
 ---
+id: tutorial-extras-translate-your-site
+title: Translate Your Site
 sidebar_position: 2
+sidebar_label: Translate Your Site
+tags: []
 ---
 
 # Translate your site

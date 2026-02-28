@@ -1,3 +1,7 @@
+---
+id: quick-reference-index
+---
+
 <!-- Last updated: January 11, 2026, 12:00 PM -->
 
 #  Quick Reference Index

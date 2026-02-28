@@ -1,5 +1,9 @@
 ---
+id: tutorial-basics-deploy-your-site
+title: Deploy Your Site
 sidebar_position: 5
+sidebar_label: Deploy Your Site
+tags: []
 ---
 
 # Deploy Your Site

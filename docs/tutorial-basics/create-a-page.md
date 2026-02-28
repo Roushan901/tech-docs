@@ -1,5 +1,9 @@
 ---
+id: tutorial-basics-create-a-page
+title: Create a Page
 sidebar_position: 1
+sidebar_label: Create a Page
+tags: []
 ---
 
 # Create a Page

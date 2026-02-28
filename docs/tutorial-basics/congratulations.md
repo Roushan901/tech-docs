@@ -1,5 +1,9 @@
 ---
+id: tutorial-basics-congratulations
+title: Congratulations!
 sidebar_position: 6
+sidebar_label: Congratulations
+tags: []
 ---
 
 # Congratulations!

@@ -1,5 +1,9 @@
 ---
+id: tutorial-basics-create-a-document
+title: Create a Document
 sidebar_position: 2
+sidebar_label: Create a Document
+tags: []
 ---
 
 # Create a Document
