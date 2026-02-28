@@ -349,7 +349,7 @@ export default function Home() {
                   <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Explore Docusaurus, Swagger, MkDocs, and modern platforms for building scalable documentation sites.</p>
                 </Link>
                 <Link
-                  to="/docs/cloud-devops/aws"
+                  to="/docs/cloud-devops"
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
@@ -377,7 +377,7 @@ export default function Home() {
                   <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Deep dive into AWS, Azure, and GCP with architecture patterns, deployment strategies, and cloud-native solutions.</p>
                 </Link>
                 <Link
-                  to="/docs/integration-guides"
+                  to="/docs/devops"
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
@@ -405,7 +405,7 @@ export default function Home() {
                   <p style={{ lineHeight: "1.6", color: "#64748b", margin: 0 }}>Master CI/CD pipelines, Docker, Kubernetes, and infrastructure as code with practical automation examples.</p>
                 </Link>
                 <Link
-                  to="/docs/api-references"
+                  to="/docs/writing-best-practices"
                   className={styles.featureCard}
                   style={{
                     backgroundColor: "#ffffff",
