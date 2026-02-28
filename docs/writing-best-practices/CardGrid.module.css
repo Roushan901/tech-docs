@@ -1,0 +1,38 @@
+/* Auto-fit responsive grid for navigation cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: var(--ifm-radius);
+  background-color: var(--ifm-color-background-secondary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-shadow-md);
+}
+
+.card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: var(--ifm-color-muted);
+}

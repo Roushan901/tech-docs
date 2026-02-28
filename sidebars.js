@@ -59,9 +59,21 @@ const sidebars = {
   // Writing Best Practices sidebar
   writingSidebar: [
     {
-      type: 'doc',
-      id: 'writing-best-practices',
+      type: 'category',
       label: 'Writing Best Practices',
+      collapsed: false,
+      link: { type: 'doc', id: 'writing-best-practices/index' },
+      items: [
+        'writing-best-practices/core-principles',
+        'writing-best-practices/accessibility',
+        'writing-best-practices/document-structure',
+        'writing-best-practices/style-guide',
+        'writing-best-practices/visual-elements',
+        'writing-best-practices/docs-as-code',
+        'writing-best-practices/review-process',
+        'writing-best-practices/maintenance',
+        'writing-best-practices/seo',
+      ],
     },
   ],
 

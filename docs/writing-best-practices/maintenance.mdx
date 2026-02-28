@@ -1,0 +1,59 @@
+---
+sidebar_position: 8
+---
+
+import styles from './CardGrid.module.css';
+
+<!-- Last updated: February 28, 2026 -->
+
+# Maintenance
+
+<div className={styles.grid} role="navigation" aria-label="Writing best practices sections">
+  <div className={styles.card}><a href="./core-principles"><h3>Core Principles</h3><p>Understand audience, clarity, and consistency.</p></a></div>
+  <div className={styles.card}><a href="./accessibility"><h3>Writing for Global Audience</h3><p>Make docs accessible and internationalization‑ready.</p></a></div>
+  <div className={styles.card}><a href="./document-structure"><h3>Document Structure</h3><p>Organize content for easy navigation and comprehension.</p></a></div>
+  <div className={styles.card}><a href="./style-guide"><h3>Style Guide</h3><p>Voice, tone, formatting, and content types.</p></a></div>
+  <div className={styles.card}><a href="./visual-elements"><h3>Visual Elements</h3><p>Use images, diagrams, and code examples effectively.</p></a></div>
+  <div className={styles.card}><a href="./docs-as-code"><h3>Docs as Code</h3><p>Treat documentation like software.</p></a></div>
+  <div className={styles.card}><a href="./review-process"><h3>Review &amp; Quality</h3><p>Establish review workflows and validation checks.</p></a></div>
+  <div className={styles.card}><a href="./maintenance"><h3>Maintenance</h3><p>Keep docs current and handle deprecations.</p></a></div>
+  <div className={styles.card}><a href="./seo"><h3>SEO</h3><p>Optimize documentation for search engines.</p></a></div>
+</div>
+
+**Estimated reading time:** 3 min  
+**Skill level:** Intermediate
+
+## What you'll learn
+
+- Strategies for keeping documentation up to date
+- How to handle deprecation notices
+
+### Keeping Documentation Current
+
+**Regular audits:**
+- Quarterly content review
+- Update version-specific information
+- Remove deprecated content
+- Refresh screenshots and examples
+
+**Set up alerts for:**
+- API changes
+- Breaking changes in dependencies
+- UI/UX updates
+- Security patches
+
+### Deprecation Notices
+
+When features are deprecated:
+
+:::warning Deprecated
+This API endpoint is deprecated as of v2.0 and will be removed in v3.0.
+Use the new `/api/v2/users` endpoint instead.
+:::
+
+## Migration Guide
+
+Follow these steps to migrate to the new endpoint:
+1. Update base URL to `/api/v2`
+2. Modify authentication header format
+3. Test with new response schema

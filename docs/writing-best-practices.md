@@ -5,19 +5,23 @@ sidebar: writingSidebar
 
 <!-- Last updated: January 08, 2026, 10:00 AM -->
 
-# Writing Best Practices
+## Writing Best Practices (Overview)
 
-**Who This Is For:** Technical writers, content strategists, developers documenting code, and anyone responsible for creating clear, professional technical content.
+This content has been reorganized into a set of focused guides to improve discoverability and reduce cognitive load. Visit the new landing page to explore topic cards and dedicated articles.
 
-**When to Use This Guide:** You're establishing documentation standards, training new writers, improving existing content quality, or building a style guide for your organization.
+- Landing page: [Writing Best Practices Overview](./writing-best-practices/index)
 
-**What You'll Learn:** Industry-proven writing techniques, style guidelines, formatting standards, information architecture principles, and strategies to make complex technical concepts accessible to diverse audiences.
+Child pages:
 
-## Why Writing Best Practices Matter
-
-Great technical writing isn't about using fancy words—it's about getting users from confusion to clarity as quickly as possible. Well-written documentation reduces support tickets, improves user satisfaction, accelerates feature adoption, and saves your organization money.
-
-**Real-World Impact:** A software company rewrote their installation guide using the principles in this guide. Result? Support tickets related to installation dropped by 60%, new user onboarding time decreased by 45%, and customer satisfaction scores increased by 35%. The difference? Clear structure, concise language, and practical examples.
+- [Core Principles](./writing-best-practices/core-principles)
+- [Writing for Global Audience (Accessibility)](./writing-best-practices/accessibility)
+- [Document Structure](./writing-best-practices/document-structure)
+- [Style Guide](./writing-best-practices/style-guide)
+- [Visual Elements](./writing-best-practices/visual-elements)
+- [Docs as Code](./writing-best-practices/docs-as-code)
+- [Review & Quality](./writing-best-practices/review-process)
+- [Maintenance](./writing-best-practices/maintenance)
+- [SEO](./writing-best-practices/seo)
 
 ## Core Principles
 
