@@ -33,10 +33,10 @@
             <name>Roushan Gupta</name>
             <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <category label="documentation" term="documentation"/>
-        <category label="technical-writing" term="technical-writing"/>
-        <category label="business-growth" term="business-growth"/>
-        <category label="knowledge-sharing" term="knowledge-sharing"/>
+        <category label="Documentation" term="Documentation"/>
+        <category label="Technical Writing" term="Technical Writing"/>
+        <category label="Business Growth" term="Business Growth"/>
+        <category label="Knowledge Sharing" term="Knowledge Sharing"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Cloud Computing Basics]]></title>
@@ -101,9 +101,9 @@
             <name>Roushan Gupta</name>
             <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <category label="cloud-computing" term="cloud-computing"/>
-        <category label="cloud-services" term="cloud-services"/>
-        <category label="cloud-technology" term="cloud-technology"/>
+        <category label="Cloud Computing" term="Cloud Computing"/>
+        <category label="Cloud Services" term="Cloud Services"/>
+        <category label="Cloud Technology" term="Cloud Technology"/>
         <category label="DevOps" term="DevOps"/>
     </entry>
     <entry>
@@ -126,10 +126,10 @@
             <name>Roushan Gupta</name>
             <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <category label="introduction" term="introduction"/>
-        <category label="technical-writing" term="technical-writing"/>
-        <category label="documentation" term="documentation"/>
-        <category label="about" term="about"/>
+        <category label="Introduction" term="Introduction"/>
+        <category label="Technical Writing" term="Technical Writing"/>
+        <category label="Documentation" term="Documentation"/>
+        <category label="About" term="About"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Docs as Code Approach]]></title>
@@ -188,11 +188,11 @@
             <name>Roushan Gupta</name>
             <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <category label="docs-as-code" term="docs-as-code"/>
-        <category label="documentation" term="documentation"/>
-        <category label="content-management" term="content-management"/>
+        <category label="Docs as Code" term="Docs as Code"/>
+        <category label="Documentation" term="Documentation"/>
+        <category label="Content Management" term="Content Management"/>
         <category label="Docusaurus" term="Docusaurus"/>
-        <category label="technical-writing" term="technical-writing"/>
+        <category label="Technical Writing" term="Technical Writing"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Turn Your Documentation Search Box into SuperSmart Search]]></title>
@@ -249,12 +249,12 @@
             <name>Roushan Gupta</name>
             <uri>https://www.linkedin.com/in/roushan-g-99242299/</uri>
         </author>
-        <category label="ai-search" term="ai-search"/>
-        <category label="algolia" term="algolia"/>
-        <category label="ask-ai" term="ask-ai"/>
+        <category label="AI Search" term="AI Search"/>
+        <category label="Algolia" term="Algolia"/>
+        <category label="Ask AI" term="Ask AI"/>
         <category label="Docusaurus" term="Docusaurus"/>
-        <category label="documentation" term="documentation"/>
-        <category label="technical-writing" term="technical-writing"/>
-        <category label="search-integration" term="search-integration"/>
+        <category label="Documentation" term="Documentation"/>
+        <category label="Technical Writing" term="Technical Writing"/>
+        <category label="Search Integration" term="Search Integration"/>
     </entry>
 </feed>

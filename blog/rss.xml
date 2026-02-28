@@ -30,10 +30,10 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="self-service-what-customers-love">Self-Service: What Customers Love<a href="https://techdocs.co.in/blog/documentation-helps-businesses-scale#self-service-what-customers-love" class="hash-link" aria-label="Direct link to Self-Service: What Customers Love" title="Direct link to Self-Service: What Customers Love" translate="no">​</a></h2>
 <p>Today's customers love self-service. They want to find answers on their own, whenever they need them, without waiting on hold or submitting a ticket. High-quality documentation—think clear instructions, troubleshooting guides, and FAQs—makes this possible.</p>
 <p>Not only does this free up your support team, but it also builds customer loyalty. In crowded markets, being known for excellent documentation can set you apart and keep customers coming back.</p>]]></content:encoded>
-            <category>documentation</category>
-            <category>technical-writing</category>
-            <category>business-growth</category>
-            <category>knowledge-sharing</category>
+            <category>Documentation</category>
+            <category>Technical Writing</category>
+            <category>Business Growth</category>
+            <category>Knowledge Sharing</category>
         </item>
         <item>
             <title><![CDATA[Cloud Computing Basics]]></title>
@@ -94,9 +94,9 @@
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-next">What's Next?<a href="https://techdocs.co.in/blog/cloud-computing-basics#whats-next" class="hash-link" aria-label="Direct link to What's Next?" title="Direct link to What's Next?" translate="no">​</a></h2>
 <p>Understanding the basics of cloud computing is just the beginning. In my next post, I'll dive deeper into the different types of cloud models and top global market leaders.</p>]]></content:encoded>
-            <category>cloud-computing</category>
-            <category>cloud-services</category>
-            <category>cloud-technology</category>
+            <category>Cloud Computing</category>
+            <category>Cloud Services</category>
+            <category>Cloud Technology</category>
             <category>DevOps</category>
         </item>
         <item>
@@ -115,10 +115,10 @@
 <li class=""><strong>Insights on Cloud and DevOps</strong></li>
 </ul>
 <p>Whether you're new to tech or looking to sharpen your skills, you'll find practical and accessible content here.</p>]]></content:encoded>
-            <category>introduction</category>
-            <category>technical-writing</category>
-            <category>documentation</category>
-            <category>about</category>
+            <category>Introduction</category>
+            <category>Technical Writing</category>
+            <category>Documentation</category>
+            <category>About</category>
         </item>
         <item>
             <title><![CDATA[Docs as Code Approach]]></title>
@@ -173,11 +173,11 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="essential-tools-for-docs-as-code">Essential Tools for Docs as Code<a href="https://techdocs.co.in/blog/docs-as-code-approach#essential-tools-for-docs-as-code" class="hash-link" aria-label="Direct link to Essential Tools for Docs as Code" title="Direct link to Essential Tools for Docs as Code" translate="no">​</a></h2>
 <table><thead><tr><th>Tool</th><th>Purpose</th></tr></thead><tbody><tr><td><strong>Visual Studio Code</strong></td><td>Free, open-source, and highly customizable code editor. Supports Markdown, live preview, Git integration, and many extensions.</td></tr><tr><td><strong>Git</strong></td><td>Distributed version control system. Tracks every change, supports branching, merging, and rollback for transparent history.</td></tr><tr><td><strong>GitHub</strong></td><td>Web-based platform for hosting/managing Git repositories. Enables pull requests, code reviews, issue tracking, and automation.</td></tr><tr><td><strong>GitHub Actions</strong></td><td>Built-in CI/CD service for GitHub. Automates workflows like building and deploying documentation whenever changes are merged.</td></tr><tr><td><strong>Docusaurus</strong></td><td>Static site generator for documentation. Converts Markdown files into professional, searchable, and mobile-friendly websites.</td></tr></tbody></table>
 <p>Docs as Code is more than a trend—it's a practical, proven approach that brings the best of software development to the world of documentation.</p>]]></content:encoded>
-            <category>docs-as-code</category>
-            <category>documentation</category>
-            <category>content-management</category>
+            <category>Docs as Code</category>
+            <category>Documentation</category>
+            <category>Content Management</category>
             <category>Docusaurus</category>
-            <category>technical-writing</category>
+            <category>Technical Writing</category>
         </item>
         <item>
             <title><![CDATA[Turn Your Documentation Search Box into SuperSmart Search]]></title>
@@ -230,13 +230,13 @@
 <li class=""><a href="https://docsearch.algolia.com/docs/v4/askai/" target="_blank" rel="noopener noreferrer" class="">Algolia DocSearch v4</a></li>
 <li class=""><a href="https://docusaurus.io/blog/releases/3.9" target="_blank" rel="noopener noreferrer" class="">Docusaurus 3.9 Release</a></li>
 </ul>]]></content:encoded>
-            <category>ai-search</category>
-            <category>algolia</category>
-            <category>ask-ai</category>
+            <category>AI Search</category>
+            <category>Algolia</category>
+            <category>Ask AI</category>
             <category>Docusaurus</category>
-            <category>documentation</category>
-            <category>technical-writing</category>
-            <category>search-integration</category>
+            <category>Documentation</category>
+            <category>Technical Writing</category>
+            <category>Search Integration</category>
         </item>
     </channel>
 </rss>
