@@ -1,3 +1,8 @@
+documentation:
+  label: Documentation
+  permalink: /documentation
+  description: Documentation best practices and techniques
+
 facebook:
   label: Facebook
   permalink: /facebook

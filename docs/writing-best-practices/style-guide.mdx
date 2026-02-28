@@ -1,28 +1,223 @@
 ---
 id: writing-best-practices-style-guide
-title: Style Guide
-sidebar_position: 4
-sidebar_label: Style Guide
+title: Structure & Organization
+sidebar_position: 2
+sidebar_label: Structure & Organization
 tags: []
 ---
 
-import styles from './CardGrid.module.css';
-
 <!-- Last updated: February 28, 2026 -->
 
-# Style Guide
+# Structure & Organization
 
-<div className={styles.grid} role="navigation" aria-label="Writing best practices sections">
-  <div className={styles.card}><a href="./core-principles"><h3>Core Principles</h3><p>Understand audience, clarity, and consistency.</p></a></div>
-  <div className={styles.card}><a href="./accessibility"><h3>Writing for Global Audience</h3><p>Make docs accessible and internationalization‑ready.</p></a></div>
-  <div className={styles.card}><a href="./document-structure"><h3>Document Structure</h3><p>Organize content for easy navigation and comprehension.</p></a></div>
-  <div className={styles.card}><a href="./style-guide"><h3>Style Guide</h3><p>Voice, tone, formatting, and content types.</p></a></div>
-  <div className={styles.card}><a href="./visual-elements"><h3>Visual Elements</h3><p>Use images, diagrams, and code examples effectively.</p></a></div>
-  <div className={styles.card}><a href="./docs-as-code"><h3>Docs as Code</h3><p>Treat documentation like software.</p></a></div>
-  <div className={styles.card}><a href="./review-process"><h3>Review &amp; Quality</h3><p>Establish review workflows and validation checks.</p></a></div>
-  <div className={styles.card}><a href="./maintenance"><h3>Maintenance</h3><p>Keep docs current and handle deprecations.</p></a></div>
-  <div className={styles.card}><a href="./seo"><h3>SEO</h3><p>Optimize documentation for search engines.</p></a></div>
-</div>
+As a content designer, your job is to organize information so users can find what they need instantly. Good structure is invisible—it just works. Bad structure frustrates users.
+
+## The Content Designer's Framework
+
+Structure is about understanding user journeys and organizing content to support how users actually search, read, and learn.
+
+## Information Architecture Principles
+
+### 1. Start with User Tasks
+
+Organize content around what users want to accomplish, not your product structure:
+
+**❌ Product-focused:**
+- Dashboard Settings
+- User Profile Management
+- Notification Controls
+- Data Export Features
+
+**✅ Task-focused:**
+- Getting Started
+- Managing Your Account
+- Staying Updated
+- Exporting Your Data
+
+### 2. Hierarchy That Matches User Needs
+
+Create mental models that match user thinking:
+
+```
+Writing Guide
+├── Getting Started
+│   ├── What is this?
+│   └── First steps
+├── Common Tasks
+│   ├── Creating content
+│   ├── Publishing
+│   └── Analytics
+└── Advanced
+    ├── Custom styles
+    └── API
+```
+
+### 3. Descriptive Headings
+
+Headings are scannable—make them meaningful:
+
+**❌ Vague:**
+> Overview
+> Details
+> Settings
+
+**✅ Descriptive:**
+> What is Markdown?
+> Formatting Your Text
+> Control Notifications
+
+## Content Structure Formula
+
+### The 4-Part Pattern
+
+**1. Context (What is this?)**
+> Brief explanation of what you're about to read
+
+**2. Action (What do I do?)**
+> Step-by-step instructions or key points
+
+**3. Example (How does it work?)**
+> Real example users can relate to
+
+**4. What's Next?**
+> Links to related topics or next steps
+
+### Example Page Structure
+
+```markdown
+# Creating Your First Post
+
+Want to share your first update? Here's how.
+
+## Step 1: Click "New Post"
+[Screenshot]
+
+## Step 2: Write Your Title
+Make it clear and specific.
+
+## Step 3: Add Your Content
+Click the text area and start typing.
+
+## Step 4: Publish
+Click the green "Publish" button.
+
+## What can I do next?
+- Share your post
+- Add collaborators
+- See analytics
+```
+
+## Navigation Design
+
+### Breadcrumbs Help Orientation
+
+```
+Home > Documentation > Content > Creating Posts
+```
+
+Users always know where they are and how to go back.
+
+### Related Content Links
+
+At the bottom of each page:
+
+```
+← Back to Getting Started
+Next: Publishing Your Post →
+
+Related Articles:
+- Formatting Guide
+- Analytics Explained
+- Troubleshooting
+```
+
+### Search & Discoverability
+
+- Use clear, predictable URL structures
+- Include keywords in headings
+- Create a sitemap or index
+- Link between related topics
+
+## Visual Content Hierarchy
+
+### Typography for Scanning
+
+- **H1:** Page title (1 per page)
+- **H2:** Main sections (users skip to these)
+- **H3:** Subsections (detail level)
+- **Body text:** Actual content
+- **Bold:** Key terms users should remember
+
+### Lists Over Paragraphs
+
+When you have 3+ items, use a list:
+
+```markdown
+Before publishing, check:
+- Spelling and grammar
+- Links work correctly
+- Images are optimized
+- Title is clear
+```
+
+## Content Patterns
+
+### Decision Trees
+
+Help users choose the right path:
+
+```
+Do you have an account?
+├─ Yes → Go to login
+└─ No → Create account first
+```
+
+### FAQ Structure
+
+Organize by user question, not topic:
+
+```
+Frequently Asked Questions
+
+Q: How do I change my password?
+Q: Why won't my post publish?
+Q: Can I export my data?
+```
+
+### Troubleshooting Guide
+
+Organized by symptom, not cause:
+
+```
+Problem: App keeps crashing
+- Check you have latest version
+- Clear app cache
+- Restart your device
+
+Problem: Can't log in
+- Verify your email
+- Reset your password
+- Contact support
+```
+
+## Testing Your Structure
+
+### Card Sorting Exercise
+
+Ask users to organize topics the way they'd expect them. Compare results to your structure.
+
+### Tree Testing
+
+Test navigation before building. Do users find content easily?
+
+### User Feedback
+
+- Can they find what they need?
+- Is the path logical?
+- Are headings clear?
+- What's confusing?
+
+# Style Guide
 
 **Estimated reading time:** 5 min  
 **Skill level:** Beginner – Intermediate

@@ -1,0 +1,211 @@
+---
+sidebar_position: 5
+id: writing-best-practices-procedural-writing
+---
+
+<!-- Last updated: February 28, 2026, 12:00 PM -->
+
+# Procedural Writing
+
+Procedural writing guides users through completing a specific task step-by-step. Well-written procedures prevent errors, reduce support requests, and help users succeed quickly.
+
+## Elements of a Strong Procedure
+
+### Title
+
+The title should clearly state what users will accomplish, using outcome-focused language.
+
+**Weak**: "Authentication Setup"
+**Strong**: "Set Up Two-Factor Authentication"
+
+**Weak**: "Database Migration"
+**Strong**: "Migrate Your Database to PostgreSQL"
+
+### Introductory Context
+
+Provide users context about why they're doing this and what success looks like.
+
+```
+This procedure walks you through enabling two-factor 
+authentication (2FA) on your account. 2FA adds a security 
+layer requiring a second verification method beyond your 
+password. When complete, you'll be prompted for a code 
+from your phone when logging in.
+```
+
+### Prerequisites Section
+
+List everything users need before starting:
+
+```
+Before you start, you need:
+- An active account
+- Access to your phone
+- An authenticator app (Google Authenticator, Authy, 
+  Microsoft Authenticator, or similar)
+```
+
+### Numbered Steps
+
+Use numbered lists for sequential actions. Each step should be:
+- **One action per step**: Don't combine multiple actions
+- **Action-oriented**: Start with a verb
+- **Concise**: 1-2 lines each
+- **Specific**: Include what to look for
+
+**Weak steps:**
+1. Log in and go to security settings
+2. Set up 2FA
+3. Save and finish
+
+**Strong steps:**
+1. Log in to your account at example.com
+2. Click **Settings** in the top-right menu
+3. Select **Security** from the left sidebar
+4. Click **Enable Two-Factor Authentication**
+5. Choose an authenticator app (Google Authenticator recommended)
+6. Scan the QR code with your authenticator app
+7. Enter the 6-digit code shown in your app
+8. Click **Verify and Enable**
+9. Save your backup codes in a safe location
+
+### Expected Results
+
+Tell users what they should see when each step completes.
+
+```
+3. Click the **Enable** button
+   → A QR code appears on your screen
+```
+
+### Verification Section
+
+Help users confirm they've completed the task successfully.
+
+```
+## Verify 2FA is enabled
+1. Log out of your account
+2. Log in again with your password
+3. You should be prompted to enter a code from your 
+   authenticator app
+4. Enter the code and click **Verify**
+
+If you can log in successfully, 2FA is enabled.
+```
+
+### Troubleshooting (if needed)
+
+Include common issues and solutions.
+
+```
+## Troubleshooting
+
+**I don't see the QR code**
+- Refresh the page
+- Try a different browser
+- Clear your browser cache
+
+**The code keeps saying it's invalid**
+- Make sure your phone's time is synchronized correctly
+- Try the next code (codes change every 30 seconds)
+- Ensure the authenticator app is up to date
+```
+
+### Next Steps
+
+Point users to related tasks or information.
+
+```
+## What's next
+- [Set up backup authentication methods](link)
+- [Review your security settings](link)
+- [Manage connected devices](link)
+```
+
+## Writing Techniques for Procedures
+
+### Use Consistent Terminology
+
+Stick to one word for each concept throughout.
+
+**Inconsistent**: "Click the button... press the button... select the button..."
+**Consistent**: "Click the button" (use "click" for mouse, "enter" for keyboard)
+
+### Emphasize UI Elements
+
+Make it clear which buttons, menus, and fields to use.
+
+```
+1. Click **Settings** (button in top-right corner)
+2. In the left sidebar, click **Account**
+3. Find the "Change Password" field
+4. Enter your current password
+5. Enter your new password
+6. Click the **Save Changes** button
+```
+
+### Include Screenshots Strategically
+
+Screenshots help users find the right button or field, but don't overuse them.
+
+**Use screenshots for:**
+- Complex interfaces where buttons aren't obvious
+- Finding a specific field among many options
+- Confirming expected results
+
+**Don't use screenshots for:**
+- Simple, labeled buttons
+- Navigation that's obvious from text
+- Content that changes frequently (screenshots get outdated)
+
+### Handle Variations and Branches
+
+When different users follow different paths, use conditional language.
+
+```
+4. Choose your authentication method:
+   - If using Google Authenticator: Go to step 5
+   - If using SMS: Go to step 6
+   - If using email: Go to step 7
+```
+
+## Procedure Length Guidelines
+
+**Ideal length**: 5-10 steps for a focused task
+
+**Too short** (&lt;3 steps): Probably needs more detail or combines multiple tasks
+**Too long** (&gt;15 steps): Consider breaking into multiple procedures
+
+If you need more than 15 steps, consider:
+- Breaking into smaller focused procedures
+- Using a tutorial format for teaching a complex workflow
+- Providing conceptual background first
+
+## Common Procedure Mistakes to Avoid
+
+| Mistake | Problem | Fix |
+|---------|---------|-----|
+| "Then do X and Y" | Two actions in one step | Separate into two numbered steps |
+| "Configure settings" | Too vague | "Set the timeout to 30 seconds" |
+| No expected results | Users unsure if step worked | Add "You should see..." after each step |
+| Assumes knowledge | New users get lost | Include prerequisites and terminology |
+| Walls of text | Hard to follow | Break into short, numbered steps |
+| "Go back to step 5" | Hard to navigate | Repeat critical information instead |
+| Only happy path | Doesn't handle common issues | Add troubleshooting section |
+
+## Procedural Writing Checklist
+
+- [ ] Title clearly states what users will accomplish
+- [ ] Introductory context explains the purpose
+- [ ] Prerequisites listed completely
+- [ ] Each step contains one action
+- [ ] Steps start with action verbs
+- [ ] UI elements are emphasized (bold/special formatting)
+- [ ] Expected results included for each step
+- [ ] Verification section helps users confirm completion
+- [ ] Troubleshooting section addresses common issues
+- [ ] Next steps point to related tasks
+- [ ] Terminology is consistent throughout
+- [ ] Length is appropriate (5-10 steps ideal)
+- [ ] Screenshots used strategically, not for every step
+

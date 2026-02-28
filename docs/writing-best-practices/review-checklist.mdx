@@ -1,0 +1,267 @@
+---
+sidebar_position: 8
+id: writing-best-practices-review-checklist
+---
+
+<!-- Last updated: February 28, 2026, 12:00 PM -->
+
+# Review and Quality Checklist
+
+Quality review ensures documentation meets standards before publication. A comprehensive checklist catches errors, improves consistency, and prevents user confusion.
+
+## Pre-Publish Review Process
+
+### Stage 1: Self-Review
+
+Before submitting for review, the writer checks their own work.
+
+**Clarity and Completeness:**
+- [ ] Title clearly describes the content
+- [ ] Introduction explains why readers should care
+- [ ] All steps or sections are present
+- [ ] Examples are relevant and correct
+- [ ] No information is missing that users need
+- [ ] Conclusion or next steps are provided
+
+**Writing Quality:**
+- [ ] Used simple, clear language
+- [ ] Removed jargon or explained necessary jargon
+- [ ] Sentences are short and focused
+- [ ] Used active voice
+- [ ] No grammatical errors
+- [ ] Tone is consistent throughout
+
+**Structure and Organization:**
+- [ ] Heading hierarchy is logical
+- [ ] Information flows naturally
+- [ ] Related items are grouped together
+- [ ] Paragraphs are short (2-3 sentences)
+- [ ] Lists are formatted consistently
+- [ ] Callouts are used appropriately
+
+**Formatting and Links:**
+- [ ] Code examples are properly formatted
+- [ ] UI elements are bolded consistently
+- [ ] Links have descriptive text (not "click here")
+- [ ] All links are tested and work
+- [ ] Cross-references to related docs are included
+
+### Stage 2: Content Review
+
+Subject matter experts (SMEs) verify accuracy and completeness.
+
+**Accuracy Review:**
+- [ ] All technical information is accurate
+- [ ] Code examples run correctly
+- [ ] Commands work as documented
+- [ ] UI references match current product
+- [ ] Feature descriptions are current
+- [ ] No outdated or deprecated information
+
+**Completeness Review:**
+- [ ] All necessary prerequisite knowledge mentioned
+- [ ] Edge cases or common issues addressed
+- [ ] Troubleshooting covers common problems
+- [ ] Related content is appropriately linked
+- [ ] No gaps in logical flow
+
+**Terminology Review:**
+- [ ] Product/feature names used consistently
+- [ ] Terms match the documentation glossary
+- [ ] User roles named correctly
+- [ ] Technical terms are precise
+- [ ] Acronyms explained on first mention
+
+### Stage 3: Copy/Style Review
+
+An editor or second writer checks style, tone, and consistency.
+
+**Style Consistency:**
+- [ ] Tone matches documentation standard
+- [ ] Terminology consistent with style guide
+- [ ] Formatting matches established patterns
+- [ ] Abbreviations follow style guide rules
+- [ ] Capitalization is consistent
+
+**Grammar and Mechanics:**
+- [ ] Spelling is correct
+- [ ] No grammatical errors
+- [ ] Punctuation is correct
+- [ ] Verb tenses are consistent
+- [ ] Subject-verb agreement is correct
+
+**Clarity:**
+- [ ] No unnecessary jargon
+- [ ] Ambiguous phrases clarified
+- [ ] Sentences are easy to understand
+- [ ] Paragraphs are focused
+- [ ] Ideas are expressed concisely
+
+### Stage 4: User Testing (for critical docs)
+
+For complex or frequently-used documentation, test with actual users.
+
+**User Testing Process:**
+1. Give unedited documentation to a test user
+2. Ask them to complete the task described
+3. Observe what works and what confuses them
+4. Ask for feedback on clarity
+5. Record the time it takes to complete
+6. Document any questions they ask
+
+**Test User Feedback Should Answer:**
+- [ ] Were instructions clear?
+- [ ] Did users get stuck anywhere?
+- [ ] Were examples helpful?
+- [ ] Did the structure make sense?
+- [ ] Was the length appropriate?
+- [ ] Would they recommend changes?
+
+## Quality Standards
+
+### Accessibility Standards
+
+- [ ] Images have descriptive alt text
+- [ ] Color is not the only way to convey information
+- [ ] Code examples follow WCAG guidelines
+- [ ] Text has sufficient contrast with background
+- [ ] Videos have captions (if included)
+- [ ] Tables have proper header rows
+
+### Technical Accuracy Standards
+
+- [ ] All code examples execute without errors
+- [ ] All commands work on stated platforms
+- [ ] All external links are active
+- [ ] All internal links point to current docs
+- [ ] Technical details match actual product
+- [ ] No deprecated features presented as current
+
+### Content Completeness Standards
+
+- [ ] Every section has an introduction and conclusion
+- [ ] Every task includes prerequisites
+- [ ] Every feature includes at least one example
+- [ ] Every error condition includes troubleshooting
+- [ ] Cross-references connect related content
+- [ ] Next steps guide users to related tasks
+
+## Review Checklist Template
+
+Create a reusable checklist for your team:
+
+```markdown
+## Documentation Review Checklist
+
+**Document:** [Name]
+**Author:** [Name]
+**Reviewer:** [Name]
+**Date:** [Date]
+
+### Content Accuracy
+- [ ] Technically accurate
+- [ ] Code examples tested
+- [ ] Product references current
+- [ ] No contradictions with other docs
+
+### Clarity and Completeness
+- [ ] Clear title and introduction
+- [ ] All necessary information included
+- [ ] Examples are relevant
+- [ ] No unexplained jargon
+- [ ] Logical flow maintained
+
+### Structure
+- [ ] Heading hierarchy correct
+- [ ] Paragraphs short and focused
+- [ ] Related items grouped
+- [ ] Bulleted/numbered lists used appropriately
+
+### Style and Formatting
+- [ ] Matches style guide
+- [ ] Consistent terminology
+- [ ] Proper emphasis (bold, italics)
+- [ ] Code properly formatted
+- [ ] UI elements clearly identified
+
+### Links and References
+- [ ] All links tested and active
+- [ ] Link text is descriptive
+- [ ] Related docs cross-referenced
+- [ ] No broken internal links
+
+### Grammar and Mechanics
+- [ ] No spelling errors
+- [ ] Correct grammar
+- [ ] Consistent tense
+- [ ] Proper punctuation
+
+### Reviewer Comments
+[Space for reviewer notes]
+
+### Approval
+- [ ] Approved for publication
+- [ ] Approved with revisions (see notes)
+- [ ] Needs significant revisions (see notes)
+```
+
+## Common Quality Issues and Fixes
+
+| Issue | Example | Solution |
+|-------|---------|----------|
+| Unclear instructions | "Configure the system properly" | "Set timeout to 30 seconds in config.json" |
+| Missing steps | Step 1... Step 3... | List all steps, test them before publishing |
+| Outdated information | References feature from v1.0 | Update to current version, check dates |
+| Vague terminology | "Use appropriate settings" | "Set maxConnections: 50 in database.conf" |
+| Broken links | [Related doc](broken-link) | Test all links before publishing |
+| No context | "Click Save" | "Click the **Save Changes** button to apply" |
+| Incomplete examples | Code example won't run | Test code, include all necessary parts |
+
+## Defect Categories
+
+Track types of issues to improve processes:
+
+**High Priority** (blocks user success):
+- Inaccurate technical information
+- Broken links
+- Missing critical steps
+- Incorrect code examples
+
+**Medium Priority** (confuses but doesn't block):
+- Unclear instructions
+- Inconsistent terminology
+- Poor structure
+- Missing examples
+
+**Low Priority** (quality improvements):
+- Grammar/spelling
+- Tone inconsistencies
+- Formatting improvements
+- Minor clarity issues
+
+## Review and Quality Checklist
+
+**Before Submitting for Review:**
+- [ ] Spell check passed
+- [ ] Grammar check completed
+- [ ] All links tested
+- [ ] Code examples executed successfully
+- [ ] Screenshots current and accurate
+- [ ] Self-review checklist completed
+
+**For Reviewers:**
+- [ ] Content accuracy verified
+- [ ] Structure and organization logical
+- [ ] Style and terminology consistent
+- [ ] No grammar or spelling errors
+- [ ] Links functional
+- [ ] Ready for publication or needs revision specified
+
+**Before Publication:**
+- [ ] All review feedback addressed
+- [ ] Final proofread completed
+- [ ] Updated in document management system
+- [ ] Version control updated
+- [ ] Search index updated (if applicable)
+- [ ] Release notes mention if significant change
+

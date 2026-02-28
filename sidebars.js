@@ -60,19 +60,54 @@ const sidebars = {
   writingSidebar: [
     {
       type: 'category',
-      label: 'Writing Best Practices',
+      label: '📖 Writing Best Practices',
       collapsed: false,
-      link: { type: 'doc', id: 'writing-best-practices/writing-best-practices-index' },
       items: [
-        'writing-best-practices/writing-best-practices-core-principles',
-        'writing-best-practices/writing-best-practices-accessibility',
-        'writing-best-practices/writing-best-practices-document-structure',
-        'writing-best-practices/writing-best-practices-style-guide',
-        'writing-best-practices/writing-best-practices-visual-elements',
-        'writing-best-practices/writing-best-practices-docs-as-code',
-        'writing-best-practices/writing-best-practices-review-process',
-        'writing-best-practices/writing-best-practices-maintenance',
-        'writing-best-practices/writing-best-practices-seo',
+        {
+          type: 'doc',
+          id: 'writing-best-practices',
+          label: '📚 Overview',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-audience-and-intent',
+          label: 'Audience and Intent',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-content-types',
+          label: 'Content Types',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-content-structure',
+          label: 'Content Structure',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-clear-concise-writing',
+          label: 'Clear and Concise Writing',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-procedural-writing',
+          label: 'Procedural Writing',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-commands-code-ui',
+          label: 'Commands, Code, and UI Text',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-style-terminology',
+          label: 'Style and Terminology',
+        },
+        {
+          type: 'doc',
+          id: 'writing-best-practices/writing-best-practices-review-checklist',
+          label: 'Review and Quality Checklist',
+        },
       ],
     },
   ],

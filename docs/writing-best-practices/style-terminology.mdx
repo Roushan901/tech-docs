@@ -1,0 +1,219 @@
+---
+sidebar_position: 7
+id: writing-best-practices-style-terminology
+---
+
+<!-- Last updated: February 28, 2026, 12:00 PM -->
+
+# Style and Terminology
+
+Consistent style and terminology across documentation ensures users can navigate confidently and understand concepts consistently. A style guide and terminology glossary are essential tools for documentation teams.
+
+## Building a Documentation Style Guide
+
+A style guide documents decisions about language, formatting, and tone to ensure consistency across all documentation.
+
+### Style Guide Sections
+
+#### 1. Tone and Voice
+
+Define how the documentation "sounds" and how it should address readers.
+
+**Example entry:**
+```
+Tone: Professional but approachable, confident but not 
+      condescending
+
+Use first person plural ("we") to invite collaboration
+  - "Let's set up authentication together"
+
+Avoid apologetic language
+  - Don't: "Unfortunately, this feature isn't available yet"
+  - Do: "This feature will be available in v2.0"
+
+Address readers directly using "you"
+  - Don't: "One should configure the server"
+  - Do: "You should configure the server"
+```
+
+#### 2. Grammar and Mechanics
+
+Establish consistent rules for grammar, punctuation, and formatting.
+
+```
+Capitalization:
+- Capitalize proper nouns (Product names, company names)
+- Use title case for headings and menu items
+- Use sentence case in body text
+
+Punctuation:
+- Use Oxford comma: "features, benefits, and advantages"
+- Use em dashes (—) for emphasis, not hyphens (-)
+- Use colons to introduce lists
+
+Lists:
+- Use bullet points for unordered items
+- Use numbered lists for sequential steps
+- Capitalize first word of each item
+- Use parallel structure (all starting same way)
+```
+
+#### 3. Word and Phrase Choices
+
+Create a list of preferred terms with explanations.
+
+```
+Preferred: "click" (for mouse action)
+Not: "press," "hit," "push"
+
+Preferred: "select" (choosing from options)
+Not: "choose," "pick"
+
+Preferred: "enter" (typing information)
+Not: "type," "input," "put in"
+
+Preferred: "password" 
+Not: "secret," "passphrase," "credentials" (unless 
+      specifically referring to credentials)
+
+Preferred: "customer"
+Not: "client," "user," "end user" (when referring to paid users)
+```
+
+#### 4. Formatting Conventions
+
+Document how to format different elements consistently.
+
+```
+UI Elements: Bold (**Settings** menu)
+File names: Monospace (src/config.js)
+Code: Monospace in backticks (`npm install`)
+Emphasis: Italics (*important point*)
+Variable placeholders: Angle brackets (<your-api-key>)
+Keyboard keys: Initial caps (Press Enter)
+```
+
+#### 5. Abbreviations and Acronyms
+
+Define when and how to use abbreviations.
+
+```
+First mention: Spell out fully with abbreviation in parentheses
+  "Application Programming Interface (API) allows..."
+
+Subsequent mentions: Use abbreviation
+  "The API provides endpoints for..."
+
+No periods in acronyms:
+  - API (not A.P.I.)
+  - HTML (not H.T.M.L.)
+```
+
+## Building a Terminology Glossary
+
+A glossary defines key terms used in your documentation, ensuring consistent understanding.
+
+### Glossary Entry Format
+
+**Term:** (as it should appear in documentation)
+**Definition:** (clear, simple explanation)
+**Example usage:** (how it's used in documentation)
+**Related terms:** (synonyms or related concepts)
+**Avoid:** (words not to use instead)
+
+### Example Glossary Entries
+
+```
+**Term:** API Key
+**Definition:** A unique identifier that authenticates 
+              your application to our API
+**Example:** "Include your API key in the Authorization 
+             header: Authorization: Bearer YOUR_API_KEY"
+**Related:** Access token, OAuth token
+**Avoid:** Secret key, password, credential
+---
+
+**Term:** Webhook
+**Definition:** An automated notification sent by our 
+              system to your application when specific 
+              events occur
+**Example:** "When a payment succeeds, we'll send a 
+             webhook to your configured endpoint"
+**Related:** Event, callback, notification
+**Avoid:** Callback hook, trigger
+---
+
+**Term:** Namespace
+**Definition:** A named container that organizes and 
+              isolates resources to avoid conflicts
+**Example:** "Create different namespaces for development,
+             staging, and production environments"
+**Related:** Scope, context, container
+**Avoid:** Folder, directory, partition
+```
+
+## Consistency Across Documentation
+
+### Terminology Checklist
+
+When writing, verify consistency:
+- [ ] All product features use consistent names
+- [ ] User roles are consistently named throughout
+- [ ] UI paths use the same terminology
+- [ ] Acronyms are spelled out on first mention
+- [ ] Plural/singular forms are consistent
+- [ ] Third-party product names match official naming
+
+### Formatting Consistency
+
+- [ ] All buttons formatted the same way
+- [ ] All file paths formatted consistently
+- [ ] Code snippets use consistent syntax highlighting
+- [ ] Callouts (notes, warnings) use consistent styling
+- [ ] Examples follow the same structure
+
+## Managing Terminology Evolution
+
+Terminology changes as products evolve.
+
+### When Terminology Changes
+
+1. **Update the glossary** with the new term
+2. **Mark old terminology** as deprecated: "Previously called X, now called Y"
+3. **Update existing docs** to use new terminology
+4. **Document the change** in release notes if it's user-facing
+5. **Track deprecation period** if users need time to adjust
+
+**Example:**
+```
+**Term:** Authentication Token (formerly API Key)
+**Definition:** A secure credential that authenticates 
+              your application to our service
+**Migration:** We renamed API Keys to Authentication 
+              Tokens in v2.0. See [migration guide](link).
+```
+
+## Common Style Mistakes
+
+| Mistake | Problem | Solution |
+|---------|---------|----------|
+| Inconsistent button names | Users confused about which to click | Standardize on one term in style guide |
+| Mixing "customer" and "user" | Unclear who you're talking about | Define each term distinctly |
+| Spelling out vs abbreviating | Looks unprofessional | Choose one approach in style guide |
+| Varying code formatting | Hard to distinguish code from text | Use consistent formatting |
+| "Click here" links | Unclear where link goes | Use descriptive link text |
+| Capitalization varies | Looks inconsistent | Document capitalization rules |
+
+## Style and Terminology Checklist
+
+- [ ] Style guide defines tone and voice
+- [ ] Grammar and mechanics rules documented
+- [ ] Word and phrase preferences documented
+- [ ] Formatting conventions standardized
+- [ ] Abbreviations and acronyms rules defined
+- [ ] Terminology glossary created and maintained
+- [ ] All writers follow the style guide
+- [ ] Terminology is consistent throughout all docs
+- [ ] Documentation reviewed regularly for consistency
+- [ ] Style guide reviewed and updated annually
+
