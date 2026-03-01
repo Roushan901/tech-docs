@@ -185,7 +185,7 @@ export default function Home() {
                   Tech<span className={styles.highlightText}>DOCS</span>
                 </h1>
                 <p className={styles.heroDescription}>
-                  Professional technical writing resources for developers and technical writers
+                  Professional Technical Writing Resources for Developers and Technical Writers
                 </p>
                 
                 <div className={styles.searchWrapper}>

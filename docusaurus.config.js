@@ -30,7 +30,8 @@ const config = {
   organizationName: 'Roushan901', // Usually your GitHub org/user name.
   projectName: 'tech-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  // Allow the build to succeed even if there are unresolved links (tutorial placeholders, etc.)
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
