@@ -44,6 +44,7 @@
 .heroInner {
   position: relative;
   padding: 84px 0 88px;
+  overflow: hidden;
 }
 
 .heroInner::before {
@@ -55,6 +56,21 @@
   height: 2px;
   background: var(--ifm-color-primary, #c9191e);
   opacity: 0.85;
+}
+
+.heroInner::after {
+  content: '';
+  position: absolute;
+  top: -160px;
+  right: -120px;
+  width: min(46vw, 560px);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(248, 113, 113, 0.22), rgba(248, 113, 113, 0) 64%);
+  pointer-events: none;
+  opacity: 0.75;
+  filter: blur(2px);
 }
 
 /* ===== Hero grid ===== */
@@ -71,11 +87,12 @@
   flex-direction: column;
   gap: 1.25rem;
   padding-top: 0.4rem;
+  animation: heroFadeUp 0.62s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Main headline */
 .title {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
   font-size: clamp(2.75rem, 4.5vw, 4rem);
   font-weight: 800;
   line-height: 1.0;
@@ -90,7 +107,7 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary, #c9191e);
+  color: #f87171;
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
@@ -106,6 +123,7 @@
   font-weight: 400;
 }
 
+
 /* ===== CTA row ===== */
 .heroCtas {
   display: flex;
@@ -113,6 +131,8 @@
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-top: 0.5rem;
+  animation: heroFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.08s;
 }
 
 /* Primary — solid red */
@@ -201,6 +221,8 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 0.75rem;
+  animation: heroFadeIn 0.84s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.16s;
 }
 
 .videoWrap {
@@ -221,6 +243,14 @@
   box-shadow:
     0 0 0 1px rgba(255,255,255,0.05) inset,
     0 12px 28px rgba(0,0,0,0.42);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.videoWrap:hover .videoFrame {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06) inset,
+    0 16px 32px rgba(0,0,0,0.48);
 }
 
 .videoIframe {
@@ -270,22 +300,167 @@
   gap: 1rem;
 }
 
+.roleSwitcher {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.roleTabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.roleTab {
+  border: 1px solid var(--card-border);
+  border-radius: 9px;
+  background: var(--card-bg);
+  color: #334155;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.72rem 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.roleTab:hover {
+  border-color: #cbd5e1;
+  transform: translateX(1px);
+}
+
+.roleTabActive {
+  border-color: rgba(201, 25, 30, 0.45);
+  background: rgba(201, 25, 30, 0.06);
+  color: #111827;
+}
+
+.roleTab:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+[data-theme='dark'] .roleTab {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .roleTab:hover {
+  border-color: #374151;
+}
+
+[data-theme='dark'] .roleTabActive {
+  border-color: rgba(248, 113, 113, 0.45);
+  background: rgba(201, 25, 30, 0.14);
+  color: #f8fafc;
+}
+
+.rolePanel {
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: var(--card-bg);
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.rolePanelAnimated {
+  animation: rolePanelSwap 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rolePanelFocus {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+.rolePanelSummary {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #475569;
+}
+
+[data-theme='dark'] .rolePanelSummary {
+  color: #94a3b8;
+}
+
+.rolePanelCtas {
+  margin-top: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.rolePanelPrimary,
+.rolePanelSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border-radius: 8px;
+  padding: 0.52rem 0.78rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.rolePanelPrimary {
+  background: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+  color: #ffffff !important;
+}
+
+.rolePanelPrimary:hover {
+  background: #a01217;
+  border-color: #a01217;
+}
+
+.rolePanelSecondary {
+  border: 1px solid var(--card-border);
+  color: #334155 !important;
+  background: transparent;
+}
+
+.rolePanelSecondary:hover {
+  border-color: #cbd5e1;
+  color: #111827 !important;
+}
+
+[data-theme='dark'] .rolePanelSecondary {
+  color: #dbe4ee !important;
+}
+
+[data-theme='dark'] .rolePanelSecondary:hover {
+  border-color: #4b5563;
+  color: #ffffff !important;
+}
+
 .pathCard {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 1.25rem;
   text-decoration: none !important;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
   min-height: 172px;
+  opacity: 0;
+  animation: cardFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .pathCard:hover {
   border-color: #d1d5db;
   box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transform: translateY(-1px);
 }
 
 .pathCard:focus-visible {
@@ -385,10 +560,22 @@
   text-decoration: none !important;
   color: inherit;
   cursor: pointer;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, transform 0.15s ease;
   position: relative;
   min-height: 224px;
+  opacity: 0;
+  animation: cardFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+.pathGrid .pathCard:nth-child(1),
+.featuresGrid .featureCard:nth-child(1) { animation-delay: 0.04s; }
+.pathGrid .pathCard:nth-child(2),
+.featuresGrid .featureCard:nth-child(2) { animation-delay: 0.1s; }
+.pathGrid .pathCard:nth-child(3),
+.featuresGrid .featureCard:nth-child(3) { animation-delay: 0.16s; }
+.featuresGrid .featureCard:nth-child(4) { animation-delay: 0.22s; }
+.featuresGrid .featureCard:nth-child(5) { animation-delay: 0.28s; }
+.featuresGrid .featureCard:nth-child(6) { animation-delay: 0.34s; }
 
 .featureCard:hover {
   border-color: #d1d5db;
@@ -396,6 +583,7 @@
   background: var(--card-hover);
   text-decoration: none !important;
   color: inherit;
+  transform: translateY(-1px);
 }
 
 .featureCard:focus-visible {
@@ -528,11 +716,26 @@
   .pathGrid {
     grid-template-columns: 1fr;
   }
+  .roleSwitcher {
+    grid-template-columns: 1fr;
+  }
+  .roleTabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .roleTab {
+    flex: 1 1 180px;
+  }
   .pathCard {
     min-height: unset;
   }
   .title {
     font-size: clamp(2.5rem, 7vw, 3.25rem);
+  }
+  .heroInner::after {
+    top: -180px;
+    right: -180px;
+    width: min(72vw, 520px);
   }
 }
 
@@ -575,6 +778,22 @@
   }
   .pathsSection {
     padding: 48px 0 16px;
+  }
+  .roleSwitcher {
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .rolePanel {
+    padding: 0.85rem 0.9rem;
+  }
+  .rolePanelSummary {
+    font-size: 0.86rem;
+    line-height: 1.55;
+  }
+  .rolePanelPrimary,
+  .rolePanelSecondary {
+    flex: 1 1 100%;
+    min-height: 40px;
   }
   .pathCard {
     padding: 1rem;
@@ -644,4 +863,58 @@
 
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: 0.01ms !important; }
+  .heroLeft,
+  .heroCtas,
+  .heroRight,
+  .rolePanelAnimated,
+  .pathCard,
+  .featureCard {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rolePanelSwap {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

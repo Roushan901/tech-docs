@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
@@ -90,7 +90,46 @@ const QUICK_PATHS = [
   },
 ];
 
+const ROLE_PREVIEWS = [
+  {
+    id: "developer",
+    label: "Developer",
+    focus: "Ship integrations faster",
+    summary: "Start with API references and implementation-focused guides for setup, auth, payload design, and troubleshooting.",
+    primaryCta: "Open API references",
+    primaryTo: "/docs/api-references",
+    secondaryCta: "Open technical guides",
+    secondaryTo: "/docs/user-guides",
+  },
+  {
+    id: "writer",
+    label: "Technical Writer",
+    focus: "Improve content quality and consistency",
+    summary: "Use writing standards, review workflows, and docs-as-code patterns to keep documentation clear across releases.",
+    primaryCta: "Open writing standards",
+    primaryTo: "/docs/writing-best-practices",
+    secondaryCta: "Open review checklist",
+    secondaryTo: "/docs/writing-best-practices/review-checklist",
+  },
+  {
+    id: "platform",
+    label: "Platform / DevOps",
+    focus: "Increase reliability in delivery",
+    summary: "Work through cloud architecture and DevOps operations guidance for deployment safety, observability, and scale.",
+    primaryCta: "Open DevOps docs",
+    primaryTo: "/docs/devops",
+    secondaryCta: "Open cloud docs",
+    secondaryTo: "/docs/cloud-devops",
+  },
+];
+
 export default function Home() {
+  const [activeRoleId, setActiveRoleId] = useState(ROLE_PREVIEWS[0].id);
+  const activeRole = useMemo(
+    () => ROLE_PREVIEWS.find((role) => role.id === activeRoleId) || ROLE_PREVIEWS[0],
+    [activeRoleId]
+  );
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -140,7 +179,7 @@ export default function Home() {
                     TechDOCS
                   </h1>
 
-                  <p className={styles.heroSubtitle}>Developer Documentation Portal</p>
+                  <p className={styles.heroSubtitle}>Documentation Portal for Delivery Teams</p>
 
                   <p className={styles.heroDescription}>
                     A documentation portal for engineering teams, product teams, and technical writers.
@@ -219,8 +258,43 @@ export default function Home() {
               <div className={styles.sectionHeader}>
                 <h2 className={styles.sectionTitle}>Choose your path</h2>
                 <p className={styles.sectionDescription}>
-                  Start with the role that matches your work, then move into deeper implementation guidance.
+                  Choose the role closest to your work. Each path starts with essentials and links to deeper implementation guidance.
                 </p>
+              </div>
+
+              <div className={styles.roleSwitcher} aria-label="Role-based quick planner">
+                <div className={styles.roleTabs} role="tablist" aria-label="Select your role">
+                  {ROLE_PREVIEWS.map((role) => (
+                    <button
+                      key={role.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={activeRole.id === role.id}
+                      className={`${styles.roleTab} ${activeRole.id === role.id ? styles.roleTabActive : ""}`}
+                      onClick={() => setActiveRoleId(role.id)}
+                    >
+                      {role.label}
+                    </button>
+                  ))}
+                </div>
+
+                <div
+                  key={activeRole.id}
+                  className={`${styles.rolePanel} ${styles.rolePanelAnimated}`}
+                  role="tabpanel"
+                  aria-live="polite"
+                >
+                  <p className={styles.rolePanelFocus}>{activeRole.focus}</p>
+                  <p className={styles.rolePanelSummary}>{activeRole.summary}</p>
+                  <div className={styles.rolePanelCtas}>
+                    <Link to={activeRole.primaryTo} className={styles.rolePanelPrimary}>
+                      {activeRole.primaryCta}
+                    </Link>
+                    <Link to={activeRole.secondaryTo} className={styles.rolePanelSecondary}>
+                      {activeRole.secondaryCta}
+                    </Link>
+                  </div>
+                </div>
               </div>
 
               <div className={styles.pathGrid}>
@@ -239,9 +313,9 @@ export default function Home() {
             <div className={styles.container}>
 
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Explore by track</h2>
+                <h2 className={styles.sectionTitle}>Explore by topic</h2>
                 <p className={styles.sectionDescription}>
-                  Explore by topic and jump into practical guidance designed for production teams.
+                  Browse focused topic areas and move directly into practical guidance for production environments.
                 </p>
               </div>
 
