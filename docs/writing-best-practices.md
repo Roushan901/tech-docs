@@ -8,9 +8,32 @@ import styles from './writing-best-practices/CardGrid.module.css';
 
 # Writing Best Practices
 
-Master the essential principles of creating clear, accessible, and maintainable documentation. This guide covers the core areas every technical writer should know.
+This section defines the writing standards used across TechDOCS.
 
-> Good documentation reduces support tickets, improves adoption, and delights users. Learn the why and the how in bite‑sized pieces.
+Use these guides to produce documentation that is:
+
+- clear for first-time readers,
+- reliable for production usage, and
+- maintainable across releases.
+
+## How to use this section
+
+Follow the modules in this order for best results:
+
+1. Audience and intent
+2. Content types and structure
+3. Clear, concise language
+4. Procedural writing and formatting
+5. Style consistency and review
+
+## Outcomes you should expect
+
+After applying this section, your docs should:
+
+- reduce repeated support questions,
+- improve onboarding speed,
+- standardize voice across teams, and
+- remain accurate through version updates.
 
 <div className={styles.grid} role="navigation" aria-label="Writing best practices sections">
   <div className={styles.card}>

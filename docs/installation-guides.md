@@ -7,45 +7,33 @@ sidebar: guidesSidebar
 
 # Installation Guides
 
-**Who This Is For:** Developers, technical writers, and DevOps engineers setting up documentation tools and development environments.
+Use this section to bootstrap documentation tooling quickly and consistently across local and team environments.
 
-**When to Use This Guide:** You're starting a new documentation project, migrating to a new platform, setting up local development environments, or deploying documentation sites to production.
+## Scope
 
-**What You'll Learn:** Step-by-step installation procedures for popular documentation tools (Docusaurus, MkDocs, Jekyll, Hugo), environment configuration, dependency management, and troubleshooting common installation issues.
+- Local setup for documentation projects
+- Baseline toolchain for authors and reviewers
+- Cross-platform install commands and validation checks
+- Common setup failures and practical fixes
 
-## Overview
+## Recommended baseline
 
-Setting up documentation tools shouldn't be complicated. This guide provides clear, tested installation instructions for the most popular documentation platforms, helping you go from zero to a running documentation site in minutes, not hours.
+For this portal, standardize on:
 
-**Real-World Scenario:** Your team has decided to migrate from Confluence to a docs-as-code approach using Docusaurus. You need to set up local development environments for 10 engineers, configure CI/CD pipelines, and ensure everyone can preview changes before deployment. This guide covers everything from Node.js installation to production deployment configurations.
+- Node.js LTS (or newer supported version)
+- Yarn or npm
+- Git
+- VS Code with Markdown linting/spellcheck extensions
 
 ## Prerequisites
 
-Before you begin, ensure you have:
-- A computer with internet access
-- Basic command line knowledge
-- Administrator/sudo access
-- 4GB+ RAM recommended
+- Terminal access with install permissions
+- Basic familiarity with command-line workflows
+- Network access for package installation
 
-## Quick Start
+## Docusaurus setup (primary path)
 
-### Choose Your Platform
-Select the tool that best fits your documentation needs:
-- **Docusaurus** - Modern static site generator
-- **MkDocs** - Python-based documentation
-- **Jekyll** - Ruby static site generator
-- **Hugo** - Fast Go-based generator
-
-## Docusaurus Installation
-
-### System Requirements
-- Node.js version 18.0 or above
-- npm or Yarn package manager
-- Git for version control
-
-### Installation Steps
-
-#### 1. Install Node.js
+### 1) Install Node.js
 ```bash
 # Windows (using Chocolatey)
 choco install nodejs
@@ -57,60 +45,33 @@ brew install node
 sudo apt install nodejs npm
 ```
 
-#### 2. Verify Installation
+### 2) Verify
 ```bash
 node --version
 npm --version
 ```
 
-#### 3. Create New Docusaurus Site
+### 3) Create and run
 ```bash
 npx create-docusaurus@latest my-website classic
 cd my-website
-```
-
-#### 4. Start Development Server
-```bash
 npm start
 ```
 
-Your site will be available at `http://localhost:3000`
+The local site runs at `http://localhost:3000`.
 
-### Configuration
+## Alternative stack: MkDocs
 
-Edit `docusaurus.config.js` to customize:
-- Site title and tagline
-- Navigation menu
-- Footer content
-- Theme settings
-
-## MkDocs Installation
-
-### Requirements
-- Python 3.8 or higher
-- pip package manager
-
-### Installation Steps
-
+### Quick setup
 ```bash
-# Install MkDocs
 pip install mkdocs
-
-# Install Material theme (optional)
 pip install mkdocs-material
-
-# Create new project
 mkdocs new my-project
 cd my-project
-
-# Start development server
 mkdocs serve
 ```
 
-## Visual Studio Code Setup
-
-### Install VS Code
-Download from [code.visualstudio.com](https://code.visualstudio.com/)
+## Editor setup (VS Code)
 
 ### Recommended Extensions
 - **Markdown All in One** - Enhanced Markdown support
@@ -126,52 +87,18 @@ code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension streetsidesoftware.code-spell-checker
 ```
 
-## Git Installation
-
-### Windows
-Download from [git-scm.com](https://git-scm.com/)
-
-### macOS
-```bash
-brew install git
-```
-
-### Linux
-```bash
-sudo apt install git
-```
-
-### Configuration
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
-
-## Docker Installation (Optional)
-
-For containerized documentation builds:
-
-### Install Docker Desktop
-Download from [docker.com](https://www.docker.com/)
-
-### Verify Installation
-```bash
-docker --version
-docker-compose --version
-```
-
-## Troubleshooting
+## Troubleshooting quick fixes
 
 ### Common Issues
 
-#### Node.js Version Issues
+### Node version mismatch
 ```bash
 # Use nvm to manage Node versions
 nvm install 18
 nvm use 18
 ```
 
-#### Permission Errors
+### Permission errors
 ```bash
 # Fix npm permissions on Linux/macOS
 mkdir ~/.npm-global
@@ -179,28 +106,17 @@ npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
 ```
 
-#### Port Already in Use
+### Port in use
 ```bash
-# Use different port
 npm start -- --port 3001
 ```
 
 ## Next Steps
 
-After installation:
 1. [Create your first document](/docs/tutorial-basics/create-a-document)
 2. [Learn Markdown features](/docs/tutorial-basics/markdown-features)
 3. [Deploy your site](/docs/tutorial-basics/deploy-your-site)
 
-## Additional Resources
-
-- [Official Docusaurus Documentation](https://docusaurus.io/)
-- [MkDocs Documentation](https://www.mkdocs.org/)
-- [Markdown Guide](https://www.markdownguide.org/)
-
 ## Support
 
-Need help with installation?
-- Check our [FAQ](#)
-- Join our [Community](#)
-- [Contact Support](mailto:contact@techdocs.co.in) or [LinkedIn](https://www.linkedin.com/in/roushan-gupta-a42a6a8a/)
+Need help with setup? Contact [support](mailto:contact@techdocs.co.in).

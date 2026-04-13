@@ -6,23 +6,21 @@ id: quick-start-components
 
 # Quick Start: Using Interactive Components
 
-## Getting Started
-
-All interactive components are ready to use in your MDX documentation files. Simply import and use them!
+Use this guide when you need to add interactive elements to `.mdx` pages without breaking readability or performance.
 
 ## Basic Usage
 
-### 1. Import the Component
+### 1) Import the component
 
-At the top of your MDX file, add the import statement:
+Add imports at the top of your file:
 
 ```jsx
 import InteractiveCodeEditor from '@site/src/components/InteractiveCodeEditor';
 ```
 
-### 2. Use the Component
+### 2) Render the component
 
-Add the component anywhere in your markdown:
+Place the component near the section where users need it:
 
 ```jsx
 <InteractiveCodeEditor 
@@ -31,17 +29,17 @@ Add the component anywhere in your markdown:
 />
 ```
 
-### 3. Preview Your Changes
+### 3) Validate locally
 
-Run the development server:
+Run local preview:
 
 ```bash
 npm start
 ```
 
-Visit `http://localhost:3000` to see your changes.
+Open `http://localhost:3000` and validate keyboard, mobile, and dark-mode behavior.
 
-## Common Examples
+## Common patterns
 
 ### Code Tutorial
 
@@ -117,21 +115,20 @@ import ProgressTracker from '@site/src/components/ProgressTracker';
 />
 ```
 
-## Tips
+## Authoring recommendations
 
--  Always import at the top of your MDX file
--  Use meaningful titles and descriptions
--  Pre-fill with helpful examples
--  Test on mobile devices
--  Don't overuse - keep it intuitive
+- Keep one component per learning objective.
+- Use realistic sample data and commands.
+- Prefer clarity over visual density.
+- Add fallback text for users who skip interactive blocks.
+- Validate accessibility before publishing.
 
 ## Need Help?
 
--  [Full Documentation](/docs/interactive-components)
--  [Contact Support](mailto:contact@techdocs.co.in)
--  [LinkedIn: Roushan Gupta](https://www.linkedin.com/in/roushan-gupta-a42a6a8a/)
--  See [Markdown Features](/docs/tutorial-basics/markdown-features) for more examples
+- [Full Documentation](/docs/interactive-components)
+- [Contact Support](mailto:contact@techdocs.co.in)
+- See [Markdown Features](/docs/tutorial-basics/markdown-features) for additional examples
 
 ---
 
-**Happy Documenting! **
+Ship interactive content intentionally, not decoratively.

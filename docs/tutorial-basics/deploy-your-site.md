@@ -1,5 +1,5 @@
 ---
-id: tutorial-basics-deploy-your-site
+id: deploy-your-site
 title: Deploy Your Site
 sidebar_position: 5
 sidebar_label: Deploy Your Site
@@ -8,11 +8,9 @@ tags: []
 
 # Deploy Your Site
 
-Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
+Docusaurus is a static site generator. It builds deployable HTML, CSS, and JavaScript assets.
 
-It builds your site as simple **static HTML, JavaScript and CSS files**.
-
-## Build Your Site
+## Build your site
 
 Build your site **for production**:
 
@@ -20,16 +18,18 @@ Build your site **for production**:
 npm run build
 ```
 
-The static files are generated in the `build` folder.
+Static output is generated in the `build` directory.
 
 ## Deploy your site
 
-Test your production build locally:
+Validate the build locally before deployment:
 
 ```bash
 npm run serve
 ```
 
-The `build` folder is now served at [http://localhost:3000/](http://localhost:3000/).
+The `build` output is served at [http://localhost:3000/](http://localhost:3000/).
 
-You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).
+Deploy the `build` directory to your hosting platform of choice.
+
+For platform-specific options, refer to the [Docusaurus deployment guide](https://docusaurus.io/docs/deployment).

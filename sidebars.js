@@ -60,13 +60,13 @@ const sidebars = {
   writingSidebar: [
     {
       type: 'category',
-      label: '📖 Writing Best Practices',
+      label: 'Writing Standards',
       collapsed: false,
       items: [
         {
           type: 'doc',
           id: 'writing-best-practices',
-          label: '📚 Overview',
+          label: 'Overview',
         },
         {
           type: 'doc',
@@ -126,17 +126,17 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'cloud-devops/cloud-devops-aws',
+          id: 'cloud-devops/aws',
           label: 'AWS (Amazon Web Services)',
         },
         {
           type: 'doc',
-          id: 'cloud-devops/cloud-devops-azure',
+          id: 'cloud-devops/azure',
           label: 'Azure (Microsoft Azure)',
         },
         {
           type: 'doc',
-          id: 'cloud-devops/cloud-devops-gcp',
+          id: 'cloud-devops/gcp',
           label: 'GCP (Google Cloud Platform)',
         },
       ],
@@ -158,17 +158,17 @@ const sidebars = {
         {
           type: 'doc',
           id: 'devops/cicd',
-          label: 'CI/CD Pipeline Documentation',
+          label: 'CI/CD Pipelines',
         },
         {
           type: 'doc',
           id: 'devops/containers',
-          label: 'Docker & Kubernetes Documentation',
+          label: 'Docker and Kubernetes',
         },
         {
           type: 'doc',
           id: 'devops/iac',
-          label: 'Infrastructure As Code (IaC)',
+          label: 'Infrastructure as Code',
         },
       ],
     },
@@ -205,38 +205,38 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Tutorial - Basics',
+      label: 'Tutorial Basics',
       items: [
-                {
-                  type: 'doc',
-                  id: 'tutorial-basics/tutorial-basics-create-a-document',
-                  label: 'Create A Document',
-                },
-                {
-                  type: 'doc',
-                  id: 'tutorial-basics/tutorial-basics-create-a-blog-post',
-                  label: 'Create A Blog Post',
-                },
-                {
-                  type: 'doc',
-                  id: 'tutorial-basics/tutorial-basics-create-a-page',
-                  label: 'Create A Page',
-                },
-                {
-                  type: 'doc',
-                  id: 'tutorial-basics/tutorial-basics-markdown-features',
-                  label: 'Markdown Features',
-                },
-                {
-                  type: 'doc',
-                  id: 'tutorial-basics/tutorial-basics-deploy-your-site',
-                  label: 'Deploy Your Site',
-                },
-                {
-                  type: 'doc',
-                  id: 'tutorial-basics/tutorial-basics-congratulations',
-                  label: 'Congratulations',
-                },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-document',
+          label: 'Create a Document',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-blog-post',
+          label: 'Create a Blog Post',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-page',
+          label: 'Create a Page',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/markdown-features',
+          label: 'Markdown Features',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/deploy-your-site',
+          label: 'Deploy Your Site',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/congratulations',
+          label: 'Congratulations',
+        },
       ],
     },
   ],

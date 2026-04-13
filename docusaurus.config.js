@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TechDOCS - Professional Technical Writing Hub',
-  tagline: 'Master technical writing, API documentation, and modern DevOps practices',
+  title: 'TechDOCS - Developer Documentation Portal',
+  tagline: 'Practical guidance for technical writing, APIs, cloud architecture, and DevOps operations',
   favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -120,14 +120,14 @@ const config = {
       metadata: [
         {name: 'keywords', content: 'technical writing, API documentation, DevOps, documentation tools, technical writer, developer documentation, cloud computing, TechDOCS'},
         {name: 'author', content: 'Roushan Gupta'},
-        {property: 'og:title', content: 'TechDOCS - Professional Technical Writing Hub'},
-        {property: 'og:description', content: 'Master technical writing, API documentation, and modern DevOps practices. Your comprehensive resource for creating professional documentation that developers love.'},
+        {property: 'og:title', content: 'TechDOCS - Developer Documentation Portal'},
+        {property: 'og:description', content: 'Practical guidance for technical writing, APIs, cloud architecture, and DevOps operations.'},
         {property: 'og:image', content: 'https://techdocs.co.in/img/docusaurus-social-card.jpg'},
         {property: 'og:url', content: 'https://techdocs.co.in'},
         {property: 'og:type', content: 'website'},
         {name: 'twitter:card', content: 'summary_large_image'},
-        {name: 'twitter:title', content: 'TechDOCS - Professional Technical Writing Hub'},
-        {name: 'twitter:description', content: 'Master technical writing, API documentation, and modern DevOps practices'},
+        {name: 'twitter:title', content: 'TechDOCS - Developer Documentation Portal'},
+        {name: 'twitter:description', content: 'Practical guidance for technical writing, APIs, cloud architecture, and DevOps operations'},
         {name: 'twitter:image', content: 'https://techdocs.co.in/img/docusaurus-social-card.jpg'},
       ],
       colorMode: {
@@ -146,7 +146,7 @@ const config = {
             type: 'doc',
             docId: 'writing-best-practices',
             position: 'left',
-            label: 'Writing Best Practices',
+            label: 'Writing Standards',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -207,7 +207,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Getting Started',
                 to: '/docs/intro',
               },
             ],
@@ -224,7 +224,7 @@ const config = {
                 href: 'https://www.youtube.com/@TechDocsTutorials',
               },
               {
-                label: 'Contact Us',
+                label: 'Contact',
                 href: 'mailto:contact@techdocs.co.in',
               },
             ],
@@ -239,7 +239,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} TechDOCS. Professional technical writing resources for developers and technical writers. Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.5); font-weight: 500; text-decoration: none;">Roushan Gupta</a>.`,
+        copyright: `© ${new Date().getFullYear()} TechDOCS. Documentation resources for engineering and technical writing teams. Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.5); font-weight: 500; text-decoration: none;">Roushan Gupta</a>.`,
       },
       prism: {
         theme: prismThemes.github,

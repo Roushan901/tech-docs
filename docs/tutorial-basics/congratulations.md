@@ -1,5 +1,5 @@
 ---
-id: tutorial-basics-congratulations
+id: congratulations
 title: Congratulations!
 sidebar_position: 6
 sidebar_label: Congratulations
@@ -8,15 +8,17 @@ tags: []
 
 # Congratulations!
 
-You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
+You have completed the core Docusaurus tutorial track.
 
-Docusaurus has **much more to offer**!
+At this stage, you can create pages, docs, and blog content with confidence.
 
-Have **5 more minutes**? Take a look at **[versioning](../tutorial-extras/manage-docs-versions.md)** and **[i18n](../tutorial-extras/translate-your-site.md)**.
+## Recommended next steps
 
-Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)
+- Review [versioning](../tutorial-extras/manage-docs-versions.md) to support multiple doc releases.
+- Review [localization](../tutorial-extras/translate-your-site.md) to support multilingual content.
+- Align your docs structure with your release and ownership model.
 
-## What's next?
+## Expand your implementation
 
 - Read the [official documentation](https://docusaurus.io/)
 - Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config)
