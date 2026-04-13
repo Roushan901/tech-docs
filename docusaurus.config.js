@@ -202,11 +202,6 @@ const config = {
       },
       footer: {
         style: 'dark',
-        logo: {
-          alt: 'TechDOCS',
-          src: 'img/logo.svg',
-          width: 60,
-        },
         links: [
           {
             title: 'Docs',
@@ -244,7 +239,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} TechDOCS. One platform to help you understand, build, and scale technical content—covering technical writing best practices, documentation, cloud technologies, and DevOps.<br/><br/>Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: #fbbf24; font-weight: 600; text-decoration: none;">Roushan Gupta</a>.`,
+        copyright: `© ${new Date().getFullYear()} TechDOCS. Professional technical writing resources for developers and technical writers. Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.5); font-weight: 500; text-decoration: none;">Roushan Gupta</a>.`,
       },
       prism: {
         theme: prismThemes.github,
@@ -257,6 +252,44 @@ const config = {
       attributes: {
         name: 'algolia-site-verification',
         content: '38E57BBFE8761DB1',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/img/logo.svg',
+        as: 'image',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap',
+        as: 'style',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'prefetch',
+        href: '/docs/writing-best-practices',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'prefetch',
+        href: '/blog',
       },
     },
   ],
