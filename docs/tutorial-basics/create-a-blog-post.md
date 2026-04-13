@@ -1,5 +1,5 @@
 ---
-id: tutorial-basics-create-a-blog-post
+id: create-a-blog-post
 title: Create a Blog Post
 sidebar_position: 3
 sidebar_label: Create a Blog Post
@@ -8,9 +8,9 @@ tags: []
 
 # Create a Blog Post
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+Docusaurus generates a post page, blog index, tag pages, and RSS feed automatically.
 
-## Create Your First Post
+## Create your first post
 
 Create a file at `blog/2021-02-28-greetings.md`:
 
@@ -30,9 +30,14 @@ authors:
 tags: [greetings]
 ---
 
-Congratulations, you have made your first post!
-
-Feel free to play around and edit this post as much as you like.
+Your post is now part of the blog index and tag system.
 ```
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+The post is available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+
+## Production tips
+
+- Keep titles specific and outcome-oriented.
+- Add one clear topic per post.
+- Use tags that match your information architecture.
+- Add a short summary before the truncate marker when using long-form posts.

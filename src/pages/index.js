@@ -61,36 +61,63 @@ const Icons = {
 };
 
 const FEATURES = [
-  { to: "/blog", title: "Blog", description: "Insights on technical writing trends, documentation tools, and industry best practices.", icon: Icons.blog },
-  { to: "/docs/user-guides", title: "Technical Guides", description: "Comprehensive guides covering installation, integration, and documentation project best practices.", icon: Icons.guides },
-  { to: "/docs/installation-guides", title: "Documentation Tools", description: "Explore Docusaurus, Swagger, MkDocs, and modern platforms for building scalable doc sites.", icon: Icons.tools },
-  { to: "/docs/cloud-devops", title: "Cloud Computing", description: "AWS, Azure, and GCP architecture patterns, deployment strategies, and cloud-native solutions.", icon: Icons.cloud },
-  { to: "/docs/devops", title: "DevOps", description: "CI/CD pipelines, Docker, Kubernetes, and infrastructure as code with practical examples.", icon: Icons.devops },
-  { to: "/docs/writing-best-practices", title: "Writing Best Practices", description: "Professional writing techniques, style guides, and standards for clear, effective documentation.", icon: Icons.writing },
+  { to: "/blog", title: "Blog", description: "Lessons learned from real documentation programs, tooling rollouts, and developer experience work.", icon: Icons.blog },
+  { to: "/docs/user-guides", title: "Technical Guides", description: "Task-oriented guides for setup, integration, operations, and day-to-day team workflows.", icon: Icons.guides },
+  { to: "/docs/installation-guides", title: "Documentation Tools", description: "Setup patterns and implementation guidance for modern documentation platforms.", icon: Icons.tools },
+  { to: "/docs/cloud-devops", title: "Cloud Computing", description: "Cloud architecture and deployment guidance for AWS, Azure, and GCP environments.", icon: Icons.cloud },
+  { to: "/docs/devops", title: "DevOps", description: "Operational guidance for CI/CD, containers, observability, and infrastructure as code.", icon: Icons.devops },
+  { to: "/docs/writing-best-practices", title: "Writing Best Practices", description: "Practical writing standards for clarity, consistency, quality review, and maintainability.", icon: Icons.writing },
+];
+
+const QUICK_PATHS = [
+  {
+    title: "For Developers",
+    description: "Find API references, integration guidance, and implementation details you can ship with.",
+    to: "/docs/api-references",
+    cta: "Open API references",
+  },
+  {
+    title: "For Technical Writers",
+    description: "Use writing standards, review checklists, and docs-as-code practices built for teams.",
+    to: "/docs/writing-best-practices",
+    cta: "Open writing standards",
+  },
+  {
+    title: "For Platform and DevOps Teams",
+    description: "Use cloud and DevOps guidance to improve release reliability and operational readiness.",
+    to: "/docs/devops",
+    cta: "Open DevOps docs",
+  },
 ];
 
 export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
+    "@type": "WebSite",
     name: "TechDOCS",
     url: "https://techdocs.co.in",
-    description: "Master technical writing, API documentation, and modern DevOps practices.",
+    description: "Global documentation portal for technical writing, API documentation, cloud, and DevOps practices.",
     sameAs: ["https://www.linkedin.com/in/roushan-g-99242299/"],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://techdocs.co.in/search?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (
     <ErrorBoundary>
       <Layout
-        title="TechDOCS — Professional Technical Writing Hub"
-        description="Master technical writing, API documentation, and modern DevOps practices."
+        title="TechDOCS — Developer Documentation Portal"
+        description="Global documentation portal for technical writing, API documentation, cloud, and DevOps practices."
       >
         <Head>
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://techdocs.co.in" />
-          <meta property="og:title" content="TechDOCS — Professional Technical Writing Hub" />
-          <meta property="og:description" content="Master technical writing, API documentation, and modern DevOps practices." />
-          <meta property="og:image" content="https://techdocs.co.in/img/logo.png" />
+          <meta property="og:title" content="TechDOCS — Developer Documentation Portal" />
+          <meta property="og:description" content="Global documentation portal for technical writing, API documentation, cloud, and DevOps practices." />
+          <meta property="og:image" content="https://techdocs.co.in/img/docusaurus-social-card.jpg" />
+          <meta name="twitter:image" content="https://techdocs.co.in/img/docusaurus-social-card.jpg" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="keywords" content="technical writing, API documentation, DevOps, Docusaurus, cloud computing, developer docs" />
           <meta name="author" content="Roushan Gupta" />
@@ -101,7 +128,7 @@ export default function Home() {
         </Head>
 
         {/* ===== HERO ===== */}
-        <header className={styles.heroBanner}>
+        <header className={styles.heroBanner} aria-label="Homepage introduction">
           <div className={styles.heroInner}>
             <div className={styles.container}>
               <div className={styles.heroContent}>
@@ -113,24 +140,22 @@ export default function Home() {
                     TechDOCS
                   </h1>
 
-                  <p className={styles.heroSubtitle}>
-                    Professional Technical Writing Hub
-                  </p>
+                  <p className={styles.heroSubtitle}>Developer Documentation Portal</p>
 
                   <p className={styles.heroDescription}>
-                    Learn technical writing, API documentation, DevOps, and cloud computing.
-                    Guides and resources built for developers and technical writers worldwide.
+                    A documentation portal for engineering teams, product teams, and technical writers.
+                    Use practical standards and implementation guides to ship clearer docs with less rework.
                   </p>
 
                   <div className={styles.heroCtas}>
                     <Link to="/docs/writing-best-practices" className={styles.ctaPrimary}>
-                      Browse Docs
+                      Start with Docs
                       <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </Link>
                     <Link to="/blog" className={styles.ctaSecondary}>
-                      Read Blog
+                      Read Insights
                     </Link>
                     <a
                       href="https://www.youtube.com/@TechDocsTutorials"
@@ -177,7 +202,7 @@ export default function Home() {
                       />
                     </div>
                     <p className={styles.videoCaption}>
-                      New to TechDOCS? Watch the intro overview
+                      New here? Watch a short platform walkthrough
                     </p>
                   </div>
                 </div>
@@ -189,13 +214,34 @@ export default function Home() {
 
         {/* ===== RESOURCES ===== */}
         <main>
-          <section className={styles.resourcesSection}>
+          <section className={styles.pathsSection} aria-label="Role-based quick paths">
+            <div className={styles.container}>
+              <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>Choose your path</h2>
+                <p className={styles.sectionDescription}>
+                  Start with the role that matches your work, then move into deeper implementation guidance.
+                </p>
+              </div>
+
+              <div className={styles.pathGrid}>
+                {QUICK_PATHS.map((path) => (
+                  <Link key={path.to} to={path.to} className={styles.pathCard}>
+                    <h3>{path.title}</h3>
+                    <p>{path.description}</p>
+                    <span className={styles.pathCta}>{path.cta} →</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className={styles.resourcesSection} aria-label="Documentation tracks">
             <div className={styles.container}>
 
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Everything you need</h2>
+                <h2 className={styles.sectionTitle}>Explore by track</h2>
                 <p className={styles.sectionDescription}>
-                  From writing fundamentals to cloud infrastructure — all the documentation resources you need.
+                  Explore by topic and jump into practical guidance designed for production teams.
                 </p>
               </div>
 

@@ -1,5 +1,5 @@
 ---
-id: tutorial-basics-create-a-document
+id: create-a-document
 title: Create a Document
 sidebar_position: 2
 sidebar_label: Create a Document
@@ -8,13 +8,13 @@ tags: []
 
 # Create a Document
 
-Documents are **groups of pages** connected through:
+In Docusaurus, documents are organized pages connected by:
 
 - a **sidebar**
 - **previous/next navigation**
 - **versioning**
 
-## Create Your First Doc
+## Create your first document
 
 Create a Markdown file at `docs/hello.md`:
 
@@ -24,11 +24,11 @@ Create a Markdown file at `docs/hello.md`:
 This is my **first Docusaurus document**!
 ```
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+The document is available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
 
-## Configure the Sidebar
+## Configure the sidebar
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
+Docusaurus can generate sidebars automatically from the `docs` folder.
 
 Add metadata to customize the sidebar label and position:
 
@@ -43,7 +43,7 @@ sidebar_position: 3
 This is my **first Docusaurus document**!
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+You can also define sidebar structure explicitly in `sidebars.js`:
 
 ```js title="sidebars.js"
 export default {
@@ -59,3 +59,7 @@ export default {
   ],
 };
 ```
+
+## Best practice
+
+Use one document per user task or concept. Keep titles specific and link related pages intentionally.

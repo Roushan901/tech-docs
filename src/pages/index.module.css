@@ -8,6 +8,7 @@
   --home-max:     1280px;
   --home-px:      2rem;
   --hero-bg:      #0d1117;
+  --hero-bg-soft: #111827;
   --hero-border:  rgba(255,255,255,0.06);
   --card-bg:      #ffffff;
   --card-border:  #e5e7eb;
@@ -20,6 +21,7 @@
   --card-border: #21262d;
   --card-hover:  #1c2128;
   --section-bg:  #0d1117;
+  --hero-bg-soft: #0b1220;
 }
 
 /* ===== Container ===== */
@@ -34,14 +36,14 @@
    HERO
    =================================================================== */
 .heroBanner {
-  background: var(--hero-bg);
+  background: linear-gradient(180deg, var(--hero-bg) 0%, var(--hero-bg-soft) 100%);
   border-bottom: 1px solid var(--hero-border);
 }
 
 /* Thin red stripe along the very top of the hero */
 .heroInner {
   position: relative;
-  padding: 72px 0 80px;
+  padding: 84px 0 88px;
 }
 
 .heroInner::before {
@@ -60,7 +62,7 @@
   display: grid;
   grid-template-columns: 1fr 480px;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
 }
 
 /* ===== Left column ===== */
@@ -68,6 +70,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  padding-top: 0.4rem;
 }
 
 /* Main headline */
@@ -95,9 +98,9 @@
 /* Description */
 .heroDescription {
   font-size: 1.0625rem;
-  line-height: 1.7;
-  color: rgba(205, 217, 229, 0.72);
-  max-width: 520px;
+  line-height: 1.75;
+  color: rgba(226, 232, 240, 0.86);
+  max-width: 560px;
   margin: 0;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -109,7 +112,7 @@
   align-items: center;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 /* Primary — solid red */
@@ -168,7 +171,7 @@
   align-items: center;
   gap: 0.4rem;
   background: transparent;
-  color: rgba(205, 217, 229, 0.45) !important;
+  color: rgba(205, 217, 229, 0.7) !important;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
@@ -181,20 +184,27 @@
   white-space: nowrap;
 }
 .ctaGhost:hover {
-  color: rgba(205,217,229,0.8) !important;
+  color: rgba(255,255,255,0.92) !important;
   text-decoration: none !important;
+}
+
+.ctaPrimary:focus-visible,
+.ctaSecondary:focus-visible,
+.ctaGhost:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* ===== Right column — Video ===== */
 .heroRight {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 0.75rem;
 }
 
 .videoWrap {
-  width: 100%;
+  width: min(100%, 470px);
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
@@ -204,13 +214,13 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.14);
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   background: #0d1117;
   box-shadow:
-    0 0 0 1px rgba(255,255,255,0.04) inset,
-    0 8px 24px rgba(0,0,0,0.5);
+    0 0 0 1px rgba(255,255,255,0.05) inset,
+    0 12px 28px rgba(0,0,0,0.42);
 }
 
 .videoIframe {
@@ -223,7 +233,7 @@
 
 .videoCaption {
   font-size: 0.8125rem;
-  color: rgba(205,217,229,0.38);
+  color: rgba(226,232,240,0.72);
   margin: 0;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -236,12 +246,86 @@
    =================================================================== */
 .resourcesSection {
   background: var(--section-bg);
-  padding: 72px 0 88px;
+  padding: 64px 0 88px;
   border-top: 1px solid var(--card-border);
 }
 
 [data-theme='dark'] .resourcesSection {
   border-top-color: #21262d;
+}
+
+.pathsSection {
+  background: var(--section-bg);
+  padding: 64px 0 24px;
+  border-top: 1px solid var(--card-border);
+}
+
+[data-theme='dark'] .pathsSection {
+  border-top-color: #21262d;
+}
+
+.pathGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.pathCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-decoration: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  min-height: 172px;
+}
+
+.pathCard:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+.pathCard:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+[data-theme='dark'] .pathCard:hover {
+  border-color: #30363d;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.pathCard h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+[data-theme='dark'] .pathCard h3 {
+  color: #e6edf3;
+}
+
+.pathCard p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+[data-theme='dark'] .pathCard p {
+  color: #8b949e;
+}
+
+.pathCta {
+  margin-top: auto;
+  color: var(--ifm-color-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 /* Section header */
@@ -268,7 +352,7 @@
 
 .sectionDescription {
   font-size: 1rem;
-  color: #6b7280;
+  color: #5f6b7a;
   margin: 0;
   line-height: 1.6;
   font-family: 'Inter', sans-serif;
@@ -294,7 +378,7 @@
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1.35rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -303,6 +387,7 @@
   cursor: pointer;
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   position: relative;
+  min-height: 224px;
 }
 
 .featureCard:hover {
@@ -311,6 +396,11 @@
   background: var(--card-hover);
   text-decoration: none !important;
   color: inherit;
+}
+
+.featureCard:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
 }
 
 [data-theme='dark'] .featureCard:hover {
@@ -362,7 +452,7 @@
 
 .featureCard h3 {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #111827;
   margin: 0;
@@ -376,10 +466,11 @@
 
 .featureCard p {
   font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #5f6b7a;
   margin: 0;
+  text-wrap: pretty;
 }
 
 [data-theme='dark'] .featureCard p {
@@ -417,18 +508,28 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+  .heroLeft {
+    padding-top: 0;
+  }
   .heroRight {
     align-items: center;
     width: 100%;
   }
   .videoWrap {
     max-width: 540px;
+    width: 100%;
   }
   .heroDescription {
     max-width: 100%;
   }
   .featuresGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .pathGrid {
+    grid-template-columns: 1fr;
+  }
+  .pathCard {
+    min-height: unset;
   }
   .title {
     font-size: clamp(2.5rem, 7vw, 3.25rem);
@@ -440,7 +541,7 @@
     --home-px: 1.125rem;
   }
   .heroInner {
-    padding: 52px 0 64px;
+    padding: 56px 0 64px;
   }
   .title {
     font-size: clamp(2.25rem, 9vw, 2.875rem);
@@ -448,41 +549,80 @@
   }
   .heroDescription {
     font-size: 1rem;
+    line-height: 1.7;
   }
   .heroCtas {
     flex-wrap: wrap;
-    gap: 0.625rem;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
   }
   .ctaPrimary, .ctaSecondary {
-    flex: 1;
+    flex: 1 1 100%;
     justify-content: center;
     min-width: 0;
+    min-height: 46px;
+    padding: 0.75rem 0.875rem;
   }
   .ctaGhost {
     width: 100%;
+    justify-content: center;
+    min-height: 42px;
+    padding-top: 0.125rem;
+  }
+  .videoCaption {
+    text-align: center;
+    padding-left: 0;
+  }
+  .pathsSection {
+    padding: 48px 0 16px;
+  }
+  .pathCard {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  .pathCard h3 {
+    font-size: 0.95rem;
+  }
+  .pathCard p {
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+  .pathCta {
+    font-size: 0.82rem;
   }
   .resourcesSection {
-    padding: 52px 0 64px;
+    padding: 48px 0 60px;
   }
   .featuresGrid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.625rem;
   }
   .featureCard {
-    padding: 1.25rem;
+    padding: 1rem;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    gap: 0.75rem;
+    min-height: unset;
   }
   .cardBody {
     flex: 1;
     min-width: 0;
   }
   .featureCard h3 {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+  .featureCard p {
+    font-size: 0.84rem;
+    line-height: 1.55;
   }
   .cardArrow {
     align-self: center;
+    font-size: 0.9rem;
+  }
+  .featureCard:active,
+  .pathCard:active {
+    transform: scale(0.995);
   }
 }
 
@@ -491,8 +631,14 @@
     font-size: clamp(2rem, 10.5vw, 2.5rem);
   }
   .ctaPrimary, .ctaSecondary {
-    font-size: 0.875rem;
-    padding: 0.625rem 1.125rem;
+    font-size: 0.86rem;
+    padding: 0.625rem 0.875rem;
+  }
+  .sectionHeader {
+    margin-bottom: 1.5rem;
+  }
+  .sectionDescription {
+    font-size: 0.94rem;
   }
 }
 

@@ -20,14 +20,14 @@ npm run docusaurus docs:version 1.0
 
 The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
 
-Your docs now have 2 versions:
+After the command, you will have two versions:
 
 - `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
 - `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
 
 ## Add a Version Dropdown
 
-To navigate seamlessly across versions, add a version dropdown.
+Add a version dropdown in the navbar so readers can switch releases quickly.
 
 Modify the `docusaurus.config.js` file:
 
@@ -47,13 +47,19 @@ export default {
 };
 ```
 
-The docs version dropdown appears in your navbar:
+The docs version dropdown appears in the navbar:
 
 ![Docs Version Dropdown](./img/docsVersionDropdown.png)
 
 ## Update an existing version
 
-It is possible to edit versioned docs in their respective folder:
+Update versioned content in its corresponding directory:
 
 - `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
 - `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+
+## Operational guidance
+
+- Version only when release behavior or APIs change materially.
+- Avoid modifying past versions unless fixing factual errors.
+- Document deprecations and migration steps with each release.

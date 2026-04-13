@@ -8,7 +8,7 @@ export default function BlogCardsPage() {
       id: 1,
       slug: 'welcome-to-tech-docs',
       title: 'Welcome to Tech Docs',
-      description: 'Hello, I am Roushan Gupta, a technical writer. Tech Docs is a platform where I share knowledge and insights on technical writing, documentation, cloud computing, and DevOps.',
+      description: 'An introduction to Tech Docs, including the goals behind the platform and what you can expect across writing, cloud, and DevOps content.',
       date: 'November 23, 2025',
       readTime: '5 min'
     },
@@ -24,7 +24,7 @@ export default function BlogCardsPage() {
       id: 3,
       slug: 'docs-as-code-approach',
       title: 'Docs as Code Approach',
-      description: 'Learn what Docs as Code means, why it is become popular in tech, and how it powers modern developer documentation with version control and automation.',
+      description: 'Learn what Docs as Code means, why it has become widely adopted, and how it supports maintainable developer documentation.',
       date: 'November 23, 2025',
       readTime: '10 min'
     },
@@ -47,10 +47,10 @@ export default function BlogCardsPage() {
   ];
 
   return (
-    <Layout title="Blog" description="Tech Docs blog featuring insights on technical writing, documentation, cloud computing, and DevOps">
+    <Layout title="Blog" description="Tech Docs blog covering technical writing, documentation strategy, cloud, and DevOps">
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>Tech Docs Blog</h1>
+          <h1>TechDOCS Blog</h1>
           <p className={styles.subtitle}>
             Insights on technical writing, documentation best practices, cloud computing, and DevOps
           </p>

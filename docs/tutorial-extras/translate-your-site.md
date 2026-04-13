@@ -6,13 +6,13 @@ sidebar_label: Translate Your Site
 tags: []
 ---
 
-# Translate your site
+# Translate Your Site
 
-Let's translate `docs/intro.md` to French.
+This guide shows how to localize content by translating `docs/intro.md` into French.
 
 ## Configure i18n
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+Update `docusaurus.config.js` to add the `fr` locale:
 
 ```js title="docusaurus.config.js"
 export default {
@@ -25,7 +25,7 @@ export default {
 
 ## Translate a doc
 
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
+Copy `docs/intro.md` into the French docs path:
 
 ```bash
 mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
@@ -33,27 +33,27 @@ mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
 cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
 ```
 
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
+Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md`.
 
-## Start your localized site
+## Start localized preview
 
-Start your site on the French locale:
+Run the site in French locale:
 
 ```bash
 npm run start -- --locale fr
 ```
 
-Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.
+The localized site is available at [http://localhost:3000/fr/](http://localhost:3000/fr/).
 
 :::caution
 
-In development, you can only use one locale at a time.
+In development mode, only one locale can run at a time.
 
 :::
 
-## Add a Locale Dropdown
+## Add a locale dropdown
 
-To navigate seamlessly across languages, add a locale dropdown.
+Add a navbar locale dropdown to support language switching.
 
 Modify the `docusaurus.config.js` file:
 
@@ -73,11 +73,11 @@ export default {
 };
 ```
 
-The locale dropdown now appears in your navbar:
+The locale dropdown appears in the navbar:
 
 ![Locale Dropdown](./img/localeDropdown.png)
 
-## Build your localized site
+## Build localized output
 
 Build your site for a specific locale:
 
@@ -85,8 +85,15 @@ Build your site for a specific locale:
 npm run build -- --locale fr
 ```
 
-Or build your site to include all the locales at once:
+To build all locales in one run:
 
 ```bash
 npm run build
 ```
+
+## Localization quality checklist
+
+- Keep source and translated page structure aligned.
+- Preserve code blocks and command examples.
+- Validate internal links in each locale build.
+- Assign ownership for ongoing translation updates.

@@ -7,44 +7,40 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 20 seconds**.
+TechDOCS is a documentation portal for engineering teams, technical writers, and platform owners who need clear, maintainable docs.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Use this page to understand the portal structure and choose the right learning path.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## How this portal is organized
 
-### What You'll Need
+- **Writing Best Practices**: standards for clarity, structure, terminology, and reviews.
+- **Guides**: practical user, admin, installation, integration, and API documentation.
+- **Cloud & DevOps**: provider-specific cloud references and delivery operations.
+- **Blog**: implementation notes and lessons learned from documentation projects.
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Suggested first path
 
-## Generate a new site
+If you are new to technical documentation, start with this sequence:
 
-Generate a new Docusaurus site using the **classic template**.
+1. Open [Writing Best Practices](/docs/writing-best-practices)
+2. Review audience and content-type guidance
+3. Apply the review checklist to one live page
+4. Move to tooling and automation topics
 
-The classic template will automatically be added to your project after you run the command:
+If you are documenting a product or platform, start with guides:
+
+1. Draft one user guide and one installation guide for a single workflow
+2. Publish or update an API reference page
+3. Link operational runbooks from the DevOps section
+
+## Local development
+
+Run the portal locally while editing content:
 
 ```bash
-npm init docusaurus@latest my-website classic
+yarn start
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+The site is available at `http://localhost:3000` and hot-reloads when files change.

@@ -7,99 +7,55 @@ sidebar: guidesSidebar
 
 # User Guides
 
-**Who This Is For:** Technical writers, content creators, developers, product managers, and anyone creating user-facing documentation.
+Use this section to design user-facing documentation that answers real tasks quickly and consistently.
 
-**When to Use This Guide:** You're writing product documentation, creating help articles, developing tutorials, or need to communicate technical concepts to end users effectively.
+## What this section covers
 
-**What You'll Learn:** Fundamental technical writing skills, documentation structure best practices, how to write for different audiences, and proven techniques to create clear, user-friendly content that solves real problems.
+- Audience targeting and intent-driven writing
+- Content selection by outcome (tutorial, how-to, reference, concept)
+- Scannable structure and consistent terminology
+- Review workflows that improve accuracy and readability
 
-## Getting Started
+## Start here
 
-Welcome to our user guides! Whether you're a software engineer documenting an API, a product manager writing feature announcements, or a dedicated technical writer crafting comprehensive manuals, these guides will help you create documentation that users actually want to read.
+If you are documenting a new feature or workflow, use this path:
 
-**Real-World Scenario:** You've just launched a new SaaS product feature. Users are confused about how to use it, and support tickets are piling up. You need to create quick-start guides, detailed how-to articles, and video tutorials that reduce support burden and increase feature adoption. This guide shows you exactly how to approach this challenge.
+1. Define the reader and their task outcome.
+2. Choose the content type that fits the task.
+3. Draft steps with concrete examples and expected results.
+4. Run the review checklist before publishing.
 
-## Quick Start Guide
+## Writing workflow
 
-### For Beginners
-1. **Understand Your Audience** - Know who you're writing for
-2. **Structure Your Content** - Organize information logically
-3. **Write Clearly** - Use simple, concise language
-4. **Add Examples** - Show, don't just tell
-5. **Test and Iterate** - Get feedback and improve
+### 1) Plan
+- Identify user role, prerequisites, and completion criteria.
+- Define scope so one page solves one problem well.
 
-### For Advanced Users
-- Advanced formatting techniques
-- Documentation automation
-- Style guide development
-- Multi-channel publishing
+### 2) Draft
+- Lead with the task goal, not background context.
+- Use short sections, meaningful headings, and plain language.
+- Include copy-paste-safe commands where needed.
 
-## Core Concepts
+### 3) Validate
+- Run steps in a clean environment.
+- Confirm screenshots, URLs, and command flags are current.
+- Check that first-time readers can complete the task.
 
-### Technical Writing Fundamentals
-- Clarity and conciseness
-- Active voice usage
-- Consistent terminology
-- Proper formatting
+### 4) Maintain
+- Add ownership and update cadence.
+- Track support tickets to identify unclear pages.
+- Prioritize fixes for high-traffic docs.
 
-### Documentation Types
-- **User Manuals** - Comprehensive product guides
-- **Quick Start Guides** - Fast onboarding materials
-- **Tutorials** - Step-by-step learning paths
-- **Reference Docs** - Detailed specifications
-- **Troubleshooting Guides** - Problem-solving resources
+## Practical standards
 
-## Best Practices
+- Prefer active voice and direct instructions.
+- Keep terminology stable across all pages.
+- Use warnings only for real risk conditions.
+- Link related pages so users can continue without searching.
 
-### Writing Style
-- Use clear, simple language
-- Avoid jargon when possible
-- Define technical terms
-- Keep sentences short
+## Recommended next pages
 
-### Organization
-- Use logical hierarchy
-- Create scannable content
-- Include table of contents
-- Add cross-references
-
-### Visual Elements
-- Screenshots and diagrams
-- Code examples
-- Tables and lists
-- Callouts and warnings
-
-## Templates and Examples
-
-Browse our collection of professional templates:
-- User manual template
-- API documentation template
-- Tutorial template
-- Release notes template
-
-## Tools and Resources
-
-### Recommended Tools
-- Docusaurus for static sites
-- Swagger for API docs
-- Markdown for content creation
-- Git for version control
-
-### Additional Resources
-- [Technical Writing Style Guide](#)
-- [Markdown Cheat Sheet](#)
-- [Documentation Checklist](#)
-
-## Support
-
-Need help? Check out:
-- [FAQ Section](#)
-- [Community Forum](#)
-- [Contact Support](mailto:contact@techdocs.co.in) or [LinkedIn](https://www.linkedin.com/in/roushan-gupta-a42a6a8a/)
-
-## Next Steps
-
-Ready to dive deeper? Explore:
-- [Installation Guides](/docs/tutorial-basics/create-a-page)
-- [API References](/docs/tutorial-extras/manage-docs-versions)
-- [Blog Posts](/blog)
+- [Writing Best Practices](/docs/writing-best-practices)
+- [Installation Guides](/docs/installation-guides)
+- [API References](/docs/api-references)
+- [Blog](/blog)
