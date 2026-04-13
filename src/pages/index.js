@@ -32,7 +32,7 @@ class ErrorBoundary extends React.Component {
             style={{
               marginTop: "1rem",
               padding: "10px 24px",
-              background: "#dc2626",
+              background: "#d62828",
               color: "#fff",
               border: "none",
               borderRadius: "8px",
@@ -165,6 +165,12 @@ export default function Home() {
           <link rel="canonical" href="https://techdocs.co.in" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
           <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="theme-color" content="#d62828" />
+
+          {/* Critical Assets Preload */}
+          <link rel="preload" href="https://img.youtube.com/vi/-aCKsD70V2E/sddefault.jpg" as="image" fetchpriority="high" />
+          <link rel="preconnect" href="https://www.youtube.com" />
+          
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Head>
 
@@ -230,6 +236,7 @@ export default function Home() {
                       <iframe
                         className={styles.videoIframe}
                         src="https://www.youtube.com/embed/-aCKsD70V2E?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1&autoplay=0&mute=0&vq=hd1080"
+                        srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;min-height:100%}span{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;width:68px;height:48px;background:red;border-radius:12px;display:flex;align-items:center;justify-content:center;transition:background 0.2s ease;box-shadow:0 0 10px rgba(0,0,0,0.3)}span::before{content:'';border:solid transparent;border-width:12px 0 12px 20px;border-left-color:white;margin-left:5px}a:hover span{background:#cc0000}</style><a href=https://www.youtube.com/embed/-aCKsD70V2E?autoplay=1&rel=0&modestbranding=1><img src=https://img.youtube.com/vi/-aCKsD70V2E/sddefault.jpg fetchpriority='high' alt='TechDOCS Introduction'><span></span></a>"
                         title="TechDOCS Introduction"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -155,9 +155,9 @@
 }
 
 .incorrectFeedback {
-  background: rgba(239, 68, 68, 0.1);
-  border: 2px solid #ef4444;
-  color: #dc2626;
+  background: rgba(214, 40, 40, 0.1);
+  border: 2px solid #d62828;
+  color: #d62828;
 }
 
 .feedback strong {

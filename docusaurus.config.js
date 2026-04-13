@@ -259,6 +259,44 @@ const config = {
         content: '38E57BBFE8761DB1',
       },
     },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/img/logo.svg',
+        as: 'image',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Red+Hat+Display:wght@700;800;900&family=Red+Hat+Text:wght@400;500;600&display=swap',
+        as: 'style',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'prefetch',
+        href: '/docs/writing-best-practices',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'prefetch',
+        href: '/blog',
+      },
+    },
   ],
 };
 
