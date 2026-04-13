@@ -69,27 +69,6 @@ const FEATURES = [
   { to: "/docs/writing-best-practices", title: "Writing Best Practices", description: "Practical writing standards for clarity, consistency, quality review, and maintainability.", icon: Icons.writing },
 ];
 
-const QUICK_PATHS = [
-  {
-    title: "For Developers",
-    description: "Find API references, integration guidance, and implementation details you can ship with.",
-    to: "/docs/api-references",
-    cta: "Open API references",
-  },
-  {
-    title: "For Technical Writers",
-    description: "Use writing standards, review checklists, and docs-as-code practices built for teams.",
-    to: "/docs/writing-best-practices",
-    cta: "Open writing standards",
-  },
-  {
-    title: "For Platform and DevOps Teams",
-    description: "Use cloud and DevOps guidance to improve release reliability and operational readiness.",
-    to: "/docs/devops",
-    cta: "Open DevOps docs",
-  },
-];
-
 const ROLE_PREVIEWS = [
   {
     id: "developer",
@@ -123,8 +102,16 @@ const ROLE_PREVIEWS = [
   },
 ];
 
+const STATS = [
+  { label: "Documentation Guides", value: "50+" },
+  { label: "Implementation Examples", value: "100+" },
+  { label: "DevOps Patterns", value: "25+" },
+];
+
 export default function Home() {
   const [activeRoleId, setActiveRoleId] = useState(ROLE_PREVIEWS[0].id);
+  const [searchQuery, setSearchQuery] = useState("");
+  
   const activeRole = useMemo(
     () => ROLE_PREVIEWS.find((role) => role.id === activeRoleId) || ROLE_PREVIEWS[0],
     [activeRoleId]
@@ -135,7 +122,7 @@ export default function Home() {
     "@type": "WebSite",
     name: "TechDOCS",
     url: "https://techdocs.co.in",
-    description: "Global documentation portal for technical writing, API documentation, cloud, and DevOps practices.",
+    description: "Production-ready documentation standards, workflows, and guides for engineering teams. Ship better docs faster.",
     sameAs: ["https://www.linkedin.com/in/roushan-g-99242299/"],
     potentialAction: {
       "@type": "SearchAction",
@@ -147,14 +134,14 @@ export default function Home() {
   return (
     <ErrorBoundary>
       <Layout
-        title="TechDOCS — Developer Documentation Portal"
-        description="Global documentation portal for technical writing, API documentation, cloud, and DevOps practices."
+        title="TechDOCS — Ship Better Docs Faster"
+        description="Production-ready documentation standards, workflows, and guides for engineering teams. Build clarity at scale with less rework."
       >
         <Head>
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://techdocs.co.in" />
-          <meta property="og:title" content="TechDOCS — Developer Documentation Portal" />
-          <meta property="og:description" content="Global documentation portal for technical writing, API documentation, cloud, and DevOps practices." />
+          <meta property="og:title" content="TechDOCS — Ship Better Docs Faster" />
+          <meta property="og:description" content="Production-ready documentation standards, workflows, and guides for engineering teams. Build clarity at scale with less rework." />
           <meta property="og:image" content="https://techdocs.co.in/img/docusaurus-social-card.jpg" />
           <meta name="twitter:image" content="https://techdocs.co.in/img/docusaurus-social-card.jpg" />
           <meta name="twitter:card" content="summary_large_image" />
@@ -179,11 +166,10 @@ export default function Home() {
                     TechDOCS
                   </h1>
 
-                  <p className={styles.heroSubtitle}>Documentation Portal for Delivery Teams</p>
+                  <p className={styles.heroSubtitle}>Your Docs Probably Break When You Ship</p>
 
                   <p className={styles.heroDescription}>
-                    A documentation portal for engineering teams, product teams, and technical writers.
-                    Use practical standards and implementation guides to ship clearer docs with less rework.
+                    Here's what we've learned: docs work better with a plan. We collected structures, workflows, and examples from teams that maintain theirs. No magic. Just useful patterns you can steal and adapt.
                   </p>
 
                   <div className={styles.heroCtas}>
@@ -207,6 +193,23 @@ export default function Home() {
                       </svg>
                       YouTube
                     </a>
+                  </div>
+
+                  <div className={styles.heroSearchBox}>
+                    <form onSubmit={(e) => { e.preventDefault(); window.location.href = `/search?q=${searchQuery}`; }} className={styles.searchForm}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                      </svg>
+                      <input
+                        type="search"
+                        placeholder="Search guides, API docs, patterns..."
+                        className={styles.searchInput}
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        aria-label="Search documentation"
+                      />
+                    </form>
                   </div>
 
                 </div>
@@ -256,9 +259,9 @@ export default function Home() {
           <section className={styles.pathsSection} aria-label="Role-based quick paths">
             <div className={styles.container}>
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Choose your path</h2>
+                <h2 className={styles.sectionTitle}>Find Your Starting Point</h2>
                 <p className={styles.sectionDescription}>
-                  Choose the role closest to your work. Each path starts with essentials and links to deeper implementation guidance.
+                  Select your role to see curated resources, best practices, and actionable guidance tailored to your workflow.
                 </p>
               </div>
 
@@ -296,16 +299,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              <div className={styles.pathGrid}>
-                {QUICK_PATHS.map((path) => (
-                  <Link key={path.to} to={path.to} className={styles.pathCard}>
-                    <h3>{path.title}</h3>
-                    <p>{path.description}</p>
-                    <span className={styles.pathCta}>{path.cta} →</span>
-                  </Link>
-                ))}
-              </div>
             </div>
           </section>
 
@@ -313,7 +306,7 @@ export default function Home() {
             <div className={styles.container}>
 
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Explore by topic</h2>
+                <h2 className={styles.sectionTitle}>Explore By Topic</h2>
                 <p className={styles.sectionDescription}>
                   Browse focused topic areas and move directly into practical guidance for production environments.
                 </p>
@@ -332,6 +325,36 @@ export default function Home() {
                 ))}
               </div>
 
+            </div>
+          </section>
+
+          {/* ===== PREMIUM CTA FOOTER ===== */}
+          <section className={styles.ctaFooterSection} aria-label="Get updates and resources">
+            <div className={styles.container}>
+              <div className={styles.ctaFooterContent}>
+                <div className={styles.ctaFooterText}>
+                  <h2 className={styles.ctaFooterTitle}>Stay Updated</h2>
+                  <p className={styles.ctaFooterDesc}>Get the latest guides, patterns, and DevOps insights delivered to your inbox.</p>
+                </div>
+                <div className={styles.ctaFooterForm}>
+                  <form onSubmit={(e) => { e.preventDefault(); alert('Thanks! Check your email.'); }} className={styles.newsletterForm}>
+                    <input 
+                      type="email" 
+                      placeholder="your@email.com" 
+                      className={styles.newsletterInput}
+                      required
+                      aria-label="Email address"
+                    />
+                    <button type="submit" className={styles.newsletterButton}>
+                      Subscribe
+                      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </button>
+                  </form>
+                  <p className={styles.ctaFooterPrivacy}>No spam, no marketing emails. Unsubscribe anytime.</p>
+                </div>
+              </div>
             </div>
           </section>
         </main>
