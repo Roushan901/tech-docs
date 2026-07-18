@@ -16,42 +16,15 @@ export default function ContactForm() {
     setLoading(true);
     setStatus(null);
 
-    const brevoApiKey = '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';
-
     try {
-      // Send email via Brevo
-      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
-        method: 'POST',
-        headers: {
-          'api-key': brevoApiKey,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          sender: { name: formData.name, email: formData.email },
-          to: [{ email: 'contact@techdocs.co.in', name: 'TechDocs Team' }],
-          subject: `Contact Form: ${formData.subject}`,
-          htmlContent: `
-            <h2>New Contact Message</h2>
-            <p><strong>From:</strong> ${formData.name}</p>
-            <p><strong>Email:</strong> ${formData.email}</p>
-            <p><strong>Subject:</strong> ${formData.subject}</p>
-            <hr/>
-            <p><strong>Message:</strong></p>
-            <p>${formData.message.replace(/\n/g, '<br>')}</p>
-          `
-        })
-      });
-
-      if (!response.ok) throw new Error('Failed to send');
-
-      // Discord notification
-      fetch('https://discord.com/api/webhooks/1265155621505994803/mWxUVPmOXQXFa3t7Qn6w2pKzL8vN3jZ4r5sT9uW2xY', {
+      // Send Discord notification
+      await fetch('https://discord.com/api/webhooks/1265155621505994803/mWxUVPmOXQXFa3t7Qn6w2pKzL8vN3jZ4r5sT9uW2xY', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           content: `💬 **New Contact Message**\n**From:** ${formData.name} (${formData.email})\n**Subject:** ${formData.subject}\n**Message:** ${formData.message.substring(0, 100)}...`
         })
-      }).catch(err => console.error(err));
+      });
 
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });

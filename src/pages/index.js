@@ -358,39 +358,18 @@ export default function Home() {
                   <form method="POST" className={styles.newsletterForm} onSubmit={(e) => {
                     e.preventDefault();
                     const email = e.target.email.value;
-                    const brevoApiKey = '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';
                     
-                    // Add contact to Brevo list
-                    fetch('https://api.brevo.com/v3/contacts', {
+                    // Send Discord notification to admin
+                    fetch('https://discord.com/api/webhooks/1265155621505994803/mWxUVPmOXQXFa3t7Qn6w2pKzL8vN3jZ4r5sT9uW2xY', {
                       method: 'POST',
-                      headers: {
-                        'api-key': brevoApiKey,
-                        'Content-Type': 'application/json'
-                      },
+                      headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({
-                        email: email,
-                        listIds: [2],
-                        attributes: {
-                          FIRSTNAME: 'TechDocs',
-                          SIGNUP_SOURCE: 'Website Newsletter'
-                        }
+                        content: `📧 **New Newsletter Subscriber**\n**Email:** ${email}`
                       })
-                    }).then(res => res.json()).then(data => {
-                      // Send Discord notification to admin
-                      fetch('https://discord.com/api/webhooks/1265155621505994803/mWxUVPmOXQXFa3t7Qn6w2pKzL8vN3jZ4r5sT9uW2xY', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                          content: `📧 **New Newsletter Subscriber**\n**Email:** ${email}\n**Status:** ✅ Added to Brevo List`
-                        })
-                      }).catch(err => console.error(err));
-                      
-                      alert('✅ Subscribed! Check your email for a welcome message.');
-                      e.target.reset();
-                    }).catch(err => {
-                      console.error('Brevo error:', err);
-                      alert('Subscription failed. Please try again.');
-                    });
+                    }).catch(err => console.error(err));
+                    
+                    alert('✅ Subscribed! Check your email for updates.');
+                    e.target.reset();
                   }}>
                     <input 
                       type="email" 
