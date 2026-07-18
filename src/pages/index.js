@@ -4,6 +4,7 @@ import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
 import Testimonials from "../components/Testimonials";
 import InstructorProfile from "../components/InstructorProfile";
+import ChatBot from "../components/ChatBot";
 import styles from "./index.module.css";
 
 class ErrorBoundary extends React.Component {
@@ -392,6 +393,7 @@ export default function Home() {
             </div>
           </section>
         </main>
+        <ChatBot />
       </Layout>
     </ErrorBoundary>
   );
