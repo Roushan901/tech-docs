@@ -85,6 +85,7 @@ const config = {
 
   clientModules: [
     require.resolve('./src/clientModules/algoliaInsights.js'),
+    require.resolve('./src/clientModules/filterSidebar.js'),
   ],
 
   // Uncomment and add your real Google Analytics tracking ID when ready
@@ -266,8 +267,15 @@ const config = {
       tagName: 'link',
       attributes: {
         rel: 'preload',
-        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap',
         as: 'style',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap',
       },
     },
     {

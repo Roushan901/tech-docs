@@ -2,6 +2,8 @@ import React, { useMemo, useState } from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
+import Testimonials from "../components/Testimonials";
+import InstructorProfile from "../components/InstructorProfile";
 import styles from "./index.module.css";
 
 class ErrorBoundary extends React.Component {
@@ -61,43 +63,43 @@ const Icons = {
 };
 
 const FEATURES = [
-  { to: "/blog", title: "Blog", description: "Lessons learned from real documentation programs, tooling rollouts, and developer experience work.", icon: Icons.blog },
-  { to: "/docs/user-guides", title: "Technical Guides", description: "Task-oriented guides for setup, integration, operations, and day-to-day team workflows.", icon: Icons.guides },
-  { to: "/docs/installation-guides", title: "Documentation Tools", description: "Setup patterns and implementation guidance for modern documentation platforms.", icon: Icons.tools },
-  { to: "/docs/cloud-devops", title: "Cloud Computing", description: "Cloud architecture and deployment guidance for AWS, Azure, and GCP environments.", icon: Icons.cloud },
-  { to: "/docs/devops", title: "DevOps", description: "Operational guidance for CI/CD, containers, observability, and infrastructure as code.", icon: Icons.devops },
-  { to: "/docs/writing-best-practices", title: "Writing Best Practices", description: "Practical writing standards for clarity, consistency, quality review, and maintainability.", icon: Icons.writing },
+  { to: "/blog", title: "Blog & Insights", description: "Industry best practices, lessons learned from documentation programs, and proven strategies for improving developer experience.", icon: Icons.blog },
+  { to: "/docs/user-guides", title: "Technical Guides", description: "Comprehensive task-oriented guides for setup, integration, configuration, and day-to-day team operations.", icon: Icons.guides },
+  { to: "/docs/installation-guides", title: "Documentation Tools", description: "Implementation patterns and best practices for modern documentation platforms and content management systems.", icon: Icons.tools },
+  { to: "/docs/cloud-devops", title: "Cloud Architecture", description: "Proven cloud deployment patterns and architectural guidance for AWS, Azure, GCP, and multi-cloud environments.", icon: Icons.cloud },
+  { to: "/docs/devops", title: "DevOps & Operations", description: "Production-ready operational guidance for CI/CD pipelines, containerization, infrastructure as code, and observability.", icon: Icons.devops },
+  { to: "/docs/writing-best-practices", title: "Writing Standards", description: "Professional writing guidelines, documentation standards, quality assurance checklists, and content maintenance strategies.", icon: Icons.writing },
 ];
 
 const ROLE_PREVIEWS = [
   {
     id: "developer",
-    label: "Developer",
-    focus: "Ship integrations faster",
-    summary: "Start with API references and implementation-focused guides for setup, auth, payload design, and troubleshooting.",
-    primaryCta: "Open API references",
+    label: "Software Developer",
+    focus: "Cut integration time in half. Ship features with confidence.",
+    summary: "Stop hunting for documentation. Get API references, proven code patterns, and integration guides that actually work. Learn from real examples and reduce debugging time with clear, actionable guidance.",
+    primaryCta: "Explore API Documentation",
     primaryTo: "/docs/api-references",
-    secondaryCta: "Open technical guides",
+    secondaryCta: "View Code Examples",
     secondaryTo: "/docs/user-guides",
   },
   {
     id: "writer",
     label: "Technical Writer",
-    focus: "Improve content quality and consistency",
-    summary: "Use writing standards, review workflows, and docs-as-code patterns to keep documentation clear across releases.",
-    primaryCta: "Open writing standards",
+    focus: "Write docs that users actually love. Become a documentation expert.",
+    summary: "Master the craft of technical writing. Learn proven standards, documentation workflows, and quality checklists. Write clear, consistent docs that reduce support tickets and improve user satisfaction.",
+    primaryCta: "Master Writing Standards",
     primaryTo: "/docs/writing-best-practices",
-    secondaryCta: "Open review checklist",
+    secondaryCta: "Quality Assurance Guide",
     secondaryTo: "/docs/writing-best-practices/review-checklist",
   },
   {
     id: "platform",
-    label: "Platform / DevOps",
-    focus: "Increase reliability in delivery",
-    summary: "Work through cloud architecture and DevOps operations guidance for deployment safety, observability, and scale.",
-    primaryCta: "Open DevOps docs",
+    label: "DevOps Engineer",
+    focus: "Deploy with confidence. Master cloud & infrastructure.",
+    summary: "Stop reinventing the wheel. Get battle-tested cloud architecture patterns, CI/CD best practices, and infrastructure-as-code templates. Deploy reliably with proven operational guidance from experts.",
+    primaryCta: "Explore DevOps Guides",
     primaryTo: "/docs/devops",
-    secondaryCta: "Open cloud docs",
+    secondaryCta: "Cloud Architecture Patterns",
     secondaryTo: "/docs/cloud-devops",
   },
 ];
@@ -166,21 +168,21 @@ export default function Home() {
                     TechDOCS
                   </h1>
 
-                  <p className={styles.heroSubtitle}>Your Docs Probably Break When You Ship</p>
+                  <p className={styles.heroSubtitle}>Master Documentation. Master Your Craft.</p>
 
                   <p className={styles.heroDescription}>
-                    Here's what we've learned: docs work better with a plan. We collected structures, workflows, and examples from teams that maintain theirs. No magic. Just useful patterns you can steal and adapt.
+                    Get production-ready standards, proven workflows, and real-world patterns that work. Whether you're a developer, technical writer, or DevOps engineer, learn industry best practices and level up your skills with expert guidance backed by years of experience.
                   </p>
 
                   <div className={styles.heroCtas}>
-                    <Link to="/docs/writing-best-practices" className={styles.ctaPrimary}>
-                      Start with Docs
+                    <Link to="/docs/learning-paths" className={styles.ctaPrimary}>
+                      Start Learning Today
                       <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </Link>
-                    <Link to="/blog" className={styles.ctaSecondary}>
-                      Read Insights
+                    <Link to="/docs/about" className={styles.ctaSecondary}>
+                      How It Works
                     </Link>
                     <a
                       href="https://www.youtube.com/@TechDocsTutorials"
@@ -191,7 +193,7 @@ export default function Home() {
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/>
                       </svg>
-                      YouTube
+                      Watch Tutorial
                     </a>
                   </div>
 
@@ -203,7 +205,7 @@ export default function Home() {
                       </svg>
                       <input
                         type="search"
-                        placeholder="Search guides, API docs, patterns..."
+                        placeholder="Search documentation, API guides, patterns..."
                         className={styles.searchInput}
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
@@ -226,9 +228,9 @@ export default function Home() {
                           html,body{height:100%;background:#0d1117}
                           .thumb{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0.85}
                           .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-                          .play-btn{width:60px;height:42px;background:#c9191e;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background 0.15s}
+                          .play-btn{width:60px;height:42px;background:#10a37f;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background 0.15s}
                           .play-btn::before{content:'';border:solid transparent;border-width:10px 0 10px 17px;border-left-color:#fff;margin-left:3px}
-                          a:hover .play-btn{background:#a01217}
+                          a:hover .play-btn{background:#0d8b6d}
                           .label{position:absolute;bottom:14px;left:16px;color:rgba(255,255,255,0.75);font-family:system-ui,sans-serif;font-size:13px;font-weight:500}
                         </style>
                         <a href="https://www.youtube.com/embed/-aCKsD70V2E?autoplay=1&rel=0">
@@ -244,7 +246,7 @@ export default function Home() {
                       />
                     </div>
                     <p className={styles.videoCaption}>
-                      New here? Watch a short platform walkthrough
+                      Take a guided tour of TechDOCS (3 minutes)
                     </p>
                   </div>
                 </div>
@@ -259,9 +261,9 @@ export default function Home() {
           <section className={styles.pathsSection} aria-label="Role-based quick paths">
             <div className={styles.container}>
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Find Your Starting Point</h2>
+                <h2 className={styles.sectionTitle}>Pick Your Role & Master Your Skills</h2>
                 <p className={styles.sectionDescription}>
-                  Select your role to see curated resources, best practices, and actionable guidance tailored to your workflow.
+                  Curated learning paths designed for your career. Get exactly what you need to become an expert in your field—no fluff, no confusion.
                 </p>
               </div>
 
@@ -306,9 +308,9 @@ export default function Home() {
             <div className={styles.container}>
 
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Explore By Topic</h2>
+                <h2 className={styles.sectionTitle}>Everything You Need to Know</h2>
                 <p className={styles.sectionDescription}>
-                  Browse focused topic areas and move directly into practical guidance for production environments.
+                  From API integration to cloud deployment—find battle-tested guides and practical solutions for real-world challenges.
                 </p>
               </div>
 
@@ -328,18 +330,71 @@ export default function Home() {
             </div>
           </section>
 
+          {/* ===== TESTIMONIALS ===== */}
+          <Testimonials />
+
+          {/* ===== INSTRUCTOR PROFILE ===== */}
+          <section className={styles.instructorSection} aria-label="Meet the instructor">
+            <div className={styles.container}>
+              <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>Meet Your Instructor</h2>
+                <p className={styles.sectionDescription}>
+                  Learn from an experienced professional passionate about documentation excellence and your success.
+                </p>
+              </div>
+              <InstructorProfile />
+            </div>
+          </section>
+
           {/* ===== PREMIUM CTA FOOTER ===== */}
           <section className={styles.ctaFooterSection} aria-label="Get updates and resources">
             <div className={styles.container}>
               <div className={styles.ctaFooterContent}>
                 <div className={styles.ctaFooterText}>
-                  <h2 className={styles.ctaFooterTitle}>Stay Updated</h2>
-                  <p className={styles.ctaFooterDesc}>Get the latest guides, patterns, and DevOps insights delivered to your inbox.</p>
+                  <h2 className={styles.ctaFooterTitle}>Never Miss an Update</h2>
+                  <p className={styles.ctaFooterDesc}>Get weekly insights on documentation excellence, cloud architecture trends, and DevOps best practices. Join 10,000+ engineers leveling up their craft.</p>
                 </div>
                 <div className={styles.ctaFooterForm}>
-                  <form onSubmit={(e) => { e.preventDefault(); alert('Thanks! Check your email.'); }} className={styles.newsletterForm}>
+                  <form method="POST" className={styles.newsletterForm} onSubmit={(e) => {
+                    e.preventDefault();
+                    const email = e.target.email.value;
+                    const brevoApiKey = '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';
+                    
+                    // Add contact to Brevo list
+                    fetch('https://api.brevo.com/v3/contacts', {
+                      method: 'POST',
+                      headers: {
+                        'api-key': brevoApiKey,
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                        email: email,
+                        listIds: [2],
+                        attributes: {
+                          FIRSTNAME: 'TechDocs',
+                          SIGNUP_SOURCE: 'Website Newsletter'
+                        }
+                      })
+                    }).then(res => res.json()).then(data => {
+                      // Send Discord notification to admin
+                      fetch('https://discord.com/api/webhooks/1265155621505994803/mWxUVPmOXQXFa3t7Qn6w2pKzL8vN3jZ4r5sT9uW2xY', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                          content: `📧 **New Newsletter Subscriber**\n**Email:** ${email}\n**Status:** ✅ Added to Brevo List`
+                        })
+                      }).catch(err => console.error(err));
+                      
+                      alert('✅ Subscribed! Check your email for a welcome message.');
+                      e.target.reset();
+                    }).catch(err => {
+                      console.error('Brevo error:', err);
+                      alert('Subscription failed. Please try again.');
+                    });
+                  }}>
                     <input 
                       type="email" 
+                      name="email"
                       placeholder="your@email.com" 
                       className={styles.newsletterInput}
                       required
@@ -352,7 +407,7 @@ export default function Home() {
                       </svg>
                     </button>
                   </form>
-                  <p className={styles.ctaFooterPrivacy}>No spam, no marketing emails. Unsubscribe anytime.</p>
+                  <p className={styles.ctaFooterPrivacy}>We respect your inbox. No spam, no marketing emails. Unsubscribe anytime.</p>
                 </div>
               </div>
             </div>

@@ -141,7 +141,7 @@ export default function APISimulator({
             disabled={loading}
             className={styles.sendButton}
           >
-            {loading ? '⏳ Sending...' : '🚀 Send Request'}
+            {loading ? 'Sending...' : 'Send Request'}
           </button>
           <button 
             onClick={clearAll}

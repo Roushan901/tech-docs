@@ -2,7 +2,7 @@
 id: cloud-devops-index
 title: Cloud Platforms
 sidebar_position: 1
-sidebar: cloudSidebar
+sidebar: guidesSidebar
 sidebar_label: Cloud Platforms
 tags: []
 ---

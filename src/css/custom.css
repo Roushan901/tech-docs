@@ -1,76 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /**
- * TechDOCS — Clean Professional Design System
+ * TechDOCS — Premium Professional Design System
+ * Sophisticated, Classy, Production-Grade Aesthetics
  */
 
-/* ===== Color Tokens ===== */
+/* ===== Color Tokens — Sophisticated Palette ===== */
 :root {
-  --ifm-color-primary: #c9191e;
-  --ifm-color-primary-dark: #b51519;
-  --ifm-color-primary-darker: #a01217;
-  --ifm-color-primary-darkest: #7d0e12;
-  --ifm-color-primary-light: #e02226;
-  --ifm-color-primary-lighter: #e94a4d;
-  --ifm-color-primary-lightest: #f28082;
+  --ifm-color-primary: #10a37f;
+  --ifm-color-primary-dark: #0d8b6d;
+  --ifm-color-primary-darker: #097357;
+  --ifm-color-primary-darkest: #065a45;
+  --ifm-color-primary-light: #2db896;
+  --ifm-color-primary-lighter: #4ecaa4;
+  --ifm-color-primary-lightest: #d9f2eb;
 
-  --brand-red: #c9191e;
+  --brand-primary: #10a37f;
+  --brand-gold: #d4a574;
+  --brand-accent: #0d6f5b;
+  --brand-accent-soft: #e8f5f1;
 
-  /* Typography */
+  /* Typography — Premium System */
   --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-heading-font-family: 'Fraunces', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --ifm-font-size-base: 16px;
-  --ifm-line-height-base: 1.7;
-  --ifm-heading-line-height: 1.2;
+  --ifm-line-height-base: 1.75;
+  --ifm-heading-line-height: 1.25;
   --ifm-code-font-size: 87.5%;
 
-  /* Light mode surfaces */
-  --ifm-background-color: #ffffff;
-  --ifm-background-surface-color: #f7f7f8;
-  --ifm-font-color-base: #1a1a1a;
-  --ifm-heading-color: #111111;
-  --ifm-color-emphasis-100: #f0f0f0;
-  --ifm-color-emphasis-200: #e5e5e5;
-  --ifm-color-emphasis-300: #d4d4d4;
-  --ifm-color-emphasis-600: #737373;
-  --ifm-color-emphasis-700: #525252;
-  --ifm-color-emphasis-900: #171717;
+  /* Light mode surfaces — Refined */
+  --ifm-background-color: #fafaf9;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #1f2937;
+  --ifm-heading-color: #0f172a;
+  --ifm-color-emphasis-100: #f3f4f6;
+  --ifm-color-emphasis-200: #e5e7eb;
+  --ifm-color-emphasis-300: #d1d5db;
+  --ifm-color-emphasis-600: #6b7280;
+  --ifm-color-emphasis-700: #4b5563;
+  --ifm-color-emphasis-900: #111827;
 
-  /* Shadows */
-  --ifm-global-shadow-lw: 0 1px 2px rgba(0,0,0,0.05);
-  --ifm-global-shadow-md: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
-  --ifm-global-shadow-tl: 0 4px 24px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+  /* Shadows — Premium Depth */
+  --ifm-global-shadow-lw: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --ifm-global-shadow-md: 0 12px 32px rgba(15, 23, 42, 0.1);
+  --ifm-global-shadow-tl: 0 25px 50px rgba(15, 23, 42, 0.15);
 
   /* Radius */
-  --ifm-global-radius: 8px;
-  --ifm-button-border-radius: 6px;
+  --ifm-global-radius: 14px;
+  --ifm-button-border-radius: 999px;
   --touch-target-min: 44px;
 
-  --docusaurus-highlighted-code-line-bg: rgba(201, 25, 30, 0.06);
+  --docusaurus-highlighted-code-line-bg: rgba(16, 163, 127, 0.1);
 }
 
-/* ===== Dark Mode ===== */
+/* ===== Dark Mode — Sophisticated ===== */
 [data-theme='dark'] {
-  --ifm-color-primary: #e84147;
-  --ifm-color-primary-dark: #d62828;
-  --ifm-color-primary-darker: #c9191e;
-  --ifm-color-primary-darkest: #a01217;
-  --ifm-color-primary-light: #ed6669;
-  --ifm-color-primary-lighter: #f38587;
-  --ifm-color-primary-lightest: #f9b0b1;
+  --ifm-color-primary: #2db896;
+  --ifm-color-primary-dark: #25a182;
+  --ifm-color-primary-darker: #1d8b6e;
+  --ifm-color-primary-darkest: #0d8b6d;
+  --ifm-color-primary-light: #3dcaa4;
+  --ifm-color-primary-lighter: #4ecaa4;
+  --ifm-color-primary-lightest: #7de4c8;
 
-  --ifm-background-color: #111111;
-  --ifm-background-surface-color: #1a1a1a;
-  --ifm-font-color-base: #d4d4d4;
-  --ifm-heading-color: #f5f5f5;
-  --ifm-color-emphasis-100: #1f1f1f;
-  --ifm-color-emphasis-200: #262626;
-  --ifm-color-emphasis-300: #333333;
-  --ifm-color-emphasis-600: #737373;
-  --ifm-color-emphasis-700: #a3a3a3;
-  --ifm-color-emphasis-900: #f5f5f5;
+  --ifm-background-color: #0f0f10;
+  --ifm-background-surface-color: #161618;
+  --ifm-font-color-base: #e5e7eb;
+  --ifm-heading-color: #f9fafb;
+  --ifm-color-emphasis-100: #1f2937;
+  --ifm-color-emphasis-200: #2a2a2e;
+  --ifm-color-emphasis-300: #374151;
+  --ifm-color-emphasis-600: #9ca3af;
+  --ifm-color-emphasis-700: #d1d5db;
+  --ifm-color-emphasis-900: #f9fafb;
 
-  --docusaurus-highlighted-code-line-bg: rgba(232, 65, 71, 0.08);
+  --docusaurus-highlighted-code-line-bg: rgba(45, 184, 150, 0.12);
+}
+
+[data-theme='dark'] body {
+  background: linear-gradient(135deg, #0f0f10 0%, #1a1a1d 50%, #141417 100%);
 }
 
 /* ===== Reset ===== */
@@ -87,41 +95,56 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--ifm-font-color-base);
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.75;
+  background: linear-gradient(135deg, #fafaf9 0%, #f5f5f3 50%, #f0f0ed 100%);
 }
 
 /* ===== Typography ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--ifm-heading-font-family);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--ifm-heading-color);
-  line-height: 1.2;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
 }
 
-h1 { font-size: clamp(1.875rem, 3.5vw, 2.5rem);  font-weight: 700; }
-h2 { font-size: clamp(1.5rem, 2.5vw, 2rem);       font-weight: 600; }
-h3 { font-size: clamp(1.125rem, 2vw, 1.375rem);   font-weight: 600; }
+h1 { font-size: clamp(2rem, 3.5vw, 3rem);  font-weight: 800; letter-spacing: -0.04em; }
+h2 { font-size: clamp(1.5rem, 2.5vw, 2.25rem);       font-weight: 700; letter-spacing: -0.035em; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.5rem);   font-weight: 700; letter-spacing: -0.03em; }
 
 p {
   line-height: 1.75;
   color: var(--ifm-color-emphasis-700);
 }
 
-a {
-  color: var(--brand-red);
-  text-decoration: none;
-  transition: color 0.15s ease;
+[data-theme='dark'] p {
+  color: #d1d5db;
 }
-a:hover { color: var(--ifm-color-primary-dark); }
+
+[data-theme='light'] p {
+  color: #4b5563;
+}
+
+a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: color 0.18s ease, text-decoration-color 0.18s ease;
+  position: relative;
+}
+a:hover { 
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-gold);
+}
 
 /* ===== Buttons ===== */
 .button {
   font-family: var(--ifm-font-family-base);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9375rem;
   border-radius: var(--ifm-button-border-radius);
-  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
   min-height: var(--touch-target-min);
   display: inline-flex;
   align-items: center;
@@ -129,23 +152,28 @@ a:hover { color: var(--ifm-color-primary-dark); }
   padding: 0 1.25rem;
   cursor: pointer;
   letter-spacing: -0.01em;
+  border: 1.5px solid transparent;
 }
 .button--primary {
-  background: var(--brand-red);
-  border-color: var(--brand-red);
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--brand-accent) 100%);
+  border-color: rgba(16, 163, 127, 0.3);
+  color: #ffffff !important;
+  box-shadow: 0 12px 24px rgba(16, 163, 127, 0.2);
 }
 .button--primary:hover {
-  background: var(--ifm-color-primary-dark);
-  border-color: var(--ifm-color-primary-dark);
-  box-shadow: 0 1px 4px rgba(201,25,30,0.3);
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--brand-accent) 100%);
+  border-color: rgba(16, 163, 127, 0.6);
+  box-shadow: 0 16px 32px rgba(16, 163, 127, 0.28);
+  transform: translateY(-2px);
 }
 
 /* ===== Navbar ===== */
 .navbar {
   font-family: var(--ifm-font-family-base);
-  background: #ffffff !important;
-  box-shadow: none;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  border-bottom: 1px solid rgba(16, 163, 127, 0.08);
   height: 56px;
   padding: 0 1.5rem;
   position: sticky;
@@ -191,11 +219,11 @@ a:hover { color: var(--ifm-color-primary-dark); }
 }
 .navbar__link:hover {
   color: var(--ifm-color-emphasis-900) !important;
-  background: var(--ifm-color-emphasis-100);
+  background: rgba(16, 163, 127, 0.08);
 }
 .navbar__link--active {
-  color: var(--brand-red) !important;
-  font-weight: 500;
+  color: var(--brand-primary) !important;
+  font-weight: 600;
 }
 
 [data-theme='dark'] .navbar__title {
@@ -224,13 +252,13 @@ a:hover { color: var(--ifm-color-primary-dark); }
   min-height: 38px;
 }
 .dropdown__link:hover {
-  color: var(--brand-red) !important;
-  background: rgba(201,25,30,0.06) !important;
+  color: var(--brand-primary) !important;
+  background: rgba(16, 163, 127, 0.1) !important;
 }
 .dropdown__link--active {
-  color: var(--brand-red) !important;
-  font-weight: 500;
-  background: rgba(201,25,30,0.06) !important;
+  color: var(--brand-primary) !important;
+  font-weight: 600;
+  background: rgba(16, 163, 127, 0.1) !important;
 }
 .dropdown__menu {
   border: 1px solid var(--ifm-color-emphasis-200);
@@ -811,5 +839,49 @@ blockquote p {
   border-radius: 6px !important;
   padding: 0.5rem 1rem !important;
   min-height: 36px !important;
+}
+
+/* ===== Dark Mode Text Visibility Fixes ===== */
+[data-theme='dark'] .markdown {
+  color: #d1d5db;
+}
+
+[data-theme='dark'] .markdown a {
+  color: #3dcaa4;
+  text-decoration-color: rgba(61, 202, 164, 0.3);
+}
+
+[data-theme='dark'] .markdown a:hover {
+  text-decoration-color: #3dcaa4;
+  color: #4ecaa4;
+}
+
+[data-theme='dark'] article,
+[data-theme='dark'] .docusaurus-mt-lg,
+[data-theme='dark'] .DocSearch-Hit-content-wrapper {
+  color: #d1d5db !important;
+}
+
+[data-theme='dark'] .article__header {
+  color: #f9fafb !important;
+}
+
+[data-theme='dark'] .blog-sidebar h3,
+[data-theme='dark'] .tagline {
+  color: #f9fafb !important;
+}
+
+[data-theme='dark'] time,
+[data-theme='dark'] .authorCol__avatar,
+[data-theme='dark'] .authorCol__info {
+  color: #d1d5db !important;
+}
+
+[data-theme='dark'] .BlogListPage article p {
+  color: #d1d5db !important;
+}
+
+[data-theme='dark'] .BlogListPage .article__intro {
+  color: #c4cbdb !important;
 }
 

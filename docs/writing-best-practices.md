@@ -1,7 +1,7 @@
 ---
 id: writing-best-practices
 sidebar_position: 2
-sidebar: writingSidebar
+sidebar: guidesSidebar
 ---
 
 import styles from './writing-best-practices/CardGrid.module.css';

@@ -148,7 +148,7 @@ export default function TerminalSimulator({
       </div>
 
       <div className={styles.terminalFooter}>
-        <span className={styles.hint}>💡 Tip: Use ↑/↓ arrows for command history, Ctrl+L to clear</span>
+        <span className={styles.hint}>Tip: Use ↑/↓ arrows for command history, Ctrl+L to clear</span>
       </div>
     </div>
   );

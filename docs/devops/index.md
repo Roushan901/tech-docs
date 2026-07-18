@@ -2,7 +2,7 @@
 id: devops-index
 title: DevOps Practices
 sidebar_position: 1
-sidebar: devopsSidebar
+sidebar: guidesSidebar
 sidebar_label: DevOps Practices
 tags: []
 ---

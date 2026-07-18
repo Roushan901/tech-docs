@@ -16,12 +16,12 @@ export default function InteractiveCallout({
   const [isDismissed, setIsDismissed] = React.useState(false);
 
   const icons = {
-    info: 'ℹ️',
-    success: '✅',
-    warning: '⚠️',
-    danger: '🚫',
-    tip: '💡',
-    note: '📝'
+    info: 'ℹ',
+    success: '✓',
+    warning: '⚠',
+    danger: '✕',
+    tip: '→',
+    note: '•'
   };
 
   const handleDismiss = () => {

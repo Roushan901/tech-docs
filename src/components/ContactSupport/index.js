@@ -25,7 +25,7 @@ export default function ContactSupport() {
       title: 'LinkedIn',
       value: 'Connect & Network',
       type: 'linkedin',
-      link: 'https://linkedin.com/in/techdocs'
+      link: 'https://www.linkedin.com/in/roushan-g-99242299/'
     },
     {
       title: 'GitHub',

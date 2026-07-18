@@ -1,96 +1,71 @@
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#ef4444;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:1" />
+    <!-- Main emerald gradient -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10a37f;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2db896;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d8b6d;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="paperGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#fafafa;stop-opacity:1" />
+    
+    <!-- Accent gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a574;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9935a;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="shineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+    
+    <!-- Radial glow effect -->
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15" />
       <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
-    </linearGradient>
+    </radialGradient>
+    
+    <!-- Shadow filter -->
     <filter id="shadow">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.35"/>
-    </filter>
-    <filter id="innerShadow">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
-      <feOffset dx="1" dy="2" result="offsetblur"/>
-      <feComponentTransfer>
-        <feFuncA type="linear" slope="0.3"/>
-      </feComponentTransfer>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.25"/>
     </filter>
   </defs>
   
-  <!-- Background Circle with gradient -->
-  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)"/>
+  <!-- Circular background with gradient -->
+  <circle cx="100" cy="100" r="100" fill="url(#emeraldGrad)"/>
   
-  <!-- Subtle accent circles -->
-  <circle cx="140" cy="60" r="30" fill="white" opacity="0.05"/>
-  <circle cx="60" cy="140" r="40" fill="black" opacity="0.05"/>
+  <!-- Inner glow circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#glowGrad)"/>
   
-  <!-- Document stack effect (depth) -->
-  <g opacity="0.2">
-    <rect x="58" y="48" width="88" height="108" rx="6" fill="#000"/>
-    <rect x="60" y="50" width="86" height="106" rx="6" fill="#000"/>
+  <!-- Geometric layers representing documentation stacks -->
+  
+  <!-- Layer 1 (bottom) - tilted left -->
+  <g opacity="0.85">
+    <rect x="50" y="95" width="90" height="35" rx="4" fill="white" transform="skewX(-8)" filter="url(#shadow)"/>
+    <line x1="55" y1="105" x2="130" y2="105" stroke="#10a37f" stroke-width="2" opacity="0.6"/>
+    <line x1="55" y1="112" x2="125" y2="112" stroke="#e5e7eb" stroke-width="1.5"/>
+    <line x1="55" y1="119" x2="125" y2="119" stroke="#e5e7eb" stroke-width="1.5"/>
   </g>
   
-  <!-- Main Document with shadow -->
-  <g filter="url(#shadow)">
-    <!-- Document base -->
-    <rect x="62" y="52" width="84" height="104" rx="6" fill="url(#paperGradient)"/>
-    
-    <!-- Document header bar -->
-    <rect x="62" y="52" width="84" height="18" rx="6" fill="#dc2626"/>
-    <rect x="62" y="62" width="84" height="8" fill="#dc2626"/>
-    
-    <!-- Folded corner (enhanced) -->
-    <path d="M 146 52 L 146 70 L 128 70 Z" fill="#e5e7eb"/>
-    <path d="M 146 52 L 146 70 L 128 70 Z" fill="#000" opacity="0.1"/>
-    <line x1="128" y1="70" x2="146" y2="52" stroke="#d1d5db" stroke-width="0.5"/>
+  <!-- Layer 2 (middle) - straight -->
+  <g opacity="0.92">
+    <rect x="45" y="70" width="100" height="38" rx="4" fill="white" filter="url(#shadow)"/>
+    <line x1="52" y1="80" x2="138" y2="80" stroke="url(#emeraldGrad)" stroke-width="2.5"/>
+    <line x1="52" y1="88" x2="133" y2="88" stroke="#e5e7eb" stroke-width="1.5"/>
+    <line x1="52" y1="96" x2="133" y2="96" stroke="#e5e7eb" stroke-width="1.5"/>
+    <line x1="52" y1="103" x2="128" y2="103" stroke="#e5e7eb" stroke-width="1.5"/>
   </g>
   
-  <!-- Document content area -->
+  <!-- Layer 3 (top) - tilted right -->
+  <g opacity="1">
+    <rect x="50" y="45" width="95" height="40" rx="4" fill="white" transform="skewX(6)" filter="url(#shadow)"/>
+    <line x1="58" y1="56" x2="138" y2="56" stroke="#2db896" stroke-width="2.5"/>
+    <line x1="58" y1="64" x2="135" y2="64" stroke="#d1d5db" stroke-width="1.5"/>
+    <line x1="58" y1="72" x2="135" y2="72" stroke="#d1d5db" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Code bracket accent (< >) on top layer -->
   <g>
-    <!-- Code/Tech brackets decoration -->
-    <text x="72" y="85" font-family="monospace" font-size="12" fill="#dc2626" opacity="0.4">&lt;/&gt;</text>
-    
-    <!-- Document text lines (realistic text) -->
-    <rect x="78" y="85" width="58" height="3.5" rx="1.5" fill="#dc2626" opacity="0.8"/>
-    <rect x="78" y="92" width="54" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
-    <rect x="78" y="98" width="52" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
-    <rect x="78" y="104" width="56" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
-    <rect x="78" y="110" width="50" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
-    
-    <!-- Section divider -->
-    <line x1="75" y1="118" x2="138" y2="118" stroke="#e5e7eb" stroke-width="1"/>
-    
-    <!-- More text lines -->
-    <rect x="78" y="123" width="55" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
-    <rect x="78" y="129" width="48" height="2.5" rx="1" fill="#6b7280" opacity="0.5"/>
+    <text x="142" y="82" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="url(#goldGrad)" opacity="0.85">&lt;</text>
+    <text x="142" y="102" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="url(#goldGrad)" opacity="0.85">/</text>
+    <text x="142" y="122" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="url(#goldGrad)" opacity="0.85">&gt;</text>
   </g>
   
-  <!-- Large stylized T (with better positioning) -->
-  <g>
-    <text x="110" y="146" font-family="'Arial Black', Arial, sans-serif" font-size="42" font-weight="900" fill="#dc2626" text-anchor="middle">T</text>
-    <text x="110" y="146" font-family="'Arial Black', Arial, sans-serif" font-size="42" font-weight="900" fill="url(#shineGradient)" text-anchor="middle">T</text>
-  </g>
-  
-  <!-- Badge with D (enhanced) -->
-  <g filter="url(#shadow)">
-    <circle cx="135" cy="60" r="17" fill="#dc2626"/>
-    <circle cx="135" cy="60" r="17" fill="url(#shineGradient)"/>
-    <circle cx="135" cy="60" r="14" fill="#dc2626"/>
-    <text x="135" y="67.5" font-family="'Arial Black', Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">D</text>
-  </g>
-  
-  <!-- Subtle shine on background circle -->
-  <ellipse cx="100" cy="50" rx="70" ry="35" fill="url(#shineGradient)" opacity="0.3"/>
+  <!-- Connection dots between layers -->
+  <circle cx="48" cy="107" r="2.5" fill="#10a37f" opacity="0.7"/>
+  <circle cx="152" cy="84" r="2.5" fill="#2db896" opacity="0.7"/>
 </svg>
