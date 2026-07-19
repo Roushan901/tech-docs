@@ -165,7 +165,7 @@ const config = {
             type: 'doc',
             docId: 'writing-best-practices',
             position: 'left',
-            label: 'Writing Standards',
+            label: 'Technical Writing Best Practices',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -207,6 +207,24 @@ const config = {
             label: 'DevOps',
             position: 'left',
             to: '/docs/devops',
+          },
+          {
+            label: 'Getting Started',
+            position: 'right',
+            items: [
+              {
+                label: 'About TechDocs',
+                to: '/docs/about',
+              },
+              {
+                label: 'Learning Paths',
+                to: '/docs/learning-paths',
+              },
+              {
+                label: 'FAQ',
+                to: '/docs/faq',
+              },
+            ],
           },
           {
             type: 'search',

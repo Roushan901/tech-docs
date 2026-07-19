@@ -8,16 +8,6 @@ const sidebars = {
   guidesSidebar: [
     {
       type: 'category',
-      label: 'Getting Started',
-      collapsed: false,
-      items: [
-        { type: 'doc', id: 'about', label: 'About TechDocs' },
-        { type: 'doc', id: 'learning-paths', label: 'Learning Paths' },
-        { type: 'doc', id: 'faq', label: 'FAQ' },
-      ],
-    },
-    {
-      type: 'category',
       label: 'Release Notes',
       collapsed: true,
       items: [
