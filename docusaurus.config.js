@@ -46,6 +46,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        debug: false,
         docs: {
           sidebarPath: './sidebars.js',
           remarkPlugins: [require('remark-math')],

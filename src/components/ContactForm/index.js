@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
 
-export default function ContactForm() {
+const CONTACT_EMAIL = 'contact@techdocs.co.in';
+
+function buildMailtoLink(subject, body) {
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+/**
+ * Renders the contact form and opens the user's email client with a prefilled draft.
+ */
+function ContactForm() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
@@ -11,20 +20,22 @@ export default function ContactForm() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setStatus(null);
 
     try {
-      // Send Discord notification
-      await fetch('https://discord.com/api/webhooks/1265155621505994803/mWxUVPmOXQXFa3t7Qn6w2pKzL8vN3jZ4r5sT9uW2xY', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          content: `💬 **New Contact Message**\n**From:** ${formData.name} (${formData.email})\n**Subject:** ${formData.subject}\n**Message:** ${formData.message.substring(0, 100)}...`
-        })
-      });
+      const subject = `Contact request: ${formData.subject}`;
+      const body = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        '',
+        'Message:',
+        formData.message,
+      ].join('\n');
+
+      window.location.href = buildMailtoLink(subject, body);
 
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
@@ -99,15 +110,17 @@ export default function ContactForm() {
 
         {status === 'success' && (
           <div className={styles.successMessage}>
-            ✅ Message sent! We'll get back to you soon.
+            Your email app has been opened with a draft to our team.
           </div>
         )}
         {status === 'error' && (
           <div className={styles.errorMessage}>
-            ❌ Failed to send. Please try again or email us directly.
+            We could not open your email app. Please email us directly at {CONTACT_EMAIL}.
           </div>
         )}
       </form>
     </div>
   );
 }
+
+export default ContactForm;

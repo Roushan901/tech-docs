@@ -7,6 +7,12 @@ import InstructorProfile from "../components/InstructorProfile";
 import ChatBot from "../components/ChatBot";
 import styles from "./index.module.css";
 
+const CONTACT_EMAIL = "contact@techdocs.co.in";
+
+function buildMailtoLink(subject, body) {
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 class ErrorBoundary extends React.Component {
   constructor(props) { super(props); this.state = { hasError: false }; }
   static getDerivedStateFromError() { return { hasError: true }; }
@@ -111,7 +117,10 @@ const STATS = [
   { label: "DevOps Patterns", value: "25+" },
 ];
 
-export default function Home() {
+/**
+ * Renders the TechDOCS homepage and newsletter call to action.
+ */
+function Home() {
   const [activeRoleId, setActiveRoleId] = useState(ROLE_PREVIEWS[0].id);
   const [searchQuery, setSearchQuery] = useState("");
   
@@ -359,17 +368,13 @@ export default function Home() {
                   <form method="POST" className={styles.newsletterForm} onSubmit={(e) => {
                     e.preventDefault();
                     const email = e.target.email.value;
-                    
-                    // Send Discord notification to admin
-                    fetch('https://discord.com/api/webhooks/1265155621505994803/mWxUVPmOXQXFa3t7Qn6w2pKzL8vN3jZ4r5sT9uW2xY', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify({
-                        content: `📧 **New Newsletter Subscriber**\n**Email:** ${email}`
-                      })
-                    }).catch(err => console.error(err));
-                    
-                    alert('✅ Subscribed! Check your email for updates.');
+
+                    window.location.href = buildMailtoLink(
+                      'Newsletter subscription request',
+                      `Please subscribe this email address to Tech Docs updates:\n\n${email}`
+                    );
+
+                    alert('Your email app will open with a subscription request draft.');
                     e.target.reset();
                   }}>
                     <input 
@@ -398,3 +403,5 @@ export default function Home() {
     </ErrorBoundary>
   );
 }
+
+export default Home;
