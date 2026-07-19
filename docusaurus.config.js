@@ -73,6 +73,23 @@ const config = {
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
+        sitemap: {
+          lastmod: 'date',
+          async createSitemapItems({defaultCreateSitemapItems, ...args}) {
+            const items = await defaultCreateSitemapItems(args);
+            const homepageUrl = 'https://techdocs.co.in/';
+
+            if (!items.some((item) => item.url === homepageUrl || item.url === 'https://techdocs.co.in')) {
+              items.unshift({
+                url: homepageUrl,
+                changefreq: 'weekly',
+                priority: 1.0,
+              });
+            }
+
+            return items;
+          },
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
