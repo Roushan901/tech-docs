@@ -297,7 +297,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} TechDOCS. Documentation resources for engineering and technical writing teams. Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.5); font-weight: 500; text-decoration: none;">Roushan Gupta</a>.`,
+        copyright: `Copyright ${new Date().getFullYear()} TechDOCS. Documentation resources for engineering and technical writing teams. Created by <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.5); font-weight: 500; text-decoration: none;">Roushan Gupta</a>.`,
       },
       prism: {
         theme: prismThemes.github,

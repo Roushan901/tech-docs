@@ -62,7 +62,7 @@ export default function ProgressTracker({
               onClick={() => toggleStep(index)}
             >
               <div className={styles.stepIcon}>
-                {isCompleted ? '✓' : index + 1}
+                {isCompleted ? 'Completed' : index + 1}
               </div>
               <div className={styles.stepContent}>
                 <h4 className={styles.stepTitle}>{step.title}</h4>
@@ -70,7 +70,7 @@ export default function ProgressTracker({
                   <p className={styles.stepDescription}>{step.description}</p>
                 )}
                 {step.duration && (
-                  <span className={styles.stepDuration}>⏱️ {step.duration}</span>
+                  <span className={styles.stepDuration}>Duration: {step.duration}</span>
                 )}
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function ProgressTracker({
 
       {progress === 100 && (
         <div className={styles.completionBadge}>
-          🎉 Congratulations! You've completed all steps!
+          Congratulations! You've completed all steps!
         </div>
       )}
     </div>

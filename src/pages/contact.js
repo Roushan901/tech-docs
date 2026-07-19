@@ -32,7 +32,7 @@ export default function ContactPage() {
                 gap: '1.5rem'
               }}>
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                  <span style={{ fontSize: '2rem', flexShrink: 0 }}>📧</span>
+                  <span style={{ fontSize: '2rem', flexShrink: 0 }}>Email</span>
                   <div>
                     <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>Email</h3>
                     <p style={{ margin: '0', color: 'var(--ifm-color-content-secondary)' }}>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 </div>
                 
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                  <span style={{ fontSize: '2rem', flexShrink: 0 }}>💼</span>
+                  <span style={{ fontSize: '2rem', flexShrink: 0 }}>LinkedIn</span>
                   <div>
                     <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>LinkedIn</h3>
                     <p style={{ margin: '0', color: 'var(--ifm-color-content-secondary)' }}>

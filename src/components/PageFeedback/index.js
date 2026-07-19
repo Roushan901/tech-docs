@@ -35,7 +35,7 @@ export default function PageFeedback() {
     return (
       <div className={styles.feedbackContainer}>
         <div className={styles.thankYou}>
-          ✓ Thank you for your feedback!
+          Thank you for your feedback!
         </div>
       </div>
     );
@@ -59,7 +59,7 @@ export default function PageFeedback() {
                     className={`${styles.star} ${star <= rating ? styles.starFilled : ''}`}
                     onClick={() => setRating(star)}
                   >
-                    ★
+                    {star}
                   </button>
                 ))}
               </div>

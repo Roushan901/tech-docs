@@ -45,7 +45,7 @@ export default function FeedbackForm() {
             onClick={() => setRating(star)}
             aria-label={`Rate ${star} out of 5`}
           >
-            ★
+            {star}
           </button>
         ))}
       </div>
@@ -55,7 +55,7 @@ export default function FeedbackForm() {
   if (submitted) {
     return (
       <div className={styles.successMessage}>
-        <div className={styles.successIcon}>✓</div>
+        <div className={styles.successIcon}>Success</div>
         <h3>Thank You!</h3>
         <p>Your feedback helps us create better technical writing resources.</p>
       </div>

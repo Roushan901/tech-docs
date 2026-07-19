@@ -22,7 +22,7 @@ This is a **Docusaurus v3.9.2** documentation site for technical writing resourc
 
 ### Configuration Files
 - **`docusaurus.config.js`**: Main config - defines navbar, footer, i18n, plugins (@docusaurus/plugin-google-gtag, @easyops-cn/docusaurus-search-local), PWA settings, math support (remark-math, rehype-katex)
-- **`sidebars.js`**: Sidebar structure with emoji icons (📚, ☁️, 📖, 🚀) and categories
+- **`sidebars.js`**: Sidebar structure with categories
 - **`manifest.json`**: PWA manifest with theme color `#0ea5e9`
 - **`update-timestamps.js`**: Chokidar-based file watcher that auto-updates timestamps in markdown files
 

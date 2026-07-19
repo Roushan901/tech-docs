@@ -4,10 +4,10 @@ sidebar_position: -1
 
 # Learning Paths - Choose Your Journey
 
-## 👨‍💻 Developer Learning Path
+## Developer Learning Path
 **Master API Documentation & Integration Guides**
 
-**Duration:** 4-6 weeks | **Level:** Beginner to Intermediate | **Difficulty:** ⭐⭐⭐
+**Duration:** 4-6 weeks | **Level:** Beginner to Intermediate | **Difficulty:** 3/5
 
 ### What You'll Learn
 - Write clear, comprehensive API documentation
@@ -47,10 +47,10 @@ Create a complete API documentation set with integration guide and code examples
 
 ---
 
-## ✍️ Technical Writer Learning Path
+## Technical Writer Learning Path
 **Professional Writing Standards & Best Practices**
 
-**Duration:** 5-7 weeks | **Level:** Beginner to Advanced | **Difficulty:** ⭐⭐⭐⭐
+**Duration:** 5-7 weeks | **Level:** Beginner to Advanced | **Difficulty:** 4/5
 
 ### What You'll Learn
 - Professional documentation standards
@@ -88,10 +88,10 @@ Develop a complete documentation suite including guides, references, and style g
 
 ---
 
-## ☁️ Cloud Engineer Learning Path
+## Cloud Engineer Learning Path
 **Cloud Architecture & Deployment Patterns**
 
-**Duration:** 6-8 weeks | **Level:** Intermediate to Advanced | **Difficulty:** ⭐⭐⭐⭐
+**Duration:** 6-8 weeks | **Level:** Intermediate to Advanced | **Difficulty:** 4/5
 
 ### What You'll Learn
 - Multi-cloud architecture patterns
@@ -132,10 +132,10 @@ Design and document a complete multi-cloud architecture with deployment guide.
 
 ---
 
-## 🚀 DevOps Engineer Learning Path
+## DevOps Engineer Learning Path
 **CI/CD, Infrastructure, & Operations**
 
-**Duration:** 6-8 weeks | **Level:** Intermediate to Advanced | **Difficulty:** ⭐⭐⭐⭐⭐
+**Duration:** 6-8 weeks | **Level:** Intermediate to Advanced | **Difficulty:** 5/5
 
 ### What You'll Learn
 - CI/CD pipeline design and implementation
@@ -176,7 +176,7 @@ Build a complete CI/CD pipeline with Infrastructure as Code and monitoring setup
 
 ---
 
-## 🎯 Quick Start Guides
+## Quick Start Guides
 
 ### Just Getting Started?
 Start with **[Writing Best Practices Fundamentals](./writing-best-practices)** - It's the foundation for all roles!
@@ -197,18 +197,18 @@ The **Full Stack Path** covers all areas:
 
 ---
 
-## 📊 Difficulty Levels Explained
+##  Difficulty Levels Explained
 
 | Level | Requirements | Time Investment |
 |-------|-------------|-----------------|
-| **Beginner** (⭐) | No prior knowledge needed | 2-4 hours |
-| **Intermediate** (⭐⭐⭐) | Basic technical knowledge | 4-8 hours |
-| **Advanced** (⭐⭐⭐⭐) | Solid experience in field | 8-12 hours |
-| **Expert** (⭐⭐⭐⭐⭐) | Deep expertise required | 12+ hours |
+| **Beginner** (1/5) | No prior knowledge needed | 2-4 hours |
+| **Intermediate** (3/5) | Basic technical knowledge | 4-8 hours |
+| **Advanced** (4/5) | Solid experience in field | 8-12 hours |
+| **Expert** (5/5) | Deep expertise required | 12+ hours |
 
 ---
 
-## 🏆 Certification Tracks
+## Certification Tracks
 
 Complete any learning path and earn a certificate of completion:
 
@@ -237,7 +237,7 @@ Complete any learning path and earn a certificate of completion:
 3. What's your experience level?
    - New to field → Beginner paths
    - 1-3 years experience → Intermediate paths
-   - 5+ years experience → Advanced paths
+   - 10+ years experience → Advanced paths
 
 Still unsure? [Join our Discord community](https://discord.gg/techdocs) and ask mentors for guidance!
 

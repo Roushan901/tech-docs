@@ -98,12 +98,12 @@ Yes! We follow WCAG 2.1 guidelines to ensure accessibility for all users, includ
 We're developing premium features including certificates, advanced filtering, offline access, and exclusive content.
 
 ### What will premium include?
-- ✓ Ad-free experience
-- ✓ PDF downloads for all courses
-- ✓ Progress tracking and certificates
-- ✓ Exclusive advanced content
-- ✓ Priority support
-- ✓ Community access (Discord)
+- Ad-free experience
+- PDF downloads for all courses
+- Progress tracking and certificates
+- Exclusive advanced content
+- Priority support
+- Community access (Discord)
 
 ### Will free content remain free?
 Yes! Core guides will always be available for free. Premium features will add convenience and advanced learning tools.
@@ -117,9 +117,9 @@ Absolutely! We offer a 30-day money-back guarantee. No questions asked.
 
 Can't find the answer you're looking for? 
 
-📧 **Email us**: contact@techdocs.co.in  
-💬 **Discord**: Join our community  
-🐙 **GitHub**: Open an issue  
-📱 **LinkedIn**: Message us directly
+**Email us**: contact@techdocs.co.in  
+**Discord**: Join our community  
+**GitHub**: Open an issue  
+**LinkedIn**: Message us directly
 
 We're here to help! Don't hesitate to reach out.

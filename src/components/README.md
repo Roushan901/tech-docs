@@ -1,15 +1,15 @@
-# 🎨 Interactive Components for TechDocs
+#  Interactive Components for TechDocs
 
 This directory contains **11 reactive, interactive components** that transform your Docusaurus documentation from static to dynamic and engaging.
 
-## 🎯 Component Overview
+##  Component Overview
 
 - **5 Original Components** - Code, tabs, accordion, API, progress
 - **6 New Components** - Quiz, terminal, image comparison, searchable table, live search, callouts
 
-## 📦 All Available Components
+##  All Available Components
 
-### 🎓 Learning & Education
+###  Learning & Education
 
 #### 1. **InteractiveQuiz**
 Interactive quiz component with multiple choice questions, instant feedback, and score tracking.
@@ -48,7 +48,7 @@ import ProgressTracker from '@site/src/components/ProgressTracker';
 />
 ```
 
-### 💻 Code & Development
+###  Code & Development
 
 #### 3. **InteractiveCodeEditor**
 Live code editor with instant execution and output display.
@@ -80,7 +80,7 @@ import TerminalSimulator from '@site/src/components/TerminalSimulator';
   }}
 />
 ```
-📊 Data & Information
+ Data & Information
 
 #### 6. **SearchableTable**
 Interactive data table with search, sort, and pagination capabilities.
@@ -95,7 +95,7 @@ import SearchableTable from '@site/src/components/SearchableTable';
     { key: 'name', label: 'Name' },
     { key: 'value', label: 'Value' }
   ]}
-  da🔌 API & Integration
+  da API & Integration
 
 #### 9a={[
     { name: 'Item 1', value: '100' }
@@ -110,7 +110,7 @@ Live search with instant filtering and category tags.
 
 ```jsx
 import LiveSearch from '@site/src/components/LiveSearch';
-🎨 Visual & Media
+ Visual & Media
 
 #### 10. **ImageComparison**
 Before/after image comparison with interactive slider.
@@ -185,17 +185,17 @@ Track completion progress through tutorials or learning paths.
 **Use Case:** Tutorials, courses, multi-step guides
 
 ```jsx
-imp🎯 Component Categories Summary
+imp Component Categories Summary
 
 | Category | Components | Count |
 |----------|-----------|-------|
-| 🎓 Learning | Quiz, Progress Tracker | 2 |
-| 💻 Development | Code Editor, Terminal, Tabs | 3 |
-| 📊 Data | Table, Live Search, Accordion | 3 |
-| 🔌 Integration | API Simulator | 1 |
-| 🎨 Visual | Image Comparison, Callouts | 2 |
+|  Learning | Quiz, Progress Tracker | 2 |
+|  Development | Code Editor, Terminal, Tabs | 3 |
+|  Data | Table, Live Search, Accordion | 3 |
+|  Integration | API Simulator | 1 |
+|  Visual | Image Comparison, Callouts | 2 |
 
-## 📝 Best Practices
+##  Best Practices
 
 1. **Use Sparingly** - Don't overload pages with too many interactive elements
 2. **Provide Context** - Explain what each component does
@@ -206,7 +206,7 @@ imp🎯 Component Categories Summary
 />
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 1. **Import the component** in your MDX file:
    ```jsx
@@ -222,7 +222,7 @@ imp🎯 Component Categories Summary
 - [Original 5 Components](/docs/interactive-components)
 - [All 11 Components Showcase](/docs/all-interactive-components)
 - [Quick Start Guide](/docs/quick-start
-## 📁 Component Structure
+##  Component Structure
 
 Each component follows this structure:
 ```
@@ -231,7 +231,7 @@ ComponentName/
 └── styles.module.css # Component styles
 ```
 
-## 🎨 Styling
+##  Styling
 
 All components use:
 - CSS Modules for scoped styling
@@ -239,7 +239,7 @@ All components use:
 - Responsive design patterns
 - Dark mode support via CSS variables
 
-## ♿ Accessibility
+##  Accessibility
 
 All components include:
 - Proper ARIA labels
@@ -247,7 +247,7 @@ All components include:
 - Screen reader compatibility
 - Focus management
 
-## 📱 Responsive Design
+##  Responsive Design
 
 All components are fully responsive and tested on:
 - Desktop (1920px+)
@@ -255,7 +255,7 @@ All components are fully responsive and tested on:
 - Tablet (768px - 1023px)
 - Mobile (< 768px)
 
-## 🧪 Testing
+##  Testing
 
 Test components locally:
 ```bash
@@ -267,7 +267,7 @@ Navigate to the demo page:
 http://localhost:3000/docs/interactive-components
 ```
 
-## 📝 Best Practices
+##  Best Practices
 
 1. **Use Sparingly** - Don't overload pages with too many interactive elements
 2. **Provide Context** - Explain what each component does
@@ -275,7 +275,7 @@ http://localhost:3000/docs/interactive-components
 4. **Test Mobile** - Always test on mobile devices
 5. **Maintain Consistency** - Use similar components for similar content
 
-## 🔧 Customization
+##  Customization
 
 ### Overriding Styles
 
@@ -298,12 +298,12 @@ export default function MyCustomEditor(props) {
 }
 ```
 
-## 📚 Documentation
+##  Documentation
 
 Full documentation with live examples:
 [Interactive Components Demo](/docs/interactive-components)
 
-## 🤝 Contributing
+##  Contributing
 
 To add a new component:
 
@@ -313,10 +313,10 @@ To add a new component:
 4. Update this README
 5. Add examples to demo page
 
-## 📧 Support
+##  Support
 
 Questions or issues? Contact: [contact@techdocs.co.in](mailto:contact@techdocs.co.in)
 
 ---
 
-**Built with ❤️ for TechDocs**
+**Built with ️ for TechDocs**

@@ -32,10 +32,10 @@ TechDocs is a comprehensive learning platform designed for engineering professio
 
 At TechDocs, we believe that **great documentation is the foundation of great products**. We're committed to:
 
-✓ **Practical Learning** - Every guide is tested in real-world scenarios  
-✓ **Expert Guidance** - Curated by professionals with years of experience  
-✓ **Continuous Updates** - Content updated with industry best practices  
-✓ **Community Focus** - Built for engineers, by engineers  
+- **Practical Learning** - Every guide is tested in real-world scenarios  
+- **Expert Guidance** - Curated by professionals with years of experience  
+- **Continuous Updates** - Content updated with industry best practices  
+- **Community Focus** - Built for engineers, by engineers  
 
 ## Who Is This For?
 
@@ -49,10 +49,10 @@ At TechDocs, we believe that **great documentation is the foundation of great pr
 
 Choose your learning path below and begin your journey to mastering technical excellence:
 
-- [👨‍💻 **Learning Path for Developers**](./user-guides)
-- [✍️ **Learning Path for Technical Writers**](./writing-best-practices)
-- [☁️ **Learning Path for Cloud Engineers**](./cloud-devops)
-- [🚀 **Learning Path for DevOps**](./devops)
+- [**Learning Path for Developers**](./user-guides)
+- [**Learning Path for Technical Writers**](./writing-best-practices)
+- [**Learning Path for Cloud Engineers**](./cloud-devops)
+- [**Learning Path for DevOps**](./devops)
 
 ---
 

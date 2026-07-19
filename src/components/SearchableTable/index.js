@@ -92,7 +92,7 @@ export default function SearchableTable({
             onChange={(e) => handleSearch(e.target.value)}
             className={styles.searchInput}
           />
-          <span className={styles.searchIcon}>🔍</span>
+          <span className={styles.searchIcon}>Search</span>
         </div>
       )}
 
@@ -111,8 +111,8 @@ export default function SearchableTable({
                     {sortable && (
                       <span className={styles.sortIcon}>
                         {sortConfig.key === column.key 
-                          ? (sortConfig.direction === 'asc' ? '▲' : '▼')
-                          : '⇅'}
+                          ? (sortConfig.direction === 'asc' ? 'Ascending' : 'Descending')
+                          : 'Sort'}
                       </span>
                     )}
                   </div>
@@ -151,7 +151,7 @@ export default function SearchableTable({
             disabled={currentPage === 1}
             className={styles.pageButton}
           >
-            ← Previous
+            Previous
           </button>
           
           <div className={styles.pageInfo}>
@@ -168,7 +168,7 @@ export default function SearchableTable({
             disabled={currentPage === totalPages}
             className={styles.pageButton}
           >
-            Next →
+            Next
           </button>
         </div>
       )}

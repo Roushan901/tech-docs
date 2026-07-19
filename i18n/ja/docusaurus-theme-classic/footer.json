@@ -28,7 +28,7 @@
     "description": "The label of footer link with label=Blog linking to /blog"
   },
   "copyright": {
-    "message": "© 2026 TechDOCS. Your go-to resource for mastering technical writing, API documentation, and modern DevOps practices. Learn, build, and scale with confidence. <br/> Crafted with passion by <a href=\"https://www.linkedin.com/in/roushan-g-99242299/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #fecaca; font-weight: 600; text-decoration: underline;\">Roushan Gupta</a>",
+    "message": "Copyright 2026 TechDOCS. Your go-to resource for mastering technical writing, API documentation, and modern DevOps practices. Learn, build, and scale with confidence. <br/> Crafted with passion by <a href=\"https://www.linkedin.com/in/roushan-g-99242299/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #fecaca; font-weight: 600; text-decoration: underline;\">Roushan Gupta</a>",
     "description": "The footer copyright"
   },
   "logo.alt": {

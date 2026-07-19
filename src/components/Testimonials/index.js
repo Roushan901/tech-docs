@@ -7,37 +7,37 @@ export default function Testimonials() {
       metric: '40%',
       outcome: 'Faster Onboarding',
       description: 'Teams using TechDocs reduce new engineer onboarding time',
-      icon: '↗',
+      icon: 'Growth',
     },
     {
       metric: '3-6 months',
       outcome: 'Skill Progression',
       description: 'Average time to master cloud platform fundamentals through structured paths',
-      icon: '▲',
+      icon: 'Path',
     },
     {
       metric: '95%',
       outcome: 'Learning Completion',
       description: 'Structured learning paths with high completion and mastery rates',
-      icon: '✓',
+      icon: 'Complete',
     },
     {
       metric: '50+ guides',
       outcome: 'Real-World Applicable',
       description: 'Comprehensive, production-tested content for immediate professional use',
-      icon: '▣',
+      icon: 'Value',
     },
     {
-      metric: '4.9★',
+      metric: '4.9/5',
       outcome: 'Learner-Approved',
       description: 'Consistently high ratings from professionals and teams',
-      icon: '★',
+      icon: 'Rating',
     },
     {
       metric: '10k+',
       outcome: 'Active Learning Community',
       description: 'Growing network of engineers improving their craft daily',
-      icon: '◉',
+      icon: 'Community',
     },
   ];
 
@@ -64,20 +64,20 @@ export default function Testimonials() {
 
         <div className={styles.stats}>
           <div className={styles.statItem}>
+            <div className={styles.statValue}>50+</div>
+            <div className={styles.statText}>Guides Published</div>
+          </div>
+          <div className={styles.statItem}>
             <div className={styles.statValue}>10k+</div>
             <div className={styles.statText}>Active Learners</div>
           </div>
           <div className={styles.statItem}>
-            <div className={styles.statValue}>4.9★</div>
-            <div className={styles.statText}>Average Rating</div>
-          </div>
-          <div className={styles.statItem}>
-            <div className={styles.statValue}>50+</div>
-            <div className={styles.statText}>Comprehensive Guides</div>
+            <div className={styles.statValue}>5+</div>
+            <div className={styles.statText}>Years Experience</div>
           </div>
           <div className={styles.statItem}>
             <div className={styles.statValue}>98%</div>
-            <div className={styles.statText}>Satisfaction</div>
+            <div className={styles.statText}>Client Satisfaction</div>
           </div>
         </div>
       </div>

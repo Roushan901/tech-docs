@@ -96,14 +96,14 @@ export default function LiveSearch({
             onChange={(e) => setSearchQuery(e.target.value)}
             className={styles.searchInput}
           />
-          <span className={styles.searchIcon}>🔍</span>
+          <span className={styles.searchIcon}>Search</span>
           {searchQuery && (
             <button 
               onClick={() => setSearchQuery('')}
               className={styles.clearButton}
               aria-label="Clear search"
             >
-              ✕
+              Clear
             </button>
           )}
         </div>
@@ -144,7 +144,7 @@ export default function LiveSearch({
           )
         ) : (
           <div className={styles.emptyState}>
-            <div className={styles.emptyIcon}>🔍</div>
+            <div className={styles.emptyIcon}>Search</div>
             <p className={styles.emptyMessage}>{emptyMessage}</p>
             {(searchQuery || selectedFilters.size > 0) && (
               <button onClick={clearAll} className={styles.resetButton}>

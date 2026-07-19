@@ -50,7 +50,7 @@ export default function InteractiveAccordion({
                 {item.title}
               </span>
               <span className={`${styles.chevron} ${isExpanded ? styles.chevronExpanded : ''}`}>
-                ▼
+                Expand
               </span>
             </button>
             
@@ -75,7 +75,7 @@ export default function InteractiveAccordion({
 export function FAQAccordion({ faqs = [] }) {
   const items = faqs.map(faq => ({
     title: faq.question,
-    icon: '❓',
+    icon: 'Question',
     content: <p>{faq.answer}</p>
   }));
 

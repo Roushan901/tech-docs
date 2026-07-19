@@ -16,12 +16,12 @@ export default function InteractiveCallout({
   const [isDismissed, setIsDismissed] = React.useState(false);
 
   const icons = {
-    info: 'ℹ',
-    success: '✓',
-    warning: '⚠',
-    danger: '✕',
-    tip: '→',
-    note: '•'
+    info: 'Info',
+    success: 'Success',
+    warning: 'Warning',
+    danger: 'Close',
+    tip: 'Tip',
+    note: 'Note'
   };
 
   const handleDismiss = () => {
@@ -44,7 +44,7 @@ export default function InteractiveCallout({
             className={styles.dismissButton}
             aria-label="Dismiss"
           >
-            ✕
+            Close
           </button>
         )}
       </div>

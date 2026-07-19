@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { type: 'bot', text: 'Hi! 👋 I can answer questions about our documentation. What would you like to know?' }
+    { type: 'bot', text: 'Hi! I can answer questions about our documentation. What would you like to know?' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -49,22 +49,22 @@ const ChatBot = () => {
 
     // Context-aware responses
     if (lowerMsg.includes('install') || lowerMsg.includes('setup')) {
-      return "📦 For installation instructions, check our **Installation Guides** section. We have guides for various platforms and services.";
+      return "For installation instructions, check our **Installation Guides** section. We have guides for various platforms and services.";
     }
     if (lowerMsg.includes('api') || lowerMsg.includes('endpoint')) {
-      return "🔌 You can find API documentation in our **API References** section with detailed endpoint information.";
+      return "You can find API documentation in our **API References** section with detailed endpoint information.";
     }
     if (lowerMsg.includes('cloud') || lowerMsg.includes('aws') || lowerMsg.includes('azure') || lowerMsg.includes('gcp')) {
-      return "☁️ Check our **Cloud & DevOps** guides for AWS, Azure, and GCP resources and best practices.";
+      return "Check our **Cloud & DevOps** guides for AWS, Azure, and GCP resources and best practices.";
     }
     if (lowerMsg.includes('devops') || lowerMsg.includes('deploy') || lowerMsg.includes('ci/cd')) {
-      return "🚀 Our **DevOps** section covers CI/CD, containers, and infrastructure as code. Browse our comprehensive guides.";
+      return "Our **DevOps** section covers CI/CD, containers, and infrastructure as code. Browse our comprehensive guides.";
     }
     if (lowerMsg.includes('help') || lowerMsg.includes('how') || lowerMsg.includes('what')) {
-      return "ℹ️ I can help you find information about:\n- **Installation & Setup**\n- **API References**\n- **Cloud Platforms**\n- **DevOps Practices**\n- **Documentation Best Practices**\n\nWhat would you like to know more about?";
+      return "I can help you find information about:\n- **Installation & Setup**\n- **API References**\n- **Cloud Platforms**\n- **DevOps Practices**\n- **Documentation Best Practices**\n\nWhat would you like to know more about?";
     }
     if (lowerMsg.includes('thank') || lowerMsg.includes('thanks')) {
-      return "You're welcome! 😊 Feel free to ask me anything else about our documentation.";
+      return "You're welcome! Feel free to ask me anything else about our documentation.";
     }
 
     // Default response with suggestions
@@ -129,7 +129,7 @@ const ChatBot = () => {
               onClick={() => setIsOpen(false)}
               aria-label="Close chat"
             >
-              ✕
+              Close
             </button>
           </div>
 

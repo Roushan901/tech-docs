@@ -4,7 +4,7 @@ function filterSidebarByRoute() {
   // Wait a bit for the DOM to be fully ready
   setTimeout(() => {
     const currentPath = window.location.pathname;
-    console.log('🔍 Filtering sidebar for path:', currentPath);
+    console.log('Filtering sidebar for path:', currentPath);
     
     // Determine which guide type user is viewing
     let activeGuideType = null;
@@ -27,20 +27,20 @@ function filterSidebarByRoute() {
       }
     }
 
-    console.log('📍 Active guide type:', activeGuideType);
+    console.log('Active guide type:', activeGuideType);
 
     // Find sidebar nav
     const sidebarNav = document.querySelector('nav[aria-label="Docs sidebar"]');
     
     if (!sidebarNav) {
-      console.log('⚠️ Sidebar nav not found');
+      console.log('Sidebar nav not found');
       return;
     }
 
     // Get only level-1 category items (main guide categories)
     const categories = sidebarNav.querySelectorAll('li.theme-doc-sidebar-item-category-level-1');
     
-    console.log('📊 Found', categories.length, 'level-1 sidebar categories');
+    console.log('Found', categories.length, 'level-1 sidebar categories');
 
     categories.forEach((category) => {
       const label = category.textContent?.toLowerCase() || '';
@@ -48,7 +48,7 @@ function filterSidebarByRoute() {
       // Always show Getting Started
       if (label.includes('getting started')) {
         category.style.display = '';
-        console.log('✅ Showing: Getting Started');
+        console.log('Showing: Getting Started');
         return;
       }
 
@@ -97,9 +97,9 @@ function filterSidebarByRoute() {
       if (activeGuideType) {
         category.style.display = shouldHide ? 'none' : '';
         if (shouldHide) {
-          console.log('❌ Hiding:', label.substring(0, 30));
+          console.log('Hiding:', label.substring(0, 30));
         } else if (matchType) {
-          console.log('✅ Showing:', matchType, '-', label.substring(0, 30));
+          console.log('Showing:', matchType, '-', label.substring(0, 30));
         }
       } else {
         category.style.display = '';

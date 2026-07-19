@@ -82,7 +82,7 @@ export default function APISimulator({
   return (
     <div className={styles.simulatorContainer}>
       <div className={styles.simulatorHeader}>
-        <h3>🔌 API Simulator</h3>
+        <h3>API Simulator</h3>
         <p className={styles.description}>{description}</p>
       </div>
 
@@ -158,7 +158,7 @@ export default function APISimulator({
             <span className={styles.sectionLabel}>Response</span>
             {responseTime && (
               <span className={styles.responseTime}>
-                ⚡ {responseTime}ms
+                Response time: {responseTime}ms
               </span>
             )}
           </div>

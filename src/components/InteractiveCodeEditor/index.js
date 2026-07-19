@@ -32,7 +32,7 @@ export default function InteractiveCodeEditor({
       // Execute the code
       // eslint-disable-next-line no-eval
       eval(code);
-      setOutput(logs.join('\n') || '✓ Code executed successfully (no output)');
+      setOutput(logs.join('\n') || 'Code executed successfully (no output)');
     } catch (err) {
       setError(`Error: ${err.message}`);
     } finally {
@@ -52,10 +52,10 @@ export default function InteractiveCodeEditor({
         <h3>{title}</h3>
         <div className={styles.editorActions}>
           <button onClick={runCode} className={styles.runButton}>
-            ▶ Run Code
+            Run Code
           </button>
           <button onClick={resetCode} className={styles.resetButton}>
-            ↻ Reset
+            Reset
           </button>
         </div>
       </div>

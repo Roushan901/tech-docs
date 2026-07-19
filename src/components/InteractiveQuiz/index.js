@@ -71,7 +71,7 @@ export default function InteractiveQuiz({
     return (
       <div className={styles.quizContainer}>
         <div className={styles.resultsContainer}>
-          <h2>🎉 Quiz Complete!</h2>
+          <h2>Quiz Complete!</h2>
           <div className={styles.scoreDisplay}>
             <div className={styles.scoreCircle}>
               <span className={styles.scoreNumber}>{percentage}%</span>
@@ -90,7 +90,7 @@ export default function InteractiveQuiz({
               return (
                 <div key={index} className={`${styles.reviewItem} ${isCorrect ? styles.correct : styles.incorrect}`}>
                   <div className={styles.reviewHeader}>
-                    <span className={styles.reviewIcon}>{isCorrect ? '✓' : '✗'}</span>
+                    <span className={styles.reviewIcon}>{isCorrect ? 'Correct' : 'Incorrect'}</span>
                     <span className={styles.reviewLabel}>Question {index + 1}</span>
                   </div>
                   <p className={styles.reviewQuestion}>{q.question}</p>
@@ -104,7 +104,7 @@ export default function InteractiveQuiz({
                   )}
                   {q.explanation && (
                     <p className={styles.explanation}>
-                      <strong>💡 Explanation:</strong> {q.explanation}
+                      <strong>Explanation:</strong> {q.explanation}
                     </p>
                   )}
                 </div>
@@ -113,7 +113,7 @@ export default function InteractiveQuiz({
           </div>
           
           <button onClick={handleReset} className={styles.retryButton}>
-            🔄 Try Again
+            Try Again
           </button>
         </div>
       </div>
@@ -159,8 +159,8 @@ export default function InteractiveQuiz({
               >
                 <span className={styles.optionLabel}>{String.fromCharCode(65 + index)}</span>
                 <span className={styles.optionText}>{option}</span>
-                {showCorrect && <span className={styles.checkMark}>✓</span>}
-                {showIncorrect && <span className={styles.crossMark}>✗</span>}
+                {showCorrect && <span className={styles.checkMark}>Correct</span>}
+                {showIncorrect && <span className={styles.crossMark}>Incorrect</span>}
               </button>
             );
           })}
@@ -168,7 +168,7 @@ export default function InteractiveQuiz({
 
         {hasChecked && question.explanation && (
           <div className={`${styles.feedback} ${isCorrect ? styles.correctFeedback : styles.incorrectFeedback}`}>
-            <strong>{isCorrect ? '✓ Correct!' : '✗ Incorrect'}</strong>
+            <strong>{isCorrect ? 'Correct' : 'Incorrect'}</strong>
             <p>{question.explanation}</p>
           </div>
         )}
@@ -189,13 +189,13 @@ export default function InteractiveQuiz({
                 disabled={currentQuestion === 0}
                 className={styles.prevButton}
               >
-                ← Previous
+                Previous
               </button>
               <button
                 onClick={handleNext}
                 className={styles.nextButton}
               >
-                {currentQuestion === questions.length - 1 ? 'Finish Quiz' : 'Next →'}
+                {currentQuestion === questions.length - 1 ? 'Finish Quiz' : 'Next'}
               </button>
             </div>
           )}
