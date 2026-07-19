@@ -154,8 +154,13 @@ function Home() {
           <meta property="og:url" content="https://techdocs.co.in" />
           <meta property="og:title" content="TechDOCS — Ship Better Docs Faster" />
           <meta property="og:description" content="Production-ready documentation standards, workflows, and guides for engineering teams. Build clarity at scale with less rework." />
-          <meta property="og:image" content="https://techdocs.co.in/img/docusaurus-social-card.jpg" />
-          <meta name="twitter:image" content="https://techdocs.co.in/img/docusaurus-social-card.jpg" />
+          <meta property="og:image" content="https://techdocs.co.in/img/techdocs-social-card.svg" />
+          <meta property="og:image:type" content="image/svg+xml" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="TechDOCS preview card for technical writing, API documentation, cloud architecture, and DevOps guidance" />
+          <meta name="twitter:image" content="https://techdocs.co.in/img/techdocs-social-card.svg" />
+          <meta name="twitter:image:alt" content="TechDOCS preview card for technical writing, API documentation, cloud architecture, and DevOps guidance" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="keywords" content="technical writing, API documentation, DevOps, Docusaurus, cloud computing, developer docs" />
           <meta name="author" content="Roushan Gupta" />

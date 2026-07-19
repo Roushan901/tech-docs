@@ -51,6 +51,17 @@ const config = {
           sidebarPath: './sidebars.js',
           remarkPlugins: [require('remark-math')],
           rehypePlugins: [require('rehype-katex')],
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: '2.0.0',
+              banner: 'none',
+            },
+            '1.0.0': {
+              label: '1.0.0',
+              banner: 'none',
+            },
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: undefined,
@@ -135,19 +146,24 @@ const config = {
         searchPagePath: 'search',
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/techdocs-social-card.svg',
       metadata: [
         {name: 'keywords', content: 'technical writing, API documentation, DevOps, documentation tools, technical writer, developer documentation, cloud computing, TechDOCS'},
         {name: 'author', content: 'Roushan Gupta'},
         {property: 'og:title', content: 'TechDOCS - Developer Documentation Portal'},
         {property: 'og:description', content: 'Practical guidance for technical writing, APIs, cloud architecture, and DevOps operations.'},
-        {property: 'og:image', content: 'https://techdocs.co.in/img/docusaurus-social-card.jpg'},
+        {property: 'og:image', content: 'https://techdocs.co.in/img/techdocs-social-card.svg'},
+        {property: 'og:image:type', content: 'image/svg+xml'},
+        {property: 'og:image:width', content: '1200'},
+        {property: 'og:image:height', content: '630'},
+        {property: 'og:image:alt', content: 'TechDOCS preview card for technical writing, API documentation, cloud architecture, and DevOps guidance'},
         {property: 'og:url', content: 'https://techdocs.co.in'},
         {property: 'og:type', content: 'website'},
         {name: 'twitter:card', content: 'summary_large_image'},
         {name: 'twitter:title', content: 'TechDOCS - Developer Documentation Portal'},
         {name: 'twitter:description', content: 'Practical guidance for technical writing, APIs, cloud architecture, and DevOps operations'},
-        {name: 'twitter:image', content: 'https://techdocs.co.in/img/docusaurus-social-card.jpg'},
+        {name: 'twitter:image', content: 'https://techdocs.co.in/img/techdocs-social-card.svg'},
+        {name: 'twitter:image:alt', content: 'TechDOCS preview card for technical writing, API documentation, cloud architecture, and DevOps guidance'},
       ],
       colorMode: {
         defaultMode: 'light',
@@ -225,6 +241,11 @@ const config = {
                 to: '/docs/faq',
               },
             ],
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
           },
           {
             type: 'search',

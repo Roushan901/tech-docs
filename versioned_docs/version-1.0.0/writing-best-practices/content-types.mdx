@@ -1,0 +1,167 @@
+---
+sidebar_position: 2
+id: writing-best-practices-content-types
+---
+
+<!-- Last updated: February 28, 2026, 12:00 PM -->
+
+# Content Types
+
+Content designers use specific content types for different user needs. Each type has a distinct purpose, structure, and user expectation. Using the right type ensures users can quickly find and understand the information they need.
+
+## Overview of Core Content Types
+
+A well-organized documentation site uses a mixture of content types, each designed for a specific user need.
+
+### 1. Conceptual Content
+
+Conceptual content explains **why** and **what**—principles, background, and foundational knowledge.
+
+**Use when:**
+- Introducing new concepts or features
+- Explaining underlying principles
+- Providing context or background information
+- Helping users understand design decisions
+
+**Characteristics:**
+- Starts with plain language definitions
+- Uses analogies and real-world examples
+- Includes diagrams and illustrations
+- Organized by concept, not by steps
+- 800-1500 words typically
+
+**Example structure:**
+- What is [Concept]?
+- How does [Concept] work?
+- Why use [Concept]?
+- When should you use [Concept]?
+- Common misconceptions
+
+### 2. Task/How-To Content
+
+Task content guides users through completing a specific goal step-by-step.
+
+**Use when:**
+- Users need to accomplish a specific action
+- There's a sequential workflow to follow
+- Users are checking off completion
+
+**Characteristics:**
+- Clear, numbered steps
+- Concise action language
+- Assumes reader has prerequisite knowledge
+- Includes expected results or confirmation
+- 300-800 words typically
+
+**Example structure:**
+- Before you start (prerequisites)
+- Steps to [Complete Task]
+- Verify completion
+- What's next (related tasks)
+
+### 3. Reference Content
+
+Reference content provides quick lookup information for users who know what they're looking for.
+
+**Use when:**
+- Information needs to be findable quickly
+- Content is used for lookup rather than learning
+- Information changes frequently
+- Users already have foundational knowledge
+
+**Characteristics:**
+- Organized alphabetically, numerically, or by category
+- Concise, factual entries
+- Cross-references to related items
+- Scannable format (tables, lists)
+- Minimal narrative
+
+**Example formats:**
+- API reference with parameters and examples
+- Configuration options tables
+- Keyboard shortcut lists
+- Glossary or terminology index
+
+### 4. Tutorial Content
+
+Tutorials teach users a complete skill or workflow, often combining multiple tasks.
+
+**Use when:**
+- Teaching a larger workflow or capability
+- Users are new to a product area
+- Multiple tasks need to be learned together
+- Progressive skill building is needed
+
+**Characteristics:**
+- Hands-on, example-driven
+- Assumes minimal prior knowledge
+- Each step builds on previous ones
+- Includes sample data or sandbox environment
+- 2000-5000 words typically
+
+**Example structure:**
+- Learning objectives
+- Prerequisites and setup
+- Lesson 1: Foundation skill
+- Lesson 2: Building on lesson 1
+- Lesson 3: Advanced techniques
+- Summary and next steps
+
+### 5. Decision/Comparison Content
+
+Decision content helps users choose between options, approaches, or products.
+
+**Use when:**
+- Users face multiple options or approaches
+- Users need guidance on which choice is right
+- Comparison clarifies trade-offs
+- Users are evaluating features
+
+**Characteristics:**
+- Unbiased presentation of options
+- Clear criteria for comparison
+- Realistic use cases for each option
+- Pro/con analysis
+- Final recommendation with reasoning
+
+**Example structure:**
+- Scenario or problem statement
+- Option A (characteristics, strengths, limitations)
+- Option B (characteristics, strengths, limitations)
+- Option C (characteristics, strengths, limitations)
+- Decision criteria and recommendation
+- Next steps for each choice
+
+## Content Type Selection Guide
+
+| User Need | Best Content Type | Key Question |
+|-----------|------------------|--------------|
+| "How do I...?" | Task/How-To | Does the user need step-by-step instructions? |
+| "What is...?" | Conceptual | Does the user need foundational understanding? |
+| "Where do I find...?" | Reference | Is the user looking up specific information? |
+| "Teach me this skill" | Tutorial | Does the user need to learn a complete workflow? |
+| "Which should I choose?" | Decision/Comparison | Is the user evaluating options? |
+
+## Content Type Governance
+
+- **Assign ownership**: Each content type should have a responsible team
+- **Define standards**: Document formatting, length, and style for each type
+- **Version clearly**: Make it obvious if content is current or deprecated
+- **Cross-reference**: Link related content types together
+- **Review regularly**: Ensure all types are current and accurate
+
+## Metadata Importance
+
+Tag and organize your content by type:
+
+```
+---
+contentType: "task"
+difficulty: "beginner"
+timeToComplete: "10 minutes"
+relatedTypes: ["conceptual", "reference"]
+---
+```
+
+This metadata helps users find the right content type for their needs.
+

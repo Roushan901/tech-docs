@@ -1,0 +1,193 @@
+---
+id: writing-best-practices-docs-as-code
+title: Docs as Code & Automation
+sidebar_position: 3
+sidebar_label: Docs as Code & Automation
+
+---
+<!-- Last updated: February 28, 2026 -->
+
+# Docs as Code & Automation
+
+Content design isn't just about writing—it's about building systems that make writing sustainable, consistent, and scalable. Treating documentation as code is how modern content teams ship faster without sacrificing quality.
+
+## What is "Docs as Code"?
+
+Documentation that lives in version control (Git), goes through review processes, and gets tested before publishing. Your content becomes part of your product development workflow.
+
+**Benefits:**
+- Content changes tracked (who wrote what, when)
+- Review process ensures quality
+- Rollback to previous versions if needed
+- Automated quality checks
+- Team collaboration built in
+
+## Version Control for Content
+
+### Git Workflow for Content Designers
+
+Think of Git like "Track Changes" for your entire documentation:
+
+```bash
+# Create a new branch for your changes
+git checkout -b add-payment-guide
+
+# Make your content changes
+# Edit docs/payment/setup.md
+
+# Commit your changes with a clear message
+git commit -m "Add step-by-step payment setup guide"
+
+# Push to your team for review
+git push origin add-payment-guide
+
+# Open a Pull Request for feedback
+```
+
+### Commit Messages Matter
+
+Clear commits tell the story of your content:
+
+```
+❌ Poor:
+"Update docs"
+"Fix typo"
+
+✅ Good:
+"Add troubleshooting section for payment errors"
+"Clarify setup requirements for new users"
+"Update API examples for v2.0"
+```
+
+## Continuous Improvement (CI/CD)
+
+### Automated Quality Checks
+
+Run checks on every documentation change:
+
+**1. Spelling & Grammar**
+```bash
+npm run spell-check
+```
+Catch typos before they ship.
+
+**2. Link Validation**
+```bash
+npm run check-links
+```
+Broken links frustrate users. Catch them automatically.
+
+**3. Content Consistency**
+```bash
+npm run lint-docs
+```
+Enforce style guide rules:
+- Heading capitalization
+- Terminology consistency
+- Code block formatting
+
+**4. Build Verification**
+```bash
+npm run build
+```
+Does the documentation actually render? This catches broken Markdown syntax.
+
+## Documentation Standards
+
+### Use Markdown
+
+Store all documentation as Markdown (`.md` or `.mdx`):
+- Human-readable source
+- Version control friendly
+- Easy to parse and transform
+- Industry standard
+
+### Structured Metadata
+
+Use frontmatter for metadata:
+
+```yaml
+---
+id: api-authentication
+title: API Authentication
+sidebar_position: 2
+author: John Doe
+last_updated: 2025-02-28
+---
+```
+
+## Quality Assurance Automation
+
+### Automated Checks
+
+- **Link Validation:** Ensure all links work
+- **Spell Check:** Catch typos automatically
+- **Grammar Check:** Check for common issues
+- **Style Validation:** Enforce style guide rules
+- **Build Validation:** Test documentation builds
+
+### Manual Review
+
+Despite automation, require:
+- Peer review of content
+- Subject matter expert review
+- User testing for complex topics
+
+## Scaling Documentation
+
+### Templates
+
+Create reusable templates:
+
+```markdown
+# API Endpoint Template
+
+## Endpoint Name
+POST /api/v1/resource
+
+### Parameters
+- `id` (required): Resource ID
+- `data` (required): JSON payload
+
+### Response
+```json
+{
+  "success": true,
+  "data": {}
+}
+```
+
+### Documentation Generators
+
+Use tools to auto-generate docs:
+- **OpenAPI/Swagger:** Generate API docs from specs
+- **JSDoc/JavaDoc:** Generate code API docs
+- **Docusaurus:** Generate site from Markdown
+
+**Estimated reading time:** 3 min  
+**Skill level:** Intermediate
+
+## What you'll learn
+
+- How to manage docs using version control workflows
+- Benefits of treating documentation like software
+
+Treat documentation with the same rigor as code:
+
+```bash
+# Feature branch for doc updates
+git checkout -b docs/update-api-guide
+
+# Make changes and commit
+git add docs/api-reference.md
+git commit -m "docs: update API authentication section"
+
+# Create pull request for review
+git push origin docs/update-api-guide
+```
+
+**Benefits:**
+- Track changes over time
+- Enable collaborative editing
+- Automate deployments
+- Integrate with CI/CD pipelines
