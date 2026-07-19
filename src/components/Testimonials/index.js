@@ -72,7 +72,7 @@ export default function Testimonials() {
             <div className={styles.statText}>Active Learners</div>
           </div>
           <div className={styles.statItem}>
-            <div className={styles.statValue}>5+</div>
+            <div className={styles.statValue}>10+</div>
             <div className={styles.statText}>Years Experience</div>
           </div>
           <div className={styles.statItem}>
