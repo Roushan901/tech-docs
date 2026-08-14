@@ -397,10 +397,19 @@ function Home() {
           <section className={styles.instructorSection} aria-label="Meet the instructor">
             <div className={styles.container}>
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Meet the Expert</h2>
+                <p className={styles.sectionEyebrow}>Technical Documentation • Cloud • DevOps</p>
+                <h2 className={styles.sectionTitle}>
+                  <span>Learn from Experience.</span>
+                  <span>Build Practical Skills.</span>
+                </h2>
                 <p className={styles.sectionDescription}>
-                  Learn from a practicing documentation professional who helps engineers and writers build practical, job-ready skills that create real impact.
+                  Learn from a practicing documentation professional who helps engineers and writers build practical, job-ready skills that create measurable impact.
                 </p>
+                <div className={styles.heroCredibility} aria-label="Career credibility">
+                  <span>10+ Years Experience</span>
+                  <span>Documentation Architecture</span>
+                  <span>Cloud &amp; DevOps</span>
+                </div>
               </div>
               <InstructorProfile />
             </div>
