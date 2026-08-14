@@ -70,51 +70,76 @@ const Icons = {
 };
 
 const FEATURES = [
-  { to: "/blog", title: "Blog & Insights", description: "Industry best practices, lessons learned from documentation programs, and proven strategies for improving developer experience.", icon: Icons.blog },
-  { to: "/docs/user-guides", title: "Technical Guides", description: "Comprehensive task-oriented guides for setup, integration, configuration, and day-to-day team operations.", icon: Icons.guides },
-  { to: "/docs/installation-guides", title: "Documentation Tools", description: "Implementation patterns and best practices for modern documentation platforms and content management systems.", icon: Icons.tools },
-  { to: "/docs/cloud-devops", title: "Cloud Architecture", description: "Proven cloud deployment patterns and architectural guidance for AWS, Azure, GCP, and multi-cloud environments.", icon: Icons.cloud },
-  { to: "/docs/devops", title: "DevOps & Operations", description: "Production-ready operational guidance for CI/CD pipelines, containerization, infrastructure as code, and observability.", icon: Icons.devops },
-  { to: "/docs/writing-best-practices", title: "Writing Standards", description: "Professional writing guidelines, documentation standards, quality assurance checklists, and content maintenance strategies.", icon: Icons.writing },
+  { to: "/blog", title: "Insights & Case Studies", description: "Real implementation lessons from documentation modernization, developer onboarding, and documentation program improvements.", icon: Icons.blog },
+  { to: "/docs/user-guides", title: "Technical Guides", description: "Task-focused implementation guides for engineering teams covering setup, integration, operations, and support workflows.", icon: Icons.guides },
+  { to: "/docs/writing-best-practices", title: "Technical Writing Standards", description: "Professional writing standards, editorial workflows, and review checklists used to keep docs accurate, scalable, and user-friendly.", icon: Icons.writing },
+  { to: "/docs/cloud-devops", title: "Cloud Architecture", description: "Production-ready architecture guidance for AWS, Azure, and GCP with clear patterns for resilience, security, and scale.", icon: Icons.cloud },
+  { to: "/docs/devops", title: "DevOps Delivery", description: "CI/CD, containers, infrastructure as code, and observability practices for consistent, low-risk releases.", icon: Icons.devops },
+  { to: "/docs/installation-guides", title: "Platform Tooling", description: "Practical reference for documentation tooling, publishing workflows, and maintainable docs-as-code systems.", icon: Icons.tools },
 ];
 
 const ROLE_PREVIEWS = [
   {
-    id: "developer",
-    label: "Software Developer",
-    focus: "Cut integration time in half. Ship features with confidence.",
-    summary: "Stop hunting for documentation. Get API references, proven code patterns, and integration guides that actually work. Learn from real examples and reduce debugging time with clear, actionable guidance.",
-    primaryCta: "Explore API Documentation",
-    primaryTo: "/docs/api-references",
-    secondaryCta: "View Code Examples",
-    secondaryTo: "/docs/user-guides",
-  },
-  {
     id: "writer",
-    label: "Technical Writer",
-    focus: "Write docs that users actually love. Become a documentation expert.",
-    summary: "Master the craft of technical writing. Learn proven standards, documentation workflows, and quality checklists. Write clear, consistent docs that reduce support tickets and improve user satisfaction.",
-    primaryCta: "Master Writing Standards",
+    label: "Technical Writing",
+    focus: "Write clear, consistent documentation that drives trust and adoption.",
+    summary: "Learn structured writing methods, style governance, docs-as-code workflows, and editorial QA practices that scale across products and teams.",
+    primaryCta: "Explore Writing Standards",
     primaryTo: "/docs/writing-best-practices",
-    secondaryCta: "Quality Assurance Guide",
-    secondaryTo: "/docs/writing-best-practices/review-checklist",
+    secondaryCta: "Review Checklist",
+    secondaryTo: "/docs/writing-best-practices/writing-best-practices-review-checklist",
   },
   {
-    id: "platform",
-    label: "DevOps Engineer",
-    focus: "Deploy with confidence. Master cloud & infrastructure.",
-    summary: "Stop reinventing the wheel. Get battle-tested cloud architecture patterns, CI/CD best practices, and infrastructure-as-code templates. Deploy reliably with proven operational guidance from experts.",
+    id: "cloud",
+    label: "Cloud",
+    focus: "Build a strong foundation in cloud computing",
+    summary: "Learn cloud fundamentals, architecture, networking, security, storage, compute, scalability, reliability, and cost optimization through practical guides and resources.",
+    primaryCta: "Explore Cloud Guides",
+    primaryTo: "/docs/cloud-devops",
+    secondaryCta: "Cloud Architecture",
+    secondaryTo: "/docs/cloud-devops",
+  },
+  {
+    id: "devops",
+    label: "DevOps",
+    focus: "Build, automate, and deliver software with confidence.",
+    summary: "Learn DevOps concepts, practices, tools, and workflows for building reliable and efficient software delivery processes.",
     primaryCta: "Explore DevOps Guides",
     primaryTo: "/docs/devops",
-    secondaryCta: "Cloud Architecture Patterns",
-    secondaryTo: "/docs/cloud-devops",
+    secondaryCta: "CI/CD Pipelines",
+    secondaryTo: "/docs/devops/cicd",
   },
 ];
 
 const STATS = [
-  { label: "Documentation Guides", value: "50+" },
-  { label: "Implementation Examples", value: "100+" },
-  { label: "DevOps Patterns", value: "25+" },
+  { label: "Production-Ready Guides", value: "50+" },
+  { label: "Active Learners", value: "10k+" },
+  { label: "Cloud & DevOps Modules", value: "25+" },
+  { label: "Learner Satisfaction", value: "98%" },
+];
+
+const LEARNING_PILLARS = [
+  {
+    title: "Technical Writing Standards",
+    description: "Build durable documentation quality with audience-first writing, content structuring, terminology consistency, and review discipline.",
+    outcomes: "Style guides, docs-as-code workflows, review checklists, and maintenance standards.",
+    cta: "Start Writing Track",
+    to: "/docs/writing-best-practices",
+  },
+  {
+    title: "Cloud Architecture Foundations",
+    description: "Understand service design, reliability patterns, and provider-specific decisions across AWS, Azure, and GCP.",
+    outcomes: "Reference architectures, deployment strategies, and practical cloud decision frameworks.",
+    cta: "Explore Cloud Track",
+    to: "/docs/cloud-devops",
+  },
+  {
+    title: "DevOps Delivery Excellence",
+    description: "Improve release confidence with CI/CD pipelines, infrastructure automation, and operational observability practices.",
+    outcomes: "Deployment patterns, IaC principles, container workflows, and monitoring baselines.",
+    cta: "Open DevOps Track",
+    to: "/docs/devops",
+  },
 ];
 
 /**
@@ -183,21 +208,21 @@ function Home() {
                     TechDOCS
                   </h1>
 
-                  <p className={styles.heroSubtitle}>Master Documentation. Master Your Craft.</p>
+                  <p className={styles.heroSubtitle}>Learn Technical Writing Best Practices, Cloud & DevOps</p>
 
                   <p className={styles.heroDescription}>
-                    Get production-ready standards, proven workflows, and real-world patterns that work. Whether you're a developer, technical writer, or DevOps engineer, learn industry best practices and level up your skills with expert guidance backed by years of experience.
+                    A professional learning platform with practical guides, structured learning paths, implementation examples, and industry standards.
                   </p>
 
                   <div className={styles.heroCtas}>
                     <Link to="/docs/learning-paths" className={styles.ctaPrimary}>
-                      Start Learning Today
+                      Explore Learning Paths
                       <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </Link>
                     <Link to="/docs/about" className={styles.ctaSecondary}>
-                      How It Works
+                      Professional Profile
                     </Link>
                     <a
                       href="https://www.youtube.com/@TechDocsTutorials"
@@ -220,7 +245,7 @@ function Home() {
                       </svg>
                       <input
                         type="search"
-                        placeholder="Search documentation, API guides, patterns..."
+                        placeholder="Search standards, cloud guides, DevOps workflows..."
                         className={styles.searchInput}
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
@@ -278,7 +303,7 @@ function Home() {
               <div className={styles.sectionHeader}>
                 <h2 className={styles.sectionTitle}>Pick Your Role & Master Your Skills</h2>
                 <p className={styles.sectionDescription}>
-                  Curated learning paths designed for your career. Get exactly what you need to become an expert in your field—no fluff, no confusion.
+                  Follow role-based learning routes designed for professionals who want practical growth, consistent standards, and real implementation results.
                 </p>
               </div>
 
@@ -323,9 +348,9 @@ function Home() {
             <div className={styles.container}>
 
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Everything You Need to Know</h2>
+                <h2 className={styles.sectionTitle}>Core Learning Tracks</h2>
                 <p className={styles.sectionDescription}>
-                  From API integration to cloud deployment—find battle-tested guides and practical solutions for real-world challenges.
+                  Move from fundamentals to advanced execution with guides built for technical writing excellence, cloud architecture, and DevOps delivery.
                 </p>
               </div>
 
@@ -345,16 +370,36 @@ function Home() {
             </div>
           </section>
 
-          {/* ===== TESTIMONIALS ===== */}
-          <Testimonials />
+          <section className={styles.frameworkSection} aria-label="Professional learning framework">
+            <div className={styles.container}>
+              <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>What You Will Master</h2>
+                <p className={styles.sectionDescription}>
+                  A professional curriculum focused on career-impact skills across technical writing standards, cloud systems, and DevOps operations.
+                </p>
+              </div>
 
+              <div className={styles.frameworkGrid}>
+                {LEARNING_PILLARS.map((pillar) => (
+                  <article key={pillar.title} className={styles.frameworkCard}>
+                    <h3>{pillar.title}</h3>
+                    <p>{pillar.description}</p>
+                    <p className={styles.frameworkOutcome}>{pillar.outcomes}</p>
+                    <Link to={pillar.to} className={styles.frameworkLink}>{pillar.cta}</Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ===== TESTIMONIALS ===== */}
           {/* ===== INSTRUCTOR PROFILE ===== */}
           <section className={styles.instructorSection} aria-label="Meet the instructor">
             <div className={styles.container}>
               <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Meet Your Instructor</h2>
+                <h2 className={styles.sectionTitle}>Meet the Expert</h2>
                 <p className={styles.sectionDescription}>
-                  Learn from an experienced professional passionate about documentation excellence and your success.
+                  Learn from a practicing documentation professional who helps engineers and writers build practical, job-ready skills that create real impact.
                 </p>
               </div>
               <InstructorProfile />
@@ -367,7 +412,7 @@ function Home() {
               <div className={styles.ctaFooterContent}>
                 <div className={styles.ctaFooterText}>
                   <h2 className={styles.ctaFooterTitle}>Never Miss an Update</h2>
-                  <p className={styles.ctaFooterDesc}>Get weekly insights on documentation excellence, cloud architecture trends, and DevOps best practices. Join 10,000+ engineers leveling up their craft.</p>
+                  <p className={styles.ctaFooterDesc}>Get practical weekly insights on technical writing standards, cloud architecture, and DevOps execution. Join professionals building stronger engineering communication and delivery systems.</p>
                 </div>
                 <div className={styles.ctaFooterForm}>
                   <form method="POST" className={styles.newsletterForm} onSubmit={(e) => {
