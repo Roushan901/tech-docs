@@ -125,9 +125,6 @@ export default function InstructorProfile() {
             <a href="https://www.linkedin.com/in/roushan-g-99242299/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
               LinkedIn
             </a>
-            <a href="https://github.com/Roushan901" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-              GitHub
-            </a>
             <a href="mailto:contact@techdocs.co.in" className={styles.socialLink}>
               Email
             </a>

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect, useRef } from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
@@ -148,7 +148,68 @@ const LEARNING_PILLARS = [
 function Home() {
   const [activeRoleId, setActiveRoleId] = useState(ROLE_PREVIEWS[0].id);
   const [searchQuery, setSearchQuery] = useState("");
-  
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [playerReady, setPlayerReady] = useState(false);
+  const playerRef = useRef(null);
+  const playerInstanceRef = useRef(null);
+
+  // Load YouTube IFrame Player API
+  useEffect(() => {
+    if (window.YT) return; // Already loaded
+    
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  }, []);
+
+  // Initialize YouTube player when video play is triggered
+  useEffect(() => {
+    if (!isVideoPlaying || playerInstanceRef.current) return;
+
+    const initPlayer = () => {
+      if (!window.YT) {
+        setTimeout(initPlayer, 100);
+        return;
+      }
+
+      playerInstanceRef.current = new window.YT.Player(playerRef.current, {
+        videoId: 'W78WSKJVgq0',
+        width: '100%',
+        height: '100%',
+        playerVars: {
+          autoplay: 1,
+          rel: 0,
+          modestbranding: 1,
+          controls: 1,
+          playsinline: 1,
+        },
+        events: {
+          onReady: () => {
+            setPlayerReady(true);
+            playerInstanceRef.current.playVideo();
+          },
+          onError: () => {
+            console.error('YouTube player error');
+          },
+        },
+      });
+    };
+
+    initPlayer();
+  }, [isVideoPlaying]);
+
+  // Cleanup when returning to thumbnail
+  useEffect(() => {
+    if (!isVideoPlaying) {
+      setPlayerReady(false);
+      if (playerInstanceRef.current) {
+        playerInstanceRef.current.destroy();
+        playerInstanceRef.current = null;
+      }
+    }
+  }, [isVideoPlaying]);
+
   const activeRole = useMemo(
     () => ROLE_PREVIEWS.find((role) => role.id === activeRoleId) || ROLE_PREVIEWS[0],
     [activeRoleId]
@@ -224,17 +285,6 @@ function Home() {
                     <Link to="/docs/about" className={styles.ctaSecondary}>
                       Professional Profile
                     </Link>
-                    <a
-                      href="https://www.youtube.com/@TechDocsTutorials"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.ctaGhost}
-                    >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/>
-                      </svg>
-                      Watch Tutorial
-                    </a>
                   </div>
 
                   <div className={styles.heroSearchBox}>
@@ -258,38 +308,61 @@ function Home() {
 
                 {/* Right — Video */}
                 <div className={styles.heroRight}>
-                  <div className={styles.videoWrap}>
-                    <div className={styles.videoFrame}>
-                      <iframe
-                        className={styles.videoIframe}
-                        src="https://www.youtube.com/embed/-aCKsD70V2E?rel=0&modestbranding=1&controls=1"
-                        srcDoc={`<style>
-                          *{padding:0;margin:0;overflow:hidden}
-                          html,body{height:100%;background:#0d1117}
-                          .thumb{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0.85}
-                          .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-                          .play-btn{width:60px;height:42px;background:#10a37f;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background 0.15s}
-                          .play-btn::before{content:'';border:solid transparent;border-width:10px 0 10px 17px;border-left-color:#fff;margin-left:3px}
-                          a:hover .play-btn{background:#0d8b6d}
-                          .label{position:absolute;bottom:14px;left:16px;color:rgba(255,255,255,0.75);font-family:system-ui,sans-serif;font-size:13px;font-weight:500}
-                        </style>
-                        <a href="https://www.youtube.com/embed/-aCKsD70V2E?autoplay=1&rel=0">
-                          <img class="thumb" src="https://img.youtube.com/vi/-aCKsD70V2E/sddefault.jpg" fetchpriority="high" alt="TechDOCS Introduction">
-                          <div class="play"><div class="play-btn"></div></div>
-                          <span class="label">Watch intro · 3 min</span>
-                        </a>`}
-                        title="TechDOCS Introduction"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className={styles.videoCaption}>
-                      Take a guided tour of TechDOCS (3 minutes)
-                    </p>
+                  <div className={styles.videoContainer}>
+                    {/* Thumbnail backdrop (stays visible while player loads) */}
+                    {isVideoPlaying && (
+                      <div
+                        className={`${styles.videoThumbBackdrop} ${playerReady ? styles.hidden : ''}`}
+                        aria-hidden={playerReady}
+                      >
+                        <img
+                          className={styles.videoThumb}
+                          src="https://img.youtube.com/vi/W78WSKJVgq0/maxresdefault.jpg"
+                          alt="Video loading..."
+                          loading="eager"
+                        />
+                      </div>
+                    )}
+
+                    {/* YouTube player container (fades in when ready) */}
+                    {isVideoPlaying && (
+                      <div className={`${styles.videoFrame} ${playerReady ? styles.playerReady : ''}`}>
+                        <button
+                          type="button"
+                          className={styles.videoCloseButton}
+                          onClick={() => setIsVideoPlaying(false)}
+                          aria-label="Return to thumbnail preview"
+                        >
+                          ×
+                        </button>
+                        <div
+                          ref={playerRef}
+                          className={styles.videoIframe}
+                          id="techdocs-youtube-player"
+                        />
+                      </div>
+                    )}
+
+                    {/* Initial thumbnail button */}
+                    {!isVideoPlaying && (
+                      <button
+                        type="button"
+                        className={styles.videoLaunchLink}
+                        onClick={() => setIsVideoPlaying(true)}
+                        aria-label="Play the TechDOCS introduction video"
+                      >
+                        <img
+                          className={styles.videoThumb}
+                          src="https://img.youtube.com/vi/W78WSKJVgq0/maxresdefault.jpg"
+                          alt="TechDOCS introduction video thumbnail"
+                          loading="eager"
+                        />
+                        <span className={styles.videoPlayButton} aria-hidden="true" />
+                      </button>
+                    )}
                   </div>
                 </div>
+
 
               </div>
             </div>
