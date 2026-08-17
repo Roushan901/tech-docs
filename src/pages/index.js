@@ -8,6 +8,7 @@ import ChatBot from "../components/ChatBot";
 import styles from "./index.module.css";
 
 const CONTACT_EMAIL = "contact@techdocs.co.in";
+const YOUTUBE_VIDEO_ID = "M7lc1UVf-VE";
 
 function buildMailtoLink(subject, body) {
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -174,7 +175,7 @@ function Home() {
       }
 
       playerInstanceRef.current = new window.YT.Player(playerRef.current, {
-        videoId: 'W78WSKJVgq0',
+        videoId: YOUTUBE_VIDEO_ID,
         width: '100%',
         height: '100%',
         playerVars: {
@@ -309,6 +310,21 @@ function Home() {
                 {/* Right — Video */}
                 <div className={styles.heroRight}>
                   <div className={styles.videoContainer}>
+                    <div className={styles.videoWindowBar} aria-hidden="true">
+                      <div className={styles.videoWindowBrand}>
+                        <span className={styles.videoWindowLogo}>▶</span>
+                        <div className={styles.videoWindowText}>
+                          <span className={styles.videoWindowTitle}>YouTube Developers Live: Embedded Web...</span>
+                          <span className={styles.videoWindowSubtitle}>Google for Developers</span>
+                        </div>
+                      </div>
+                      <div className={styles.videoWindowControls} aria-hidden="true">
+                        <span />
+                        <span />
+                        <span />
+                      </div>
+                    </div>
+
                     {/* Thumbnail backdrop (stays visible while player loads) */}
                     {isVideoPlaying && (
                       <div
@@ -317,7 +333,7 @@ function Home() {
                       >
                         <img
                           className={styles.videoThumb}
-                          src="https://img.youtube.com/vi/W78WSKJVgq0/maxresdefault.jpg"
+                          src={`https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
                           alt="Video loading..."
                           loading="eager"
                         />
@@ -353,7 +369,7 @@ function Home() {
                       >
                         <img
                           className={styles.videoThumb}
-                          src="https://img.youtube.com/vi/W78WSKJVgq0/maxresdefault.jpg"
+                          src={`https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
                           alt="TechDOCS introduction video thumbnail"
                           loading="eager"
                         />
