@@ -18,24 +18,24 @@ Reference guides for AWS, Azure, and GCP with emphasis on architecture choices, 
 
 <a href="./aws" className="cloud-card aws-card">
   <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
-  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#FF9900'}}>Amazon Web Services (AWS)</h3>
-  <div style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
+  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700'}}>Amazon Web Services (AWS)</h3>
+  <div style={{lineHeight: '1.6', margin: 0}}>
     Complete guide to AWS services including EC2, S3, Lambda, RDS, and more. Learn cloud architecture, deployment strategies, and AWS best practices.
   </div>
 </a>
 
 <a href="./azure" className="cloud-card azure-card">
   <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
-  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#0078D4'}}>Microsoft Azure</h3>
-  <div style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
+  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700'}}>Microsoft Azure</h3>
+  <div style={{lineHeight: '1.6', margin: 0}}>
     Comprehensive Azure documentation covering Virtual Machines, App Service, Azure Functions, Cosmos DB, and enterprise integration patterns.
   </div>
 </a>
 
 <a href="./gcp" className="cloud-card gcp-card">
   <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
-  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#4285F4'}}>Google Cloud Platform (GCP)</h3>
-  <div style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
+  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700'}}>Google Cloud Platform (GCP)</h3>
+  <div style={{lineHeight: '1.6', margin: 0}}>
     Deep dive into GCP services like Compute Engine, Cloud Functions, BigQuery, and Kubernetes Engine with practical examples and architecture patterns.
   </div>
 </a>

@@ -5,22 +5,23 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #10a37f 0%, #2db896 100%);
-  color: white;
-  border: none;
+  background: var(--td-accent);
+  color: #06231a;
+  border: 1px solid var(--td-accent);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(16, 163, 127, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   font-size: 24px;
-  z-index: 999;
+  z-index: 250;
 }
 
 .chatButton:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(16, 163, 127, 0.4);
+  background: var(--td-accent-hover);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.36);
 }
 
 .chatButton:active {
@@ -40,7 +41,7 @@
   display: flex;
   flex-direction: column;
   animation: slideUp 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  z-index: 1000;
+  z-index: 260;
   overflow: hidden;
 }
 
@@ -285,6 +286,13 @@
 }
 
 /* Mobile responsive */
+@media (max-width: 1199px) {
+  .chatButton {
+    position: static;
+    margin: 1rem 1rem 1rem auto;
+  }
+}
+
 @media (max-width: 768px) {
   .chatContainer {
     position: fixed;
@@ -299,8 +307,7 @@
   }
 
   .chatButton {
-    bottom: 1rem;
-    right: 1rem;
+    margin: 1rem auto;
   }
 
   .messageText {

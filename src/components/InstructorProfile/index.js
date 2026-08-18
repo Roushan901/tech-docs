@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
+/** Renders the instructor profile and documentation impact summary. */
 export default function InstructorProfile() {
   const helpItems = [
     {
@@ -51,16 +52,16 @@ export default function InstructorProfile() {
       description: 'Improve discoverability and help teams resolve issues faster.',
     },
     {
-      kind: 'insight',
-      title: 'Enhanced Chatbot Responses',
-      icon: '◍',
-      description: 'Better AI/RAG answer quality through structured, discoverable documentation.',
+      value: '50%',
+      label: 'Product Adoption',
+      icon: '↗',
+      description: 'Help users discover key workflows and adopt product capabilities.',
     },
     {
-      kind: 'insight',
-      title: 'Documentation Usage & Business Growth',
-      icon: '▣',
-      description: 'Increase engagement, adoption, discoverability, and content usage.',
+      value: '40%',
+      label: 'Chatbot Response Quality',
+      icon: '◍',
+      description: 'Improve answer relevance with structured, discoverable content.',
     },
   ];
 
@@ -113,8 +114,8 @@ export default function InstructorProfile() {
         </div>
 
         <div className={styles.profileContent}>
-          <p className={styles.profileEyebrow}>About My Work</p>
-          <h3 className={styles.aboutHeading}>I turn complex technology into documentation people can actually use.</h3>
+          <h2 className={styles.profileSectionTitle}>About Me</h2>
+          <h3 className={styles.aboutHeading}>Simplify Complex Technical Information into User-Centric Documentation</h3>
           <p className={styles.bio}>
             With 10+ years of experience in technical writing, documentation architecture, and content strategy,
             I help teams create clear, consistent, scalable documentation that improves user experience and
@@ -158,30 +159,15 @@ export default function InstructorProfile() {
 
         <div className={styles.metricsGrid}>
           {stats.map((stat) => {
-            const isStrategic = stat.kind === 'insight';
-            const flowText = stat.title === 'Enhanced Chatbot Responses'
-              ? 'Better content → Better retrieval → Better answers'
-              : 'Discoverability → Engagement → Adoption';
-
             return (
               <div
-                key={stat.label || stat.title}
-                className={`${styles.metricCard} ${isStrategic ? styles.metricNarrative : styles.primaryMetric}`}
+                key={stat.label}
+                className={`${styles.metricCard} ${styles.primaryMetric}`}
               >
                 <div className={styles.metricIcon} aria-hidden="true">{stat.icon}</div>
-                {isStrategic ? (
-                  <>
-                    <div className={styles.metricTitle}>{stat.title}</div>
-                    <div className={styles.metricDescription}>{stat.description}</div>
-                    <div className={styles.metricFlow}>{flowText}</div>
-                  </>
-                ) : (
-                  <>
-                    <div className={styles.metricValue}>{stat.value}</div>
-                    <div className={styles.metricLabel}>{stat.label}</div>
-                    <div className={styles.metricDescription}>{stat.description}</div>
-                  </>
-                )}
+                <div className={styles.metricValue}>{stat.value}</div>
+                <div className={styles.metricLabel}>{stat.label}</div>
+                <div className={styles.metricDescription}>{stat.description}</div>
               </div>
             );
           })}
@@ -210,7 +196,7 @@ export default function InstructorProfile() {
           <p className={styles.ctaSubtitle}>Have a documentation challenge, learning goal, or collaboration opportunity? Let&apos;s connect.</p>
         </div>
         <a href="mailto:contact@techdocs.co.in" className={styles.ctaButton}>
-          Get in Touch <span aria-hidden="true">→</span>
+          Get In Touch <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>

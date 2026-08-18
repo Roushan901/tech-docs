@@ -18,26 +18,26 @@ Use this section to implement reliable delivery pipelines, consistent infrastruc
 
 <a href="./cicd" className="cloud-card cicd-card">
   <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
-  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#10b981'}}>CI/CD Pipelines</h3>
-  <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
+  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700'}}>CI/CD Pipelines</h3>
+  <div style={{lineHeight: '1.6', margin: 0}}>
     Automate your build, test, and deployment workflows with GitHub Actions, Jenkins, GitLab CI/CD. Learn pipeline best practices and deployment strategies.
-  </p>
+  </div>
 </a>
 
 <a href="./containers" className="cloud-card docker-card">
   <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
-  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#2496ED'}}>Docker & Kubernetes</h3>
-  <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
+  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700'}}>Docker & Kubernetes</h3>
+  <div style={{lineHeight: '1.6', margin: 0}}>
     Master containerization with Docker and orchestration with Kubernetes. Build, deploy, and scale containerized applications with confidence.
-  </p>
+  </div>
 </a>
 
 <a href="./iac" className="cloud-card iac-card">
   <div style={{fontSize: '3rem', marginBottom: '16px'}}></div>
-  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700', color: '#7B42BC'}}>Infrastructure as Code</h3>
-  <p style={{lineHeight: '1.6', color: '#64748b', margin: 0}}>
+  <h3 style={{marginBottom: '12px', fontSize: '1.5rem', fontWeight: '700'}}>Infrastructure as Code</h3>
+  <div style={{lineHeight: '1.6', margin: 0}}>
     Manage infrastructure declaratively with Terraform, CloudFormation, and Ansible. Version control, automate, and standardize your infrastructure.
-  </p>
+  </div>
 </a>
 
 </div>

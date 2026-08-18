@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
@@ -8,7 +8,8 @@ import ChatBot from "../components/ChatBot";
 import styles from "./index.module.css";
 
 const CONTACT_EMAIL = "contact@techdocs.co.in";
-const YOUTUBE_VIDEO_ID = "M7lc1UVf-VE";
+const YOUTUBE_VIDEO_ID = "oX7OduG1YmI";
+const HERO_PREVIEW_IMAGE = "/img/techdocs-social-card.svg";
 
 function buildMailtoLink(subject, body) {
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -82,41 +83,37 @@ const FEATURES = [
 const ROLE_PREVIEWS = [
   {
     id: "writer",
-    label: "Technical Writing",
+    label: "Technical Writer",
+    icon: Icons.writing,
     focus: "Write clear, consistent documentation that drives trust and adoption.",
     summary: "Learn structured writing methods, style governance, docs-as-code workflows, and editorial QA practices that scale across products and teams.",
-    primaryCta: "Explore Writing Standards",
-    primaryTo: "/docs/writing-best-practices",
-    secondaryCta: "Review Checklist",
-    secondaryTo: "/docs/writing-best-practices/writing-best-practices-review-checklist",
+    cta: "Explore Writing Standards",
+    to: "/docs/writing-best-practices",
   },
   {
     id: "cloud",
-    label: "Cloud",
+    label: "Cloud Engineer",
+    icon: Icons.cloud,
     focus: "Build a strong foundation in cloud computing",
     summary: "Learn cloud fundamentals, architecture, networking, security, storage, compute, scalability, reliability, and cost optimization through practical guides and resources.",
-    primaryCta: "Explore Cloud Guides",
-    primaryTo: "/docs/cloud-devops",
-    secondaryCta: "Cloud Architecture",
-    secondaryTo: "/docs/cloud-devops",
+    cta: "Explore Cloud Guides",
+    to: "/docs/cloud-devops",
   },
   {
     id: "devops",
-    label: "DevOps",
+    label: "DevOps Specialist",
+    icon: Icons.devops,
     focus: "Build, automate, and deliver software with confidence.",
     summary: "Learn DevOps concepts, practices, tools, and workflows for building reliable and efficient software delivery processes.",
-    primaryCta: "Explore DevOps Guides",
-    primaryTo: "/docs/devops",
-    secondaryCta: "CI/CD Pipelines",
-    secondaryTo: "/docs/devops/cicd",
+    cta: "Explore DevOps Guides",
+    to: "/docs/devops",
   },
 ];
 
-const STATS = [
-  { label: "Production-Ready Guides", value: "50+" },
-  { label: "Active Learners", value: "10k+" },
-  { label: "Cloud & DevOps Modules", value: "25+" },
-  { label: "Learner Satisfaction", value: "98%" },
+const LEARNING_HUB_TABS = [
+  { id: "roles", label: "Roles" },
+  { id: "tracks", label: "Tracks" },
+  { id: "competencies", label: "Competencies" },
 ];
 
 const LEARNING_PILLARS = [
@@ -147,8 +144,7 @@ const LEARNING_PILLARS = [
  * Renders the TechDOCS homepage and newsletter call to action.
  */
 function Home() {
-  const [activeRoleId, setActiveRoleId] = useState(ROLE_PREVIEWS[0].id);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [activeHubTab, setActiveHubTab] = useState(LEARNING_HUB_TABS[0].id);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [playerReady, setPlayerReady] = useState(false);
   const playerRef = useRef(null);
@@ -210,11 +206,6 @@ function Home() {
       }
     }
   }, [isVideoPlaying]);
-
-  const activeRole = useMemo(
-    () => ROLE_PREVIEWS.find((role) => role.id === activeRoleId) || ROLE_PREVIEWS[0],
-    [activeRoleId]
-  );
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -288,43 +279,11 @@ function Home() {
                     </Link>
                   </div>
 
-                  <div className={styles.heroSearchBox}>
-                    <form onSubmit={(e) => { e.preventDefault(); window.location.href = `/search?q=${searchQuery}`; }} className={styles.searchForm}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                      </svg>
-                      <input
-                        type="search"
-                        placeholder="Search standards, cloud guides, DevOps workflows..."
-                        className={styles.searchInput}
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        aria-label="Search documentation"
-                      />
-                    </form>
-                  </div>
-
                 </div>
 
                 {/* Right — Video */}
                 <div className={styles.heroRight}>
                   <div className={styles.videoContainer}>
-                    <div className={styles.videoWindowBar} aria-hidden="true">
-                      <div className={styles.videoWindowBrand}>
-                        <span className={styles.videoWindowLogo}>▶</span>
-                        <div className={styles.videoWindowText}>
-                          <span className={styles.videoWindowTitle}>YouTube Developers Live: Embedded Web...</span>
-                          <span className={styles.videoWindowSubtitle}>Google for Developers</span>
-                        </div>
-                      </div>
-                      <div className={styles.videoWindowControls} aria-hidden="true">
-                        <span />
-                        <span />
-                        <span />
-                      </div>
-                    </div>
-
                     {/* Thumbnail backdrop (stays visible while player loads) */}
                     {isVideoPlaying && (
                       <div
@@ -333,8 +292,8 @@ function Home() {
                       >
                         <img
                           className={styles.videoThumb}
-                          src={`https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
-                          alt="Video loading..."
+                          src={HERO_PREVIEW_IMAGE}
+                          alt="TechDOCS documentation platform preview"
                           loading="eager"
                         />
                       </div>
@@ -369,8 +328,8 @@ function Home() {
                       >
                         <img
                           className={styles.videoThumb}
-                          src={`https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
-                          alt="TechDOCS introduction video thumbnail"
+                          src={HERO_PREVIEW_IMAGE}
+                          alt="TechDOCS documentation platform preview"
                           loading="eager"
                         />
                         <span className={styles.videoPlayButton} aria-hidden="true" />
@@ -387,96 +346,76 @@ function Home() {
 
         {/* ===== RESOURCES ===== */}
         <main>
-          <section className={styles.pathsSection} aria-label="Role-based quick paths">
+          <section className={styles.learningHubSection} aria-labelledby="learning-hub-title">
             <div className={styles.container}>
-              <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Pick Your Role & Master Your Skills</h2>
-                <p className={styles.sectionDescription}>
-                  Follow role-based learning routes designed for professionals who want practical growth, consistent standards, and real implementation results.
-                </p>
+              <div className={styles.learningHubHeader}>
+                <h2 id="learning-hub-title" className={styles.sectionTitle}>Find Your Role, Learning Path, and Core Competency</h2>
               </div>
 
-              <div className={styles.roleSwitcher} aria-label="Role-based quick planner">
-                <div className={styles.roleTabs} role="tablist" aria-label="Select your role">
-                  {ROLE_PREVIEWS.map((role) => (
-                    <button
-                      key={role.id}
-                      type="button"
-                      role="tab"
-                      aria-selected={activeRole.id === role.id}
-                      className={`${styles.roleTab} ${activeRole.id === role.id ? styles.roleTabActive : ""}`}
-                      onClick={() => setActiveRoleId(role.id)}
-                    >
-                      {role.label}
-                    </button>
-                  ))}
-                </div>
+              <div className={styles.learningHubTabs} role="tablist" aria-label="Learning Hub categories">
+                {LEARNING_HUB_TABS.map((tab) => (
+                  <button
+                    key={tab.id}
+                    id={`learning-hub-tab-${tab.id}`}
+                    type="button"
+                    role="tab"
+                    aria-selected={activeHubTab === tab.id}
+                    aria-controls={`learning-hub-panel-${tab.id}`}
+                    className={`${styles.learningHubTab} ${activeHubTab === tab.id ? styles.learningHubTabActive : ""}`}
+                    onClick={() => setActiveHubTab(tab.id)}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
 
-                <div
-                  key={activeRole.id}
-                  className={`${styles.rolePanel} ${styles.rolePanelAnimated}`}
-                  role="tabpanel"
-                  aria-live="polite"
-                >
-                  <p className={styles.rolePanelFocus}>{activeRole.focus}</p>
-                  <p className={styles.rolePanelSummary}>{activeRole.summary}</p>
-                  <div className={styles.rolePanelCtas}>
-                    <Link to={activeRole.primaryTo} className={styles.rolePanelPrimary}>
-                      {activeRole.primaryCta}
-                    </Link>
-                    <Link to={activeRole.secondaryTo} className={styles.rolePanelSecondary}>
-                      {activeRole.secondaryCta}
-                    </Link>
+              <div
+                id={`learning-hub-panel-${activeHubTab}`}
+                className={styles.learningHubPanel}
+                role="tabpanel"
+                aria-labelledby={`learning-hub-tab-${activeHubTab}`}
+              >
+                {activeHubTab === "roles" && (
+                  <div className={styles.roleGrid}>
+                    {ROLE_PREVIEWS.map((role) => (
+                      <Link key={role.id} to={role.to} className={styles.roleCard}>
+                        <div className={styles.roleCardIcon} aria-hidden="true">{role.icon}</div>
+                        <p className={styles.roleCardFocus}>{role.focus}</p>
+                        <h3>{role.label}</h3>
+                        <p className={styles.roleCardSummary}>{role.summary}</p>
+                        <span className={styles.roleCardLink}>{role.cta} <span aria-hidden="true">→</span></span>
+                      </Link>
+                    ))}
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
+                )}
 
-          <section className={styles.resourcesSection} aria-label="Documentation tracks">
-            <div className={styles.container}>
+                {activeHubTab === "tracks" && (
+                  <div className={styles.featuresGrid}>
+                    {FEATURES.map((feature) => (
+                      <Link key={feature.to} to={feature.to} className={styles.featureCard}>
+                        <div className={styles.cardIcon}>{feature.icon}</div>
+                        <div className={styles.cardBody}>
+                          <h3>{feature.title}</h3>
+                          <p>{feature.description}</p>
+                        </div>
+                        <span className={styles.cardArrow} aria-hidden="true">→</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
 
-              <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Core Learning Tracks</h2>
-                <p className={styles.sectionDescription}>
-                  Move from fundamentals to advanced execution with guides built for technical writing excellence, cloud architecture, and DevOps delivery.
-                </p>
-              </div>
-
-              <div className={styles.featuresGrid}>
-                {FEATURES.map((feature) => (
-                  <Link key={feature.to} to={feature.to} className={styles.featureCard}>
-                    <div className={styles.cardIcon}>{feature.icon}</div>
-                    <div className={styles.cardBody}>
-                      <h3>{feature.title}</h3>
-                      <p>{feature.description}</p>
-                    </div>
-                    <span className={styles.cardArrow} aria-hidden="true">→</span>
-                  </Link>
-                ))}
-              </div>
-
-            </div>
-          </section>
-
-          <section className={styles.frameworkSection} aria-label="Professional learning framework">
-            <div className={styles.container}>
-              <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>What You Will Master</h2>
-                <p className={styles.sectionDescription}>
-                  A professional curriculum focused on career-impact skills across technical writing standards, cloud systems, and DevOps operations.
-                </p>
-              </div>
-
-              <div className={styles.frameworkGrid}>
-                {LEARNING_PILLARS.map((pillar) => (
-                  <article key={pillar.title} className={styles.frameworkCard}>
-                    <h3>{pillar.title}</h3>
-                    <p>{pillar.description}</p>
-                    <p className={styles.frameworkOutcome}>{pillar.outcomes}</p>
-                    <Link to={pillar.to} className={styles.frameworkLink}>{pillar.cta}</Link>
-                  </article>
-                ))}
+                {activeHubTab === "competencies" && (
+                  <div className={styles.frameworkGrid}>
+                    {LEARNING_PILLARS.map((pillar) => (
+                      <article key={pillar.title} className={styles.frameworkCard}>
+                        <h3>{pillar.title}</h3>
+                        <p>{pillar.description}</p>
+                        <p className={styles.frameworkOutcome}>{pillar.outcomes}</p>
+                        <Link to={pillar.to} className={styles.frameworkLink}>{pillar.cta}</Link>
+                      </article>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </section>
@@ -485,21 +424,6 @@ function Home() {
           {/* ===== INSTRUCTOR PROFILE ===== */}
           <section className={styles.instructorSection} aria-label="Meet the instructor">
             <div className={styles.container}>
-              <div className={styles.sectionHeader}>
-                <p className={styles.sectionEyebrow}>Technical Documentation • Cloud • DevOps</p>
-                <h2 className={styles.sectionTitle}>
-                  <span>Learn from Experience.</span>
-                  <span>Build Practical Skills.</span>
-                </h2>
-                <p className={styles.sectionDescription}>
-                  Learn from a practicing documentation professional who helps engineers and writers build practical, job-ready skills that create measurable impact.
-                </p>
-                <div className={styles.heroCredibility} aria-label="Career credibility">
-                  <span>10+ Years Experience</span>
-                  <span>Documentation Architecture</span>
-                  <span>Cloud &amp; DevOps</span>
-                </div>
-              </div>
               <InstructorProfile />
             </div>
           </section>
